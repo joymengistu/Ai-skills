@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, thirty-two modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, thirty-six modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -24,6 +24,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Quality gates | Capability-risk matrix, evidence ledger, human feedback, and release criteria |
 | Capability extension | Skill forging, capability discovery, model routing, agent collaboration, and progressive disclosure |
 | Universal access | Multimodal reasoning, accessibility, and incident response |
+| Build completeness | Intent preservation, requirement traceability, product completeness, and dynamic verification |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
@@ -48,6 +49,16 @@ Ultra Plan Mode is an original, bounded high-rigor protocol for difficult, ambig
 
 See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`. The peak runtime layer additionally provides durable execution, structured event traces, resumable approval state, idempotency and reconciliation rules, progress states, evidence ledgers, human feedback controls, and capability-risk release gates.
 
+## Absolute Best standard
+
+“Absolute best” is defined operationally as the agent that maximizes verified human outcome value across the dimensions that matter for the current task, subject to safety, privacy, time, cost, capability, and user-control constraints, while minimizing unnecessary effort and preventing silent omission of important requirements. It is not a context-free claim that one model wins every task.
+
+## Ultra Ultra Mode
+
+Ultra Ultra Mode is the highest-rigor route for complex interactive builds and ambitious briefs. It preserves every explicit requirement, labels reasonable inferences, expands necessary system details, builds a thin end-to-end vertical slice, and verifies the running artifact. It checks interface, interactions, state, data, backend, persistence, errors, accessibility, security, deployment, documentation, and acceptance criteria. For games it also checks controls, camera, collisions, progression, feedback, pause, restart, win/lose behavior, performance, and playability. It does not mean infinite text or permission to act without approval.
+
+See `core/layered-system-prompts.md`, `core/ultra-ultra-mode.md`, `skills/intent-preservation/SKILL.md`, `skills/product-completeness/SKILL.md`, `skills/dynamic-verification/SKILL.md`, and `skills/requirement-traceability/SKILL.md`.
+
 ## Full-mode expansion
 
 The full-mode release adds a skill-forging lifecycle: **discover gap → frame outcome → define trigger and scope → choose progressive disclosure → write → add resources → define permissions → test → validate → package/version → observe → improve or retire**. It also adds model routing, structured agent collaboration, multimodal reasoning, accessibility, incident response, and portable capability discovery. The goal is not to cover everything in one skill; it is to make future capabilities easier to create, discover, evaluate, control, and retire.
@@ -64,7 +75,7 @@ The included human-satisfaction skill defines satisfaction as actual outcome qua
 
 ## Research basis
 
-The design is grounded in public guidance from Anthropic on effective agents, context engineering, and tool design [1] [2] [3]; OpenAI on trace-based agent evaluation and human review [4] [8]; NIST on AI risk management and human-centered AI [5] [6]; OWASP on agentic-AI threats and mitigations [7]; and Temporal on durable human-in-the-loop execution [9]. See `references/research-and-sources.md` for the synthesis and links.
+The design is grounded in public guidance from Anthropic on effective agents, context engineering, tool design, and reusable Agent Skills [1] [2] [3] [10]; OpenAI on trace-based agent evaluation and human review [4] [8]; NIST on AI risk management and human-centered AI [5] [6]; OWASP on agentic-AI threats and mitigations [7]; Temporal on durable human-in-the-loop execution [9]; MCP on portable resources, prompts, tools, progress, cancellation, tasks, and consent [11]; and OpenGame-Bench on dynamic build health, visual usability, and intent alignment [12]. See `references/research-and-sources.md` and `references/absolute-best-research.md` for the synthesis.
 
 ## Public Fable analysis
 
@@ -97,3 +108,4 @@ MIT. See `LICENSE`.
 [9]: https://docs.temporal.io/ai/cookbook/human-in-the-loop-python "Temporal — Human-in-the-loop AI agent"
 [10]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills "Anthropic — Equipping agents for the real world with Agent Skills"
 [11]: https://modelcontextprotocol.io/specification/2026-07-28 "Model Context Protocol — Specification"
+[12]: https://arxiv.org/html/2604.18394v1 "OpenGame: Open Agentic Coding for Games"

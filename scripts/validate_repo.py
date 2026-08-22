@@ -11,20 +11,23 @@ required = [
     ROOT / "manifest.yaml",
     ROOT / "core" / "self-directing-prompt.md",
     ROOT / "core" / "action-protocol.md",
+    ROOT / "core" / "layered-system-prompts.md",
+    ROOT / "core" / "ultra-ultra-mode.md",
     ROOT / "runtime" / "trace-schema.json",
     ROOT / "runtime" / "capability-manifest.schema.json",
     ROOT / "runtime" / "capability-manifest.example.json",
     ROOT / "runtime" / "progress-state-machine.md",
     ROOT / "governance" / "capability-risk-matrix.md",
     ROOT / "references" / "peak-upgrade-design.md",
+    ROOT / "references" / "absolute-best-research.md",
 ]
 for path in required:
     if not path.exists():
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 30:
-    raise SystemExit(f"expected at least 30 skills, found {len(skills)}")
+if len(skills) < 35:
+    raise SystemExit(f"expected at least 35 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -39,6 +42,10 @@ for path in [
     ROOT / "skills" / "durable-execution" / "SKILL.md",
     ROOT / "skills" / "evidence-ledger" / "SKILL.md",
     ROOT / "skills" / "human-feedback" / "SKILL.md",
+    ROOT / "skills" / "intent-preservation" / "SKILL.md",
+    ROOT / "skills" / "product-completeness" / "SKILL.md",
+    ROOT / "skills" / "dynamic-verification" / "SKILL.md",
+    ROOT / "skills" / "requirement-traceability" / "SKILL.md",
 ]:
     if not path.exists():
         raise SystemExit(f"missing governance or peak skill file: {path}")
@@ -51,6 +58,9 @@ for phrase in [
     "Verify",
     "SUPERLATIVE COMPILER",
     "correct useful action",
+    "Ultra Ultra Mode",
+    "requirement",
+    "CAPABILITY LIFECYCLE",
 ]:
     if phrase.lower() not in prompt.lower():
         raise SystemExit(f"self-prompt missing principle: {phrase}")
@@ -87,6 +97,10 @@ for name in [
     "accessibility",
     "incident-response",
     "capability-discovery",
+    "intent-preservation",
+    "product-completeness",
+    "dynamic-verification",
+    "requirement-traceability",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")

@@ -1,5 +1,5 @@
 name: ai-skills
-version: 0.6.0
+version: 0.7.0
 purpose: Model-agnostic operating system for capable, safe, evaluated, human-centered AI agents.
 entrypoint: core/self-directing-prompt.md
 loading:
@@ -8,6 +8,8 @@ loading:
     - core/execution-loop.md
   optional_modes:
     - core/ultra-plan-mode.md
+    - core/ultra-ultra-mode.md
+    - core/layered-system-prompts.md
   route_by_task: true
   progressive_disclosure: true
 principles:
@@ -52,3 +54,7 @@ skills:
   - accessibility
   - incident-response
   - capability-discovery
+  - intent-preservation
+  - product-completeness
+  - dynamic-verification
+  - requirement-traceability
