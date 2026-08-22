@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, twenty-two modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, twenty-five modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -20,6 +20,8 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Bestness and frontier | Superlative analysis, frontier research, evidence, alternatives, and stopping criteria |
 | Assistance and product | Optimal assistance, product strategy, magic moments, quality bar, and outcome completion |
 | Improvement | Traces, graders, regression cases, bounded self-improvement |
+| Peak runtime | Durable execution, event traces, resumable approvals, idempotency, and progress states |
+| Quality gates | Capability-risk matrix, evidence ledger, human feedback, and release criteria |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
@@ -42,7 +44,11 @@ The layers are: identity and contract; request understanding; strategy; context;
 
 Ultra Plan Mode is an original, bounded high-rigor protocol for difficult, ambiguous, long-running, or high-impact tasks. It does not expose private chain-of-thought or imitate hidden model prompts. It uses a preflight plan, dependency graph, context and assumption ledgers, risk map, resource budgets, user checkpoints, resumable state, independent verification, and safe stop rules. It automatically reduces depth when extra planning would cost more than it saves.
 
-See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`.
+See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`. The peak runtime layer additionally provides durable execution, structured event traces, resumable approval state, idempotency and reconciliation rules, progress states, evidence ledgers, human feedback controls, and capability-risk release gates.
+
+## Peak review
+
+The current improvement focuses on the highest-leverage gap: converting excellent instructions into observable runtime behavior. `runtime/trace-schema.json` defines auditable events; `runtime/progress-state-machine.md` defines resumable states; `skills/durable-execution` protects retries and side effects; `skills/evidence-ledger` protects claims and provenance; `skills/human-feedback` turns corrections into scoped learning; and `governance/capability-risk-matrix.md` prevents capability gains from compensating for failed safety, privacy, control, or recovery gates.
 
 ## Human satisfaction
 
@@ -50,7 +56,7 @@ The included human-satisfaction skill defines satisfaction as actual outcome qua
 
 ## Research basis
 
-The design is grounded in public guidance from Anthropic on effective agents, context engineering, and tool design [1] [2] [3]; OpenAI on trace-based agent evaluation [4]; NIST on AI risk management and human-centered AI [5] [6]; and OWASP on agentic-AI threats and mitigations [7]. See `references/research-and-sources.md` for the synthesis and links.
+The design is grounded in public guidance from Anthropic on effective agents, context engineering, and tool design [1] [2] [3]; OpenAI on trace-based agent evaluation and human review [4] [8]; NIST on AI risk management and human-centered AI [5] [6]; OWASP on agentic-AI threats and mitigations [7]; and Temporal on durable human-in-the-loop execution [9]. See `references/research-and-sources.md` for the synthesis and links.
 
 ## Public Fable analysis
 
@@ -79,3 +85,5 @@ MIT. See `LICENSE`.
 [5]: https://www.nist.gov/itl/ai-risk-management-framework "NIST — AI Risk Management Framework"
 [6]: https://www.nist.gov/programs-projects/human-centered-ai "NIST — Human-Centered AI"
 [7]: https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/ "OWASP GenAI Security Project — Agentic AI: Threats and Mitigations"
+[8]: https://developers.openai.com/api/docs/guides/agents/guardrails-approvals "OpenAI — Guardrails and human review"
+[9]: https://docs.temporal.io/ai/cookbook/human-in-the-loop-python "Temporal — Human-in-the-loop AI agent"

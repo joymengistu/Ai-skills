@@ -33,3 +33,12 @@ OWASP's Agentic AI guidance provides a threat-model-based reference for emerging
 [6]: https://www.nist.gov/programs-projects/human-centered-ai "NIST — Human-Centered AI"
 
 [7]: https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/ "OWASP GenAI Security Project — Agentic AI: Threats and Mitigations"
+
+
+The peak review identified an operational gap between good instructions and durable runtime behavior. Temporal's public AI cookbook describes resource-efficient waiting for approvals, durable timers that survive disruptions, asynchronous approval signals, configurable timeouts, and audit trails.[8] OpenAI's public guardrails guidance describes automatic checks plus human review, resumable approval interruptions, validation of target/action/arguments/identity/scope, denial of out-of-scope or destructive actions, decision logging, and fail-closed behavior when review is unavailable.[9] These findings motivate the runtime trace schema, progress state machine, durable-execution skill, idempotency rules, and capability-risk release gates.
+
+## Additional references
+
+[8]: https://docs.temporal.io/ai/cookbook/human-in-the-loop-python "Temporal — Human-in-the-loop AI agent"
+
+[9]: https://developers.openai.com/api/docs/guides/agents/guardrails-approvals "OpenAI — Guardrails and human review"

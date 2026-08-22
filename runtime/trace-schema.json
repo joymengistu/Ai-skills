@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/trace-schema.json",
+  "title": "Ai skills agent trace event",
+  "type": "object",
+  "required": ["schema_version", "run_id", "sequence", "timestamp", "actor", "event_type", "risk_class"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "run_id": {"type": "string", "minLength": 1},
+    "parent_run_id": {"type": ["string", "null"]},
+    "sequence": {"type": "integer", "minimum": 0},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "actor": {"type": "string", "enum": ["user", "agent", "tool", "reviewer", "system"]},
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "run_started", "plan_created", "context_acquired", "decision_proposed",
+        "approval_requested", "approval_received", "approval_rejected", "tool_started",
+        "tool_completed", "tool_failed", "checkpoint_saved", "verification_completed",
+        "run_paused", "run_resumed", "run_completed", "run_stopped"
+      ]
+    },
+    "risk_class": {"type": "string", "enum": ["read_only", "reversible", "consequential", "irreversible", "unknown"]},
+    "payload": {"type": "object", "additionalProperties": true},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "approval_ref": {"type": ["string", "null"]},
+    "idempotency_key": {"type": ["string", "null"]},
+    "state_hash": {"type": ["string", "null"]},
+    "redaction": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

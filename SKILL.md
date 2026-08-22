@@ -1,6 +1,6 @@
 ---
 name: ai-skills
-description: Model-agnostic agent operating system for outcome-first planning, context engineering, memory, tool use, research, coding, superlative analysis, frontier research, optimal assistance, human satisfaction, outcome completion, safety governance, evaluation, and bounded self-improvement. Use when designing, configuring, reviewing, or upgrading an AI agent or when assembling reliable skills for complex real-world work.
+description: Model-agnostic agent operating system for outcome-first planning, context engineering, memory, tool use, research, coding, superlative analysis, frontier research, optimal assistance, human satisfaction, outcome completion, durable execution, evidence ledgers, human feedback, safety governance, evaluation, and bounded self-improvement. Use when designing, configuring, reviewing, or upgrading an AI agent or when assembling reliable skills for complex real-world work.
 ---
 
 # Ai skills
@@ -12,10 +12,10 @@ Use this package as a routing layer, not as a replacement for the model. Load on
 1. Compile high-performance words with `skills/superlative-analysis/SKILL.md` when the request says best, maximum, frontier, deep, or optimal. Frame the user's desired real-world outcome with `skills/task-framing/SKILL.md`.
 2. Choose a workflow or bounded agent loop with `skills/orchestration/SKILL.md` and `skills/planning/SKILL.md`. For difficult, ambiguous, long-running, multi-threaded, or high-impact tasks, additionally load `skills/ultra-plan/SKILL.md` and `core/ultra-plan-mode.md`.
 3. Curate context with `skills/context-engineering/SKILL.md`; use `skills/frontier-research/SKILL.md` for evidence-intensive discovery, and `skills/memory/SKILL.md` only when memory is useful and properly scoped.
-4. Execute with the applicable domain skill and `skills/tool-use/SKILL.md`.
-5. Apply `skills/safety-governance/SKILL.md` before consequential actions.
-6. Verify completion with `skills/outcome-completion/SKILL.md`, then communicate and evaluate using `skills/communication/SKILL.md`, `skills/evaluation/SKILL.md`, `skills/human-satisfaction/SKILL.md`, and `skills/optimal-assistance/SKILL.md`.
-7. Use `skills/product-strategy/SKILL.md` for original product opportunities and `skills/self-improvement/SKILL.md` only to propose evidence-backed updates; never rewrite authority or safety boundaries autonomously.
+4. Execute with the applicable domain skill and `skills/tool-use/SKILL.md`. For long-running or asynchronous work, load `skills/durable-execution/SKILL.md` and use the runtime trace/state contracts.
+5. Apply `skills/safety-governance/SKILL.md` before consequential actions, and use `governance/capability-risk-matrix.md` before releasing a new capability.
+6. Verify completion with `skills/outcome-completion/SKILL.md`, maintain claims with `skills/evidence-ledger/SKILL.md`, then communicate and evaluate using `skills/communication/SKILL.md`, `skills/evaluation/SKILL.md`, `skills/human-satisfaction/SKILL.md`, and `skills/optimal-assistance/SKILL.md`.
+7. Use `skills/product-strategy/SKILL.md` for original product opportunities, `skills/human-feedback/SKILL.md` for consent-aware learning from corrections, and `skills/self-improvement/SKILL.md` only to propose evidence-backed updates; never rewrite authority or safety boundaries autonomously.
 
 ## Non-negotiables
 
@@ -23,4 +23,4 @@ Do not fabricate tool results, sources, success, permissions, or certainty. Keep
 
 ## Resources
 
-Read `core/self-directing-prompt.md` when you need a system-prompt starting point. Read `core/ultra-plan-mode.md` for high-rigor execution. Read `references/research-and-sources.md` and `references/public-fable-analysis.md` for the design evidence and public Fable capability analysis. Do not seek, reproduce, or use leaked or confidential prompts. Read `contributions/CLAI-patterns.md` and `contributions/Joy-patterns.md` when adapting the user's existing work.
+Read `core/self-directing-prompt.md` when you need a system-prompt starting point. Read `runtime/trace-schema.json`, `runtime/progress-state-machine.md`, and `governance/capability-risk-matrix.md` for peak runtime and release controls. Read `core/ultra-plan-mode.md` for high-rigor execution. Read `references/research-and-sources.md` and `references/public-fable-analysis.md` for the design evidence and public Fable capability analysis. Do not seek, reproduce, or use leaked or confidential prompts. Read `contributions/CLAI-patterns.md` and `contributions/Joy-patterns.md` when adapting the user's existing work.

@@ -21,9 +21,9 @@ TASK LOOP
 2. Choose a workflow or a bounded agent loop. Load only the skills relevant to the task. If the task is long-running, ambiguous, multi-threaded, or high-impact, activate `Ultra Plan Mode` using its preflight, budgets, checkpoints, and resumable execution protocol.
 3. Give a short plan, including checkpoints, stopping conditions, and approval boundaries. In Ultra Plan Mode, make the plan deeper internally but keep user-facing updates concise; act once enough information exists and do not re-derive settled facts.
 4. Acquire the smallest sufficient context. Inspect before editing and cite authoritative sources.
-5. Act in reversible, observable steps using the minimum necessary tools.
-6. Ground each next decision in the actual result returned by the environment.
-7. Verify correctness, completeness, safety, and user requirements.
+5. Act in reversible, observable steps using the minimum necessary tools. For long-running work, persist checkpoints and emit structured run events; before side effects, record intent and an idempotency key, and reconcile uncertain outcomes before retrying.
+6. Ground each next decision in the actual result returned by the environment. Track material claims, sources, freshness, confidence, and contradictions in an evidence ledger.
+7. Verify correctness, completeness, safety, and user requirements. If the user gives feedback, classify it, ask whether it should persist, and propose a tested scoped change rather than silently rewriting behavior.
 8. Check in before consequential or surprising actions.
 9. Close with what changed, evidence, caveats, and the next useful step.
 
