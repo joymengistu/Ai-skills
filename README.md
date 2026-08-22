@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, sixteen modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, seventeen modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -16,6 +16,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Domains | Research, coding, data analysis, creative work, communication |
 | Human value | Human satisfaction, interaction design, agency, accessibility |
 | Trust | Safety governance, threat modeling, privacy, auditability |
+| Planning depth | Focused, Deep, and Ultra Plan modes with budgets, checkpoints, and resumability |
 | Improvement | Traces, graders, regression cases, bounded self-improvement |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
@@ -33,7 +34,13 @@ The skill files follow the progressive-disclosure format: each has YAML metadata
 
 ## Architecture
 
-The layers are: identity and contract; request understanding; strategy; context; memory; capability routing; tools; domain execution; human experience; safety and governance; evaluation; and bounded improvement. The system is deliberately modular so a failure can be diagnosed and fixed at the right layer instead of making the prompt longer by default.
+The layers are: identity and contract; request understanding; strategy; context; memory; capability routing; tools; domain execution; human experience; safety and governance; evaluation; and bounded improvement. The optional `core/ultra-plan-mode.md` adds adaptive depth, dependency mapping, budgets, checkpoints, risk gates, resumability, and independent verification. The system is deliberately modular so a failure can be diagnosed and fixed at the right layer instead of making the prompt longer by default.
+
+## Ultra Plan Mode
+
+Ultra Plan Mode is an original, bounded high-rigor protocol for difficult, ambiguous, long-running, or high-impact tasks. It does not expose private chain-of-thought or imitate hidden model prompts. It uses a preflight plan, dependency graph, context and assumption ledgers, risk map, resource budgets, user checkpoints, resumable state, independent verification, and safe stop rules. It automatically reduces depth when extra planning would cost more than it saves.
+
+See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`.
 
 ## Human satisfaction
 
@@ -42,6 +49,10 @@ The included human-satisfaction skill defines satisfaction as actual outcome qua
 ## Research basis
 
 The design is grounded in public guidance from Anthropic on effective agents, context engineering, and tool design [1] [2] [3]; OpenAI on trace-based agent evaluation [4]; NIST on AI risk management and human-centered AI [5] [6]; and OWASP on agentic-AI threats and mitigations [7]. See `references/research-and-sources.md` for the synthesis and links.
+
+## Public Fable analysis
+
+`references/public-fable-analysis.md` summarizes only publicly documented Fable 5 capabilities and turns them into original design lessons. No leaked or confidential prompts are included. The reviewed official material did not verify a current public Claude Fable 3 release, so the repository does not invent one; provide a product URL if “Fable 3” means something else.
 
 ## Reuse of Joy and CLAI
 

@@ -15,8 +15,8 @@ OPERATING CONTRACT
 
 TASK LOOP
 1. Frame the desired human outcome, constraints, definition of done, and ambiguity.
-2. Choose a workflow or a bounded agent loop. Load only the skills relevant to the task.
-3. Give a short plan, including checkpoints, stopping conditions, and approval boundaries.
+2. Choose a workflow or a bounded agent loop. Load only the skills relevant to the task. If the task is long-running, ambiguous, multi-threaded, or high-impact, activate `Ultra Plan Mode` using its preflight, budgets, checkpoints, and resumable execution protocol.
+3. Give a short plan, including checkpoints, stopping conditions, and approval boundaries. In Ultra Plan Mode, make the plan deeper internally but keep user-facing updates concise; act once enough information exists and do not re-derive settled facts.
 4. Acquire the smallest sufficient context. Inspect before editing and cite authoritative sources.
 5. Act in reversible, observable steps using the minimum necessary tools.
 6. Ground each next decision in the actual result returned by the environment.

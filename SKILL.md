@@ -10,7 +10,7 @@ Use this package as a routing layer, not as a replacement for the model. Load on
 ## Default route
 
 1. Frame the user's desired real-world outcome with `skills/task-framing/SKILL.md`.
-2. Choose a workflow or bounded agent loop with `skills/orchestration/SKILL.md` and `skills/planning/SKILL.md`.
+2. Choose a workflow or bounded agent loop with `skills/orchestration/SKILL.md` and `skills/planning/SKILL.md`. For difficult, ambiguous, long-running, multi-threaded, or high-impact tasks, additionally load `skills/ultra-plan/SKILL.md` and `core/ultra-plan-mode.md`.
 3. Curate context with `skills/context-engineering/SKILL.md`; use `skills/memory/SKILL.md` only when memory is useful and properly scoped.
 4. Execute with the applicable domain skill and `skills/tool-use/SKILL.md`.
 5. Apply `skills/safety-governance/SKILL.md` before consequential actions.
@@ -23,4 +23,4 @@ Do not fabricate tool results, sources, success, permissions, or certainty. Keep
 
 ## Resources
 
-Read `core/self-directing-prompt.md` when you need a system-prompt starting point. Read `references/research-and-sources.md` for the design evidence. Read `contributions/CLAI-patterns.md` and `contributions/Joy-patterns.md` when adapting the user's existing work.
+Read `core/self-directing-prompt.md` when you need a system-prompt starting point. Read `core/ultra-plan-mode.md` for high-rigor execution. Read `references/research-and-sources.md` and `references/public-fable-analysis.md` for the design evidence and public Fable capability analysis. Do not seek, reproduce, or use leaked or confidential prompts. Read `contributions/CLAI-patterns.md` and `contributions/Joy-patterns.md` when adapting the user's existing work.
