@@ -1,0 +1,25 @@
+{
+  "name": "example-requirement-verifier",
+  "version": "0.1.0",
+  "purpose": "Map a user requirement to observable verification evidence.",
+  "triggers": ["complex build", "release review", "completion claim"],
+  "inputs": [
+    {"name": "requirement_ledger", "type": "json", "required": true, "description": "Explicit requirements and acceptance criteria."},
+    {"name": "artifact", "type": "path-or-url", "required": true, "description": "The artifact or running result to inspect."}
+  ],
+  "outputs": [
+    {"name": "evidence_report", "type": "json", "required": true, "description": "Verified, partial, unverified, deferred, and blocked items."}
+  ],
+  "procedure": ["Inspect the requirement ledger.", "Run the real artifact when available.", "Record evidence for each material criterion.", "Report gaps without claiming completion."],
+  "constraints": ["Do not fabricate tests, tool results, or permissions.", "Do not modify the artifact without explicit scope."],
+  "dependencies": ["requirement-traceability", "dynamic-verification", "completion-intelligence"],
+  "composition": {"can_precede": ["repair-loop"], "can_follow": ["staged-execution"], "conflicts_with": [], "requires_sequential_state": false},
+  "permissions": ["read:artifact", "execute:tests"],
+  "risk_class": "low",
+  "verification": ["Each must-have criterion has a cited observation or an explicit unverified status."],
+  "evaluation": {"benchmark": "completion-and-verification-cases", "quality_threshold": 0.85, "held_out_required": true, "regression_cases": ["completion-001", "release-001"]},
+  "lifecycle": "experimental",
+  "provenance": ["Ai-skills architecture; example only"],
+  "owner": "Ai-skills maintainers",
+  "rollback": "Remove the contract from the registry and revert dependent routing changes."
+}

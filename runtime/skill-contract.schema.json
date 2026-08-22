@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/blob/main/runtime/skill-contract.schema.json",
+  "title": "Ai-skills Skill Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "version",
+    "purpose",
+    "triggers",
+    "inputs",
+    "outputs",
+    "procedure",
+    "constraints",
+    "dependencies",
+    "permissions",
+    "risk_class",
+    "verification",
+    "evaluation",
+    "lifecycle",
+    "provenance",
+    "owner",
+    "rollback"
+  ],
+  "properties": {
+    "name": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+    "version": {"type": "string"},
+    "purpose": {"type": "string"},
+    "triggers": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "inputs": {"type": "array", "items": {"$ref": "#/$defs/port"}},
+    "outputs": {"type": "array", "items": {"$ref": "#/$defs/port"}},
+    "procedure": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "dependencies": {"type": "array", "items": {"type": "string"}},
+    "composition": {"type": "object", "additionalProperties": false, "properties": {"can_precede": {"type": "array", "items": {"type": "string"}}, "can_follow": {"type": "array", "items": {"type": "string"}}, "conflicts_with": {"type": "array", "items": {"type": "string"}}, "requires_sequential_state": {"type": "boolean"}}},
+    "permissions": {"type": "array", "items": {"type": "string"}},
+    "risk_class": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+    "verification": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "evaluation": {"type": "object", "additionalProperties": false, "required": ["benchmark", "quality_threshold", "held_out_required"], "properties": {"benchmark": {"type": "string"}, "quality_threshold": {"type": "number", "minimum": 0, "maximum": 1}, "held_out_required": {"type": "boolean"}, "regression_cases": {"type": "array", "items": {"type": "string"}}}},
+    "lifecycle": {"type": "string", "enum": ["proposed", "drafted", "experimental", "evaluated", "trusted", "deprecated", "retired"]},
+    "provenance": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "owner": {"type": "string"},
+    "rollback": {"type": "string"}
+  },
+  "$defs": {
+    "port": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "type", "required"],
+      "properties": {
+        "name": {"type": "string"},
+        "type": {"type": "string"},
+        "required": {"type": "boolean"},
+        "description": {"type": "string"}
+      }
+    }
+  }
+}

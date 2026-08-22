@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, fifty-two modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, fifty-five modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -28,6 +28,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Fable-like acceleration | Requirement compiler, build recipes, staged execution, repair loops, and runtime host |
 | Online-first operation | Hosted orchestration, remote tool bridge, progressive delivery, and cost-aware execution |
 | Fable research controls | Capability analysis, context handoffs, skeptical evaluation, tool evaluation, and completion intelligence |
+| Evolving capabilities | Skill discovery, typed composition, quality judgment, capability-gap response, lifecycle promotion, and rollback |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
@@ -91,6 +92,10 @@ The design is grounded in public guidance from Anthropic on effective agents, co
 ## Public Fable analysis
 
 `references/fable5-research-report.md` and `references/fable-capability-evidence-ledger.yaml` summarize only publicly documented Fable 5 capabilities and turn them into original, model-agnostic design lessons. `references/fable-research-notes.md` preserves the working evidence trail. No leaked or confidential prompts are included. Public material supports both model capability and harness value, but it does not prove universal one-shot production completeness or reveal all internal mechanisms.
+
+## Evolving skills ecosystem
+
+The repository now treats skills as versioned procedural capabilities rather than static prompts alone. `references/evolving-skills-gap-analysis.md` compares the attached mission with existing coverage; `references/evolving-skills-architecture.md` defines discovery, typed composition, capability gaps, critics, quality judgment, human-value review, and safe promotion; and `runtime/skill-contract.schema.json` defines a portable contract. The lifecycle is **discover → compose → execute → observe → critique → verify → repair → evaluate → propose → approve → register**. Candidate skills remain experimental until they pass representative and held-out evaluation and an authorized maintainer approves promotion.
 
 The latest user-authored additions are preserved in `contributions/ULTRIA-original.txt` and `contributions/FORK-original.txt`. Their implementation map is in `references/ultria-fork-integration-map.md`; the source documents are treated as design requirements while safety, privacy, user authority, and evidence standards remain non-negotiable.
 

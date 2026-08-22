@@ -31,6 +31,10 @@ required = [
     ROOT / "references" / "fable5-research-report.md",
     ROOT / "references" / "fable-capability-evidence-ledger.yaml",
     ROOT / "references" / "magic-pipeline.md",
+    ROOT / "references" / "evolving-skills-gap-analysis.md",
+    ROOT / "references" / "evolving-skills-architecture.md",
+    ROOT / "runtime" / "skill-contract.schema.json",
+    ROOT / "runtime" / "skill-contract.example.json",
     ROOT / "contributions" / "Fable-research-mission-original.txt",
 ]
 for path in required:
@@ -38,8 +42,8 @@ for path in required:
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 52:
-    raise SystemExit(f"expected at least 52 skills, found {len(skills)}")
+if len(skills) < 55:
+    raise SystemExit(f"expected at least 55 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -63,6 +67,9 @@ for path in [
     ROOT / "skills" / "context-handoff" / "SKILL.md",
     ROOT / "skills" / "tool-evaluation" / "SKILL.md",
     ROOT / "skills" / "capability-analysis" / "SKILL.md",
+    ROOT / "skills" / "skill-composition" / "SKILL.md",
+    ROOT / "skills" / "quality-judgment" / "SKILL.md",
+    ROOT / "skills" / "capability-gap-response" / "SKILL.md",
 ]:
     if not path.exists():
         raise SystemExit(f"missing governance or peak skill file: {path}")
@@ -81,6 +88,7 @@ for phrase in [
     "output generated",
     "independent evaluator",
     "CAPABILITY ANALYSIS ROUTE",
+    "EVOLVING CAPABILITY ROUTE",
 ]:
     if phrase.lower() not in prompt.lower():
         raise SystemExit(f"self-prompt missing principle: {phrase}")
@@ -94,6 +102,16 @@ trace = json.loads((ROOT / "runtime" / "trace-schema.json").read_text(encoding="
 for key in ["schema_version", "run_id", "sequence", "timestamp", "actor", "event_type", "risk_class"]:
     if key not in trace.get("required", []):
         raise SystemExit(f"trace schema missing required field: {key}")
+
+skill_contract = json.loads((ROOT / "runtime" / "skill-contract.schema.json").read_text(encoding="utf-8"))
+for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "procedure", "constraints", "dependencies", "permissions", "risk_class", "verification", "evaluation", "lifecycle", "provenance", "owner", "rollback"]:
+    if key not in skill_contract.get("required", []):
+        raise SystemExit(f"skill contract schema missing required field: {key}")
+
+skill_contract_example = json.loads((ROOT / "runtime" / "skill-contract.example.json").read_text(encoding="utf-8"))
+for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "procedure", "constraints", "dependencies", "permissions", "risk_class", "verification", "evaluation", "lifecycle", "provenance", "owner", "rollback"]:
+    if key not in skill_contract_example:
+        raise SystemExit(f"skill contract example missing field: {key}")
 
 capability_manifest = json.loads((ROOT / "runtime" / "capability-manifest.schema.json").read_text(encoding="utf-8"))
 for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "dependencies", "permissions", "risk_class", "tests", "owner", "rollback"]:
@@ -142,6 +160,9 @@ for name in [
     "context-handoff",
     "tool-evaluation",
     "capability-analysis",
+    "skill-composition",
+    "quality-judgment",
+    "capability-gap-response",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")
