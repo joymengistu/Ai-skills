@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/online-run-profile.schema.json",
+  "title": "Online-first agent run profile",
+  "type": "object",
+  "required": ["run_id", "mode", "model_policy", "tool_policy", "budgets", "privacy", "delivery", "recovery"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "mode": {"type": "string", "enum": ["focused", "deep", "ultra", "ultra_ultra"]},
+    "model_policy": {"type": "object", "required": ["default_route", "escalation_rule", "fallback_rule"], "properties": {"default_route": {"type": "string"}, "escalation_rule": {"type": "string"}, "fallback_rule": {"type": "string"}}, "additionalProperties": false},
+    "tool_policy": {"type": "object", "required": ["allowed", "approval_required", "sandbox", "cleanup"], "properties": {"allowed": {"type": "array", "items": {"type": "string"}}, "approval_required": {"type": "array", "items": {"type": "string"}}, "sandbox": {"type": "boolean"}, "cleanup": {"type": "string"}}, "additionalProperties": false},
+    "budgets": {"type": "object", "required": ["max_model_calls", "max_tool_calls", "max_minutes", "max_retries"], "properties": {"max_model_calls": {"type": "integer", "minimum": 1}, "max_tool_calls": {"type": "integer", "minimum": 0}, "max_minutes": {"type": "number", "exclusiveMinimum": 0}, "max_retries": {"type": "integer", "minimum": 0}}, "additionalProperties": false},
+    "privacy": {"type": "object", "required": ["data_class", "retention", "provider_consent"], "properties": {"data_class": {"type": "string"}, "retention": {"type": "string"}, "provider_consent": {"type": "boolean"}}, "additionalProperties": false},
+    "delivery": {"type": "object", "required": ["first_slice_target", "completion_gate", "progress_visibility"], "properties": {"first_slice_target": {"type": "string"}, "completion_gate": {"type": "string"}, "progress_visibility": {"type": "string"}}, "additionalProperties": false},
+    "recovery": {"type": "object", "required": ["checkpoint_store", "cancel_signal", "rollback_rule"], "properties": {"checkpoint_store": {"type": "string"}, "cancel_signal": {"type": "string"}, "rollback_rule": {"type": "string"}}, "additionalProperties": false}
+  },
+  "additionalProperties": false
+}

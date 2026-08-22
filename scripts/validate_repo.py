@@ -16,19 +16,22 @@ required = [
     ROOT / "runtime" / "trace-schema.json",
     ROOT / "runtime" / "capability-manifest.schema.json",
     ROOT / "runtime" / "capability-manifest.example.json",
+    ROOT / "runtime" / "online-run-profile.schema.json",
     ROOT / "runtime" / "progress-state-machine.md",
     ROOT / "governance" / "capability-risk-matrix.md",
     ROOT / "references" / "peak-upgrade-design.md",
     ROOT / "references" / "absolute-best-research.md",
     ROOT / "references" / "fable-like-runtime-blueprint.md",
+    ROOT / "references" / "online-first-architecture.md",
+    ROOT / "references" / "online-first-research.md",
 ]
 for path in required:
     if not path.exists():
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 40:
-    raise SystemExit(f"expected at least 40 skills, found {len(skills)}")
+if len(skills) < 45:
+    raise SystemExit(f"expected at least 45 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -65,6 +68,11 @@ for phrase in [
 ]:
     if phrase.lower() not in prompt.lower():
         raise SystemExit(f"self-prompt missing principle: {phrase}")
+
+online_profile = json.loads((ROOT / "runtime" / "online-run-profile.schema.json").read_text(encoding="utf-8"))
+for key in ["run_id", "mode", "model_policy", "tool_policy", "budgets", "privacy", "delivery", "recovery"]:
+    if key not in online_profile.get("required", []):
+        raise SystemExit(f"online run profile schema missing required field: {key}")
 
 trace = json.loads((ROOT / "runtime" / "trace-schema.json").read_text(encoding="utf-8"))
 for key in ["schema_version", "run_id", "sequence", "timestamp", "actor", "event_type", "risk_class"]:
@@ -107,6 +115,10 @@ for name in [
     "staged-execution",
     "repair-loop",
     "runtime-host",
+    "online-orchestration",
+    "hosted-tool-bridge",
+    "progressive-delivery",
+    "cost-aware-execution",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")

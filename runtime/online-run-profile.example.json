@@ -1,0 +1,36 @@
+{
+  "run_id": "demo-2026-08-23-001",
+  "mode": "ultra_ultra",
+  "model_policy": {
+    "default_route": "fast hosted model for brief compilation and routine edits",
+    "escalation_rule": "Use a stronger hosted model for architecture, ambiguity, difficult repair, multimodal inspection, and final review.",
+    "fallback_rule": "Preserve the same safety, approval, and verification requirements when switching providers."
+  },
+  "tool_policy": {
+    "allowed": ["project-read", "project-write-in-sandbox", "browser-preview", "build-test", "visual-check"],
+    "approval_required": ["external-publish", "credential-access", "private-data-transfer", "destructive-change"],
+    "sandbox": true,
+    "cleanup": "Delete ephemeral browser, build, and provider artifacts after the retention period."
+  },
+  "budgets": {
+    "max_model_calls": 80,
+    "max_tool_calls": 200,
+    "max_minutes": 120,
+    "max_retries": 3
+  },
+  "privacy": {
+    "data_class": "user-project-confidential",
+    "retention": "Keep only state and evidence required to resume and verify the requested build.",
+    "provider_consent": true
+  },
+  "delivery": {
+    "first_slice_target": "A runnable core journey with honest preview status.",
+    "completion_gate": "Requirement coverage, dynamic verification, safety, accessibility, and operational readiness pass.",
+    "progress_visibility": "Show current stage, completed work, blockers, next decision, and unverified items."
+  },
+  "recovery": {
+    "checkpoint_store": "Encrypted durable session store",
+    "cancel_signal": "User cancellation or host shutdown signal",
+    "rollback_rule": "Revert the last isolated change or restore the last verified checkpoint before retrying."
+  }
+}

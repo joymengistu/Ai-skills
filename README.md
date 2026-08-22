@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, forty-one modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, forty-five modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -26,6 +26,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Universal access | Multimodal reasoning, accessibility, and incident response |
 | Build completeness | Intent preservation, requirement traceability, product completeness, and dynamic verification |
 | Fable-like acceleration | Requirement compiler, build recipes, staged execution, repair loops, and runtime host |
+| Online-first operation | Hosted orchestration, remote tool bridge, progressive delivery, and cost-aware execution |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
@@ -54,6 +55,10 @@ See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`. The peak runtime
 
 The “one-shot” effect is treated as a system, not a magic prompt: a strong model plus structured requirement compilation, reusable recipes, a thin vertical slice, staged execution, dynamic verification, targeted repair, persistent state, and a host runtime. The pipeline is **brief compiler → architecture pass → vertical slice → staged expansion → dynamic verification → repair loop → release gate**. See `references/fable-like-runtime-blueprint.md` and the skills `requirement-compiler`, `build-recipes`, `staged-execution`, `repair-loop`, and `runtime-host`.
 
+## Online-first now, local later
+
+The current priority is **online agents**. A modest laptop can act as the control surface while authorized hosted workers handle model calls, browser sessions, builds, vision checks, queues, and long-running work. The new online-first layer adds hosted orchestration, a remote-tool bridge, progressive delivery, and cost-aware routing. Local-model execution is a future compatibility track; when implemented, it must follow the same capability manifests, traces, permissions, verification, privacy, and human-control contracts.
+
 ## Absolute Best standard
 
 “Absolute best” is defined operationally as the agent that maximizes verified human outcome value across the dimensions that matter for the current task, subject to safety, privacy, time, cost, capability, and user-control constraints, while minimizing unnecessary effort and preventing silent omission of important requirements. It is not a context-free claim that one model wins every task.
@@ -80,7 +85,7 @@ The included human-satisfaction skill defines satisfaction as actual outcome qua
 
 ## Research basis
 
-The design is grounded in public guidance from Anthropic on effective agents, context engineering, tool design, and reusable Agent Skills [1] [2] [3] [10]; OpenAI on trace-based agent evaluation and human review [4] [8]; NIST on AI risk management and human-centered AI [5] [6]; OWASP on agentic-AI threats and mitigations [7]; Temporal on durable human-in-the-loop execution [9]; MCP on portable resources, prompts, tools, progress, cancellation, tasks, and consent [11]; and OpenGame-Bench on dynamic build health, visual usability, and intent alignment [12]. See `references/research-and-sources.md` and `references/absolute-best-research.md` for the synthesis.
+The design is grounded in public guidance from Anthropic on effective agents, context engineering, tool design, and reusable Agent Skills [1] [2] [3] [10]; OpenAI on trace-based agent evaluation, human review, and hosted agent runners [4] [8] [15]; NIST on AI risk management and human-centered AI [5] [6]; OWASP on agentic-AI threats and mitigations [7]; Temporal on durable human-in-the-loop execution [9]; MCP on portable resources, prompts, tools, progress, cancellation, tasks, and consent [11]; OpenGame-Bench on dynamic build health, visual usability, and intent alignment [12]; and SkillsBench on focused curated skills, skill selection, and skill evaluation [13]. See `references/research-and-sources.md`, `references/absolute-best-research.md`, and `references/online-first-research.md` for the synthesis.
 
 ## Public Fable analysis
 
@@ -116,3 +121,4 @@ MIT. See `LICENSE`.
 [12]: https://arxiv.org/html/2604.18394v1 "OpenGame: Open Agentic Coding for Games"
 [13]: https://arxiv.org/html/2602.12670v1 "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks"
 [14]: https://www.anthropic.com/claude/fable "Claude Fable — public product page"
+[15]: https://developers.openai.com/api/docs/guides/agents "OpenAI — Agents SDK"
