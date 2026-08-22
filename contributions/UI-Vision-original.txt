@@ -1,0 +1,835 @@
+UI VISION SKILL
+
+Teaching AI What Professional, Minimalistic UI Actually Means
+
+PURPOSE
+
+This skill exists because the instruction:
+
+«"Make the UI beautiful, professional, and minimalistic."»
+
+is insufficient.
+
+An AI may interpret "beautiful" as:
+
+- gradients
+- glassmorphism
+- large cards
+- glowing effects
+- oversized typography
+- decorative backgrounds
+- excessive animation
+- large buttons
+- visual effects
+
+That is NOT automatically professional design.
+
+The goal of this skill is to teach the AI to distinguish:
+
+beautiful
+
+from
+
+professional
+
+from
+
+minimal
+
+from
+
+premium
+
+from
+
+polished
+
+from
+
+usable
+
+from
+
+AI-generated-looking.
+
+---
+
+1. THE MOST IMPORTANT RULE
+
+Never design from adjectives alone.
+
+Words such as:
+
+- beautiful
+- professional
+- minimal
+- premium
+- clean
+- modern
+- elegant
+- polished
+- sophisticated
+
+must be translated into observable visual properties.
+
+For example:
+
+"Minimal" should become:
+
+- fewer visible controls
+- smaller controls
+- stronger hierarchy
+- less decoration
+- more whitespace
+- restrained typography
+- fewer competing surfaces
+- fewer borders
+- fewer colors
+- fewer visual interruptions
+- progressive disclosure
+- contextual controls
+
+---
+
+2. PROFESSIONAL ≠ BEAUTIFUL
+
+A professional interface is not necessarily visually spectacular.
+
+Professional design prioritizes:
+
+1. clarity
+2. hierarchy
+3. consistency
+4. usability
+5. restraint
+6. predictability
+7. accessibility
+8. information density appropriate to the task
+9. interaction quality
+10. visual coherence
+
+Beauty is a consequence of good decisions, not a replacement for them.
+
+---
+
+3. MINIMALISM IS SUBTRACTION
+
+Do not interpret minimalism as:
+
+"make everything tiny."
+
+Instead:
+
+«Remove everything that does not contribute meaningfully to the user's task.»
+
+Ask of every visible element:
+
+Does the user need this right now?
+
+If no:
+
+- hide it
+- collapse it
+- move it into contextual controls
+- reveal it on interaction
+- remove it
+
+---
+
+4. STUDY REAL PROFESSIONAL INTERFACES
+
+When designing a UI, actively study screenshots and live interfaces from high-quality professional products.
+
+Examples of useful references include:
+
+- ChatGPT
+- Claude
+- Gemini
+- Perplexity
+- Linear
+- Vercel
+- Figma
+- Notion
+- Raycast
+- Arc
+- GitHub
+- Stripe
+- Apple
+- Microsoft
+- Google
+- Brave
+
+Do not copy their interfaces.
+
+Instead analyze the design patterns they use.
+
+---
+
+5. SCREENSHOT-FIRST ANALYSIS
+
+If reference screenshots are available, analyze them before designing.
+
+Do not merely look at them and say:
+
+"Looks clean."
+
+Extract measurable patterns.
+
+Analyze:
+
+Navigation
+
+- sidebar width
+- icon size
+- label size
+- spacing
+- active-state treatment
+- number of visible navigation items
+
+Buttons
+
+- height
+- width
+- padding
+- icon size
+- text size
+- border radius
+- visual weight
+
+Typography
+
+- heading scale
+- body scale
+- metadata scale
+- line height
+- weight hierarchy
+
+Spacing
+
+Identify the repeated spacing rhythm.
+
+Look for:
+
+- 4px
+- 6px
+- 8px
+- 12px
+- 16px
+- 20px
+- 24px
+- 32px
+
+Do not randomly place elements.
+
+Surfaces
+
+Analyze:
+
+- number of panels
+- number of cards
+- border usage
+- shadows
+- elevation
+- background differences
+
+Color
+
+Measure the number of meaningful colors.
+
+Professional interfaces often use a restrained palette.
+
+Do not introduce colors merely to make the UI "interesting."
+
+---
+
+6. CONTROL SCALE
+
+One of the most important professional-design signals is control scale.
+
+Do not make every button large.
+
+Many professional interfaces use compact controls because users already understand common interactions.
+
+Prefer:
+
+small control + clear icon + subtle feedback
+
+over:
+
+large colorful button + huge label + decorative container
+
+unless the action genuinely requires prominence.
+
+---
+
+7. VISUAL WEIGHT
+
+Every element has visual weight.
+
+Visual weight comes from:
+
+- size
+- color
+- contrast
+- thickness
+- spacing
+- position
+- motion
+- borders
+- shadows
+
+The AI must deliberately assign visual weight.
+
+Ask:
+
+«What is the most important thing on this screen?»
+
+Then:
+
+«What is second?»
+
+Then:
+
+«What can become almost invisible?»
+
+If everything is prominent, nothing is prominent.
+
+---
+
+8. THE 3-LEVEL HIERARCHY
+
+Use:
+
+Level 1 — Primary
+
+The thing the user is currently trying to accomplish.
+
+Level 2 — Supporting
+
+Information and controls needed to accomplish it.
+
+Level 3 — Optional
+
+Advanced functionality that should not compete for attention.
+
+Do not visually emphasize Level 3.
+
+---
+
+9. BUTTON DESIGN
+
+Buttons should not look like advertisements.
+
+A professional button usually has:
+
+- appropriate height
+- restrained padding
+- clear label
+- consistent radius
+- predictable placement
+- subtle hover
+- clear pressed state
+- accessible focus state
+
+Avoid:
+
+- huge pill buttons everywhere
+- unnecessary gradients
+- excessive shadows
+- giant icons
+- multiple competing primary buttons
+
+---
+
+10. ICONS
+
+Icons should communicate quickly.
+
+Use:
+
+- consistent icon family
+- consistent stroke weight
+- consistent size
+- consistent optical alignment
+
+Do not mix random icon styles.
+
+Avoid using icons merely for decoration.
+
+---
+
+11. WHITESPACE
+
+Whitespace is not empty space.
+
+Whitespace establishes:
+
+- hierarchy
+- grouping
+- rhythm
+- calmness
+- readability
+
+However:
+
+minimal ≠ enormous empty gaps.
+
+Whitespace must be proportional to the information density.
+
+---
+
+12. INFORMATION DENSITY
+
+Professional interfaces often have carefully controlled information density.
+
+Too little:
+
+«The interface feels empty and inefficient.»
+
+Too much:
+
+«The interface feels chaotic.»
+
+The goal is:
+
+«The smallest amount of information necessary to make the current decision easy.»
+
+---
+
+13. BORDER DISCIPLINE
+
+Do not put borders around everything.
+
+Use borders only when they help:
+
+- separate regions
+- define an interactive control
+- establish hierarchy
+- communicate boundaries
+
+If every card has a border, every input has a border, and every section has a border, the interface becomes visually noisy.
+
+---
+
+14. CARD DISCIPLINE
+
+Cards are useful.
+
+But "put everything in a card" is not professional design.
+
+Before creating a card ask:
+
+«Does this content actually need to be separated from its surroundings?»
+
+If not, let it live naturally in the layout.
+
+---
+
+15. SHADOW DISCIPLINE
+
+Shadows should communicate elevation.
+
+Do not use shadows simply because they look fancy.
+
+Avoid:
+
+- huge glowing shadows
+- colored shadows everywhere
+- multiple competing elevations
+
+---
+
+16. TYPOGRAPHY
+
+Professional typography depends on hierarchy rather than giant headings.
+
+Create a small type scale.
+
+Use differences in:
+
+- size
+- weight
+- line height
+- color/contrast
+
+rather than making everything huge.
+
+Body text must remain comfortable.
+
+Metadata should be quieter.
+
+Important text should be obvious without shouting.
+
+---
+
+17. COLOR DISCIPLINE
+
+Start with a restrained palette.
+
+Use color primarily for:
+
+- meaning
+- state
+- emphasis
+- interaction
+- brand identity
+
+Do not add colors simply because the screen feels "boring."
+
+A quiet interface can be extremely premium.
+
+---
+
+18. MOTION DISCIPLINE
+
+Professional motion is:
+
+- fast enough
+- subtle
+- purposeful
+- consistent
+
+Use animation to explain:
+
+- where something came from
+- where it went
+- what changed
+- what is active
+- what finished
+
+Do not animate everything.
+
+---
+
+19. AI UI SPECIFICALLY
+
+AI interfaces require additional restraint.
+
+The user should not constantly see:
+
+- giant agent cards
+- excessive "AI thinking" animations
+- huge status panels
+- decorative robot imagery
+- unnecessary gradients
+- enormous prompts
+- giant action buttons
+
+The AI can be incredibly sophisticated underneath.
+
+The interface should remain calm.
+
+---
+
+20. COMPLEXITY SHOULD BE HIDDEN
+
+A professional AI system may contain:
+
+- multiple agents
+- tools
+- memory
+- retrieval
+- browser automation
+- code execution
+- planning
+- verification
+
+The user should not have to see all of this simultaneously.
+
+Use:
+
+progressive disclosure.
+
+Simple first.
+
+Advanced when requested.
+
+---
+
+21. THE "COULD THIS BE SMALLER?" TEST
+
+For every component ask:
+
+Could it be:
+
+- smaller?
+- quieter?
+- simpler?
+- less colorful?
+- less bordered?
+- less animated?
+- less repetitive?
+
+If yes, test the simpler version.
+
+---
+
+22. THE "REMOVE 20%" TEST
+
+After completing a screen:
+
+Remove approximately 20% of its visible elements.
+
+Then evaluate it.
+
+If the screen becomes clearer:
+
+keep the simpler version.
+
+If important functionality disappears:
+
+restore only what is necessary.
+
+---
+
+23. THE "SQUINT TEST"
+
+Visually blur or mentally squint at the interface.
+
+Ask:
+
+«Can I still identify the primary action?»
+
+If everything competes equally, hierarchy is weak.
+
+---
+
+24. THE "FIRST GLANCE" TEST
+
+At first glance, the user should understand:
+
+1. Where am I?
+2. What am I doing?
+3. What can I do next?
+
+If they need to inspect the interface to understand its purpose, simplify it.
+
+---
+
+25. THE "PROFESSIONAL COMPANY" TEST
+
+Before finalizing a screen, ask:
+
+«Does this look like a serious product that could be used every day by millions of people?»
+
+Not:
+
+«Does this look impressive in a screenshot?»
+
+These are different goals.
+
+Optimize for the first.
+
+---
+
+26. THE "AI-GENERATED UI" TEST
+
+Look specifically for patterns that make interfaces feel AI-generated:
+
+- excessive gradients
+- excessive glass
+- oversized headings
+- excessive rounded cards
+- random floating elements
+- too many badges
+- too many icons
+- too many sections
+- decorative blobs
+- meaningless statistics
+- unnecessary animations
+- huge CTA buttons
+- inconsistent spacing
+- inconsistent iconography
+
+Remove them unless they serve a real purpose.
+
+---
+
+27. REFERENCE-BASED DESIGN
+
+When the user provides screenshots:
+
+DO NOT simply imitate their appearance.
+
+Perform:
+
+Visual decomposition
+
+Identify:
+
+- layout
+- spacing
+- typography
+- controls
+- hierarchy
+- density
+- colors
+- interaction patterns
+- component proportions
+
+Then derive design principles.
+
+Apply those principles to the new product.
+
+---
+
+28. BUILD A VISUAL REFERENCE LIBRARY
+
+Maintain references organized by:
+
+Navigation
+
+Buttons
+
+Inputs
+
+AI composers
+
+Sidebars
+
+Settings
+
+Command palettes
+
+Tables
+
+Dashboards
+
+Mobile navigation
+
+Loading states
+
+Empty states
+
+Error states
+
+Agent activity
+
+Research interfaces
+
+File interfaces
+
+Professional productivity UI
+
+Each reference should include:
+
+Screenshot
+
+Source
+
+What is good
+
+What pattern it demonstrates
+
+What should NOT be copied
+
+---
+
+29. DESIGN TOKEN EXTRACTION
+
+When screenshots are available, estimate:
+
+- spacing system
+- typography scale
+- control heights
+- corner radius
+- icon dimensions
+- sidebar dimensions
+- content width
+- density
+- color hierarchy
+
+Use those observations to create a design system.
+
+Do not blindly copy exact values.
+
+---
+
+30. PROFESSIONAL UI SCORE
+
+Evaluate every screen from 0–10 on:
+
+- hierarchy
+- simplicity
+- consistency
+- spacing
+- typography
+- control quality
+- information density
+- accessibility
+- interaction clarity
+- visual restraint
+- originality
+- usability
+
+Then ask:
+
+«What specifically prevents this from being a 10?»
+
+Do not simply increase the score because the screen looks attractive.
+
+---
+
+31. BEAUTY VS PROFESSIONALISM
+
+Run two separate evaluations.
+
+BEAUTY SCORE
+
+Does it look attractive?
+
+PROFESSIONAL SCORE
+
+Does it demonstrate restraint, clarity, consistency, usability, and maturity?
+
+A screen can score:
+
+9/10 beauty
+
+and
+
+5/10 professionalism.
+
+That is a warning.
+
+---
+
+32. THE FINAL PRINCIPLE
+
+The best professional UI often feels like:
+
+«Nothing is fighting for my attention.»
+
+The user notices the task.
+
+Not the interface.
+
+Not the effects.
+
+Not the designer.
+
+Not the framework.
+
+The interface disappears into the experience.
+
+---
+
+FINAL INSTRUCTION
+
+Whenever asked to make a UI "beautiful, professional, minimalistic, premium, clean, modern, or polished":
+
+DO NOT immediately generate components.
+
+First:
+
+REFERENCE → OBSERVE → DECOMPOSE → MEASURE → ABSTRACT → DESIGN → REMOVE → TEST → POLISH
+
+The goal is not:
+
+"Make it look beautiful."
+
+The goal is:
+
+«"Make every visible decision feel intentional."»
+
+That is professional UI.

@@ -24,14 +24,17 @@ required = [
     ROOT / "references" / "fable-like-runtime-blueprint.md",
     ROOT / "references" / "online-first-architecture.md",
     ROOT / "references" / "online-first-research.md",
+    ROOT / "references" / "ui-vision-integration-map.md",
+    ROOT / "references" / "ui-vision-scorecard.md",
+    ROOT / "references" / "ui-ux-research.md",
 ]
 for path in required:
     if not path.exists():
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 45:
-    raise SystemExit(f"expected at least 45 skills, found {len(skills)}")
+if len(skills) < 47:
+    raise SystemExit(f"expected at least 47 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -119,11 +122,13 @@ for name in [
     "hosted-tool-bridge",
     "progressive-delivery",
     "cost-aware-execution",
+    "ui-vision",
+    "design-reference-library",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")
 
-for path in [ROOT / "contributions" / "ULTRIA-original.txt", ROOT / "contributions" / "FORK-original.txt"]:
+for path in [ROOT / "contributions" / "ULTRIA-original.txt", ROOT / "contributions" / "FORK-original.txt", ROOT / "contributions" / "UI-Vision-original.txt"]:
     if path.stat().st_size < 1000:
         raise SystemExit(f"user source document unexpectedly small: {path}")
 

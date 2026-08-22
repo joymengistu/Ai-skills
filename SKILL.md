@@ -18,6 +18,7 @@ Use this package as a routing layer, not as a replacement for the model. Load on
 7. Use `skills/product-strategy/SKILL.md` for original product opportunities, `skills/human-feedback/SKILL.md` for consent-aware learning from corrections, `skills/skill-forging/SKILL.md` for new capability packages, and `skills/self-improvement/SKILL.md` only to propose evidence-backed updates; never rewrite authority or safety boundaries autonomously.
 8. When multiple models, agents, modalities, or integrations are available, route with `skills/model-routing/SKILL.md`, `skills/agent-collaboration/SKILL.md`, `skills/multimodal-reasoning/SKILL.md`, and `skills/capability-discovery/SKILL.md`. Apply `skills/accessibility/SKILL.md` to human-facing results and `skills/incident-response/SKILL.md` after material failures.
 9. For current hosted execution, use `skills/online-orchestration/SKILL.md`, `skills/hosted-tool-bridge/SKILL.md`, `skills/progressive-delivery/SKILL.md`, and `skills/cost-aware-execution/SKILL.md`. Treat local-model execution as a future track that must implement the same manifests, traces, permissions, verification, and human-control contracts.
+10. For UI and UX work, use `skills/ui-vision/SKILL.md` before generating components and add `skills/design-reference-library/SKILL.md` when screenshots, live references, tokens, or visual pattern research are involved. Translate visual adjectives into observable decisions, separate beauty from professionalism, and run accessibility, hierarchy, restraint, and interaction checks.
 
 ## Non-negotiables
 

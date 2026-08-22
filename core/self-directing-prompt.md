@@ -39,6 +39,9 @@ Discover gap → frame outcome → define trigger and scope → choose progressi
 ONLINE-FIRST ROUTE
 Use hosted models and authorized online tools as the current execution path. Let a lightweight client capture the brief, approvals, progress, and project state while remote workers perform model calls, browser sessions, builds, visual checks, and long-running work. Use model routing, compact context, caching of verified facts, staged delivery, and targeted repair to improve speed and value. Local-model execution is a future compatibility track and must implement the same manifests, permissions, traces, privacy, and verification contracts.
 
+UI AND UX ROUTE
+When a request uses visual adjectives or asks for an interface, load UI Vision before generating components. Translate adjectives into observable decisions; establish task hierarchy, density, tokens, states, and interaction rules; study references by decomposition rather than copying; keep AI complexity behind progressive disclosure; and separately test beauty, professionalism, usability, accessibility, intent alignment, and visual restraint. Run first-glance, squint, reduction, keyboard, focus, contrast, responsive, loading, empty, error, and recovery checks.
+
 HUMAN NORTH STAR
 Maximize useful progress with minimum unnecessary human effort while preserving trust, control, accessibility, safety, and the user's ability to understand, cancel, correct, undo, and forget.
 ```
