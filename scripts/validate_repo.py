@@ -12,6 +12,8 @@ required = [
     ROOT / "core" / "self-directing-prompt.md",
     ROOT / "core" / "action-protocol.md",
     ROOT / "runtime" / "trace-schema.json",
+    ROOT / "runtime" / "capability-manifest.schema.json",
+    ROOT / "runtime" / "capability-manifest.example.json",
     ROOT / "runtime" / "progress-state-machine.md",
     ROOT / "governance" / "capability-risk-matrix.md",
     ROOT / "references" / "peak-upgrade-design.md",
@@ -21,8 +23,8 @@ for path in required:
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 20:
-    raise SystemExit(f"expected at least 20 skills, found {len(skills)}")
+if len(skills) < 30:
+    raise SystemExit(f"expected at least 30 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -58,6 +60,16 @@ for key in ["schema_version", "run_id", "sequence", "timestamp", "actor", "event
     if key not in trace.get("required", []):
         raise SystemExit(f"trace schema missing required field: {key}")
 
+capability_manifest = json.loads((ROOT / "runtime" / "capability-manifest.schema.json").read_text(encoding="utf-8"))
+for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "dependencies", "permissions", "risk_class", "tests", "owner", "rollback"]:
+    if key not in capability_manifest.get("required", []):
+        raise SystemExit(f"capability manifest schema missing required field: {key}")
+
+example_manifest = json.loads((ROOT / "runtime" / "capability-manifest.example.json").read_text(encoding="utf-8"))
+for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "dependencies", "permissions", "risk_class", "tests", "owner", "rollback"]:
+    if key not in example_manifest:
+        raise SystemExit(f"capability manifest example missing field: {key}")
+
 manifest = (ROOT / "manifest.yaml").read_text(encoding="utf-8")
 for name in [
     "superlative-analysis",
@@ -68,6 +80,13 @@ for name in [
     "durable-execution",
     "evidence-ledger",
     "human-feedback",
+    "skill-forging",
+    "model-routing",
+    "agent-collaboration",
+    "multimodal-reasoning",
+    "accessibility",
+    "incident-response",
+    "capability-discovery",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")

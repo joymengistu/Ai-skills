@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, twenty-five modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, thirty-two modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -22,6 +22,8 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Improvement | Traces, graders, regression cases, bounded self-improvement |
 | Peak runtime | Durable execution, event traces, resumable approvals, idempotency, and progress states |
 | Quality gates | Capability-risk matrix, evidence ledger, human feedback, and release criteria |
+| Capability extension | Skill forging, capability discovery, model routing, agent collaboration, and progressive disclosure |
+| Universal access | Multimodal reasoning, accessibility, and incident response |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
@@ -34,7 +36,7 @@ Run the structural checks from the repository root:
 python3 scripts/validate_repo.py
 ```
 
-The skill files follow the progressive-disclosure format: each has YAML metadata, a concise body, and optional references can be added later. The host agent still needs actual model APIs, tools, permission enforcement, memory storage, tracing, and evaluators.
+The skill files follow progressive disclosure: each has YAML metadata and a concise body, while detailed resources can be linked only when needed. The host agent still needs actual model APIs, tools, permission enforcement, memory storage, tracing, and evaluators. The runtime schemas in this repository define portable contracts but do not enforce them by themselves.
 
 ## Architecture
 
@@ -45,6 +47,12 @@ The layers are: identity and contract; request understanding; strategy; context;
 Ultra Plan Mode is an original, bounded high-rigor protocol for difficult, ambiguous, long-running, or high-impact tasks. It does not expose private chain-of-thought or imitate hidden model prompts. It uses a preflight plan, dependency graph, context and assumption ledgers, risk map, resource budgets, user checkpoints, resumable state, independent verification, and safe stop rules. It automatically reduces depth when extra planning would cost more than it saves.
 
 See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`. The peak runtime layer additionally provides durable execution, structured event traces, resumable approval state, idempotency and reconciliation rules, progress states, evidence ledgers, human feedback controls, and capability-risk release gates.
+
+## Full-mode expansion
+
+The full-mode release adds a skill-forging lifecycle: **discover gap → frame outcome → define trigger and scope → choose progressive disclosure → write → add resources → define permissions → test → validate → package/version → observe → improve or retire**. It also adds model routing, structured agent collaboration, multimodal reasoning, accessibility, incident response, and portable capability discovery. The goal is not to cover everything in one skill; it is to make future capabilities easier to create, discover, evaluate, control, and retire.
+
+See `references/full-mode-capability-map.md` and `runtime/capability-manifest.schema.json`.
 
 ## Peak review
 
@@ -87,3 +95,5 @@ MIT. See `LICENSE`.
 [7]: https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/ "OWASP GenAI Security Project — Agentic AI: Threats and Mitigations"
 [8]: https://developers.openai.com/api/docs/guides/agents/guardrails-approvals "OpenAI — Guardrails and human review"
 [9]: https://docs.temporal.io/ai/cookbook/human-in-the-loop-python "Temporal — Human-in-the-loop AI agent"
+[10]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills "Anthropic — Equipping agents for the real world with Agent Skills"
+[11]: https://modelcontextprotocol.io/specification/2026-07-28 "Model Context Protocol — Specification"

@@ -42,3 +42,10 @@ The peak review identified an operational gap between good instructions and dura
 [8]: https://docs.temporal.io/ai/cookbook/human-in-the-loop-python "Temporal — Human-in-the-loop AI agent"
 
 [9]: https://developers.openai.com/api/docs/guides/agents/guardrails-approvals "OpenAI — Guardrails and human review"
+
+
+Anthropic's public Agent Skills guidance describes modular directories with `SKILL.md`, optional resources, scripts, and templates, and recommends progressive disclosure so the agent loads only scenario-relevant detail.[10] The Model Context Protocol specification separates resources, prompts, and tools; supports capability negotiation, progress, cancellation, error reporting, and asynchronous tasks; and emphasizes explicit consent, privacy, clear authorization, and caution with untrusted tool descriptions.[11] These findings inform `skills/skill-forging`, `skills/capability-discovery`, the capability-manifest schema, and the full-mode routing rules.
+
+[10]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills "Anthropic — Equipping agents for the real world with Agent Skills"
+
+[11]: https://modelcontextprotocol.io/specification/2026-07-28 "Model Context Protocol — Specification"

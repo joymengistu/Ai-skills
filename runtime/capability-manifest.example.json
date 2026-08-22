@@ -1,0 +1,16 @@
+{
+  "name": "example-capability",
+  "version": "1.0.0",
+  "purpose": "A narrowly scoped capability with a measurable user outcome.",
+  "triggers": ["Use when the user requests the defined outcome."],
+  "inputs": ["User goal", "Validated context"],
+  "outputs": ["Verified artifact", "Evidence summary"],
+  "dependencies": ["core/operating-contract.md", "skills/evaluation/SKILL.md"],
+  "permissions": ["read_only"],
+  "risk_class": "read_only",
+  "tests": ["Representative success case", "Ambiguous request", "Adversarial input", "Partial failure"],
+  "owner": "project maintainer",
+  "rollback": "Disable the trigger and revert to the previous version.",
+  "data_retention": "Retain only the minimum data needed for the stated purpose.",
+  "compatibility": ["SKILL.md progressive disclosure", "MCP resources/prompts/tools boundary"]
+}
