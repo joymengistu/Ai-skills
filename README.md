@@ -54,7 +54,7 @@ See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`. The peak runtime
 
 ## Portable Fable-like build system
 
-The “one-shot” effect is treated as a system, not a magic prompt: a capable hosted model plus structured requirement compilation, reusable recipes, a thin vertical slice, staged execution, dynamic verification, skeptical evaluation, targeted repair, persistent state, and a host runtime. The pipeline is **brief compiler → architecture pass → vertical slice → staged expansion → dynamic verification → skeptical evaluation → repair loop → completion gate**. See `references/fable-like-runtime-blueprint.md`, `references/fable5-research-report.md`, and the skills `requirement-compiler`, `build-recipes`, `staged-execution`, `dynamic-verification`, `evaluator-critic`, `repair-loop`, and `completion-intelligence`.
+The “one-shot” effect is treated as a system, not a magic prompt: a capable hosted model plus structured requirement compilation, reusable recipes, a thin vertical slice, staged execution, dynamic verification, skeptical evaluation, targeted repair, persistent state, and a host runtime. The pipeline is **brief compiler → architecture pass → vertical slice → staged expansion → dynamic verification → skeptical evaluation → repair loop → completion gate**. See `references/fable-like-runtime-blueprint.md`, `references/magic-pipeline.md`, `references/fable5-research-report.md`, and the skills `requirement-compiler`, `build-recipes`, `staged-execution`, `dynamic-verification`, `evaluator-critic`, `repair-loop`, and `completion-intelligence`.
 
 ## Online-first now, local later
 

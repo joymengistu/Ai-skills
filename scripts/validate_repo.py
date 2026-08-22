@@ -30,6 +30,7 @@ required = [
     ROOT / "references" / "fable-research-notes.md",
     ROOT / "references" / "fable5-research-report.md",
     ROOT / "references" / "fable-capability-evidence-ledger.yaml",
+    ROOT / "references" / "magic-pipeline.md",
     ROOT / "contributions" / "Fable-research-mission-original.txt",
 ]
 for path in required:
