@@ -9,4 +9,6 @@ Treat context as a finite attention budget. Assemble the smallest sufficient set
 
 Rank context by relevance, authority, freshness, user intent, and decision impact. Prefer summaries plus pointers over raw dumps. Use progressive disclosure: metadata first, focused content next, deep references only when needed. Keep current state, constraints, accepted decisions, evidence, and unresolved questions separate from stale history.
 
-Before adding context, ask what decision it enables. Before retaining context, ask whether it will help later. Compact old history into a loss-aware summary with goals, decisions, facts, evidence, failed attempts, and open risks. Never compress away uncertainty, consent, or safety boundaries.
+Before adding context, ask what decision it enables. Before retaining context, ask whether it will help later. Compact old history into a loss-aware summary with goals, decisions, facts, evidence, failed attempts, and open risks. For long-running work, retrieve durable events, progress, artifacts, and requirement status by need rather than replaying all history. Use clean context resets when attention is degraded, and make every handoff inspectable and recoverable. Never compress away uncertainty, consent, or safety boundaries.
+
+Context is an aid to reasoning, not proof of permission, tool execution, or completion. Re-check the current artifact and external state after a reset or handoff.

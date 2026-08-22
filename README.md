@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, forty-five modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, fifty-two modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -27,6 +27,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Build completeness | Intent preservation, requirement traceability, product completeness, and dynamic verification |
 | Fable-like acceleration | Requirement compiler, build recipes, staged execution, repair loops, and runtime host |
 | Online-first operation | Hosted orchestration, remote tool bridge, progressive delivery, and cost-aware execution |
+| Fable research controls | Capability analysis, context handoffs, skeptical evaluation, tool evaluation, and completion intelligence |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
@@ -53,7 +54,7 @@ See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`. The peak runtime
 
 ## Portable Fable-like build system
 
-The “one-shot” effect is treated as a system, not a magic prompt: a strong model plus structured requirement compilation, reusable recipes, a thin vertical slice, staged execution, dynamic verification, targeted repair, persistent state, and a host runtime. The pipeline is **brief compiler → architecture pass → vertical slice → staged expansion → dynamic verification → repair loop → release gate**. See `references/fable-like-runtime-blueprint.md` and the skills `requirement-compiler`, `build-recipes`, `staged-execution`, `repair-loop`, and `runtime-host`.
+The “one-shot” effect is treated as a system, not a magic prompt: a capable hosted model plus structured requirement compilation, reusable recipes, a thin vertical slice, staged execution, dynamic verification, skeptical evaluation, targeted repair, persistent state, and a host runtime. The pipeline is **brief compiler → architecture pass → vertical slice → staged expansion → dynamic verification → skeptical evaluation → repair loop → completion gate**. See `references/fable-like-runtime-blueprint.md`, `references/fable5-research-report.md`, and the skills `requirement-compiler`, `build-recipes`, `staged-execution`, `dynamic-verification`, `evaluator-critic`, `repair-loop`, and `completion-intelligence`.
 
 ## Online-first now, local later
 
@@ -77,7 +78,7 @@ See `references/full-mode-capability-map.md` and `runtime/capability-manifest.sc
 
 ## Peak review
 
-The current improvement focuses on the highest-leverage gap: converting excellent instructions into observable runtime behavior. `runtime/trace-schema.json` defines auditable events; `runtime/progress-state-machine.md` defines resumable states; `skills/durable-execution` protects retries and side effects; `skills/evidence-ledger` protects claims and provenance; `skills/human-feedback` turns corrections into scoped learning; and `governance/capability-risk-matrix.md` prevents capability gains from compensating for failed safety, privacy, control, or recovery gates.
+The current improvement focuses on the highest-leverage gap: converting excellent instructions into observable runtime behavior. The Fable research pass adds explicit separation between output generation and verified completion, clean context handoffs, independent critique, tool measurement, and model-versus-harness evidence analysis. `runtime/trace-schema.json` defines auditable events; `runtime/progress-state-machine.md` defines resumable states; `skills/durable-execution` protects retries and side effects; `skills/evidence-ledger` protects claims and provenance; `skills/human-feedback` turns corrections into scoped learning; and `governance/capability-risk-matrix.md` prevents capability gains from compensating for failed safety, privacy, control, or recovery gates.
 
 ## Human satisfaction
 
@@ -89,7 +90,7 @@ The design is grounded in public guidance from Anthropic on effective agents, co
 
 ## Public Fable analysis
 
-`references/public-fable-analysis.md` summarizes only publicly documented Fable 5 capabilities and turns them into original design lessons. No leaked or confidential prompts are included. The reviewed official material did not verify a current public Claude Fable 3 release, so the repository does not invent one; provide a product URL if “Fable 3” means something else.
+`references/fable5-research-report.md` and `references/fable-capability-evidence-ledger.yaml` summarize only publicly documented Fable 5 capabilities and turn them into original, model-agnostic design lessons. `references/fable-research-notes.md` preserves the working evidence trail. No leaked or confidential prompts are included. Public material supports both model capability and harness value, but it does not prove universal one-shot production completeness or reveal all internal mechanisms.
 
 The latest user-authored additions are preserved in `contributions/ULTRIA-original.txt` and `contributions/FORK-original.txt`. Their implementation map is in `references/ultria-fork-integration-map.md`; the source documents are treated as design requirements while safety, privacy, user authority, and evidence standards remain non-negotiable.
 
@@ -121,4 +122,10 @@ MIT. See `LICENSE`.
 [12]: https://arxiv.org/html/2604.18394v1 "OpenGame: Open Agentic Coding for Games"
 [13]: https://arxiv.org/html/2602.12670v1 "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks"
 [14]: https://www.anthropic.com/claude/fable "Claude Fable — public product page"
+[16]: https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf "Claude Fable 5 & Claude Mythos 5 System Card"
+[17]: https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents "Anthropic — Effective harnesses for long-running agents"
+[18]: https://www.anthropic.com/engineering/harness-design-long-running-apps "Anthropic — Harness design for long-running application development"
+[19]: https://code.claude.com/docs/en/agent-sdk/agent-loop "Claude Code Docs — How the agent loop works"
+[20]: https://code.claude.com/docs/en/agent-teams "Claude Code Docs — Orchestrate teams of Claude Code sessions"
+[21]: https://claude.com/product/cowork "Claude Cowork — public product page"
 [15]: https://developers.openai.com/api/docs/guides/agents "OpenAI — Agents SDK"

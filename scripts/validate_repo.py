@@ -27,14 +27,18 @@ required = [
     ROOT / "references" / "ui-vision-integration-map.md",
     ROOT / "references" / "ui-vision-scorecard.md",
     ROOT / "references" / "ui-ux-research.md",
+    ROOT / "references" / "fable-research-notes.md",
+    ROOT / "references" / "fable5-research-report.md",
+    ROOT / "references" / "fable-capability-evidence-ledger.yaml",
+    ROOT / "contributions" / "Fable-research-mission-original.txt",
 ]
 for path in required:
     if not path.exists():
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 47:
-    raise SystemExit(f"expected at least 47 skills, found {len(skills)}")
+if len(skills) < 52:
+    raise SystemExit(f"expected at least 52 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -53,6 +57,11 @@ for path in [
     ROOT / "skills" / "product-completeness" / "SKILL.md",
     ROOT / "skills" / "dynamic-verification" / "SKILL.md",
     ROOT / "skills" / "requirement-traceability" / "SKILL.md",
+    ROOT / "skills" / "completion-intelligence" / "SKILL.md",
+    ROOT / "skills" / "evaluator-critic" / "SKILL.md",
+    ROOT / "skills" / "context-handoff" / "SKILL.md",
+    ROOT / "skills" / "tool-evaluation" / "SKILL.md",
+    ROOT / "skills" / "capability-analysis" / "SKILL.md",
 ]:
     if not path.exists():
         raise SystemExit(f"missing governance or peak skill file: {path}")
@@ -68,6 +77,9 @@ for phrase in [
     "Ultra Ultra Mode",
     "requirement",
     "CAPABILITY LIFECYCLE",
+    "output generated",
+    "independent evaluator",
+    "CAPABILITY ANALYSIS ROUTE",
 ]:
     if phrase.lower() not in prompt.lower():
         raise SystemExit(f"self-prompt missing principle: {phrase}")
@@ -124,11 +136,16 @@ for name in [
     "cost-aware-execution",
     "ui-vision",
     "design-reference-library",
+    "completion-intelligence",
+    "evaluator-critic",
+    "context-handoff",
+    "tool-evaluation",
+    "capability-analysis",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")
 
-for path in [ROOT / "contributions" / "ULTRIA-original.txt", ROOT / "contributions" / "FORK-original.txt", ROOT / "contributions" / "UI-Vision-original.txt"]:
+for path in [ROOT / "contributions" / "ULTRIA-original.txt", ROOT / "contributions" / "FORK-original.txt", ROOT / "contributions" / "UI-Vision-original.txt", ROOT / "contributions" / "Fable-research-mission-original.txt"]:
     if path.stat().st_size < 1000:
         raise SystemExit(f"user source document unexpectedly small: {path}")
 

@@ -1,0 +1,68 @@
+version: 1.0
+subject: Claude Fable 5 public capability extraction
+policy: Do not seek, reproduce, or use leaked, private, or access-controlled prompts.
+claims:
+  - id: fable-ambitious-coding
+    claim: Fable 5 is publicly positioned for ambitious coding and long-running work.
+    status: confirmed
+    source_refs: [1, 2]
+    confidence: high
+    boundary: Product and system-card claims do not prove every task succeeds.
+  - id: fable-agent-harness
+    claim: The model is intended to run in agent harnesses with staged work, tools, subagents, and self-checking.
+    status: confirmed
+    source_refs: [2, 3, 4, 5]
+    confidence: high
+    boundary: Public pages do not reveal all internal prompts or routing thresholds.
+  - id: external-state
+    claim: External progress, event logs, sessions, and handoffs improve long-running continuity.
+    status: supported
+    source_refs: [3, 5, 12, 13]
+    confidence: high
+    boundary: Exact effectiveness depends on implementation and task distribution.
+  - id: dynamic-verification
+    claim: Browser/runtime execution and visual inspection catch failures static code inspection can miss.
+    status: supported
+    source_refs: [3, 7, 9, 10]
+    confidence: high
+    boundary: Vision and automation have blind spots; use multiple verifiers.
+  - id: curated-skills
+    claim: Focused curated skills can improve procedural task performance, but effects vary and self-generated skills are unreliable.
+    status: supported
+    source_refs: [6, 11]
+    confidence: medium
+    boundary: SkillsBench is an independent benchmark with its own task distribution and harness.
+  - id: parallel-delegation
+    claim: Parallel specialized workers help breadth-first work but add token, latency, and coordination cost.
+    status: supported
+    source_refs: [4, 14, 15]
+    confidence: high
+    boundary: Tightly coupled coding edits may benefit less than independent research.
+  - id: fable-minecraft-anecdote
+    claim: A particular Fable 5 Minecraft demonstration proves universal one-shot production completeness.
+    status: unsupported
+    source_refs: []
+    confidence: high
+    boundary: Viral demonstrations may omit harness, edits, tools, prompts, model settings, and evaluation details.
+  - id: exact-hidden-mechanism
+    claim: The precise private prompt, routing policy, training mixture, or evaluator caused the behavior.
+    status: unknown
+    source_refs: []
+    confidence: high
+    boundary: Do not invent or acquire confidential material.
+
+sources:
+  1: https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf
+  2: https://www.anthropic.com/claude/fable
+  3: https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
+  4: https://www.anthropic.com/engineering/multi-agent-research-system
+  5: https://www.anthropic.com/engineering/managed-agents
+  6: https://arxiv.org/html/2602.12670v1
+  7: https://arxiv.org/html/2604.18394v1
+  9: https://www.anthropic.com/engineering/harness-design-long-running-apps
+  10: https://www.anthropic.com/engineering/writing-tools-for-agents
+  11: https://code.claude.com/docs/en/skills
+  12: https://code.claude.com/docs/en/memory
+  13: https://code.claude.com/docs/en/agent-sdk/overview
+  14: https://code.claude.com/docs/en/agent-sdk/agent-loop
+  15: https://code.claude.com/docs/en/agent-teams

@@ -1,0 +1,879 @@
+CLAUDE FABLE 5 MAGIC
+
+OVERNIGHT DEEP-RESEARCH + REVERSE-ENGINEERING MISSION
+
+You are researching Claude Fable 5 specifically.
+
+This is NOT a normal research task.
+
+Treat this as a full overnight research mission whose purpose is to understand:
+
+«Why does Claude Fable 5 appear capable of taking a relatively simple human request and carrying complex work much further with fewer corrections, fewer turns, and less supervision?»
+
+Then determine:
+
+«What general capabilities, agent patterns, skills, orchestration techniques, evaluation systems, and UX principles could be extracted and transformed into improvements for our existing independent AI Skills repository?»
+
+Do NOT turn the AI Skills repository into a Claude/Fable clone.
+
+Do NOT make the repository specific to Ultria.
+
+Do NOT assume undocumented details about Anthropic's implementation.
+
+We want the underlying principles, not imitation.
+
+---
+
+PHASE 0 — UNDERSTAND THE MISSION
+
+The existing AI Skills repository is an independent project.
+
+Your job is to improve that repository.
+
+Claude Fable 5 is a research subject.
+
+The final result should be:
+
+Fable research → capability extraction → general principles → reusable AI skills → improved skill architecture
+
+NOT:
+
+Fable research → copy Fable
+
+---
+
+PHASE 1 — PRIMARY-SOURCE RESEARCH
+
+Start with official Anthropic sources.
+
+Research everything publicly available about:
+
+- Claude Fable 5
+- Fable 5 announcements
+- Fable 5 documentation
+- Fable 5 model information
+- Claude Code
+- Claude Cowork
+- Anthropic agent research
+- Anthropic long-running agent research
+- Anthropic orchestration patterns
+- Anthropic memory/context research
+- Anthropic evaluation research
+- Anthropic trustworthy-agent research
+
+Use primary sources whenever possible.
+
+Then expand to:
+
+- academic papers
+- technical reports
+- engineering discussions
+- reputable independent evaluations
+- open-source implementations
+- developer experiences
+- credible technical analysis
+
+Do not rely on a single source.
+
+---
+
+PHASE 2 — BUILD THE FABLE CAPABILITY MAP
+
+Create a complete capability map.
+
+Investigate:
+
+Intelligence
+
+- reasoning
+- planning
+- abstraction
+- intent understanding
+- problem decomposition
+- judgment
+- prioritization
+
+Agentic behavior
+
+- autonomous execution
+- tool selection
+- tool calling
+- persistence
+- long-running tasks
+- task recovery
+- delegation
+- sub-agents
+
+Memory
+
+- long context
+- persistent notes
+- task state
+- external memory
+- context management
+- remembering decisions
+- maintaining goals
+
+Verification
+
+- self-checking
+- testing
+- critique
+- reflection
+- visual inspection
+- validation
+- error detection
+- revision
+
+Product behavior
+
+- fewer user turns
+- fewer corrections
+- proactive behavior
+- understanding intent
+- knowing when to continue
+- knowing when to ask
+- carrying work to completion
+
+---
+
+PHASE 3 — THE "ONE-SHOT MAGIC" INVESTIGATION
+
+This is the central research question.
+
+Anthropic currently describes Fable 5 as being capable of complex, long-running work and says that in agent harnesses it can plan across stages, delegate to sub-agents, and check its own work. It also describes the model as understanding what builders mean rather than merely what they type.
+
+Investigate what combination of factors could produce this behavior.
+
+Break it into:
+
+MODEL CAPABILITY
+
+What does the underlying model contribute?
+
+HARNESS
+
+What does the surrounding agent system contribute?
+
+TOOLS
+
+What capabilities are supplied by tools?
+
+MEMORY
+
+How is continuity maintained?
+
+PLANNING
+
+How is long-horizon work managed?
+
+VERIFICATION
+
+How does the system determine whether the work is good?
+
+ORCHESTRATION
+
+How are different agents/models/tools coordinated?
+
+UX
+
+How is all of this hidden behind a simple human interaction?
+
+---
+
+PHASE 4 — DON'T CONFUSE MODEL INTELLIGENCE WITH AGENT INTELLIGENCE
+
+This distinction is mandatory.
+
+Create a table:
+
+Capability| Likely model contribution| Likely system contribution| Evidence
+
+Investigate which improvements can be achieved through:
+
+- better prompts
+- better skills
+- better tools
+- better memory
+- better orchestration
+- better evaluation
+- better models
+- combinations of these
+
+Do NOT assume every Fable capability comes from the model itself.
+
+---
+
+PHASE 5 — RECONSTRUCT THE AGENT LOOP
+
+Study the general agent loop:
+
+PLAN
+
+↓
+
+ACT
+
+↓
+
+OBSERVE
+
+↓
+
+EVALUATE
+
+↓
+
+ADJUST
+
+↓
+
+ACT AGAIN
+
+Anthropic describes agents in this general self-directed loop.
+
+Determine how the AI Skills repository could provide reusable skills for every stage.
+
+---
+
+PHASE 6 — FIND THE HIDDEN SKILLS
+
+Instead of asking:
+
+«"What features does Fable have?"»
+
+ask:
+
+«"What skills must an AI possess to behave this way?"»
+
+Potential examples:
+
+- intent interpretation
+- requirement extraction
+- planning
+- task decomposition
+- research
+- tool selection
+- delegation
+- memory management
+- progress tracking
+- self-critique
+- testing
+- visual verification
+- error recovery
+- completion detection
+- quality evaluation
+- prioritization
+- assumption management
+- context compression
+- artifact management
+
+Do not assume this list is complete.
+
+Discover additional skills.
+
+---
+
+PHASE 7 — THE INTENT PROBLEM
+
+Investigate why some advanced systems need fewer corrections.
+
+Study:
+
+«literal instruction»
+
+versus
+
+«actual human objective»
+
+For example:
+
+User:
+
+"Make this website feel more professional."
+
+A weak AI may change colors.
+
+A stronger system may infer:
+
+- hierarchy
+- spacing
+- typography
+- controls
+- density
+- consistency
+- visual restraint
+- interaction design
+
+Investigate how an AI skill architecture could teach this kind of intent expansion.
+
+---
+
+PHASE 8 — THE ASSUMPTION PROBLEM
+
+Investigate how advanced agents decide:
+
+Ask?
+
+Assume?
+
+Research?
+
+Test?
+
+Proceed?
+
+Create a generalized decision framework.
+
+The objective:
+
+Maximum progress with minimum unnecessary interruption.
+
+But do not sacrifice user control.
+
+---
+
+PHASE 9 — LONG-HORIZON WORK
+
+Anthropic reports that Fable 5 can operate on long-running tasks and maintain focus across very large contexts; its public research also discusses persistent memory and orchestration patterns for multi-day agents.
+
+Research:
+
+- progress files
+- persistent state
+- checkpoints
+- task graphs
+- notes
+- memory
+- context compression
+- recovery
+- resumption
+- asynchronous work
+
+Determine which of these should become reusable skills.
+
+---
+
+PHASE 10 — SUB-AGENTS
+
+Research delegation.
+
+Ask:
+
+«When should one agent work alone?»
+
+«When should it delegate?»
+
+«What should the sub-agent receive?»
+
+«How should the result be evaluated?»
+
+«How does the parent agent integrate it?»
+
+«When does delegation create more overhead than value?»
+
+Do not assume:
+
+more agents = better.
+
+Find the conditions where delegation actually helps.
+
+---
+
+PHASE 11 — SELF-IMPROVEMENT LOOP
+
+Anthropic says Fable 5 can reflect on and validate its work at higher effort levels.
+
+Research the generalizable architecture behind:
+
+GENERATE
+
+→
+
+INSPECT
+
+→
+
+CRITIQUE
+
+→
+
+REVISE
+
+→
+
+VERIFY
+
+→
+
+FINALIZE
+
+Turn this into reusable skills.
+
+---
+
+PHASE 12 — VISUAL SELF-VERIFICATION
+
+Research how AI systems can use vision to evaluate their own generated interfaces.
+
+Fable 5's public description specifically mentions using vision to check coding outputs against the original design or goal.
+
+Determine how this could become a generic skill:
+
+BUILD
+
+→
+
+RENDER
+
+→
+
+SEE
+
+→
+
+COMPARE
+
+→
+
+IDENTIFY DEFECTS
+
+→
+
+FIX
+
+→
+
+RENDER AGAIN
+
+This should connect conceptually with our:
+
+- Professional UI skill
+- Pixel-Perfect skill
+- Visual QA skill
+
+---
+
+PHASE 13 — COMPLETION INTELLIGENCE
+
+Investigate:
+
+«How does an agent know when it should stop?»
+
+This is extremely important.
+
+Define:
+
+TASK COMPLETE
+
+versus
+
+TASK OUTPUT GENERATED
+
+These are not the same.
+
+Research completion criteria based on:
+
+- requirements
+- tests
+- quality
+- correctness
+- user goal
+- edge cases
+- verification
+
+Create a reusable Completion Intelligence Skill.
+
+---
+
+PHASE 14 — FAILURE RECOVERY
+
+Research how long-running agents recover from:
+
+- failed tools
+- incorrect assumptions
+- broken code
+- incomplete research
+- missing files
+- bad outputs
+- contradictory information
+- unavailable resources
+
+Create a reusable recovery framework.
+
+The desired behavior is:
+
+FAIL → DIAGNOSE → ADAPT → RETRY → VERIFY
+
+not:
+
+FAIL → STOP
+
+---
+
+PHASE 15 — MODEL ORCHESTRATION
+
+Research Anthropic's publicly described orchestration approaches.
+
+Investigate the idea of using a stronger model as a strategic advisor while delegating suitable work to cheaper/faster models. Anthropic has publicly discussed this type of orchestration pattern.
+
+Determine:
+
+- when to use a frontier model
+- when to use a smaller model
+- when to parallelize
+- when to delegate
+- when to keep one agent sequential
+- how to evaluate routing decisions
+
+---
+
+PHASE 16 — TURN EVERYTHING INTO SKILLS
+
+Now translate research findings into the existing AI Skills repository.
+
+For each discovered capability ask:
+
+«Can this become a reusable skill?»
+
+If yes, define:
+
+- skill name
+- purpose
+- trigger
+- inputs
+- outputs
+- procedure
+- tools
+- dependencies
+- verification
+- failure handling
+- composition rules
+- evaluation criteria
+
+---
+
+PHASE 17 — CREATE META-SKILLS
+
+Investigate and implement concepts such as:
+
+Skill Discovery
+
+Find useful skills.
+
+Skill Selection
+
+Choose the best skill.
+
+Skill Composition
+
+Combine skills.
+
+Skill Evaluation
+
+Measure skills.
+
+Skill Critique
+
+Find weaknesses.
+
+Skill Optimization
+
+Improve skills.
+
+Skill Generation
+
+Create missing skills.
+
+Skill Routing
+
+Choose between skills/models/tools.
+
+These may be more important than simply adding hundreds of individual skills.
+
+---
+
+PHASE 18 — CREATE A "MAGIC PIPELINE"
+
+Design a generalized pipeline inspired by the research:
+
+HUMAN INTENT
+
+↓
+
+UNDERSTAND
+
+↓
+
+EXPAND REQUIREMENTS
+
+↓
+
+PLAN
+
+↓
+
+SELECT SKILLS
+
+↓
+
+SELECT TOOLS
+
+↓
+
+EXECUTE
+
+↓
+
+OBSERVE
+
+↓
+
+EVALUATE
+
+↓
+
+DELEGATE IF USEFUL
+
+↓
+
+REVISE
+
+↓
+
+VERIFY
+
+↓
+
+COMPLETE
+
+↓
+
+PRESENT
+
+Do not assume this is the final architecture.
+
+Improve it if research suggests a better one.
+
+---
+
+PHASE 19 — WHAT MAKES IT FEEL MAGICAL?
+
+Answer this explicitly.
+
+Investigate whether the perceived magic comes from:
+
+- fewer questions
+- better intent understanding
+- better planning
+- better defaults
+- hidden complexity
+- proactive research
+- persistence
+- self-correction
+- visual verification
+- tool use
+- delegation
+- completion
+- quality
+
+Then rank the factors by importance and evidence.
+
+---
+
+PHASE 20 — WHAT CAN WE ACTUALLY REPLICATE?
+
+Create three categories:
+
+REPLICABLE
+
+Can be implemented through skills/orchestration/tools.
+
+MODEL-DEPENDENT
+
+Requires significant underlying model capability.
+
+UNKNOWN
+
+Insufficient public information.
+
+This is critical.
+
+Do not promise that a prompt can reproduce something that fundamentally depends on model capability.
+
+---
+
+PHASE 21 — DESIGN THE BETTER VERSION
+
+Now stop thinking about Fable.
+
+Ask:
+
+«If we understood the principles completely, how would we design a better general-purpose skill ecosystem from scratch?»
+
+Optimize for:
+
+- intelligence
+- reliability
+- modularity
+- composability
+- transparency
+- user control
+- efficiency
+- recoverability
+- verification
+- maintainability
+- extensibility
+
+The objective is not:
+
+"Fable but different."
+
+The objective is:
+
+«A stronger general architecture for reusable AI capabilities.»
+
+---
+
+PHASE 22 — OVERNIGHT RESEARCH STANDARD
+
+This is explicitly an overnight deep-research task.
+
+Do not rush to a conclusion.
+
+Perform multiple passes:
+
+PASS 1
+
+Discovery
+
+PASS 2
+
+Primary-source verification
+
+PASS 3
+
+Technical analysis
+
+PASS 4
+
+Competitor/system comparison
+
+PASS 5
+
+Architecture reconstruction
+
+PASS 6
+
+Capability extraction
+
+PASS 7
+
+Skill design
+
+PASS 8
+
+Contradiction checking
+
+PASS 9
+
+Self-critique
+
+PASS 10
+
+Final synthesis
+
+If you find a promising lead, investigate it instead of stopping at the first answer.
+
+---
+
+PHASE 23 — EVIDENCE DISCIPLINE
+
+Every major claim must be classified:
+
+CONFIRMED
+
+Directly documented.
+
+SUPPORTED
+
+Strongly supported by multiple credible sources.
+
+INFERRED
+
+A reasonable architectural inference.
+
+SPECULATIVE
+
+Interesting but unverified.
+
+Never present speculation as fact.
+
+---
+
+FINAL DELIVERABLE
+
+Produce a comprehensive research package containing:
+
+1. Claude Fable 5 capability map
+2. Official-source evidence
+3. One-shot behavior analysis
+4. Model vs harness analysis
+5. Agent-loop analysis
+6. Memory analysis
+7. Planning analysis
+8. Delegation analysis
+9. Tool-use analysis
+10. Self-verification analysis
+11. Visual verification analysis
+12. Completion intelligence analysis
+13. Failure recovery analysis
+14. Model orchestration analysis
+15. Intent-understanding analysis
+16. Human-interaction analysis
+17. Existing AI Skills repository gap analysis
+18. New skill proposals
+19. New meta-skill proposals
+20. Skill-composition architecture
+21. Skill evaluation architecture
+22. Benchmark proposals
+23. Replicable vs model-dependent capabilities
+24. Recommended implementation order
+25. "What we still don't know"
+26. Proposed next-generation architecture
+
+---
+
+FINAL TEST
+
+Before finishing, ask yourself:
+
+«If someone gave this skill repository to a capable AI agent tomorrow, would it actually make that agent better at completing complex work?»
+
+If the answer is not clearly yes:
+
+keep researching.
+
+Do not optimize for the length of the report.
+
+Optimize for new understanding and actionable architecture.
+
+FINAL PRINCIPLE
+
+Do not copy Fable.
+
+Understand the mechanism.
+
+Extract the capability.
+
+Generalize it.
+
+Turn it into a reusable skill.
+
+Evaluate it.
+
+Improve it.
+
+Then find what is still missing.
+
+RESEARCH → UNDERSTAND → DECOMPOSE → GENERALIZE → BUILD → EVALUATE → IMPROVE.
