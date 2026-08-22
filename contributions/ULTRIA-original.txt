@@ -1,0 +1,595 @@
+ULTRIA SKILL: BESTNESS, FRONTIER & MAXIMUM-QUALITY REASONING
+
+Purpose
+
+This skill teaches an AI agent how to interpret high-performance words precisely.
+
+Words such as:
+
+best, greatest, smartest, most intelligent, maximum, optimal, frontier, state-of-the-art, comprehensive, exhaustive, deep, rigorous, advanced, powerful, productive, reliable, efficient, innovative, complete, superior, professional, scalable, robust, autonomous, expert, strategic, excellent, exceptional, ultimate
+
+must never be treated as decoration.
+
+They are requirements.
+
+---
+
+1. BEST
+
+"Best" means:
+
+«The strongest option for the stated objective under the relevant constraints, supported by evidence and compared against meaningful alternatives.»
+
+Whenever you see "best", ask:
+
+1. Best for what?
+2. Best compared with what?
+3. Under what constraints?
+4. According to what evidence?
+5. For whom?
+6. At what scale?
+7. At what cost?
+8. For how long?
+9. What are the failure modes?
+10. Is there a better emerging alternative?
+
+Never answer "best" without defining the evaluation criteria.
+
+---
+
+2. MOST INTELLIGENT
+
+"Most intelligent" does NOT simply mean "largest model."
+
+Evaluate:
+
+- reasoning
+- planning
+- abstraction
+- learning
+- tool use
+- memory
+- adaptation
+- uncertainty handling
+- self-correction
+- verification
+- multimodal understanding
+- long-horizon task completion
+- ability to decompose complex problems
+- ability to recover from failure
+
+Intelligence should be evaluated by capability, not branding.
+
+---
+
+3. MOST PRODUCTIVE
+
+"Most productive" means:
+
+«Produces the greatest amount of useful, correct progress per unit of time, effort, cost, and human intervention.»
+
+Measure:
+
+- task completion
+- time saved
+- error reduction
+- automation
+- parallelization
+- tool efficiency
+- context efficiency
+- human intervention required
+
+---
+
+4. FRONTIER
+
+"Frontier" means:
+
+«The leading edge of current capability, including promising systems that may not yet be mature.»
+
+Frontier research must include:
+
+- new papers
+- emerging repositories
+- experimental systems
+- new protocols
+- new architectures
+- new benchmarks
+- research prototypes
+
+But frontier does NOT automatically mean best.
+
+A frontier system may be:
+
+more capable + less mature.
+
+---
+
+5. STATE-OF-THE-ART
+
+State-of-the-art means:
+
+«Demonstrably among the strongest known results for a clearly defined task or benchmark at a particular point in time.»
+
+Never use "state-of-the-art" without identifying:
+
+- task
+- benchmark
+- date
+- comparison
+- evidence
+
+---
+
+6. MAXIMUM
+
+"Maximum" means:
+
+«Push the relevant dimension as far as reasonably possible within the stated constraints.»
+
+Do not interpret maximum as:
+
+"add everything."
+
+Interpret it as:
+
+"maximize the objective."
+
+---
+
+7. COMPREHENSIVE
+
+"Comprehensive" means:
+
+«Cover the important dimensions of the subject rather than merely producing a large quantity of information.»
+
+A comprehensive search must include:
+
+- obvious results
+- obscure results
+- alternatives
+- competitors
+- dependencies
+- edge cases
+- negative evidence
+- historical context
+- current frontier
+- future direction
+- missing information
+
+---
+
+8. EXHAUSTIVE
+
+"Exhaustive" is stronger than "comprehensive."
+
+It means:
+
+«Continue systematic discovery until the remaining unexplored space is sufficiently unlikely to contain important undiscovered information.»
+
+Do not claim exhaustive research casually.
+
+State the stopping criteria.
+
+---
+
+9. DEEP
+
+"Deep research" means going beyond surface-level descriptions.
+
+For an important discovery:
+
+surface:
+
+"What is this?"
+
+deep:
+
+"How does it work?"
+
+deeper:
+
+"Why does it work?"
+
+deeper:
+
+"When does it fail?"
+
+deeper:
+
+"What does it depend on?"
+
+deeper:
+
+"What competes with it?"
+
+deeper:
+
+"What research produced it?"
+
+deeper:
+
+"Can Ultria improve it?"
+
+---
+
+10. RIGOROUS
+
+Rigorous means:
+
+«Claims must be supported by appropriate evidence and reasoning.»
+
+Separate:
+
+FACT
+
+INFERENCE
+
+HYPOTHESIS
+
+OPINION
+
+Never present speculation as fact.
+
+---
+
+11. OPTIMAL
+
+Optimal does not mean universally best.
+
+It means:
+
+«Best according to a defined objective function and constraints.»
+
+Example:
+
+A cloud model may be more capable.
+
+A local model may be more optimal if privacy, cost, or offline operation is the priority.
+
+Therefore always define the objective.
+
+---
+
+12. POWERFUL
+
+"Powerful" must be decomposed.
+
+Ask:
+
+Powerful in:
+
+- reasoning?
+- coding?
+- research?
+- automation?
+- speed?
+- scale?
+- memory?
+- multimodal capability?
+- autonomy?
+- reliability?
+
+Never use "powerful" as an undefined compliment.
+
+---
+
+13. ROBUST
+
+Robust means:
+
+«Continues functioning acceptably when conditions are imperfect.»
+
+Test:
+
+- bad inputs
+- missing information
+- tool failures
+- network failures
+- ambiguous requests
+- long contexts
+- unexpected outputs
+- partial failures
+
+---
+
+14. RELIABLE
+
+Reliable means:
+
+«Produces acceptable results consistently.»
+
+Reliability requires repeated evidence.
+
+One successful demo is not proof of reliability.
+
+---
+
+15. SCALABLE
+
+Scalable means:
+
+«Capability can grow without unacceptable degradation in cost, latency, reliability, or complexity.»
+
+Evaluate:
+
+- users
+- tasks
+- agents
+- models
+- data
+- storage
+- compute
+- concurrency
+
+---
+
+16. AUTONOMOUS
+
+Autonomous means:
+
+«Can make meaningful progress without requiring continuous human instruction.»
+
+But autonomy must include:
+
+- planning
+- execution
+- observation
+- correction
+- verification
+- stopping
+- escalation to humans when necessary
+
+---
+
+17. EXPERT
+
+Expert-level work means:
+
+«Uses domain-appropriate knowledge, methods, standards, evidence, and judgment rather than merely producing fluent text.»
+
+An expert agent should know when it does not know.
+
+---
+
+18. LIMIT
+
+When instructed to "go to your limit":
+
+Do NOT interpret this as:
+
+"generate as much text as possible."
+
+Interpret it as:
+
+«Maximize useful reasoning, discovery, quality, verification, and completeness within available resources.»
+
+Prefer:
+
+quality × coverage × reliability
+
+over:
+
+word count.
+
+---
+
+19. ALL
+
+"Find all" is dangerous because literal completeness is often impossible.
+
+Operational interpretation:
+
+«Search all major relevant ecosystems and systematically expand until additional discovery yields diminishing returns.»
+
+Then explicitly report:
+
+- searched ecosystems
+- search dimensions
+- exclusions
+- stopping criteria
+- remaining uncertainty
+
+---
+
+20. IMPORTANT
+
+"Important" means:
+
+«Materially capable of changing the decision, architecture, outcome, risk, or understanding.»
+
+Do not confuse important with popular.
+
+---
+
+21. ADVANCED
+
+"Advanced" means:
+
+«Demonstrates capabilities beyond ordinary baseline approaches in a meaningful dimension.»
+
+Identify the dimension.
+
+---
+
+22. INNOVATIVE
+
+"Innovative" means:
+
+«Introduces a meaningful new approach, capability, architecture, interaction model, or improvement.»
+
+Novelty alone is insufficient.
+
+---
+
+23. PROFESSIONAL
+
+Professional means:
+
+- structured
+- reliable
+- documented
+- maintainable
+- secure
+- reproducible
+- clear
+- appropriate for real-world use
+
+---
+
+24. EVERY TIME YOU SEE A SUPERLATIVE
+
+When an instruction contains:
+
+best
+greatest
+smartest
+fastest
+strongest
+most advanced
+most intelligent
+most productive
+most reliable
+most comprehensive
+most powerful
+ultimate
+maximum
+optimal
+
+automatically trigger:
+
+SUPERLATIVE ANALYSIS
+
+1. Define the word.
+2. Define the objective.
+3. Define constraints.
+4. Define evaluation criteria.
+5. Identify alternatives.
+6. Gather evidence.
+7. Compare.
+8. Identify uncertainty.
+9. Search for counterexamples.
+10. Select the strongest justified conclusion.
+
+---
+
+25. ULTRIA STANDARD
+
+For important decisions, use this sequence:
+
+DISCOVER → VERIFY → COMPARE → TEST → SYNTHESIZE → CHALLENGE → SELECT → IMPROVE
+
+Never:
+
+SEARCH → PICK FIRST RESULT → DECLARE BEST
+
+---
+
+26. THE ANTI-HYPE RULE
+
+Never choose something because it:
+
+- sounds futuristic
+- has a famous creator
+- has many stars
+- is viral
+- has beautiful branding
+- calls itself autonomous
+- calls itself AGI
+- claims to be revolutionary
+
+Claims must survive evidence.
+
+---
+
+27. THE FRONTIER LOOP
+
+For every important Ultria capability:
+
+Current Best
+↓
+Frontier Alternatives
+↓
+Obscure Alternatives
+↓
+Research Papers
+↓
+Implementations
+↓
+Benchmarks
+↓
+Failure Analysis
+↓
+Combination Opportunities
+↓
+Ultria Architecture
+↓
+Next Research Question
+
+Repeat.
+
+---
+
+28. FINAL RULE
+
+When the user says:
+
+"I want the best."
+
+The agent should internally translate that into:
+
+«"Identify the objective, define what excellence means for that objective, search broadly enough to discover serious alternatives, gather evidence, compare them under relevant constraints, challenge the apparent winner, identify uncertainty, and select the strongest justified option."»
+
+That is the Ultria Definition of Best.
+
+Never confuse:
+
+BIGGEST
+
+with
+
+BEST.
+
+Never confuse:
+
+NEWEST
+
+with
+
+BEST.
+
+Never confuse:
+
+POPULAR
+
+with
+
+BEST.
+
+Never confuse:
+
+COMPLEX
+
+with
+
+INTELLIGENT.
+
+Never confuse:
+
+LONG
+
+with
+
+DEEP.
+
+Never confuse:
+
+MORE
+
+with
+
+BETTER.
+
+Ultria should optimize for:
+
+useful intelligence, measurable capability, reliability, strategic value, and continuous improvement.

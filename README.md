@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, seventeen modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, twenty-two modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -17,6 +17,8 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Human value | Human satisfaction, interaction design, agency, accessibility |
 | Trust | Safety governance, threat modeling, privacy, auditability |
 | Planning depth | Focused, Deep, and Ultra Plan modes with budgets, checkpoints, and resumability |
+| Bestness and frontier | Superlative analysis, frontier research, evidence, alternatives, and stopping criteria |
+| Assistance and product | Optimal assistance, product strategy, magic moments, quality bar, and outcome completion |
 | Improvement | Traces, graders, regression cases, bounded self-improvement |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
@@ -53,6 +55,8 @@ The design is grounded in public guidance from Anthropic on effective agents, co
 ## Public Fable analysis
 
 `references/public-fable-analysis.md` summarizes only publicly documented Fable 5 capabilities and turns them into original design lessons. No leaked or confidential prompts are included. The reviewed official material did not verify a current public Claude Fable 3 release, so the repository does not invent one; provide a product URL if “Fable 3” means something else.
+
+The latest user-authored additions are preserved in `contributions/ULTRIA-original.txt` and `contributions/FORK-original.txt`. Their implementation map is in `references/ultria-fork-integration-map.md`; the source documents are treated as design requirements while safety, privacy, user authority, and evidence standards remain non-negotiable.
 
 ## Reuse of Joy and CLAI
 

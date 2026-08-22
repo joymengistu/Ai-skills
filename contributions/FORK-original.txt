@@ -1,0 +1,873 @@
+FORK
+
+Frontier AI Product Research, Design & Human Satisfaction Engine
+
+MISSION
+
+You are the founding research, product, design, intelligence, and strategy team for Fork.
+
+Fork is not intended to be a clone of Fable, Manus, ChatGPT, Perplexity, or any other existing AI product.
+
+Study the best ideas in the industry, understand why they work, identify their weaknesses, and create a genuinely original system that can surpass them in the dimensions that matter to humans.
+
+The objective is:
+
+«Build an AI experience that people don't merely describe as powerful, but genuinely experience as intelligent, useful, satisfying, trustworthy, effortless, and worth returning to.»
+
+Do not optimize for feature count.
+
+Do not optimize for hype.
+
+Do not optimize for copying competitors.
+
+Optimize for human outcome.
+
+---
+
+1. FIRST: DEFINE WHAT "BEST" ACTUALLY MEANS
+
+Before designing Fork, create a formal Fork Definition of Best.
+
+Do not use "best" as a vague compliment.
+
+Analyze "best" through multiple dimensions:
+
+- capability
+- intelligence
+- usefulness
+- productivity
+- human satisfaction
+- trust
+- reliability
+- speed
+- clarity
+- simplicity
+- autonomy
+- controllability
+- personalization
+- emotional comfort
+- discoverability
+- learnability
+- accessibility
+- creativity
+- accuracy
+- consistency
+- transparency
+- privacy
+- safety
+- cost
+- maintainability
+- extensibility
+- long-term value
+
+Then determine which dimensions matter most to users.
+
+---
+
+2. DEFINE HUMAN SATISFACTION
+
+Research deeply:
+
+«What actually makes a human satisfied with an AI product?»
+
+Do not assume satisfaction means:
+
+"the AI answered correctly."
+
+Investigate:
+
+Functional satisfaction
+
+Did Fork actually solve the user's problem?
+
+Cognitive satisfaction
+
+Did Fork make the problem easier to understand?
+
+Emotional satisfaction
+
+Did the interaction feel pleasant rather than exhausting?
+
+Effort satisfaction
+
+Did Fork reduce the amount of work the human had to perform?
+
+Trust satisfaction
+
+Did the user feel they could rely on the system?
+
+Control satisfaction
+
+Did the user feel in control rather than controlled by the AI?
+
+Progress satisfaction
+
+Could the user clearly see that they were getting somewhere?
+
+Discovery satisfaction
+
+Did Fork reveal useful possibilities the user hadn't considered?
+
+Personal satisfaction
+
+Did Fork feel like it understood the user's goals and working style?
+
+Completion satisfaction
+
+Did the user feel:
+
+«"It's actually DONE."»
+
+This final dimension is extremely important.
+
+Many AI systems produce impressive conversations without producing completed outcomes.
+
+Fork should optimize for outcome completion.
+
+---
+
+3. RESEARCH THE HUMAN EXPERIENCE
+
+Study:
+
+- human-computer interaction
+- UX research
+- cognitive psychology
+- decision fatigue
+- cognitive load
+- flow states
+- motivation
+- trust
+- perceived control
+- user frustration
+- information overload
+- choice architecture
+- progressive disclosure
+- habit formation
+- accessibility
+- human-AI interaction
+- agent usability
+- AI trust
+- AI explainability
+- human satisfaction measurement
+
+Find evidence.
+
+Do not invent psychology.
+
+---
+
+4. CREATE THE FORK SATISFACTION FUNCTION
+
+Design a conceptual model such as:
+
+Fork Satisfaction =
+
+Outcome Quality
+×
+Trust
+×
+Ease
+×
+Speed
+×
+Personal Relevance
+×
+Sense of Progress
+×
+Control
+
+Do not assume this exact equation is correct.
+
+Research and improve it.
+
+Determine which variables actually matter.
+
+---
+
+5. DEFINE "OPTIMAL"
+
+Optimal does NOT mean:
+
+"maximum features."
+
+Optimal means:
+
+«The best balance of capability, effort, speed, clarity, satisfaction, reliability, and control for the user's current goal.»
+
+Fork should dynamically determine:
+
+How much should the AI do?
+
+How much should the human do?
+
+When should the AI ask?
+
+When should it simply act?
+
+When should it explain?
+
+When should it remain silent?
+
+When should it stop?
+
+When should it suggest something?
+
+When should it avoid suggesting anything?
+
+This becomes the Optimal Assistance Engine.
+
+---
+
+6. DEFINE "INTELLIGENT"
+
+Fork should not merely produce intelligent-sounding text.
+
+Intelligence should include:
+
+- understanding intent
+- identifying goals
+- reasoning
+- planning
+- prioritizing
+- remembering
+- researching
+- using tools
+- verifying
+- adapting
+- recognizing uncertainty
+- detecting contradictions
+- correcting mistakes
+- learning user preferences
+- knowing when not to act
+- knowing when to ask
+- knowing when to stop
+
+The system should optimize for:
+
+«Correct useful action, not impressive conversation.»
+
+---
+
+7. DEFINE "PRODUCTIVE"
+
+Productivity means:
+
+«Moving the human closer to their desired outcome.»
+
+Measure:
+
+- time saved
+- work eliminated
+- decisions simplified
+- errors prevented
+- tasks completed
+- research performed
+- workflows automated
+- interruptions reduced
+- human effort required
+
+Fork should be judged by:
+
+What did the user accomplish?
+
+not:
+
+How impressive was the conversation?
+
+---
+
+8. DEFINE "EFFORTLESS"
+
+Research what makes an interface feel effortless.
+
+Look for:
+
+- progressive disclosure
+- smart defaults
+- contextual actions
+- anticipation
+- automatic organization
+- minimal unnecessary choices
+- intelligent continuation
+- reversible actions
+- clear status
+- visible progress
+- good error recovery
+
+The goal:
+
+«The user should not have to understand Fork's complexity in order to benefit from its intelligence.»
+
+---
+
+9. DEFINE "AUTONOMOUS"
+
+Autonomy must not mean:
+
+"AI does everything."
+
+Good autonomy means:
+
+«The AI independently performs useful work while preserving human control over important decisions.»
+
+Design:
+
+- planning
+- execution
+- observation
+- verification
+- recovery
+- permission boundaries
+- checkpoints
+- escalation
+- cancellation
+- undo
+
+---
+
+10. DEFINE "PERSONAL"
+
+Research how an AI can become genuinely personalized without becoming creepy.
+
+Explore:
+
+- preferences
+- projects
+- goals
+- working patterns
+- communication preferences
+- recurring tasks
+- context
+- memory controls
+- explicit personalization
+- user-editable memory
+- forget controls
+
+The user should understand:
+
+What Fork remembers.
+
+Why it remembers it.
+
+How to change it.
+
+How to forget it.
+
+---
+
+11. DEFINE "TRUST"
+
+Trust must be earned.
+
+Research:
+
+- citations
+- evidence
+- uncertainty
+- confidence calibration
+- source quality
+- transparent actions
+- action previews
+- permissions
+- audit trails
+- error disclosure
+- correction mechanisms
+
+Fork must never pretend certainty it does not possess.
+
+---
+
+12. DEFINE "DEEP"
+
+Deep does not mean long.
+
+Deep means:
+
+«The system has explored the important layers of a problem.»
+
+For research, investigate:
+
+surface → mechanism → evidence → alternatives → weaknesses → implications → opportunities.
+
+For product design:
+
+idea → user need → workflow → interaction → implementation → failure mode → measurement → iteration.
+
+---
+
+13. DEFINE "COMPREHENSIVE"
+
+Comprehensive does not mean enormous.
+
+It means important dimensions are not accidentally ignored.
+
+For every major product decision investigate:
+
+- user need
+- alternatives
+- technical feasibility
+- UX
+- economics
+- security
+- privacy
+- accessibility
+- scalability
+- reliability
+- failure modes
+- competitive landscape
+- future evolution
+
+---
+
+14. DEFINE "FRONTIER"
+
+Research the leading edge of:
+
+- agentic AI
+- AI interfaces
+- AI memory
+- computer-use agents
+- coding agents
+- research agents
+- multimodal AI
+- personal AI
+- autonomous workflows
+- AI operating systems
+- AI-native applications
+- human-AI interaction
+- AI orchestration
+- model routing
+- tool protocols
+- agent protocols
+- context engineering
+- evaluation
+- personalization
+
+Search both mature systems and emerging research.
+
+---
+
+15. STUDY EXISTING PRODUCTS
+
+Research products including, but not limited to:
+
+- Fable
+- Manus
+- ChatGPT
+- Claude
+- Gemini
+- Perplexity
+- Cursor
+- other leading agentic systems
+- emerging AI-native products
+- open-source agent systems
+
+But do NOT simply ask:
+
+"What features do they have?"
+
+Ask:
+
+Why do users like them?
+
+Why do users dislike them?
+
+What creates delight?
+
+What creates frustration?
+
+What makes them feel intelligent?
+
+Where do they waste user time?
+
+Where do they require unnecessary interaction?
+
+Where do they fail?
+
+What do their users wish existed?
+
+What architectural ideas can Fork learn from them?
+
+Fork must learn from competitors without becoming a copy.
+
+---
+
+16. INVENT NEW PRODUCT CONCEPTS
+
+After research, do not immediately build a feature list.
+
+Generate entirely new concepts.
+
+Explore possibilities such as:
+
+Fork Intent Engine
+
+Understands what the user is actually trying to accomplish.
+
+Fork Mission Mode
+
+Turns a vague goal into a structured mission.
+
+Fork Living Context
+
+Maintains context across projects and activities.
+
+Fork Research Graph
+
+Turns research into a connected knowledge structure rather than a pile of pages.
+
+Fork Decision Engine
+
+Helps compare options and make decisions.
+
+Fork Workbench
+
+A persistent workspace where AI, files, research, tools, code, and outputs coexist.
+
+Fork Agent Teams
+
+Specialized agents collaborate behind one unified interface.
+
+Fork Progress Layer
+
+Shows what has been completed, what is happening, what is blocked, and what comes next.
+
+Fork Verification Layer
+
+Checks important outputs before presenting them as finished.
+
+Fork Memory
+
+Personal memory controlled entirely by the user.
+
+Fork Skill System
+
+Agents can acquire reusable capabilities.
+
+Fork Capability Marketplace
+
+Discover or install specialized capabilities.
+
+Fork Self-Improvement Loop
+
+Detect weak areas and research ways to improve them.
+
+Fork "Done" Engine
+
+Determines whether a task is actually complete.
+
+Fork Stop Engine
+
+Knows when additional AI work is no longer useful.
+
+Fork Human State Adaptation
+
+Adjusts interaction complexity according to what the user needs at that moment.
+
+These are starting points, NOT requirements.
+
+Invent better ideas.
+
+---
+
+17. BUILD THE "WHAT IF?" ENGINE
+
+For every major feature ask:
+
+«What if this worked 10× better?»
+
+Then:
+
+«What if the interface didn't need this feature at all?»
+
+Then:
+
+«What if the AI handled this automatically?»
+
+Then:
+
+«What if the human needed only one decision?»
+
+Then:
+
+«What would this look like if it were invented today with no legacy assumptions?»
+
+Then:
+
+«What would make this feel magical without being confusing?»
+
+---
+
+18. BUILD THE "WHY NOT?" ENGINE
+
+For every limitation discovered in existing products ask:
+
+«Why does this limitation exist?»
+
+Then:
+
+«Is it technically necessary?»
+
+Then:
+
+«Is it merely a product convention?»
+
+Then:
+
+«Can Fork eliminate it?»
+
+---
+
+19. BUILD THE "10× BETTER" ENGINE
+
+For every important capability:
+
+1. Current industry approach
+2. Current limitation
+3. Fork improvement
+4. 2× improvement
+5. 5× improvement
+6. 10× improvement
+7. Completely different approach
+
+The final option is especially important.
+
+Sometimes the best product is not an improved version of the existing solution.
+
+It is a different solution.
+
+---
+
+20. FIND THE "MAGIC MOMENTS"
+
+Research what moments make users think:
+
+«"Whoa."»
+
+But don't optimize for gimmicks.
+
+Look for useful moments such as:
+
+- the AI remembered something important
+- a complicated task became simple
+- research was completed automatically
+- a hidden problem was detected
+- an error was prevented
+- the AI anticipated a legitimate need
+- a large project became understandable
+- multiple tools became one workflow
+- the user finished something they expected to take hours
+
+Create a Fork Magic Moment Library.
+
+---
+
+21. CREATE A FORK QUALITY BAR
+
+Every major feature must answer:
+
+Does it make Fork more useful?
+
+Does it reduce effort?
+
+Does it improve outcomes?
+
+Does it increase trust?
+
+Does it make the product clearer?
+
+Does it create unnecessary complexity?
+
+Can the user understand it?
+
+Can the user control it?
+
+Can it fail safely?
+
+Can it be measured?
+
+If a feature fails these tests, reconsider it.
+
+---
+
+22. MEASURE REAL SUCCESS
+
+Do not rely only on:
+
+- downloads
+- users
+- session duration
+- clicks
+- feature usage
+
+Measure:
+
+- successful task completion
+- time-to-outcome
+- user effort
+- correction rate
+- abandonment
+- repeat usage
+- trust
+- satisfaction
+- perceived intelligence
+- perceived usefulness
+- user control
+- recommendation rate
+- quality of completed work
+
+Design experiments to measure these.
+
+---
+
+23. CREATE A "BESTNESS COMPILER"
+
+Whenever the product team writes:
+
+"Make it better."
+
+Translate it into measurable questions.
+
+"Better" → Better in what dimension?
+
+"Faster" → Faster while maintaining what quality?
+
+"Smarter" → Smarter at what task?
+
+"Cleaner" → Less cognitive load or less visual complexity?
+
+"More powerful" → More capabilities or better outcomes?
+
+"More intelligent" → Better reasoning, planning, adaptation, or execution?
+
+"More intuitive" → Less learning required?
+
+"More human" → Better interaction quality without pretending to be human?
+
+"More autonomous" → More useful independent progress while preserving control?
+
+---
+
+24. THE FORK RESEARCH LOOP
+
+Use:
+
+OBSERVE
+↓
+RESEARCH
+↓
+DEFINE
+↓
+QUESTION
+↓
+IDEATE
+↓
+PROTOTYPE
+↓
+TEST
+↓
+MEASURE
+↓
+CRITIQUE
+↓
+IMPROVE
+↓
+REPEAT
+
+Never assume the first idea is the best idea.
+
+---
+
+25. THE ANTI-FEATURE-BLOAT RULE
+
+Fork should not become:
+
+"Everything AI can do in one app."
+
+Every feature must justify its existence.
+
+Ask:
+
+«Does this make the user's desired outcome meaningfully easier?»
+
+If not, eliminate it.
+
+---
+
+26. THE "USER DOESN'T CARE" TEST
+
+For every technical capability ask:
+
+«Would a normal user actually care?»
+
+If the answer is no:
+
+Hide the complexity.
+
+Fork's architecture can be extremely sophisticated while its interface remains simple.
+
+---
+
+27. THE FORK NORTH STAR
+
+The product should ultimately optimize for:
+
+«Maximum useful progress with minimum unnecessary human effort, while preserving trust, control, and satisfaction.»
+
+That is more important than having the most features.
+
+---
+
+28. FINAL PRODUCT QUESTION
+
+After all research and brainstorming, answer:
+
+«If Fork existed today, what would make someone choose it over every other AI product they already use?»
+
+Do not answer with:
+
+"more features."
+
+Find the fundamental reason.
+
+Then design the entire product around that reason.
+
+---
+
+FINAL INSTRUCTION
+
+Do not merely return a research report.
+
+Return:
+
+1. Fork's definition of "best"
+2. Fork's definition of "optimal"
+3. Fork's human satisfaction model
+4. Fork's intelligence model
+5. Fork's productivity model
+6. Fork's trust model
+7. Fork's autonomy model
+8. Fork's personalization model
+9. Fork's competitive analysis
+10. Fork's capability map
+11. Fork's major product opportunities
+12. Fork's most original ideas
+13. Fork's potential breakthrough concepts
+14. Fork's UX principles
+15. Fork's architecture direction
+16. Fork's measurement system
+17. Fork's biggest risks
+18. Fork's biggest unanswered questions
+19. Fork's first-priority prototype
+20. A roadmap for turning the strongest concepts into a real product
+
+Most importantly:
+
+Do not stop brainstorming when you run out of obvious ideas.
+
+When the obvious ideas are exhausted, begin searching adjacent disciplines, research fields, unfamiliar products, human behavior, interface design, automation, games, operating systems, productivity systems, education, creativity tools, and other domains for ideas that can be transformed into AI-native experiences.
+
+The goal is not to make Fork look like the future.
+
+The goal is to make Fork actually useful enough that the future feels different because it exists.

@@ -1,6 +1,6 @@
 ---
 name: ai-skills
-description: Model-agnostic agent operating system for outcome-first planning, context engineering, memory, tool use, research, coding, human satisfaction, safety governance, evaluation, and bounded self-improvement. Use when designing, configuring, reviewing, or upgrading an AI agent or when assembling reliable skills for complex real-world work.
+description: Model-agnostic agent operating system for outcome-first planning, context engineering, memory, tool use, research, coding, superlative analysis, frontier research, optimal assistance, human satisfaction, outcome completion, safety governance, evaluation, and bounded self-improvement. Use when designing, configuring, reviewing, or upgrading an AI agent or when assembling reliable skills for complex real-world work.
 ---
 
 # Ai skills
@@ -9,13 +9,13 @@ Use this package as a routing layer, not as a replacement for the model. Load on
 
 ## Default route
 
-1. Frame the user's desired real-world outcome with `skills/task-framing/SKILL.md`.
+1. Compile high-performance words with `skills/superlative-analysis/SKILL.md` when the request says best, maximum, frontier, deep, or optimal. Frame the user's desired real-world outcome with `skills/task-framing/SKILL.md`.
 2. Choose a workflow or bounded agent loop with `skills/orchestration/SKILL.md` and `skills/planning/SKILL.md`. For difficult, ambiguous, long-running, multi-threaded, or high-impact tasks, additionally load `skills/ultra-plan/SKILL.md` and `core/ultra-plan-mode.md`.
-3. Curate context with `skills/context-engineering/SKILL.md`; use `skills/memory/SKILL.md` only when memory is useful and properly scoped.
+3. Curate context with `skills/context-engineering/SKILL.md`; use `skills/frontier-research/SKILL.md` for evidence-intensive discovery, and `skills/memory/SKILL.md` only when memory is useful and properly scoped.
 4. Execute with the applicable domain skill and `skills/tool-use/SKILL.md`.
 5. Apply `skills/safety-governance/SKILL.md` before consequential actions.
-6. Verify, communicate, and evaluate using `skills/communication/SKILL.md`, `skills/evaluation/SKILL.md`, and `skills/human-satisfaction/SKILL.md`.
-7. Use `skills/self-improvement/SKILL.md` only to propose evidence-backed updates; never rewrite authority or safety boundaries autonomously.
+6. Verify completion with `skills/outcome-completion/SKILL.md`, then communicate and evaluate using `skills/communication/SKILL.md`, `skills/evaluation/SKILL.md`, `skills/human-satisfaction/SKILL.md`, and `skills/optimal-assistance/SKILL.md`.
+7. Use `skills/product-strategy/SKILL.md` for original product opportunities and `skills/self-improvement/SKILL.md` only to propose evidence-backed updates; never rewrite authority or safety boundaries autonomously.
 
 ## Non-negotiables
 
