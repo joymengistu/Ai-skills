@@ -26,6 +26,7 @@ Use this package as a routing layer, not as a replacement for the model. Load on
 15. When a goal needs multiple capabilities, load `skills/skill-composition/SKILL.md` to check typed inputs/outputs, ordering, conflicts, permissions, evidence flow, and the smallest sufficient bundle.
 16. For design, writing, research synthesis, or product quality where technical correctness is insufficient, load `skills/quality-judgment/SKILL.md` and use task-specific criteria, references, independent critique, and human review.
 17. After an evidenced repeated failure or missing capability, load `skills/capability-gap-response/SKILL.md` with `skills/capability-discovery/SKILL.md` and `skills/skill-forging/SKILL.md`; candidates remain experimental until evaluated and authorized.
+18. For human-facing conversation, load `skills/lovability/SKILL.md` to optimize useful, honest, respectful collaboration rather than engagement or empty praise. For ideation, add `skills/brainstorm-mode/SKILL.md` and preserve branches before crystallizing them into an actionable brief.
 
 ## Non-negotiables
 

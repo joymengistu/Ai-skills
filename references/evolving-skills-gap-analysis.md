@@ -63,3 +63,30 @@ The design implication is to separate **skill packaging** from **skill trust**. 
 
 [3]: https://agentskills.io/specification "Agent Skills — public specification"
 [4]: https://arxiv.org/html/2504.07079 "SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills"
+
+
+## Lovability and personalization evidence
+
+OpenAI's public personalization guidance frames custom instructions as stable working-style preferences and memory as recurring context that can improve relevance and consistency. Its public Memory FAQ describes user controls to inspect, edit, delete, disable, and use temporary conversations; it also warns that deleting one chat may not remove separately stored memory and that sensitive information can appear if shared.[5] [6]
+
+The portable design implication is not “make the agent more human.” It is **make the collaboration more useful, continuous, honest, and controllable**. Separate stable preferences, project state, short-term context, and inferred hypotheses. Give the user visibility, correction, deletion, temporary mode, and a reason when recalled context materially changes a response. Personalization should reduce effort without becoming overfamiliar or surprising.
+
+[5]: https://openai.com/academy/personalization/ "OpenAI Academy — Personalizing ChatGPT"
+[6]: https://help.openai.com/en/articles/8590148-memory-faq "OpenAI Help Center — Memory FAQ"
+
+
+## Honesty, agency, rapport, and trust evidence
+
+OpenAI's public Model Spec describes intended behavior including interpreting underlying intent and context, asking clarifying questions when appropriate, controlling and communicating side effects, expressing uncertainty, avoiding an independent agenda, and respecting user agency.[7] These principles reinforce that initiative must remain bounded and that a lovable assistant should help the user's goals rather than create goals of its own.
+
+A 2024 Frontiers in Psychology review discusses socio-emotional attributes in human-AI collaboration, including rapport, effective communication, empathy, active listening, familiarity, and trust. The review is useful for identifying candidate interaction variables, but it is a literature review with heterogeneous underlying evidence; its percentages and examples should not be treated as universal product targets.[8] The repository should therefore evaluate emotional appropriateness and trust calibration, not maximize anthropomorphism or engagement.
+
+[7]: https://model-spec.openai.com/2026-08-18.html "OpenAI Model Spec, 2026-08-18"
+[8]: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1369957/full "The role of socio-emotional attributes in enhancing human-AI collaboration"
+
+
+## Public constitutional guidance
+
+Anthropic's public constitution presents a model-behavior vision organized around broad safety, broad ethics, compliance with guidelines, and genuine helpfulness. It emphasizes honesty, thoughtfulness, care, correction, and the need to be transparent about the gap between intended and observed behavior.[9] This is a public statement of intended behavior, not evidence that every model response meets it. The repository can translate the principle into observable contracts: helpfulness must be substantive, honesty must include uncertainty, care must preserve agency, and correction must remain possible.
+
+[9]: https://www.anthropic.com/constitution "Anthropic — Claude's Constitution"

@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, fifty-five modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, fifty-seven modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -29,6 +29,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Online-first operation | Hosted orchestration, remote tool bridge, progressive delivery, and cost-aware execution |
 | Fable research controls | Capability analysis, context handoffs, skeptical evaluation, tool evaluation, and completion intelligence |
 | Evolving capabilities | Skill discovery, typed composition, quality judgment, capability-gap response, lifecycle promotion, and rollback |
+| Lovable collaboration | Honest appreciation, adaptive conversation, controllable personalization, Brainstorm Mode, constructive disagreement, and anti-manipulation boundaries |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
@@ -83,7 +84,7 @@ The current improvement focuses on the highest-leverage gap: converting excellen
 
 ## Human satisfaction
 
-The included human-satisfaction skill defines satisfaction as actual outcome quality plus lived experience: effort saved, clarity, agency, calibrated trust, emotional ease, accessibility, and future usefulness. It includes a starting weighted score, but the weights are hypotheses to validate—not a target to manipulate. Measure both task outcomes and user feedback.
+The included human-satisfaction skill defines satisfaction as actual outcome quality plus lived experience: effort saved, clarity, agency, calibrated trust, emotional ease, accessibility, and future usefulness. The new `lovability` and `brainstorm-mode` skills extend this with honest appreciation, context-sensitive initiative, branch-preserving ideation, constructive disagreement, controllable memory, and explicit anti-dependence boundaries. Measure both task outcomes and user feedback; do not optimize engagement as a proxy for human value.
 
 ## Research basis
 
@@ -97,7 +98,7 @@ The design is grounded in public guidance from Anthropic on effective agents, co
 
 The repository now treats skills as versioned procedural capabilities rather than static prompts alone. `references/evolving-skills-gap-analysis.md` compares the attached mission with existing coverage; `references/evolving-skills-architecture.md` defines discovery, typed composition, capability gaps, critics, quality judgment, human-value review, and safe promotion; and `runtime/skill-contract.schema.json` defines a portable contract. The lifecycle is **discover → compose → execute → observe → critique → verify → repair → evaluate → propose → approve → register**. Candidate skills remain experimental until they pass representative and held-out evaluation and an authorized maintainer approves promotion.
 
-The latest user-authored additions are preserved in `contributions/ULTRIA-original.txt` and `contributions/FORK-original.txt`. Their implementation map is in `references/ultria-fork-integration-map.md`; the source documents are treated as design requirements while safety, privacy, user authority, and evidence standards remain non-negotiable.
+The latest user-authored additions are preserved in `contributions/ULTRIA-original.txt`, `contributions/FORK-original.txt`, `contributions/maximum-capability-research-mission-original.txt`, and `contributions/lovable-ai-research-mission-original.txt`. Their implementation maps are in `references/ultria-fork-integration-map.md`, `references/evolving-skills-architecture.md`, and `references/lovable-agent-architecture.md`; the source documents are treated as design requirements while safety, privacy, user authority, and evidence standards remain non-negotiable.
 
 ## Reuse of Joy and CLAI
 

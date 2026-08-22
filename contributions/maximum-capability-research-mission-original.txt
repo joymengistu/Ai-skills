@@ -1,0 +1,689 @@
+AI SKILLS — MAXIMUM CAPABILITY RESEARCH MISSION
+
+IMPORTANT:
+You are working on the existing independent AI Skills repository.
+
+DO NOT turn this into Ultria.
+DO NOT turn this into Fork.
+DO NOT redesign the project around a brand name.
+
+Your job is to use the available research/execution capacity efficiently and push this repository as far as reasonably possible.
+
+Run the following 30 missions sequentially.
+
+Do NOT stop after the first few.
+Do NOT give me shallow summaries.
+Do NOT repeat work.
+Reuse discoveries from earlier missions.
+
+If one mission discovers something important, create follow-up work automatically.
+
+==================================================
+MISSION 01 — FULL REPOSITORY AUDIT
+==================================================
+
+Inspect the entire AI Skills repository.
+
+Understand:
+- architecture
+- skills
+- metadata
+- documentation
+- dependencies
+- duplication
+- quality
+- missing capabilities
+- inconsistencies
+
+Produce a capability map.
+
+==================================================
+MISSION 02 — SKILL QUALITY AUDIT
+==================================================
+
+Evaluate existing skills individually.
+
+Classify:
+
+KEEP
+IMPROVE
+MERGE
+REWRITE
+DEPRECATE
+REMOVE
+MISSING
+
+Do not blindly preserve existing work.
+
+==================================================
+MISSION 03 — SKILL SPECIFICATION
+==================================================
+
+Design the strongest reusable specification for an AI skill.
+
+Determine what metadata and behavior every production skill should contain.
+
+==================================================
+MISSION 04 — SKILL TAXONOMY
+==================================================
+
+Research how skills should be categorized.
+
+Investigate:
+
+- primitive skills
+- domain skills
+- workflow skills
+- meta-skills
+- orchestration skills
+
+Create a coherent taxonomy.
+
+==================================================
+MISSION 05 — FRONTIER SKILL RESEARCH
+==================================================
+
+Research advanced AI skill and agent systems.
+
+Investigate:
+
+- Claude agent systems
+- Claude Fable 5
+- Manus
+- OpenAI agent systems
+- Gemini agent systems
+- coding agents
+- research agents
+- open-source frameworks
+- MCP ecosystems
+- academic research
+
+Extract reusable principles.
+
+==================================================
+MISSION 06 — FABLE 5 DEEP RESEARCH
+==================================================
+
+Perform a dedicated deep investigation of Claude Fable 5.
+
+Research:
+
+- long-running tasks
+- planning
+- delegation
+- sub-agents
+- memory
+- tool use
+- self-evaluation
+- visual evaluation
+- completion
+- intent understanding
+- orchestration
+
+Separate:
+
+CONFIRMED
+SUPPORTED
+INFERRED
+UNKNOWN
+
+Never present speculation as fact.
+
+==================================================
+MISSION 07 — "ONE-SHOT MAGIC" ANALYSIS
+==================================================
+
+Investigate why advanced agents can turn a relatively simple human request into a large completed result.
+
+Study:
+
+intent
+→ planning
+→ execution
+→ observation
+→ evaluation
+→ revision
+→ completion
+
+Determine what belongs in skills versus models versus agent infrastructure.
+
+==================================================
+MISSION 08 — INTENT ENGINE
+==================================================
+
+Design a reusable skill for understanding what the user actually wants.
+
+Distinguish:
+
+literal request
+vs
+underlying objective.
+
+Include:
+
+- requirements
+- constraints
+- implicit goals
+- success criteria
+- ambiguity
+- risks
+
+==================================================
+MISSION 09 — TASK DECOMPOSITION
+==================================================
+
+Design a general task decomposition skill.
+
+It should discover:
+
+- dependencies
+- parallel work
+- sequential work
+- optional work
+- verification work
+- risks
+
+==================================================
+MISSION 10 — SKILL DISCOVERY
+==================================================
+
+Design a system that determines:
+
+"What skills are needed for this mission?"
+
+The user should not need to manually select every skill.
+
+==================================================
+MISSION 11 — SKILL COMPOSITION
+==================================================
+
+Make skills composable.
+
+Investigate:
+
+- contracts
+- inputs
+- outputs
+- dependencies
+- chaining
+- parallel execution
+- sequential execution
+- error handling
+
+Skills should work like reusable building blocks.
+
+==================================================
+MISSION 12 — META-SKILLS
+==================================================
+
+Design high-level skills for:
+
+- discovery
+- selection
+- composition
+- evaluation
+- critique
+- generation
+- optimization
+- routing
+- versioning
+- deprecation
+
+==================================================
+MISSION 13 — CAPABILITY GAP DETECTION
+==================================================
+
+Design a system that recognizes:
+
+"I don't have a sufficiently capable skill for this."
+
+Then determine what should happen next.
+
+==================================================
+MISSION 14 — SKILL GENERATION
+==================================================
+
+Research how a system could create candidate skills when a capability is missing.
+
+Potential workflow:
+
+gap
+→ research
+→ design
+→ prototype
+→ test
+→ benchmark
+→ approve
+
+Do NOT allow unverified skills to become trusted automatically.
+
+==================================================
+MISSION 15 — SKILL EVOLUTION
+==================================================
+
+Design controlled skill improvement.
+
+Potential loop:
+
+execute
+→ evaluate
+→ identify weakness
+→ modify
+→ test
+→ benchmark
+→ compare
+
+Never assume a modification is an improvement without evaluation.
+
+==================================================
+MISSION 16 — CRITIC SYSTEM
+==================================================
+
+Design reusable critics.
+
+A skill should potentially become:
+
+GENERATE
+→ CRITIQUE
+→ REVISE
+→ VERIFY
+
+Investigate model-based and deterministic evaluation.
+
+==================================================
+MISSION 17 — VERIFICATION ENGINE
+==================================================
+
+Design a universal verification architecture.
+
+Examples:
+
+code → tests
+research → sources
+UI → visual comparison
+data → validation
+documents → requirements
+
+Generated does not equal correct.
+
+==================================================
+MISSION 18 — COMPLETION INTELLIGENCE
+==================================================
+
+Design a system that understands:
+
+OUTPUT CREATED
+
+versus
+
+OBJECTIVE COMPLETED.
+
+Define explicit completion criteria.
+
+==================================================
+MISSION 19 — FAILURE RECOVERY
+==================================================
+
+Design recovery behavior:
+
+FAIL
+→ DIAGNOSE
+→ ADAPT
+→ RETRY
+→ VERIFY
+
+Investigate intelligent recovery from failed tools, bad assumptions, missing information, and broken outputs.
+
+==================================================
+MISSION 20 — MEMORY + LONG-RUNNING WORK
+==================================================
+
+Research:
+
+- task state
+- persistent notes
+- memory
+- context compression
+- checkpoints
+- progress tracking
+- resumption
+
+Design reusable skills around these capabilities.
+
+==================================================
+MISSION 21 — SUB-AGENT DELEGATION
+==================================================
+
+Research when agents should delegate.
+
+Determine:
+
+- when delegation helps
+- when it creates overhead
+- what context to provide
+- how results should be evaluated
+- how parent agents integrate results
+
+==================================================
+MISSION 22 — TOOL SELECTION
+==================================================
+
+Design a skill that chooses the appropriate tool for each subtask.
+
+Investigate:
+
+- browsers
+- search
+- code execution
+- filesystem
+- APIs
+- vision
+- documents
+- databases
+
+==================================================
+MISSION 23 — MODEL ROUTING
+==================================================
+
+Research whether different models should handle different tasks.
+
+Investigate:
+
+- fast models
+- reasoning models
+- coding models
+- vision models
+- research models
+
+Design intelligent routing principles.
+
+==================================================
+MISSION 24 — PROFESSIONAL UI INTELLIGENCE
+==================================================
+
+Improve the UI-related skills.
+
+Teach the system the difference between:
+
+beautiful
+professional
+minimal
+polished
+pixel-perfect
+
+Research expert UI principles.
+
+==================================================
+MISSION 25 — VISUAL VERIFICATION
+==================================================
+
+Design:
+
+BUILD
+→ RENDER
+→ INSPECT
+→ COMPARE
+→ FIX
+→ RENDER AGAIN
+
+Support visual QA and pixel-level accuracy.
+
+==================================================
+MISSION 26 — TASTE ENGINE
+==================================================
+
+Research whether AI can evaluate qualitative excellence.
+
+Investigate:
+
+- elegance
+- restraint
+- hierarchy
+- coherence
+- originality
+- sophistication
+- usefulness
+- memorability
+
+Determine what can actually be measured.
+
+==================================================
+MISSION 27 — HUMAN SATISFACTION ENGINE
+==================================================
+
+Research what makes AI genuinely useful to humans.
+
+Evaluate:
+
+- effort reduction
+- clarity
+- usefulness
+- speed
+- trust
+- control
+- frustration
+- unnecessary questions
+- outcome quality
+
+Optimize for:
+
+MAXIMUM USEFUL OUTCOME
++
+MINIMUM UNNECESSARY HUMAN EFFORT
+
+==================================================
+MISSION 28 — LOVABILITY LAYER
+==================================================
+
+Research how AI conversations can become more meaningful without becoming fake or manipulative.
+
+Design principles for:
+
+- recognizing meaningful ideas
+- genuine appreciation
+- honest encouragement
+- constructive disagreement
+- understanding project significance
+- remembering context
+- appropriate emotional tone
+
+CRITICAL RULE:
+
+Do not turn the AI into a praise machine.
+
+If the AI says:
+
+"I love this idea"
+
+it should be able to explain WHY.
+
+The AI must remain honest.
+
+==================================================
+MISSION 29 — BRAINSTORM MODE
+==================================================
+
+Design a dedicated conversational brainstorming capability.
+
+The goal is not simply:
+
+"generate random ideas."
+
+Instead:
+
+USER THOUGHT
+→ UNDERSTAND
+→ EXPAND
+→ CONNECT
+→ CHALLENGE
+→ EXPLORE
+→ REFINE
+→ CRYSTALLIZE
+
+Investigate:
+
+- idea sparks
+- idea branching
+- connecting distant concepts
+- identifying deeper ideas
+- constructive disagreement
+- unfinished idea preservation
+- converting conversations into projects
+
+The system should recognize when the user accidentally discovers a larger idea.
+
+==================================================
+MISSION 30 — NEXT-GENERATION CAPABILITY ENGINE
+==================================================
+
+Now combine everything.
+
+Design the strongest architecture you can justify.
+
+Potential model:
+
+HUMAN GOAL
+↓
+INTENT
+↓
+MISSION
+↓
+CAPABILITY ANALYSIS
+↓
+SKILL DISCOVERY
+↓
+SKILL COMPOSITION
+↓
+TOOL SELECTION
+↓
+EXECUTION
+↓
+OBSERVATION
+↓
+CRITIQUE
+↓
+VERIFICATION
+↓
+HUMAN SATISFACTION
+↓
+REVISION
+↓
+COMPLETION
+
+If a capability is missing:
+
+CAPABILITY GAP
+↓
+RESEARCH
+↓
+SKILL GENERATION
+↓
+TESTING
+↓
+BENCHMARK
+↓
+APPROVAL
+↓
+REGISTRATION
+↓
+RETRY
+
+But do NOT assume this architecture is correct.
+
+Improve it if your research finds a stronger design.
+
+==================================================
+FINAL CHALLENGE
+==================================================
+
+After completing all 30 missions, ask:
+
+"What would make this AI Skills repository genuinely different from existing skill libraries and agent frameworks?"
+
+Do not answer:
+
+"more skills."
+
+Find concrete differentiation.
+
+Then ask:
+
+"What is the strongest capability we have not thought of yet?"
+
+Research it.
+
+Then ask:
+
+"What part of our architecture is probably wrong?"
+
+Critique it.
+
+Then improve it.
+
+==================================================
+FINAL DELIVERABLE
+==================================================
+
+Produce:
+
+1. Repository audit
+2. Capability map
+3. Frontier research
+4. Fable 5 analysis
+5. Skill architecture
+6. Skill specification
+7. Skill taxonomy
+8. Meta-skill architecture
+9. Capability-gap system
+10. Skill-generation system
+11. Skill-evolution system
+12. Critic system
+13. Verification system
+14. Completion system
+15. Recovery system
+16. Memory architecture
+17. Delegation architecture
+18. Tool-routing architecture
+19. Model-routing architecture
+20. Professional UI intelligence
+21. Visual QA
+22. Taste engine
+23. Human satisfaction engine
+24. Lovability layer
+25. Brainstorm mode
+26. Benchmark system
+27. Security model
+28. Novelty analysis
+29. Recommended implementation order
+30. Final next-generation architecture
+
+IMPORTANT:
+
+Do not optimize for number of files.
+
+Do not optimize for number of prompts.
+
+Do not optimize for a giant report.
+
+Optimize for:
+
+CAPABILITY
+QUALITY
+RELIABILITY
+COMPOSABILITY
+VERIFICATION
+HUMAN VALUE
+
+If a research lead is promising, investigate it.
+
+If an existing idea is weak, remove it.
+
+If something important is missing, add a new mission.
+
+Use the available execution/research capacity efficiently.
+
+The final question is:
+
+"Would giving this skill ecosystem to a capable AI actually make that AI better at completing difficult real-world work?"
+
+If not, keep improving it.
