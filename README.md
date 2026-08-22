@@ -41,7 +41,7 @@ The included human-satisfaction skill defines satisfaction as actual outcome qua
 
 ## Research basis
 
-The design is grounded in public guidance from Anthropic on effective agents, context engineering, and tool design; OpenAI on trace-based agent evaluation; NIST on AI risk management and human-centered AI; and OWASP on agentic-AI threats and mitigations. See `references/research-and-sources.md` for the synthesis and links.
+The design is grounded in public guidance from Anthropic on effective agents, context engineering, and tool design [1] [2] [3]; OpenAI on trace-based agent evaluation [4]; NIST on AI risk management and human-centered AI [5] [6]; and OWASP on agentic-AI threats and mitigations [7]. See `references/research-and-sources.md` for the synthesis and links.
 
 ## Reuse of Joy and CLAI
 
