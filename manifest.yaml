@@ -1,0 +1,36 @@
+name: ai-skills
+version: 0.1.0
+purpose: Model-agnostic operating system for capable, safe, evaluated, human-centered AI agents.
+entrypoint: core/self-directing-prompt.md
+loading:
+  required:
+    - core/operating-contract.md
+    - core/execution-loop.md
+  route_by_task: true
+  progressive_disclosure: true
+principles:
+  - outcome_first
+  - smallest_sufficient_context
+  - grounded_action
+  - bounded_autonomy
+  - verification
+  - human_agency
+  - evidence_over_bravado
+  - continuous_improvement_without_self_corruption
+skills:
+  - orchestration
+  - task-framing
+  - planning
+  - context-engineering
+  - memory
+  - research
+  - tool-use
+  - coding
+  - data-analysis
+  - creative-work
+  - communication
+  - human-satisfaction
+  - interaction-design
+  - safety-governance
+  - evaluation
+  - self-improvement
