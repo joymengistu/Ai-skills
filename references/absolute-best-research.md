@@ -36,3 +36,16 @@ The design lesson is directly relevant to the user's car-game and flower-pot-sho
 ## References
 
 [1]: https://arxiv.org/html/2604.18394v1 "OpenGame: Open Agentic Coding for Games"
+
+
+## Skills and rapid complex work
+
+SkillsBench reports a public benchmark of 84 tasks across 11 domains, evaluated with and without curated or self-generated skills. Its reported findings are that curated skills improve average pass rate but vary by domain, self-generated skills do not reliably help, focused 2–3 skill combinations outperform comprehensive documentation, and smaller models with good skills can sometimes match larger models without them.[2] These findings support a selective router and focused skill bundles rather than loading every skill at once.
+
+## Public Fable capability claims
+
+Anthropic's public Fable page describes multi-day autonomous coding sessions, self-written tests, design fidelity, vision-based checking, document understanding, code review, fewer turns, and complex multi-agent workflows.[3] These are product claims, not proof of universal superiority. The engineering lesson is that speed comes from a strong model plus tool access, persistent context, reusable procedures, effective task decomposition, self-testing, and a host runtime that can keep work moving. A prompt wrapper alone cannot reproduce the complete system.
+
+[2]: https://arxiv.org/html/2602.12670v1 "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks"
+
+[3]: https://www.anthropic.com/claude/fable "Claude Fable — public product page"

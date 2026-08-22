@@ -20,14 +20,15 @@ required = [
     ROOT / "governance" / "capability-risk-matrix.md",
     ROOT / "references" / "peak-upgrade-design.md",
     ROOT / "references" / "absolute-best-research.md",
+    ROOT / "references" / "fable-like-runtime-blueprint.md",
 ]
 for path in required:
     if not path.exists():
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 35:
-    raise SystemExit(f"expected at least 35 skills, found {len(skills)}")
+if len(skills) < 40:
+    raise SystemExit(f"expected at least 40 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -101,6 +102,11 @@ for name in [
     "product-completeness",
     "dynamic-verification",
     "requirement-traceability",
+    "requirement-compiler",
+    "build-recipes",
+    "staged-execution",
+    "repair-loop",
+    "runtime-host",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")

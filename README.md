@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, thirty-six modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, forty-one modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -25,6 +25,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Capability extension | Skill forging, capability discovery, model routing, agent collaboration, and progressive disclosure |
 | Universal access | Multimodal reasoning, accessibility, and incident response |
 | Build completeness | Intent preservation, requirement traceability, product completeness, and dynamic verification |
+| Fable-like acceleration | Requirement compiler, build recipes, staged execution, repair loops, and runtime host |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
@@ -48,6 +49,10 @@ The layers are: identity and contract; request understanding; strategy; context;
 Ultra Plan Mode is an original, bounded high-rigor protocol for difficult, ambiguous, long-running, or high-impact tasks. It does not expose private chain-of-thought or imitate hidden model prompts. It uses a preflight plan, dependency graph, context and assumption ledgers, risk map, resource budgets, user checkpoints, resumable state, independent verification, and safe stop rules. It automatically reduces depth when extra planning would cost more than it saves.
 
 See `core/ultra-plan-mode.md` and `skills/ultra-plan/SKILL.md`. The peak runtime layer additionally provides durable execution, structured event traces, resumable approval state, idempotency and reconciliation rules, progress states, evidence ledgers, human feedback controls, and capability-risk release gates.
+
+## Portable Fable-like build system
+
+The “one-shot” effect is treated as a system, not a magic prompt: a strong model plus structured requirement compilation, reusable recipes, a thin vertical slice, staged execution, dynamic verification, targeted repair, persistent state, and a host runtime. The pipeline is **brief compiler → architecture pass → vertical slice → staged expansion → dynamic verification → repair loop → release gate**. See `references/fable-like-runtime-blueprint.md` and the skills `requirement-compiler`, `build-recipes`, `staged-execution`, `repair-loop`, and `runtime-host`.
 
 ## Absolute Best standard
 
@@ -109,3 +114,5 @@ MIT. See `LICENSE`.
 [10]: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills "Anthropic — Equipping agents for the real world with Agent Skills"
 [11]: https://modelcontextprotocol.io/specification/2026-07-28 "Model Context Protocol — Specification"
 [12]: https://arxiv.org/html/2604.18394v1 "OpenGame: Open Agentic Coding for Games"
+[13]: https://arxiv.org/html/2602.12670v1 "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks"
+[14]: https://www.anthropic.com/claude/fable "Claude Fable — public product page"
