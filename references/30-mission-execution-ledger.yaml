@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 3
-next_mission: 4
+current_mission: 5
+next_mission: 6
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -61,7 +61,40 @@ missions:
       - no live user study or measured model-arm comparison has been run
   4:
     title: Add difficulty, risk, effort, and proportionality classification
+    status: complete
+    artifacts:
+      - references/task-classification-contract.md
+      - core/ultra-plan-mode.md
+      - skills/ultra-plan/SKILL.md
+      - skills/agent-max/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - eight task dimensions map to Focused, Deep, or Ultra planning and approval gates
+      - high consequence, irreversibility, external effect, or sensitivity overrides prompt length
+      - four evaluations cover overplanning, high-risk short prompts, exhaustive loading, and ambiguous deadlines
+    result: proportional_task_classification_created
+    limitations:
+      - classification remains a reasoning contract and has not been calibrated on measured production trajectories
+  5:
+    title: Standardize objective, acceptance, evidence, and stopping contracts
+    status: complete
+    artifacts:
+      - references/completion-contract.md
+      - skills/outcome-completion/SKILL.md
+      - core/self-directing-prompt.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - completion record separates outcome, acceptance, evidence, quality, safety, recovery, and human-value gates
+      - statuses distinguish complete, caveated, needs_review, blocked, and not_started
+      - four evaluations cover build-versus-product evidence, visual claims, missing error tests, and diminishing returns
+    result: shared_completion_contract_created
+    limitations:
+      - benchmark comparison remains not_run without measured model arms
+  6:
+    title: Research source hierarchy, freshness, and independence
     status: next
     planned_artifacts:
-      - task classification contract
-      - proportional planning evaluations
+      - source hierarchy and freshness policy
+      - research quality evaluations

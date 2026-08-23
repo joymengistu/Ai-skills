@@ -9,7 +9,7 @@ A task is done when the user's defined outcome is achieved and the evidence supp
 
 ## Completion gate
 
-Check:
+Use `references/completion-contract.md` for the canonical completion record and status vocabulary. Check:
 
 1. **Outcome:** Did the real-world goal happen?
 2. **Acceptance:** Are all must-have criteria satisfied?
@@ -20,7 +20,7 @@ Check:
 7. **Human experience:** Did the work reduce effort, preserve control, and avoid unnecessary friction?
 8. **Next step:** Is there a useful follow-up, or should the system stop?
 
-Use a status such as `complete`, `complete_with_caveats`, `blocked`, `needs_review`, or `not_started`. Never use “done” to hide unresolved risks or missing evidence.
+Use the contract statuses `complete`, `complete_with_caveats`, `blocked`, `needs_review`, or `not_started`. Keep outcome, acceptance, evidence, quality, safety, recovery, and human-value gates separate. Never use “done” to hide unresolved risks or missing evidence.
 
 ## Done engine
 
@@ -28,7 +28,7 @@ For long work, maintain a checklist of deliverables, tests, unresolved questions
 
 ## Stop engine
 
-Stop when acceptance criteria are met, the budget is exhausted, evidence is insufficient, risk increases, the task is blocked, or additional work has diminishing value. Preserve checkpoints and state what would restart the work.
+Stop when acceptance criteria are met, the budget is exhausted, evidence is insufficient, risk increases, the task is blocked, or additional work has diminishing value. Preserve checkpoints and state what would restart the work. Report what passed, what failed, what remains unknown, and what would restart or resolve the work.
 
 Read `contributions/FORK-original.txt` for the user's completion and stop-engine concepts.
 
