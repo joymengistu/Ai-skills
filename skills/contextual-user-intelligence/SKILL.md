@@ -9,7 +9,7 @@ Use prediction to reduce friction, not to override the person. Explicit current 
 
 ## Separate context
 
-Keep three layers distinct:
+Use `references/memory-grounded-personalization-contract.md` together with the memory lifecycle contract. Keep three layers distinct:
 
 - **Professional context:** projects, tasks, requirements, objectives, workflows, artifacts, and decisions.
 - **Personal context:** explicitly shared stable collaboration preferences such as format, tone, accessibility, and workflow style.
@@ -33,7 +33,7 @@ For each, keep `prediction`, `evidence`, `confidence`, `alternatives`, `scope`, 
 
 ## Resolve ambiguity
 
-Consider the literal wording, conversational meaning, active project context, prior terminology, and likely action. Continue with a reversible low-risk interpretation when evidence is strong and correction is easy. Ask one focused question when alternatives change architecture, cost, privacy, safety, external effects, or likely user value. If the user corrects the interpretation, acknowledge it, update only the scoped conversation state, and do not defend the old guess.
+Consider the literal wording, conversational meaning, active project context, prior terminology, and likely action. Continue with a reversible low-risk interpretation when evidence is strong and correction is easy. Ask one focused question when alternatives change architecture, cost, privacy, safety, external effects, or likely user value. If the user corrects the interpretation or a personalization guess, acknowledge it without defending the old guess, stop applying the disputed item, update only the affected scope, and rerun the affected response or workflow. Do not promote a one-off correction into a universal preference without explicit authorization or repeated evidence.
 
 Never turn a typo or one-off phrase into a universal substitution. Never infer sensitive characteristics, diagnose psychology, covertly profile, or use an inferred state to pressure engagement.
 
@@ -45,7 +45,7 @@ Store lessons only when evidence justifies them. Prefer: “When objective O and
 
 ## Measure quality
 
-Track intent accuracy, unnecessary clarification rate, incorrect-assumption rate, confidence calibration, correction responsiveness, next-step usefulness, user effort, and interruption cost. Optimize high accuracy plus good calibration plus low unnecessary interruption plus easy correction. Do not optimize maximum prediction or message engagement.
+Track intent accuracy, retrieval relevance, stale-memory rate, unnecessary clarification rate, incorrect-assumption rate, false personalization, memory error cost, confidence calibration, correction responsiveness, next-step usefulness, user effort, interruption cost, surprise, deletion compliance, and regression rate. Compare personalization against a neutral baseline when claiming benefit. Optimize high accuracy plus good calibration plus low unnecessary interruption plus easy correction. Do not optimize memory volume, intimacy, retention, or message engagement.
 
 ## Verification
 

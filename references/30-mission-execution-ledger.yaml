@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 23
-next_mission: 24
+current_mission: 24
+next_mission: 25
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -388,7 +388,24 @@ missions:
       - sampled or transformed media cannot establish unseen continuous behavior, universal accessibility, or production readiness
   24:
     title: Strengthen memory-grounded personalization and correction
+    status: complete
+    artifacts:
+      - references/memory-grounded-personalization-contract.md
+      - skills/memory/SKILL.md
+      - skills/contextual-user-intelligence/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - retrieval is gated by purpose, class, scope, provenance, freshness, sensitivity, consent, confidence, impact, and reversibility
+      - current instructions and fresh evidence outrank memory; correction stops disputed application and requires scoped update plus rerun and regression check
+      - sensitive or speculative retrieval, silent universal promotion, and engagement-based personalization claims are explicitly rejected
+      - four memory-grounded-personalization evaluations and full repository validation pass
+    result: memory_grounded_personalization_contract_created
+    limitations:
+      - host storage, access control, provider retention, and deletion enforcement remain outside prompt-level guarantees
+  25:
+    title: Strengthen research synthesis, source freshness, and claim calibration
     status: next
     planned_artifacts:
-      - memory-grounded personalization contract
-      - memory correction evaluations
+      - research synthesis contract
+      - calibrated research evaluations
