@@ -29,3 +29,41 @@ Professional taste should be evaluated as contextual intentionality: hierarchy t
 [3]: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html "W3C WCAG 2.2 — Contrast minimum"
 [4]: https://www.nngroup.com/articles/aesthetic-usability-effect/ "Nielsen Norman Group — The Aesthetic-Usability Effect"
 [5]: https://www.sciencedirect.com/science/article/pii/S1071581922000647 "Visual aesthetics and user experience: A multiple-session experiment"
+
+## Replit and Vercel public UI checkpoint — 2026-08-23
+
+| Status | Observable finding | Source |
+|---|---|---|
+| FACT | Replit Design publicly describes a workspace composed of Canvas, Frames, Elements, Chat, Ambient intelligence, Toolbar, and Library panel, with each component assigned a distinct role. | [Replit Design components](https://docs.replit.com/design/core-components) |
+| FACT | Replit’s public documentation describes Chat as a docked panel that can be minimized for a fuller canvas, and the Toolbar as a floating tool catalog with interaction, pan, chat, draw, edit, and generate tools. | [Replit Design components](https://docs.replit.com/design/core-components) |
+| FACT | Vercel publicly described a dashboard navigation redesign with a resizable sidebar that can be hidden, consistent team/project tabs, reordered common workflows, and mobile navigation optimized for one-handed use. | [Vercel — New dashboard navigation available](https://vercel.com/changelog/new-dashboard-navigation-available) |
+| EVIDENCE | These sources establish publicly described component roles and navigation intentions, not universal measurements or proof that their UI is optimal for every product. | The linked public documentation and changelog. |
+| INFERENCE | Professional UI guidance should treat sidebar width, collapsibility, panel docking, tool grouping, and mobile navigation as task-dependent layout variables with explicit states rather than fixed aesthetic rules. | Derived from the public patterns and existing professional-taste architecture. |
+| HYPOTHESIS | A stable shell with a resizable/collapsible navigation rail, one primary action, grouped secondary tools, and clear panel ownership will reduce visual noise and improve task orientation in developer-tool interfaces. | Requires live usability and accessibility testing. |
+| UNKNOWN | Exact production breakpoints, pixel values, internal design tokens, interaction metrics, and whether these patterns improve task outcomes for Ai-skills users. | Not established by the public sources. |
+
+## Vercel Geist and Replit design-system checkpoint — 2026-08-23
+
+| Status | Observable finding | Source |
+|---|---|---|
+| FACT | Vercel’s public Geist Button guidance distinguishes primary/supporting/destructive variants, loading state, disabled state, links versus mutating buttons, and icon-only accessibility labels. | [Vercel Geist Button](https://vercel.com/geist/button) |
+| FACT | Geist’s public guidance says loading should preserve the button and announce busy state, disabled controls should explain why they are unavailable, labels should name the action and target, and icon-only actions need accessible labels. | [Vercel Geist Button](https://vercel.com/geist/button) |
+| FACT | Replit publicly describes design systems as reusable components, brand assets, design tokens, custom instructions, and on-demand Skills; it emphasizes consistent application across artifacts and ongoing maintenance. | [Replit — Setting up a Design System](https://docs.replit.com/teams/custom-design-system) |
+| EVIDENCE | These are public documentation patterns and recommendations, not proof of exact pixel values or universal design quality. | The linked public documentation. |
+| INFERENCE | Ai-skills should define component roles and state behavior before prescribing precise sizes: primary/secondary/destructive hierarchy, stable loading, labeled icon-only controls, and reusable token sources. | Derived from the public references and current professional-taste Skill. |
+| HYPOTHESIS | State-complete controls and a reusable token hierarchy will improve perceived professionalism and reduce user uncertainty more than decorative styling or arbitrary pixel imitation. | Requires live interface review and task testing. |
+| UNKNOWN | Exact Geist token values, Replit internal spacing values, hidden responsive breakpoints, and user outcome effects. | Not established by the public sources. |
+
+## Replit and Vercel public UI checkpoint — 2026-08-23
+
+| Status | Observable finding | Source |
+|---|---|---|
+| FACT | Replit Design publicly describes a workspace composed of Canvas, Frames, Elements, Chat, Ambient intelligence, Toolbar, and Library panel, with each component assigned a distinct role. | [Replit Design components](https://docs.replit.com/design/core-components) |
+| FACT | Replit’s public documentation describes Chat as a docked panel that can be minimized for a fuller canvas, and the Toolbar as a floating tool catalog with interaction, pan, chat, draw, edit, and generate tools. | [Replit Design components](https://docs.replit.com/design/core-components) |
+| FACT | Vercel publicly described a dashboard navigation redesign with a resizable sidebar that can be hidden, consistent team/project tabs, reordered common workflows, and mobile navigation optimized for one-handed use. | [Vercel — New dashboard navigation available](https://vercel.com/changelog/new-dashboard-navigation-available) |
+| FACT | Vercel’s public Geist Button guidance distinguishes primary/supporting/destructive variants, loading state, disabled state, links versus mutating buttons, and icon-only accessibility labels. | [Vercel Geist Button](https://vercel.com/geist/button) |
+| FACT | Replit publicly describes design systems as reusable components, brand assets, design tokens, custom instructions, and on-demand Skills; it emphasizes consistent application across artifacts and ongoing maintenance. | [Replit — Setting up a Design System](https://docs.replit.com/teams/custom-design-system) |
+| EVIDENCE | These sources establish publicly described component roles and navigation intentions, not universal measurements or proof that their UI is optimal for every product. | The linked public documentation. |
+| INFERENCE | Professional UI guidance should treat sidebar width, collapsibility, panel docking, tool grouping, and mobile navigation as task-dependent layout variables with explicit states rather than fixed aesthetic rules. | Derived from the public patterns and existing professional-taste architecture. |
+| HYPOTHESIS | A stable shell with a resizable/collapsible navigation rail, one primary action, grouped secondary tools, and clear panel ownership will reduce visual noise and improve task orientation in developer-tool interfaces. | Requires live usability and accessibility testing. |
+| UNKNOWN | Exact production breakpoints, pixel values, internal design tokens, interaction metrics, and whether these patterns improve task outcomes for Ai-skills users. | Not established by the public sources. |

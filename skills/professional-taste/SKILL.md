@@ -53,6 +53,12 @@ For live work, test first glance, squint/scan path, smaller/quieter, remove-20-p
 
 Return: overall judgment with uncertainty; strongest evidence; critical blockers; dimension scores with reasons; anti-patterns with context and user cost; three highest-leverage repairs; and what should remain unchanged. Preserve originality and references without copying another product’s exact layout or assets.
 
+## Developer-tool shell patterns
+
+When the product is a developer tool, dashboard, editor, or agent workspace, read `references/professional-ui-patterns.md`. Use its sidebar, top-bar, docked-panel, button, spacing, density, and state-completeness values as starting hypotheses—not fixed vendor measurements. Treat navigation width, collapse behavior, panel ownership, action hierarchy, and mobile navigation as task-dependent variables. Prefer one primary action per local region, explicit labels, visible focus, stable loading states, and accessible icon-only controls.
+
+Public Replit and Vercel references inform the pattern decomposition, but do not copy their exact layout, assets, or private tokens. Record exact vendor measurements as UNKNOWN unless publicly documented.
+
 ## Release gate
 
 Do not call an interface professional merely because it looks polished. A serious accessibility, interaction, content hierarchy, misleading-state, or recovery failure is a blocker. Verify the live artifact when possible and use human blind review for professional perception and taste.
