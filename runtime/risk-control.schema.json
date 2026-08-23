@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/risk-control.schema.json",
+  "title": "Ai-skills risk-control records",
+  "type": "object",
+  "required": ["trust_envelope", "action_intent", "approval_record", "incident_record"],
+  "properties": {
+    "trust_envelope": {
+      "type": "object",
+      "required": ["origin", "trust_level", "content_kind", "source_id", "received_at", "allowed_effects"],
+      "properties": {
+        "origin": {"type": "string", "minLength": 1},
+        "trust_level": {"enum": ["trusted", "known", "untrusted", "unknown"]},
+        "content_kind": {"type": "string", "minLength": 1},
+        "source_id": {"type": "string", "minLength": 1},
+        "received_at": {"type": "string", "format": "date-time"},
+        "allowed_effects": {"type": "array", "items": {"type": "string"}},
+        "authoritative": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "action_intent": {
+      "type": "object",
+      "required": ["run_id", "intent", "tool", "target", "scope", "risk_class", "reversible", "permission", "expected_evidence", "rollback", "idempotency_key", "state_version"],
+      "properties": {
+        "run_id": {"type": "string", "minLength": 1},
+        "intent": {"type": "string", "minLength": 1},
+        "tool": {"type": "string", "minLength": 1},
+        "target": {"type": "string", "minLength": 1},
+        "scope": {"type": "string", "minLength": 1},
+        "risk_class": {"enum": ["read_only", "reversible", "consequential", "irreversible", "unknown"]},
+        "reversible": {"type": "boolean"},
+        "permission": {"type": "string", "minLength": 1},
+        "expected_evidence": {"type": "array", "items": {"type": "string"}},
+        "rollback": {"type": "string", "minLength": 1},
+        "idempotency_key": {"type": "string", "minLength": 1},
+        "state_version": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "approval_record": {
+      "type": "object",
+      "required": ["action_hash", "approved", "approver", "expires_at"],
+      "properties": {
+        "action_hash": {"type": "string", "minLength": 1},
+        "approved": {"type": "boolean"},
+        "approver": {"type": "string", "minLength": 1},
+        "expires_at": {"type": "string", "format": "date-time"},
+        "approval_id": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "incident_record": {
+      "type": "object",
+      "required": ["category", "run_id", "status"],
+      "properties": {
+        "incident_id": {"type": "string"},
+        "category": {"type": "string", "minLength": 1},
+        "run_id": {"type": "string", "minLength": 1},
+        "action_hash": {"type": "string"},
+        "cause": {"type": "string"},
+        "status": {"type": "string"},
+        "evidence_refs": {"type": "array", "items": {"type": "string"}},
+        "uncertainty": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

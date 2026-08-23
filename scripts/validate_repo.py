@@ -42,7 +42,11 @@ required = [
     ROOT / "runtime" / "reference_host" / "__main__.py",
     ROOT / "runtime" / "reference_host" / "host.py",
     ROOT / "runtime" / "reference_host" / "test_host.py",
+    ROOT / "runtime" / "reference_host" / "risk_controls.py",
     ROOT / "references" / "reference-host-architecture.md",
+    ROOT / "references" / "agent-risk-research-notes.md",
+    ROOT / "references" / "agent-risk-control-blueprint.md",
+    ROOT / "runtime" / "risk-control.schema.json",
     ROOT / "contributions" / "Fable-research-mission-original.txt",
 ]
 for path in required:
@@ -50,8 +54,8 @@ for path in required:
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 57:
-    raise SystemExit(f"expected at least 57 skills, found {len(skills)}")
+if len(skills) < 58:
+    raise SystemExit(f"expected at least 58 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -80,6 +84,7 @@ for path in [
     ROOT / "skills" / "capability-gap-response" / "SKILL.md",
     ROOT / "skills" / "lovability" / "SKILL.md",
     ROOT / "skills" / "brainstorm-mode" / "SKILL.md",
+    ROOT / "skills" / "agent-risk-controls" / "SKILL.md",
 ]:
     if not path.exists():
         raise SystemExit(f"missing governance or peak skill file: {path}")
@@ -99,6 +104,8 @@ for phrase in [
     "independent evaluator",
     "CAPABILITY ANALYSIS ROUTE",
     "EVOLVING CAPABILITY ROUTE",
+    "RISK-CONTROL ROUTE",
+    "risk",
 ]:
     if phrase.lower() not in prompt.lower():
         raise SystemExit(f"self-prompt missing principle: {phrase}")
@@ -112,6 +119,11 @@ trace = json.loads((ROOT / "runtime" / "trace-schema.json").read_text(encoding="
 for key in ["schema_version", "run_id", "sequence", "timestamp", "actor", "event_type", "risk_class"]:
     if key not in trace.get("required", []):
         raise SystemExit(f"trace schema missing required field: {key}")
+
+risk_control = json.loads((ROOT / "runtime" / "risk-control.schema.json").read_text(encoding="utf-8"))
+for key in ["trust_envelope", "action_intent", "approval_record", "incident_record"]:
+    if key not in risk_control.get("required", []):
+        raise SystemExit(f"risk-control schema missing required record: {key}")
 
 skill_contract = json.loads((ROOT / "runtime" / "skill-contract.schema.json").read_text(encoding="utf-8"))
 for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "procedure", "constraints", "dependencies", "permissions", "risk_class", "verification", "evaluation", "lifecycle", "provenance", "owner", "rollback"]:
@@ -175,6 +187,7 @@ for name in [
     "capability-gap-response",
     "lovability",
     "brainstorm-mode",
+    "agent-risk-controls",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")

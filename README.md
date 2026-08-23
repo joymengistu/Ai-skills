@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, fifty-seven modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, fifty-eight modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -15,12 +15,12 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Action | Tool design, permissions, approvals, verification, recovery |
 | Domains | Research, coding, data analysis, creative work, communication |
 | Human value | Human satisfaction, interaction design, agency, accessibility |
-| Trust | Safety governance, threat modeling, privacy, auditability |
+| Trust | Safety governance, threat modeling, privacy, auditability, and agent-risk controls |
 | Planning depth | Focused, Deep, and Ultra Plan modes with budgets, checkpoints, and resumability |
 | Bestness and frontier | Superlative analysis, frontier research, evidence, alternatives, and stopping criteria |
 | Assistance and product | Optimal assistance, product strategy, magic moments, quality bar, and outcome completion |
 | Improvement | Traces, graders, regression cases, bounded self-improvement |
-| Peak runtime | Durable execution, event traces, resumable approvals, idempotency, and progress states |
+| Peak runtime | Durable execution, event traces, resumable approvals, idempotency, progress states, action-bound approvals, cancellation, and risk journaling |
 | Quality gates | Capability-risk matrix, evidence ledger, human feedback, and release criteria |
 | Capability extension | Skill forging, capability discovery, model routing, agent collaboration, and progressive disclosure |
 | Universal access | Multimodal reasoning, accessibility, and incident response |
@@ -30,13 +30,15 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Fable research controls | Capability analysis, context handoffs, skeptical evaluation, tool evaluation, and completion intelligence |
 | Evolving capabilities | Skill discovery, typed composition, quality judgment, capability-gap response, lifecycle promotion, and rollback |
 | Lovable collaboration | Honest appreciation, adaptive conversation, controllable personalization, Brainstorm Mode, constructive disagreement, and anti-manipulation boundaries |
+| Risk research | OWASP, NIST, MITRE ATLAS, Anthropic, Microsoft, AISI, Unit 42, IETF, and AAAI-informed risk taxonomy and control blueprint |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
 ## Quick start
 
 Read `core/self-directing-prompt.md` and combine it with `core/operating-contract.md` and `core/execution-loop.md`. For a specific task, load only the relevant specialist skills. A coding task might use task framing, planning, context engineering, coding, tool use, safety governance, evaluation, and communication. A research task might use task framing, research, context engineering, evaluation, and communication.
 
-Run the structural checks from the repository root:
+Run the structural checks from the repository root. The current risk-review milestone adds `references/agent-risk-control-blueprint.md`, `references/agent-risk-research-notes.md`, `runtime/risk-control.schema.json`, and `skills/agent-risk-controls/SKILL.md`. The executable reference host now enforces trust labeling primitives, action intent records, bound approvals, cancellation, tool validation, destination boundaries, and redacted incident journaling.
+
 
 ```bash
 python3 scripts/validate_repo.py

@@ -1,3 +1,12 @@
+from .risk_controls import (
+    ActionIntent,
+    ActionJournal,
+    ApprovalRecord,
+    CancellationSignal,
+    RedactedIncidentJournal,
+    TrustEnvelope,
+    parse_approval,
+)
 from .host import (
     ApprovalRequired,
     BudgetExceeded,
@@ -15,9 +24,13 @@ from .host import (
 )
 
 __all__ = [
+    "ActionIntent",
+    "ActionJournal",
+    "ApprovalRecord",
     "ApprovalRequired",
     "BudgetExceeded",
     "CallableProvider",
+    "CancellationSignal",
     "CheckpointError",
     "CheckpointStore",
     "DeterministicProvider",
@@ -26,6 +39,9 @@ __all__ = [
     "ProviderRequest",
     "ProviderResponse",
     "ReferenceHost",
+    "RedactedIncidentJournal",
     "ToolSpec",
     "TraceWriter",
+    "TrustEnvelope",
+    "parse_approval",
 ]

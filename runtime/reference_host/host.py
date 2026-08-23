@@ -11,6 +11,15 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Mapping, Protocol
+
+from .risk_controls import (
+    ActionIntent,
+    ActionJournal,
+    ApprovalRecord,
+    CancellationSignal,
+    TrustEnvelope,
+    parse_approval,
+)
 import hashlib
 import json
 import os
@@ -105,6 +114,9 @@ class ToolSpec:
     handler: Callable[[Mapping[str, Any]], Any]
     requires_approval: bool = False
     description: str = ""
+    argument_validator: Callable[[Mapping[str, Any]], bool] | None = None
+    data_scope: str = "unspecified"
+    destination_allowlist: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if self.risk_class not in RISK_CLASSES:
@@ -242,7 +254,9 @@ class ReferenceHost:
         trace_path: str | os.PathLike[str],
         checkpoint_path: str | os.PathLike[str],
         tools: Mapping[str, ToolSpec] | None = None,
-        approvals: Mapping[str, bool] | None = None,
+        approvals: Mapping[str, Any] | None = None,
+        cancel_path: str | os.PathLike[str] | None = None,
+        journal_path: str | os.PathLike[str] | None = None,
     ):
         self.profile = self._validate_profile(profile)
         self.provider = provider
@@ -251,6 +265,9 @@ class ReferenceHost:
         self.tools = dict(tools or {})
         self.approvals = dict(approvals or {})
         self.budget = BudgetGuard(self.profile["budgets"])
+        configured_cancel = self.profile["recovery"].get("cancel_signal")
+        self.cancel_signal = CancellationSignal(cancel_path or (configured_cancel if isinstance(configured_cancel, str) and configured_cancel.startswith("/") else None))
+        self.journal = ActionJournal(journal_path) if journal_path else None
 
     @staticmethod
     def _validate_profile(profile: Mapping[str, Any]) -> dict[str, Any]:
@@ -265,16 +282,21 @@ class ReferenceHost:
                 raise ValueError(f"budget missing {key}")
         return json.loads(json.dumps(profile))
 
+    def _check_cancel(self) -> None:
+        if self.cancel_signal.requested:
+            raise HostError("cancellation requested")
+
     def _checkpoint(self, state: Mapping[str, Any]) -> str:
         state_hash = self.checkpoints.save(self.profile["run_id"], state)
         self.trace.emit("system", "checkpoint_saved", "read_only", {"state_keys": sorted(state.keys())}, state_hash=state_hash)
         return state_hash
 
-    def _execute_tool(self, request: Mapping[str, Any]) -> tuple[str, Any]:
+    def _execute_tool(self, request: Mapping[str, Any], task: str) -> tuple[str, Any]:
         name = str(request.get("name", ""))
         arguments = request.get("arguments", {})
         if not isinstance(arguments, Mapping):
             raise PolicyError("tool arguments must be an object")
+        self._check_cancel()
         spec = self.tools.get(name)
         if spec is None:
             raise PolicyError(f"tool is not registered: {name}")
@@ -282,7 +304,22 @@ class ReferenceHost:
         allowed = set(policy["allowed"])
         if name not in allowed and spec.permission not in allowed:
             raise PolicyError(f"tool is not allowed by profile: {name}")
+        if spec.argument_validator is not None and not spec.argument_validator(arguments):
+            raise PolicyError(f"tool arguments failed validation: {name}")
+        destination = str(arguments.get("destination", ""))
+        if spec.destination_allowlist and destination and destination not in set(spec.destination_allowlist):
+            raise PolicyError(f"tool destination is not allowed: {destination}")
         self.budget.tool_call()
+        action = ActionIntent(
+            run_id=self.profile["run_id"], intent=task, tool=name,
+            target=destination or name, scope=spec.data_scope,
+            risk_class=spec.risk_class, reversible=spec.risk_class in {"read_only", "reversible"},
+            permission=spec.permission, expected_evidence=(f"tool:{name}",),
+            rollback=self.profile["recovery"].get("rollback_rule", "stop"),
+            idempotency_key=f"{self.profile['run_id']}:{name}:{self.budget.tool_calls}",
+        )
+        if self.journal:
+            self.journal.append({"kind": "intent", "action_hash": action.action_hash, **action.to_dict()})
         approval_needed = (
             name in policy["approval_required"]
             or spec.requires_approval
@@ -291,19 +328,22 @@ class ReferenceHost:
         if approval_needed:
             approval_ref = f"approval-{uuid.uuid4().hex}"
             self.trace.emit("system", "approval_requested", spec.risk_class, {"tool": name}, approval_ref=approval_ref)
-            if name not in self.approvals:
-                raise ApprovalRequired(f"approval required for tool: {name}")
-            if not self.approvals[name]:
+            decision = parse_approval(self.approvals.get(name))
+            if decision is None or decision.action_hash != action.action_hash or decision.expired:
+                raise ApprovalRequired(f"valid, unexpired approval required for tool: {name}")
+            if not decision.approved:
                 self.trace.emit("system", "approval_rejected", spec.risk_class, {"tool": name}, approval_ref=approval_ref)
                 raise PolicyError(f"approval rejected for tool: {name}")
-            self.trace.emit("system", "approval_received", spec.risk_class, {"tool": name}, approval_ref=approval_ref)
+            self.trace.emit("system", "approval_received", spec.risk_class, {"tool": name, "approver": decision.approver}, approval_ref=approval_ref)
         self.trace.emit("tool", "tool_started", spec.risk_class, {"tool": name})
         try:
             result = spec.handler(arguments)
         except Exception as exc:  # pragma: no cover - exact exception is preserved in trace only
             self.trace.emit("tool", "tool_failed", spec.risk_class, {"tool": name, "error_type": type(exc).__name__})
             raise HostError(f"tool failed: {name}") from exc
-        self.trace.emit("tool", "tool_completed", spec.risk_class, {"tool": name})
+        self.trace.emit("tool", "tool_completed", spec.risk_class, {"tool": name, "action_hash": action.action_hash})
+        if self.journal:
+            self.journal.append({"kind": "result", "action_hash": action.action_hash, "tool": name, "status": "completed"})
         return name, result
 
     def run(
@@ -315,6 +355,9 @@ class ReferenceHost:
         if not task.strip():
             raise ValueError("task must be non-empty")
         context = dict(context or {})
+        if self.cancel_signal.requested:
+            self.trace.emit("system", "run_stopped", "read_only", {"reason": "cancellation requested"})
+            return {"run_id": self.profile["run_id"], "status": "cancelled", "completed": False, "reason": "cancellation requested"}
         self.trace.emit("system", "run_started", "read_only", {"mode": self.profile["mode"]})
         self.trace.emit("agent", "context_acquired", "read_only", {"context_keys": sorted(context.keys())})
         state: dict[str, Any] = {"task": task, "context": context, "status": "running"}
@@ -325,7 +368,7 @@ class ReferenceHost:
             self.trace.emit("agent", "decision_proposed", "read_only", {"has_tool_request": response.tool_request is not None})
             if response.tool_request is not None:
                 try:
-                    name, result = self._execute_tool(response.tool_request)
+                    name, result = self._execute_tool(response.tool_request, task)
                     state["tool_result"] = {"tool": name, "result": result}
                 except ApprovalRequired as exc:
                     state["status"] = "waiting_approval"
@@ -349,6 +392,11 @@ class ReferenceHost:
             self.trace.emit("reviewer", "verification_completed", "read_only", {"evidence_count": len(evidence)}, evidence_refs=evidence, state_hash=state_hash)
             self.trace.emit("system", "run_completed", "read_only", {"evidence_count": len(evidence)}, evidence_refs=evidence, state_hash=state_hash)
             return {"run_id": self.profile["run_id"], "status": state["status"], "completed": True, "text": response.text, "evidence_refs": evidence}
+        except HostError as exc:
+            state["status"] = "cancelled" if "cancellation" in str(exc) else "stopped"
+            self._checkpoint(state)
+            self.trace.emit("system", "run_stopped", "read_only", {"reason": str(exc)})
+            return {"run_id": self.profile["run_id"], "status": state["status"], "completed": False, "reason": str(exc)}
         except BudgetExceeded as exc:
             state["status"] = "stopped"
             self._checkpoint(state)

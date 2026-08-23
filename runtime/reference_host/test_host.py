@@ -1,9 +1,11 @@
 import json
 import tempfile
 import unittest
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from host import CheckpointError, CheckpointStore, DeterministicProvider, ReferenceHost, ToolSpec
+from runtime.reference_host.host import CheckpointError, CheckpointStore, DeterministicProvider, ReferenceHost, ToolSpec
+from runtime.reference_host.risk_controls import ActionIntent, ApprovalRecord, CancellationSignal, RedactedIncidentJournal, TrustEnvelope
 
 
 def profile(run_id="test-run", max_model_calls=1, max_tool_calls=2):
@@ -62,7 +64,13 @@ class ReferenceHostTests(unittest.TestCase):
     def test_approved_tool_executes(self):
         calls = []
         tool = ToolSpec("write_note", "write:note", "consequential", lambda args: calls.append(args) or "written", requires_approval=True)
-        host = self.make_host(DeterministicProvider("answer", {"name": "write_note", "arguments": {"text": "x"}}), approvals={"write_note": True})
+        action = ActionIntent(
+            run_id="test-run", intent="Write", tool="write_note", target="write_note", scope="unspecified",
+            risk_class="consequential", reversible=False, permission="write:note", expected_evidence=("tool:write_note",),
+            rollback="restore checkpoint", idempotency_key="test-run:write_note:1",
+        )
+        approval = ApprovalRecord(action.action_hash, True, "user", (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat())
+        host = self.make_host(DeterministicProvider("answer", {"name": "write_note", "arguments": {"text": "x"}}), approvals={"write_note": approval})
         host.tools["write_note"] = tool
         result = host.run("Write", completion_evidence=["tool:write_note"])
         self.assertTrue(result["completed"])
@@ -85,6 +93,50 @@ class ReferenceHostTests(unittest.TestCase):
             self.assertEqual(store.load("run-a"), {"status": "paused"})
             with self.assertRaises(CheckpointError):
                 store.load("run-b")
+
+    def test_cancel_signal_stops_before_provider_call(self):
+        with tempfile.TemporaryDirectory() as directory:
+            cancel = Path(directory) / "cancel"
+            cancel.touch()
+            provider = DeterministicProvider("should not run")
+            host = self.make_host(provider, run_id="cancel-run")
+            host.cancel_signal = CancellationSignal(cancel)
+            result = host.run("Stop now", completion_evidence=["not reached"])
+            self.assertFalse(result["completed"])
+            self.assertEqual(result["status"], "cancelled")
+            self.assertEqual(provider.calls, 0)
+
+    def test_tool_argument_and_destination_boundaries(self):
+        calls = []
+        tool = ToolSpec("send", "send:message", "consequential", lambda args: calls.append(args), requires_approval=False, argument_validator=lambda args: isinstance(args.get("message"), str) and bool(args["message"]), destination_allowlist=("approved.example",))
+        host = self.make_host(DeterministicProvider("answer", {"name": "send", "arguments": {"message": "x", "destination": "evil.example"}}))
+        host.tools["send"] = tool
+        result = host.run("Send", completion_evidence=["not reached"])
+        self.assertFalse(result["completed"])
+        self.assertEqual(calls, [])
+
+    def test_untrusted_content_cannot_become_authoritative(self):
+        envelope = TrustEnvelope("web", "untrusted", "document", "doc-1", datetime.now(timezone.utc).isoformat(), ("inform",))
+        self.assertFalse(envelope.authoritative)
+        self.assertEqual(envelope.to_dict()["trust_level"], "untrusted")
+
+    def test_action_journal_detects_tampering(self):
+        with tempfile.TemporaryDirectory() as directory:
+            from runtime.reference_host.risk_controls import ActionJournal
+            path = Path(directory) / "actions.jsonl"
+            journal = ActionJournal(path)
+            journal.append({"kind": "intent", "action_hash": "abc"})
+            path.write_text(path.read_text().replace("abc", "tampered"), encoding="utf-8")
+            with self.assertRaises(ValueError):
+                journal.append({"kind": "result", "action_hash": "abc"})
+
+    def test_incident_journal_redacts_arbitrary_payload(self):
+        with tempfile.TemporaryDirectory() as directory:
+            journal = RedactedIncidentJournal(Path(directory) / "incidents.jsonl")
+            journal.append_incident({"category": "privacy", "run_id": "r", "secret": "do-not-store", "uncertainty": "known"})
+            record = json.loads((Path(directory) / "incidents.jsonl").read_text())
+            self.assertNotIn("secret", record)
+            self.assertEqual(record["category"], "privacy")
 
     def test_model_budget_is_enforced(self):
         provider = DeterministicProvider("answer")
