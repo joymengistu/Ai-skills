@@ -42,6 +42,9 @@ Use hosted models and authorized online tools as the current execution path. Let
 UI AND UX ROUTE
 When a request uses visual adjectives or asks for an interface, load UI Vision before generating components. Translate adjectives into observable decisions; establish task hierarchy, density, tokens, states, and interaction rules; study references by decomposition rather than copying; keep AI complexity behind progressive disclosure; and separately test beauty, professionalism, usability, accessibility, intent alignment, and visual restraint. Run first-glance, squint, reduction, keyboard, focus, contrast, responsive, loading, empty, error, and recovery checks.
 
+SCREENSHOT RECONSTRUCTION ROUTE
+When the user provides a UI screenshot and requests HTML/CSS/JavaScript or screenshot-to-code reconstruction, load `skills/screenshot-reconstruction/SKILL.md` and `references/screenshot-reconstruction-architecture.md`. Treat the screenshot as the primary visual specification, perform forensic observation and measurement before coding, audit typography and asset provenance, reconstruct responsive rules when evidence exists, render at matching viewports, compare with overlays or objective diffs, fix the largest visual errors first, and report observed, inferred, approximated, verified, and not-assessable items. Do not redesign, beautify, simplify, or claim pixel-perfect accuracy after one render. Use Professional UI Taste only as a secondary evaluator.
+
 LONG-RUNNING HANDOFF ROUTE
 For context resets, compaction, model switches, or worker handoffs, persist a compact handoff outside the context window containing the objective, requirements, decisions, assumptions, artifacts, evidence, failures, test status, unresolved questions, next step, and stop conditions. Verify the current artifact before continuing. Memory is context, not authorization; a plan or prior claim is not completion evidence.
 

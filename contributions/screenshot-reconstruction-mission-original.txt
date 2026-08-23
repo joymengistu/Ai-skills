@@ -1,0 +1,599 @@
+MISSION: BUILD A PIXEL-PRECISION SCREENSHOT → HTML/CSS RECONSTRUCTION SKILL
+
+You are working inside the existing AI Skills repository.
+
+Create a production-grade Skill whose purpose is to reconstruct a provided UI screenshot as accurately as technically possible using HTML, CSS, and JavaScript.
+
+This is NOT a UI-design skill.
+
+This is NOT a "make something similar" skill.
+
+This is NOT a "make it beautiful" skill.
+
+This is a VISUAL RECONSTRUCTION skill.
+
+The screenshot is the primary visual specification.
+
+==================================================
+CORE OBJECTIVE
+==================================================
+
+Given:
+
+- screenshot(s)
+- viewport dimensions
+- optional assets
+- optional fonts
+- optional interaction requirements
+
+produce:
+
+- HTML
+- CSS
+- JavaScript when required
+- required assets
+- responsive behavior when requested
+
+that visually reproduces the reference.
+
+Optimize for:
+
+VISUAL FIDELITY
++
+GEOMETRIC ACCURACY
++
+TYPOGRAPHIC ACCURACY
++
+SPACING ACCURACY
++
+COLOR ACCURACY
++
+ASSET ACCURACY
++
+RESPONSIVE ACCURACY
+
+Do NOT substitute "professional-looking" for "matching."
+
+==================================================
+1. SCREENSHOT FORENSICS
+==================================================
+
+Before writing UI code, analyze the screenshot.
+
+Identify:
+
+- viewport dimensions
+- page boundaries
+- layout system
+- major regions
+- containers
+- columns
+- rows
+- alignment
+- spacing
+- padding
+- margins
+- borders
+- corner radii
+- shadows
+- colors
+- gradients
+- typography
+- font sizes
+- font weights
+- line heights
+- letter spacing
+- icons
+- images
+- logos
+- buttons
+- controls
+- states
+- overlays
+- background elements
+- visual hierarchy
+
+Create a structured visual specification BEFORE implementation.
+
+==================================================
+2. MEASURE — DO NOT GUESS
+==================================================
+
+Whenever possible, derive measurements from the screenshot.
+
+Estimate:
+
+- x/y positions
+- widths
+- heights
+- gaps
+- padding
+- alignment
+- proportions
+- text dimensions
+
+Use relationships between elements.
+
+For example:
+
+Instead of:
+
+"the sidebar looks about 250px"
+
+determine:
+
+"sidebar width ≈ 18% of viewport width."
+
+Use the most reliable evidence available.
+
+Record uncertain measurements instead of pretending they are exact.
+
+==================================================
+3. TYPOGRAPHY
+==================================================
+
+Typography is part of geometry.
+
+Determine:
+
+- likely font family
+- fallback fonts
+- font size
+- weight
+- line height
+- letter spacing
+- text-transform
+- wrapping behavior
+- text alignment
+
+If the exact font is unavailable:
+
+1. research likely alternatives
+2. choose the closest available font
+3. compensate carefully through typography settings
+
+Do not casually replace typography with a generic system font.
+
+==================================================
+4. ASSETS
+==================================================
+
+Identify whether visible elements are:
+
+- SVG
+- PNG
+- JPG
+- WebP
+- icon font
+- CSS shape
+- text
+- generated element
+
+Prefer the original asset when available.
+
+Do not replace a distinctive logo or icon with an arbitrary substitute merely because it is convenient.
+
+If an asset is unavailable, document the approximation.
+
+==================================================
+5. LAYOUT RECONSTRUCTION
+==================================================
+
+Determine the underlying layout model.
+
+Evaluate:
+
+- flexbox
+- CSS grid
+- absolute positioning
+- fixed positioning
+- sticky positioning
+- normal document flow
+
+Choose the simplest model that reproduces the observed geometry.
+
+Do not use excessive absolute positioning simply to fake one screenshot if responsive behavior is required.
+
+==================================================
+6. RESPONSIVE BEHAVIOR
+==================================================
+
+If multiple screenshots exist at different viewport sizes:
+
+infer the responsive rules between them.
+
+Determine:
+
+- what changes
+- what remains fixed
+- what scales
+- what wraps
+- what disappears
+- what becomes scrollable
+- breakpoint behavior
+
+Do not simply create independent screenshots.
+
+Reconstruct the underlying responsive system.
+
+==================================================
+7. IMPLEMENTATION
+==================================================
+
+Create clean, maintainable code.
+
+Prefer:
+
+- semantic HTML
+- organized CSS
+- reusable components where appropriate
+- CSS variables for repeated values
+- minimal JavaScript
+- no unnecessary dependencies
+
+Do not sacrifice visual fidelity for arbitrary architectural preferences.
+
+==================================================
+8. VISUAL VALIDATION LOOP
+==================================================
+
+THIS IS MANDATORY.
+
+Do NOT stop after generating the first implementation.
+
+Use this loop:
+
+REFERENCE
+↓
+IMPLEMENT
+↓
+RENDER
+↓
+COMPARE
+↓
+IDENTIFY DIFFERENCES
+↓
+FIX
+↓
+RENDER AGAIN
+↓
+COMPARE AGAIN
+
+Repeat until improvements become negligible or the available
+evidence is exhausted.
+
+==================================================
+9. DIFFERENCE ANALYSIS
+==================================================
+
+When comparing the implementation to the reference, inspect:
+
+GLOBAL
+
+- overall composition
+- viewport coverage
+- major alignment
+
+LAYOUT
+
+- widths
+- heights
+- spacing
+- positioning
+- proportions
+
+TYPOGRAPHY
+
+- font
+- size
+- weight
+- line height
+- wrapping
+
+VISUAL
+
+- colors
+- borders
+- shadows
+- radii
+- opacity
+- gradients
+
+DETAIL
+
+- icons
+- images
+- controls
+- small spacing differences
+
+Prioritize the largest visual errors first.
+
+==================================================
+10. PIXEL-PERFECT PRINCIPLE
+==================================================
+
+"Pixel-perfect" does NOT mean blindly changing random pixel values.
+
+It means:
+
+MINIMIZE THE VISUAL DIFFERENCE BETWEEN REFERENCE
+AND GENERATED RESULT.
+
+Use a hierarchy:
+
+1. overall structure
+2. major geometry
+3. spacing
+4. typography
+5. colors
+6. components
+7. micro-details
+
+Do not spend ten minutes adjusting a 1px icon offset while
+the main layout is still wrong.
+
+==================================================
+11. OBJECTIVE COMPARISON
+==================================================
+
+When technically possible, create screenshots of the generated UI
+at the same viewport dimensions as the reference.
+
+Use image comparison methods such as:
+
+- overlay
+- difference image
+- pixel comparison
+- perceptual similarity
+- region-based comparison
+
+Do not rely solely on visual intuition.
+
+If automated comparison is unavailable, perform structured manual comparison.
+
+==================================================
+12. CONFIDENCE
+==================================================
+
+For uncertain reconstruction decisions record:
+
+ELEMENT
+ASSUMPTION
+EVIDENCE
+CONFIDENCE
+
+Example:
+
+ELEMENT:
+Font family
+
+ASSUMPTION:
+Inter-like sans-serif
+
+EVIDENCE:
+Letter shapes and proportions
+
+CONFIDENCE:
+Medium
+
+Never pretend uncertain inference is exact.
+
+==================================================
+13. EXAMPLES
+==================================================
+
+Create training examples for the Skill.
+
+GOOD:
+
+Reference screenshot → carefully measured reconstruction → validated.
+
+BAD:
+
+Reference screenshot → visually attractive but structurally different UI.
+
+BORDERLINE:
+
+Very similar structure but incorrect typography.
+
+EXCEPTION:
+
+Screenshot contains an intentionally unusual visual element
+that should not be "improved."
+
+TRANSFORMATION:
+
+AI-generated UI → screenshot-comparison-driven correction.
+
+Explain WHY each example succeeds or fails.
+
+==================================================
+14. ANTI-PATTERNS
+==================================================
+
+Explicitly prevent:
+
+- redesigning the screenshot
+- adding unnecessary UI
+- making everything larger
+- adding excessive cards
+- excessive gradients
+- excessive rounded corners
+- arbitrary animations
+- generic AI-dashboard styling
+- replacing icons unnecessarily
+- inventing content
+- changing hierarchy
+- "improving" the original design
+- stopping after the first render
+
+IMPORTANT:
+
+If the reference looks minimal, preserve its restraint.
+
+If the reference looks dense, do not artificially simplify it.
+
+If the reference looks unusual, do not normalize it.
+
+MATCH THE REFERENCE.
+
+==================================================
+15. PROFESSIONAL UI TASTE
+==================================================
+
+Use the existing Professional UI Taste knowledge only as a
+secondary evaluator.
+
+Reference fidelity has priority.
+
+The skill must understand:
+
+PROFESSIONAL
+does not automatically mean
+MINIMAL.
+
+BEAUTIFUL
+does not automatically mean
+ACCURATE.
+
+PIXEL-PERFECT
+does not automatically mean
+GOOD DESIGN.
+
+The screenshot remains the source of truth.
+
+==================================================
+16. SELF-CRITIQUE
+==================================================
+
+After each reconstruction, ask:
+
+"What is visibly different?"
+
+"What did I assume?"
+
+"What did I fail to measure?"
+
+"Which approximation contributes most to the remaining error?"
+
+"Did I accidentally redesign the reference?"
+
+"Which correction would produce the largest improvement?"
+
+==================================================
+17. SELF-IMPROVEMENT MEMORY
+==================================================
+
+Record lessons from successful and failed reconstructions.
+
+Each lesson should contain:
+
+OBSERVATION
+CAUSE
+EVIDENCE
+LESSON
+ACTION
+CONFIDENCE
+EXAMPLE
+
+Example:
+
+OBSERVATION:
+The reconstruction felt wrong despite matching the major layout.
+
+CAUSE:
+Typography metrics changed line wrapping and therefore vertical geometry.
+
+LESSON:
+Typography must be validated before micro-spacing.
+
+ACTION:
+Move typography verification earlier in the pipeline.
+
+==================================================
+18. BENCHMARK
+==================================================
+
+Create a benchmark suite containing screenshot reconstruction tasks
+of increasing difficulty:
+
+LEVEL 1:
+Simple landing page.
+
+LEVEL 2:
+Dashboard.
+
+LEVEL 3:
+Complex application interface.
+
+LEVEL 4:
+Dense professional software interface.
+
+LEVEL 5:
+Multiple responsive screenshots.
+
+LEVEL 6:
+Subtle typography and spacing differences.
+
+Measure:
+
+- structural similarity
+- geometric accuracy
+- typography accuracy
+- spacing accuracy
+- asset accuracy
+- color accuracy
+- responsive accuracy
+- overall visual similarity
+
+==================================================
+19. OUTPUT CONTRACT
+==================================================
+
+The Skill must produce:
+
+1. visual analysis
+2. inferred specification
+3. implementation plan
+4. HTML
+5. CSS
+6. JavaScript if necessary
+7. assets
+8. validation screenshots
+9. difference analysis
+10. corrections
+11. final implementation
+12. remaining uncertainties
+13. lessons learned
+
+==================================================
+20. FINAL PRINCIPLE
+==================================================
+
+DO NOT ASK:
+
+"What beautiful website should I make?"
+
+ASK:
+
+"What exact visual system produced this screenshot,
+and how can I reproduce it with the smallest possible
+visual difference?"
+
+The goal is not:
+
+SIMILAR.
+
+The goal is:
+
+RECONSTRUCT.
+
+The standard is:
+
+OBSERVE
+→ MEASURE
+→ IMPLEMENT
+→ RENDER
+→ COMPARE
+→ CORRECT
+→ VERIFY.
