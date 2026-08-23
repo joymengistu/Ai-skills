@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 26
-next_mission: 27
+current_mission: 27
+next_mission: 28
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -438,7 +438,25 @@ missions:
       - host runtime still enforces credentials, approvals, isolation, third-party availability, and external-state reconciliation
   27:
     title: Strengthen agent collaboration, delegation, and handoff integrity
+    status: complete
+    artifacts:
+      - references/collaboration-handoff-contract.md
+      - skills/agent-collaboration/SKILL.md
+      - skills/context-handoff/SKILL.md
+      - skills/orchestration/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - delegation is gated by expected outcome gain minus coordination, latency, token, conflict, and privacy cost
+      - lead ownership, worker scope, structured handoffs, evidence inspection, conflict synthesis, and failure recovery are explicit
+      - workers cannot declare the overall task complete and handoffs are treated as context rather than proof
+      - four collaboration-handoff evaluations and full repository validation pass
+    result: governed_collaboration_and_handoff_created
+    limitations:
+      - host runtime remains responsible for worker isolation, budgets, persistence, and side-effect enforcement
+  28:
+    title: Strengthen product completeness and real-world journey verification
     status: next
     planned_artifacts:
-      - collaboration and handoff contract
-      - delegation evaluations
+      - product completeness journey contract
+      - end-to-end journey evaluations
