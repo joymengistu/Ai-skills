@@ -50,6 +50,8 @@ required = [
     ROOT / "references" / "professional-taste-architecture.md",
     ROOT / "references" / "professional-ui-patterns.md",
     ROOT / "references" / "professional-ui-improvement-report-2026-08-23.md",
+    ROOT / "references" / "one-shot-execution-prompt.md",
+    ROOT / "references" / "one-shot-improvement-report-2026-08-23.md",
     ROOT / "references" / "contextual-user-intelligence-architecture.md",
     ROOT / "references" / "skill-engineering-intelligence.md",
     ROOT / "references" / "master-mission-implementation-map.md",

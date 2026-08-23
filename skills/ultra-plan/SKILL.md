@@ -35,6 +35,10 @@ Use a time, iteration, token, tool-call, delegation, and cost budget. Prefer a r
 
 Do not cross irreversible, destructive, privacy-sensitive, financial, legal, medical, security-sensitive, production, or external-communication boundaries without the required permission. Keep progress legible, preserve user control, and make recovery possible. Never relax safety or privacy constraints to finish faster or improve a benchmark.
 
+## One-shot execution path
+
+When the user asks for a one-shot, first-pass, or maximum-quality result, read `references/one-shot-execution-prompt.md`. Use it as a transparent execution contract: compile the brief, preserve explicit requirements, choose proportional planning depth, build a thin complete slice, verify the real result, repair the smallest cause, and report verified versus unverified work. One-shot does not mean blind guessing, hidden chain-of-thought, infinite planning, or universal perfection. For simple reversible work, use the focused exception rather than activating the entire Ultra protocol.
+
 ## Completion report
 
 Use this compact report:
