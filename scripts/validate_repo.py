@@ -34,6 +34,8 @@ required = [
     ROOT / "references" / "evolving-skills-gap-analysis.md",
     ROOT / "references" / "evolving-skills-architecture.md",
     ROOT / "references" / "lovable-agent-architecture.md",
+    ROOT / "references" / "repository-comparison.md",
+    ROOT / "evals" / "comparative-benchmark-plan.md",
     ROOT / "runtime" / "skill-contract.schema.json",
     ROOT / "runtime" / "skill-contract.example.json",
     ROOT / "contributions" / "Fable-research-mission-original.txt",

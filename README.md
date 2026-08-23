@@ -104,6 +104,12 @@ The latest user-authored additions are preserved in `contributions/ULTRIA-origin
 
 `contributions/CLAI-patterns.md` translates CLAI's memory, project mapping, approval, menu, export, and compaction patterns into model-agnostic capabilities. `contributions/Joy-patterns.md` translates Joy's search, responsive layout, hierarchy, and low-friction interaction ideas into human-centered interaction guidance. These are adapters and design notes, not copied runtime code.
 
+## Comparative position
+
+The repository is not currently the best overall agent system. Public frameworks such as [LangGraph](https://github.com/langchain-ai/langgraph), [CrewAI](https://github.com/crewAIInc/crewAI), the [OpenAI Agents SDK](https://github.com/openai/openai-agents-python), and [OpenHands](https://github.com/All-Hands-AI/OpenHands) are substantially ahead in executable runtime, deployment, integrations, observability, and ecosystem maturity. [Anthropic Skills](https://github.com/anthropics/skills) and [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) are ahead in ready-to-use or discoverable domain-skill breadth.
+
+Ai-skills is strongest as a **provider-agnostic quality and governance layer**: intent preservation, requirement completeness, evidence-led completion, human control, evolving-skill promotion, human-value evaluation, honest appreciation, and Brainstorm Mode. These are design advantages, not proven universal performance advantages. See `references/repository-comparison.md` for the evidence-based comparison and `evals/comparative-benchmark-plan.md` for the controlled test needed to measure whether those layers improve real outcomes. The next priority is an executable reference host, not simply more Markdown skills.
+
 ## Safety note
 
 Do not connect this package to unrestricted shell, filesystem, browser, messaging, payment, production, or credential tools without implementing the action protocol, least privilege, approval boundaries, logging, verification, and recovery described here. Skills improve behavior; they do not replace a secure host runtime.
