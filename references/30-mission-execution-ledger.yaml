@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 15
-next_mission: 16
+current_mission: 16
+next_mission: 17
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -257,7 +257,22 @@ missions:
       - integrity hashes do not prove semantic, behavioral, accessibility, or production correctness
   16:
     title: Create complete domain production workflows and recipes
+    status: complete
+    artifacts:
+      - references/domain-production-workflow-matrix.md
+      - skills/build-recipes/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - shared production spine covers framing, compilation, vertical-slice proof, broadening, verification, repair, and delivery
+      - matrix covers web apps, games, commerce, research, documents/presentations, automation, and screenshot-driven interfaces
+      - four domain-production evaluations and full repository validation pass
+    result: complete_domain_workflow_matrix_created
+    limitations:
+      - matrix is a routing reference and cannot replace domain-specific implementation or host deployment checks
+  17:
+    title: Build a professional output-quality and taste system
     status: next
     planned_artifacts:
-      - complete domain workflow matrix
-      - production recipe evaluations
+      - professional output quality contract
+      - taste and quality evaluations

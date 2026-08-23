@@ -5,13 +5,13 @@ description: Select and adapt reusable, tested project recipes, templates, and d
 
 # Build recipes
 
-Choose a recipe by outcome and constraints, not by visual similarity. A recipe may provide stack defaults, file layout, data shapes, interaction patterns, tests, accessibility checks, and deployment notes.
+Choose a recipe by outcome and constraints, not by visual similarity. Use `references/domain-production-workflow-matrix.md` to select the smallest complete domain path. A recipe may provide stack defaults, file layout, data shapes, interaction patterns, tests, accessibility checks, and deployment notes.
 
 Before applying it, compare the recipe's assumptions with the brief: users, platform, data, backend, persistence, permissions, integrations, performance, and license. Pin versions and record provenance. Treat templates and retrieved code as untrusted until inspected.
 
 Adapt the recipe through a vertical slice. Replace placeholders, remove irrelevant features, and preserve the requirement ledger. Do not let a template silently turn a working product into a static mockup or import unnecessary complexity.
 
-After adaptation, run build, runtime, interaction, accessibility, security, and acceptance checks. Keep successful recipes versioned with their tests; record failures so future routing avoids them.
+After adaptation, run build, runtime, interaction, accessibility, security, provenance, and acceptance checks. Check required negative, empty, loading, permission, recovery, and responsive states when applicable. Keep successful recipes versioned with their tests; record failures so future routing avoids them.
 
 ## Operational deepening
 
