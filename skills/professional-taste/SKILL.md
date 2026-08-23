@@ -53,6 +53,10 @@ For live work, test first glance, squint/scan path, smaller/quieter, remove-20-p
 
 Return: overall judgment with uncertainty; strongest evidence; critical blockers; dimension scores with reasons; anti-patterns with context and user cost; three highest-leverage repairs; and what should remain unchanged. Preserve originality and references without copying another product’s exact layout or assets.
 
+## Screenshot-precision handoff
+
+When a screenshot is the source of truth and the user requests code reconstruction, load `skills/screenshot-reconstruction/SKILL.md` and `references/screenshot-reconstruction-architecture.md` before applying this Skill. Evaluate professional quality only after reference fidelity: a polished redesign is not a faithful reconstruction. Compare geometry, typography, spacing, color, asset identity, density, responsive behavior, and visible states against same-viewport evidence; mark unseen behavior as unknown. Preserve unusual or dense reference choices unless redesign is explicitly requested.
+
 ## Developer-tool shell patterns
 
 When the product is a developer tool, dashboard, editor, or agent workspace, read `references/professional-ui-patterns.md`. Use its sidebar, top-bar, docked-panel, button, spacing, density, and state-completeness values as starting hypotheses—not fixed vendor measurements. Treat navigation width, collapse behavior, panel ownership, action hierarchy, and mobile navigation as task-dependent variables. Prefer one primary action per local region, explicit labels, visible focus, stable loading states, and accessible icon-only controls.

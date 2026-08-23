@@ -19,6 +19,8 @@ Build and verify one thin end-to-end path before broadening. Keep a requirement-
 
 If the brief is only a visual mockup, label it honestly as a mockup and do not claim that backend or interactivity exists. If the user intended a working product, pause or continue the architecture until the missing behavior is addressed.
 
+When a reference screenshot is supplied for a working interface, add screenshot fidelity to the completeness map without confusing it with functional completeness. Route visual implementation through `skills/screenshot-reconstruction/SKILL.md`; record viewport, regions, geometry, spacing, typography, assets, visible states, and responsive evidence. Require same-viewport render/compare/repair evidence for visual claims, while separately testing interaction, accessibility, data, persistence, and recovery.
+
 ## Operational deepening
 
 Use this Skill to improve **complete interactive product slices**. Load it only when that outcome is relevant; do not activate it for unrelated work. The main review surface is journey, state, data, backend, persistence, access, errors, accessibility, operations, and acceptance.

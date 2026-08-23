@@ -11,6 +11,8 @@ For software, build or launch the artifact, inspect runtime errors, exercise the
 
 Record evidence such as URLs, screenshots, logs, traces, outputs, timestamps, and test steps. Include the exact requirement or acceptance criterion each observation supports. A project that compiles but does not respond correctly is not verified. A beautiful screen that omits the requested workflow is not complete. Do not claim an end-to-end test unless the full path was actually exercised.
 
+When a reference screenshot is part of the request, pair runtime verification with `skills/screenshot-reconstruction/SKILL.md`: capture the artifact at the same viewport, compare global and regional visual differences, and verify typography/assets/layout before declaring visual fidelity. Keep screenshot evidence separate from semantic accessibility, keyboard behavior, state transitions, and task completion; a visual match cannot prove those properties. Mark unseen responsive behavior and hidden interaction logic as unverified or not assessable.
+
 When execution is unavailable, say what was inspected and what remains unverified. Never convert static plausibility into a claim of dynamic success.
 
 ## Operational deepening

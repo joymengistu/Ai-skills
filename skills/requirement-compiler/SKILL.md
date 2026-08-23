@@ -13,6 +13,10 @@ Compile a capability map covering interface, interactions, state, data, backend/
 
 Choose a thin vertical slice that proves the main outcome end to end. Only after it works should the plan expand into independent feature waves. Maintain requirement conservation: no explicit requirement may disappear without implementation, deferral, rejection with reason, or a visible limitation.
 
+## Screenshot-precision compilation
+
+When a screenshot is supplied for HTML/CSS/JavaScript reconstruction, add a visual-evidence track to the requirement ledger. Record viewport dimensions, page regions, geometry relationships, spacing, typography metrics, colors/surfaces, asset provenance, visible controls and states, responsive evidence, and confidence for each inference. Mark screenshot facts as `observed`, behavior inferred from multiple references as `inferred`, missing assets/fonts as `approximated`, rendered comparisons as `verified`, and hidden behavior as `not assessable from screenshot`. Route execution to `skills/screenshot-reconstruction/SKILL.md`; do not let generic design adjectives override the reference.
+
 ## Operational deepening
 
 Use this Skill to improve **compiling compressed briefs into traceable scope**. Load it only when that outcome is relevant; do not activate it for unrelated work. The main review surface is explicit items, inferences, unknowns, capability map, vertical slice, tests, and coverage.

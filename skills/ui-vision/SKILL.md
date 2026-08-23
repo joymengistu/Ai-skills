@@ -17,6 +17,10 @@ Hide system complexity through progressive disclosure. Sophisticated agents, too
 
 For AI interfaces, avoid giant “thinking” displays, decorative robot imagery, enormous prompts, excessive status panels, and noisy activity surfaces. Show concise progress, useful status, uncertainty, controls, and recovery. Treat screenshots and live products as pattern references, not permission to copy protected assets or exact layouts.
 
+## Screenshot-precision handoff
+
+When the user provides a screenshot and asks for HTML, CSS, JavaScript, or a working reconstruction, route to `skills/screenshot-reconstruction/SKILL.md` and `references/screenshot-reconstruction-architecture.md`. Treat the reference image as the primary specification: measure regions, geometry, typography, assets, density, and visible states before designing. Use UI Vision only to clarify intent, accessibility, and interaction quality after reference fidelity is established. Require same-viewport rendering, objective or structured visual comparison, ordered correction, and explicit observed/inferred/approximated/verified status. Do not redesign or beautify a screenshot unless the user explicitly requests a redesign.
+
 ## Operational deepening
 
 Use this Skill to improve **turning visual intent into testable interface decisions**. Load it only when that outcome is relevant; do not activate it for unrelated work. The main review surface is hierarchy, tokens, density, states, responsive behavior, accessibility, originality, and live review.
