@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/intelligence/communication-trial.schema.json",
+  "title": "Communication Trial Record",
+  "description": "A structured observation of human-facing communication quality. It measures useful collaboration, not engagement or friendliness alone.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "record_id", "task_id", "arm", "response_excerpt", "dimensions", "hard_checks", "human_review_required", "provenance"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "record_type": {"const": "communication_trial"},
+    "record_id": {"type": "string", "minLength": 3},
+    "task_id": {"type": "string", "minLength": 1},
+    "arm": {"type": "string", "enum": ["baseline", "candidate", "ablation", "human_reference"]},
+    "response_excerpt": {"type": "string", "minLength": 1},
+    "dimensions": {"type": "object", "additionalProperties": false, "required": ["understanding", "useful_progress", "honest_warmth", "agency", "constructive_disagreement", "initiative", "memory_comfort", "timing", "accessibility", "trust_calibration"], "properties": {"understanding": {"type": "number", "minimum": 0, "maximum": 4}, "useful_progress": {"type": "number", "minimum": 0, "maximum": 4}, "honest_warmth": {"type": "number", "minimum": 0, "maximum": 4}, "agency": {"type": "number", "minimum": 0, "maximum": 4}, "constructive_disagreement": {"type": "number", "minimum": 0, "maximum": 4}, "initiative": {"type": "number", "minimum": 0, "maximum": 4}, "memory_comfort": {"type": "number", "minimum": 0, "maximum": 4}, "timing": {"type": "number", "minimum": 0, "maximum": 4}, "accessibility": {"type": "number", "minimum": 0, "maximum": 4}, "trust_calibration": {"type": "number", "minimum": 0, "maximum": 4}}},
+    "hard_checks": {"type": "object", "additionalProperties": false, "required": ["fabricated_memory", "claimed_emotion", "unnecessary_question", "ignored_correction", "missing_safety_boundary", "pressure_or_dependency"], "properties": {"fabricated_memory": {"type": "boolean"}, "claimed_emotion": {"type": "boolean"}, "unnecessary_question": {"type": "boolean"}, "ignored_correction": {"type": "boolean"}, "missing_safety_boundary": {"type": "boolean"}, "pressure_or_dependency": {"type": "boolean"}}},
+    "human_review_required": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "provenance": {"type": "object", "additionalProperties": false, "required": ["created_by", "created_at"], "properties": {"created_by": {"type": "string", "minLength": 1}, "created_at": {"type": "string", "minLength": 1}}}
+  }
+}

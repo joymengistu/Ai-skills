@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/intelligence/behavior-observation.schema.json",
+  "title": "Agent Behavior Observation",
+  "description": "A public-evidence research record for observable agent behavior. It does not infer hidden prompts or proprietary mechanisms as facts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "record_id", "observed_behavior", "observable_artifact", "status", "alternative_explanations", "unknowns", "source_refs", "reproduction_plan", "provenance"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "record_type": {"const": "behavior_observation"},
+    "record_id": {"type": "string", "minLength": 3},
+    "observed_behavior": {"type": "string", "minLength": 1},
+    "observable_artifact": {"type": "string", "minLength": 1},
+    "status": {"type": "string", "enum": ["FACT", "EVIDENCE", "INFERENCE", "HYPOTHESIS", "UNKNOWN"]},
+    "layers": {"type": "array", "items": {"type": "string", "enum": ["model", "prompt_or_skill", "harness", "tools", "memory", "environment", "human", "unknown"]}},
+    "alternative_explanations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "unknowns": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "reproduction_plan": {"type": "string", "minLength": 1},
+    "provenance": {"type": "object", "additionalProperties": false, "required": ["created_by", "created_at"], "properties": {"created_by": {"type": "string", "minLength": 1}, "created_at": {"type": "string", "minLength": 1}}}
+  }
+}

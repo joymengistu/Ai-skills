@@ -51,8 +51,27 @@ required = [
     ROOT / "references" / "contextual-user-intelligence-architecture.md",
     ROOT / "references" / "skill-engineering-intelligence.md",
     ROOT / "references" / "master-mission-implementation-map.md",
+    ROOT / "references" / "intelligence-infrastructure-audit.md",
+    ROOT / "references" / "public-agent-infrastructure-research-2026-08-23.md",
+    ROOT / "references" / "intelligence-infrastructure-architecture.md",
+    ROOT / "references" / "intelligence-infrastructure-self-critique.md",
     ROOT / "evals" / "lovability-benchmark-plan.md",
     ROOT / "runtime" / "risk-control.schema.json",
+    ROOT / "runtime" / "intelligence" / "research-memory.schema.json",
+    ROOT / "runtime" / "intelligence" / "lesson-memory.schema.json",
+    ROOT / "runtime" / "intelligence" / "example-record.schema.json",
+    ROOT / "runtime" / "intelligence" / "intent-prediction.schema.json",
+    ROOT / "runtime" / "intelligence" / "communication-trial.schema.json",
+    ROOT / "runtime" / "intelligence" / "evaluation-record.schema.json",
+    ROOT / "runtime" / "intelligence" / "improvement-record.schema.json",
+    ROOT / "runtime" / "intelligence" / "benchmark-run.schema.json",
+    ROOT / "runtime" / "intelligence" / "behavior-observation.schema.json",
+    ROOT / "runtime" / "intelligence" / "kernel.py",
+    ROOT / "runtime" / "intelligence" / "test_kernel.py",
+    ROOT / "examples" / "intelligence" / "records.jsonl",
+    ROOT / "evals" / "intelligence-benchmark.json",
+    ROOT / "scripts" / "run_intelligence_benchmark.py",
+    ROOT / "scripts" / "test_intelligence_benchmark.py",
     ROOT / "contributions" / "Fable-research-mission-original.txt",
     ROOT / "contributions" / "lovability-communication-mission-original.txt",
     ROOT / "contributions" / "contextual-user-intelligence-mission-original.txt",
@@ -63,8 +82,8 @@ for path in required:
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 60:
-    raise SystemExit(f"expected at least 60 skills, found {len(skills)}")
+if len(skills) < 61:
+    raise SystemExit(f"expected at least 61 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -96,6 +115,7 @@ for path in [
     ROOT / "skills" / "agent-risk-controls" / "SKILL.md",
     ROOT / "skills" / "professional-taste" / "SKILL.md",
     ROOT / "skills" / "contextual-user-intelligence" / "SKILL.md",
+    ROOT / "skills" / "intelligence-infrastructure" / "SKILL.md",
 ]:
     if not path.exists():
         raise SystemExit(f"missing governance or peak skill file: {path}")
@@ -117,6 +137,7 @@ for phrase in [
     "EVOLVING CAPABILITY ROUTE",
     "RISK-CONTROL ROUTE",
     "LOVABILITY AND BRAINSTORM ROUTE",
+    "INTELLIGENCE INFRASTRUCTURE ROUTE",
     "risk",
 ]:
     if phrase.lower() not in prompt.lower():
@@ -138,12 +159,12 @@ for key in ["trust_envelope", "action_intent", "approval_record", "incident_reco
         raise SystemExit(f"risk-control schema missing required record: {key}")
 
 skill_contract = json.loads((ROOT / "runtime" / "skill-contract.schema.json").read_text(encoding="utf-8"))
-for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "procedure", "constraints", "dependencies", "permissions", "risk_class", "verification", "evaluation", "lifecycle", "provenance", "owner", "rollback"]:
+for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "procedure", "constraints", "dependencies", "permissions", "risk_class", "verification", "evaluation", "lifecycle", "provenance", "owner", "rollback", "examples", "limitations", "uncertainty", "lessons_learned", "version_history"]:
     if key not in skill_contract.get("required", []):
         raise SystemExit(f"skill contract schema missing required field: {key}")
 
 skill_contract_example = json.loads((ROOT / "runtime" / "skill-contract.example.json").read_text(encoding="utf-8"))
-for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "procedure", "constraints", "dependencies", "permissions", "risk_class", "verification", "evaluation", "lifecycle", "provenance", "owner", "rollback"]:
+for key in ["name", "version", "purpose", "triggers", "inputs", "outputs", "procedure", "constraints", "dependencies", "permissions", "risk_class", "verification", "evaluation", "lifecycle", "provenance", "owner", "rollback", "examples", "limitations", "uncertainty", "lessons_learned", "version_history"]:
     if key not in skill_contract_example:
         raise SystemExit(f"skill contract example missing field: {key}")
 
@@ -202,6 +223,7 @@ for name in [
     "agent-risk-controls",
     "professional-taste",
     "contextual-user-intelligence",
+    "intelligence-infrastructure",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")
@@ -213,4 +235,7 @@ for path in [ROOT / "contributions" / "ULTRIA-original.txt", ROOT / "contributio
 
 subprocess.run(["python3", str(ROOT / "evals" / "validate_cases.py")], check=True)
 subprocess.run(["python3", "-m", "unittest", "discover", "-s", "runtime/reference_host", "-p", "test_*.py"], cwd=ROOT, check=True)
+subprocess.run(["python3", "-m", "unittest", "discover", "-s", "runtime/intelligence", "-p", "test_*.py"], cwd=ROOT, check=True)
+subprocess.run(["python3", "scripts/run_intelligence_benchmark.py", "--suite", "evals/intelligence-benchmark.json", "--cases", "evals/cases.jsonl"], cwd=ROOT, check=True)
+subprocess.run(["python3", "-m", "unittest", "-v", "scripts/test_intelligence_benchmark.py"], cwd=ROOT, check=True)
 print(f"validated repository with {len(skills)} skills")

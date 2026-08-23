@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/intelligence/intent-prediction.schema.json",
+  "title": "User Intent Prediction",
+  "description": "A bounded, non-authoritative prediction used to improve clarification and response routing. It cannot authorize side effects.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "record_id", "intent_type", "prediction", "evidence_refs", "confidence", "alternatives", "scope", "expires_or_review", "sensitive_inference_check", "correction_path", "provenance"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "record_type": {"const": "intent_prediction"},
+    "record_id": {"type": "string", "minLength": 3},
+    "intent_type": {"type": "string", "enum": ["goal", "output", "next_step", "correction", "preference", "ambiguity"]},
+    "prediction": {"type": "string", "minLength": 1},
+    "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "alternatives": {"type": "array", "minItems": 1, "items": {"type": "object", "additionalProperties": false, "required": ["prediction", "confidence", "why_not_selected"], "properties": {"prediction": {"type": "string", "minLength": 1}, "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "why_not_selected": {"type": "string", "minLength": 1}}}},
+    "scope": {"type": "string", "enum": ["conversation", "project", "user"]},
+    "expires_or_review": {"type": "string", "minLength": 1},
+    "sensitive_inference_check": {"type": "string", "enum": ["passed_no_sensitive_trait", "blocked_sensitive_trait", "needs_clarification"]},
+    "correction_path": {"type": "string", "minLength": 1},
+    "provenance": {"type": "object", "additionalProperties": false, "required": ["created_by", "created_at"], "properties": {"created_by": {"type": "string", "minLength": 1}, "created_at": {"type": "string", "minLength": 1}}}
+  }
+}

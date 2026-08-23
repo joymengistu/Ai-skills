@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "suite_id": "ai-skills-intelligence-suite",
+  "suite_version": "1.0",
+  "purpose": "Evaluate the intelligence infrastructure and its governed behaviors without treating Skill count or aggregate score as quality.",
+  "case_source": "evals/cases.jsonl",
+  "arms": ["baseline", "candidate", "ablation"],
+  "trial_policy": {
+    "same_model_and_budget": true,
+    "multiple_trials_required_for_stochastic_runs": true,
+    "held_out_cases_never_used_for_tuning": true,
+    "record_trajectory_and_outcome_separately": true
+  },
+  "families": {
+    "development": ["contextual-intelligence-001", "contextual-intelligence-002", "contextual-intelligence-003", "contextual-intelligence-004", "contextual-intelligence-005", "contextual-intelligence-006"],
+    "held_out": ["contextual-intelligence-007", "contextual-intelligence-008", "risk-006", "risk-012", "taste-007", "taste-008"],
+    "safety_regression": ["risk-001", "risk-002", "risk-003", "risk-004", "risk-005", "risk-006", "risk-007", "risk-008", "risk-009", "risk-010", "risk-011", "risk-012"],
+    "professional_and_human_value": ["taste-001", "taste-002", "taste-003", "taste-004", "taste-005", "taste-006", "taste-007", "taste-008"]
+  },
+  "metrics": [
+    "task_outcome",
+    "requirement_coverage",
+    "factuality_and_evidence",
+    "trajectory_quality",
+    "safety",
+    "privacy",
+    "authority_and_user_control",
+    "recoverability",
+    "repair_quality",
+    "human_effort",
+    "communication_quality",
+    "latency_and_cost"
+  ],
+  "hard_gates": ["safety", "privacy", "authority_and_user_control", "recoverability"],
+  "promotion_rule": "Use runtime/intelligence/kernel.py paired_decision only after task-specific graders, held-out results, failure examples, and authorized review exist.",
+  "limitations": [
+    "This manifest defines a suite; it does not itself prove a candidate improves a real model.",
+    "Human-value and emotional-appropriateness dimensions require blinded human review.",
+    "Fable-inspired observations remain public behavioral hypotheses, not hidden implementation claims."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/intelligence/benchmark-run.schema.json",
+  "title": "Benchmark Run Record",
+  "description": "A reproducible run manifest and result summary for comparing baseline, candidate, and ablation arms.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "run_id", "suite_version", "case_refs", "held_out_case_refs", "arms", "grader_refs", "model_policy", "budget_policy", "result_summary", "hard_gates", "provenance"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "record_type": {"const": "benchmark_run"},
+    "run_id": {"type": "string", "minLength": 3},
+    "suite_version": {"type": "string", "minLength": 1},
+    "case_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "held_out_case_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "arms": {"type": "array", "minItems": 2, "items": {"type": "object", "additionalProperties": false, "required": ["arm_id", "subject_ref", "model_ref", "tool_policy_ref", "trial_count"], "properties": {"arm_id": {"type": "string", "minLength": 1}, "subject_ref": {"type": "string", "minLength": 1}, "model_ref": {"type": "string", "minLength": 1}, "tool_policy_ref": {"type": "string", "minLength": 1}, "trial_count": {"type": "integer", "minimum": 1}}}},
+    "grader_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "model_policy": {"type": "string", "minLength": 1},
+    "budget_policy": {"type": "string", "minLength": 1},
+    "result_summary": {"type": "object", "additionalProperties": false, "required": ["baseline_ref", "candidate_ref", "metric_deltas", "failure_examples", "attribution_confidence"], "properties": {"baseline_ref": {"type": "string", "minLength": 1}, "candidate_ref": {"type": "string", "minLength": 1}, "metric_deltas": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "number"}}, "failure_examples": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "attribution_confidence": {"type": "number", "minimum": 0, "maximum": 1}}},
+    "hard_gates": {"type": "object", "additionalProperties": false, "required": ["safety", "privacy", "authority", "recoverability", "regression_review"], "properties": {"safety": {"type": "boolean"}, "privacy": {"type": "boolean"}, "authority": {"type": "boolean"}, "recoverability": {"type": "boolean"}, "regression_review": {"type": "boolean"}}},
+    "provenance": {"type": "object", "additionalProperties": false, "required": ["created_by", "created_at", "environment_ref"], "properties": {"created_by": {"type": "string", "minLength": 1}, "created_at": {"type": "string", "minLength": 1}, "environment_ref": {"type": "string", "minLength": 1}}}
+  }
+}

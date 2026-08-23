@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/intelligence/improvement-record.schema.json",
+  "title": "Skill Improvement Record",
+  "description": "A governed proposal and decision record for improving a skill or runtime capability without self-authorized policy changes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "record_id", "target", "baseline_ref", "candidate_ref", "observation_refs", "hypothesis", "smallest_change", "paired_test_plan", "regression_risk", "decision", "authorization", "rollback", "provenance"],
+  "properties": {
+    "schema_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "record_type": {"const": "improvement_record"},
+    "record_id": {"type": "string", "minLength": 3},
+    "target": {"type": "string", "minLength": 1},
+    "baseline_ref": {"type": "string", "minLength": 1},
+    "candidate_ref": {"type": "string", "minLength": 1},
+    "observation_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "hypothesis": {"type": "string", "minLength": 1},
+    "smallest_change": {"type": "string", "minLength": 1},
+    "paired_test_plan": {"type": "object", "additionalProperties": false, "required": ["case_refs", "held_out_case_refs", "same_model_and_budget", "success_metrics", "hard_gates"], "properties": {"case_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "held_out_case_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "same_model_and_budget": {"type": "boolean"}, "success_metrics": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "hard_gates": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}}},
+    "regression_risk": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "decision": {"type": "string", "enum": ["proposed", "testing", "promote", "reject", "rollback", "needs_human_review"]},
+    "authorization": {"type": "object", "additionalProperties": false, "required": ["policy_change", "human_or_release_authority", "approval_ref"], "properties": {"policy_change": {"type": "boolean"}, "human_or_release_authority": {"type": "string", "minLength": 1}, "approval_ref": {"type": ["string", "null"]}}},
+    "rollback": {"type": "string", "minLength": 1},
+    "provenance": {"type": "object", "additionalProperties": false, "required": ["created_by", "created_at"], "properties": {"created_by": {"type": "string", "minLength": 1}, "created_at": {"type": "string", "minLength": 1}}}
+  }
+}

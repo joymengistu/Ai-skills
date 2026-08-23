@@ -6,7 +6,7 @@
 
 ## What is included
 
-The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, sixty modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
+The repository contains a self-directing core prompt, an operating contract, a bounded execution loop, an explicit action protocol, sixty-one modular skills, adapters for the user's Joy and CLAI repositories, a human-satisfaction framework, a security and governance layer, evaluation cases, and validation scripts.
 
 | Area | Included capability |
 |---|---|
@@ -33,6 +33,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 | Professional UI taste | Contextual hierarchy, proportion, density, typography, restraint, micro-states, accessibility, blind review, and separate beauty-versus-professionalism gates |
 | Contextual intelligence | Separated context layers, typed intent/output/next-step predictions, ambiguity resolution, correction learning, confidence, and non-authoritative personalization |
 | Skill engineering intelligence | High-information examples, contextual exceptions, conditional lessons, baseline comparison, self-critique, and governed promotion |
+| Intelligence infrastructure | Machine-readable research, lesson, example, intent, communication, evaluation, improvement, benchmark, and behavioral-observation records with a deterministic paired-decision kernel |
 | Risk research | OWASP, NIST, MITRE ATLAS, Anthropic, Microsoft, AISI, Unit 42, IETF, and AAAI-informed risk taxonomy and control blueprint |
 | User contributions | CLAI memory/project/tool patterns and Joy interaction patterns |
 
@@ -40,7 +41,7 @@ The repository contains a self-directing core prompt, an operating contract, a b
 
 Read `core/self-directing-prompt.md` and combine it with `core/operating-contract.md` and `core/execution-loop.md`. For a specific task, load only the relevant specialist skills. A coding task might use task framing, planning, context engineering, coding, tool use, safety governance, evaluation, and communication. A research task might use task framing, research, context engineering, evaluation, and communication.
 
-Run the structural checks from the repository root. The current risk-review milestone adds `references/agent-risk-control-blueprint.md`, `references/agent-risk-research-notes.md`, `runtime/risk-control.schema.json`, and `skills/agent-risk-controls/SKILL.md`. The current UI/lovability milestone adds `references/professional-taste-research-notes.md`, `references/professional-taste-architecture.md`, `skills/professional-taste/SKILL.md`, and `evals/lovability-benchmark-plan.md`. The current sequential-mission milestone adds `references/contextual-user-intelligence-architecture.md`, `references/skill-engineering-intelligence.md`, `references/master-mission-implementation-map.md`, three preserved mission sources, and contextual evaluation cases. The executable reference host now enforces trust labeling primitives, action intent records, bound approvals, cancellation, tool validation, destination boundaries, and redacted incident journaling.
+Run the structural checks from the repository root. The current risk-review milestone adds `references/agent-risk-control-blueprint.md`, `references/agent-risk-research-notes.md`, `runtime/risk-control.schema.json`, and `skills/agent-risk-controls/SKILL.md`. The current UI/lovability milestone adds `references/professional-taste-research-notes.md`, `references/professional-taste-architecture.md`, `skills/professional-taste/SKILL.md`, and `evals/lovability-benchmark-plan.md`. The current sequential-mission milestone adds `references/contextual-user-intelligence-architecture.md`, `references/skill-engineering-intelligence.md`, `references/master-mission-implementation-map.md`, three preserved mission sources, and contextual evaluation cases. The intelligence-infrastructure milestone adds `references/intelligence-infrastructure-audit.md`, public research notes, nine runtime intelligence schemas, representative records, a deterministic kernel and tests, and one focused meta-capability Skill. The executable reference host now enforces trust labeling primitives, action intent records, bound approvals, cancellation, tool validation, destination boundaries, and redacted incident journaling.
 
 
 ```bash
