@@ -1,6 +1,6 @@
 ---
 name: agent-max
-description: Universal single-entry command and Skill router for invoking the Ai-skills capability library through one button, a slash command, or a short natural-language request. Use when the user says Agent Max, clicks an Agent Max action, types `/agent-max`, or wants the system to choose and load only the Skills needed for a build, research, screenshot, or verification task.
+description: Universal single-entry command and Skill router for invoking the Ai-skills capability library through one button, a slash command, or a short natural-language request. Use when the user says Agent Max, asks Manus to use AI Skills on itself, clicks an Agent Max action, types `/agent-max`, or wants the system to choose and load only the Skills needed for a build, research, screenshot, or verification task.
 ---
 
 # Agent Max
@@ -31,6 +31,16 @@ The host may bind the button or slash command to `agent-max.auto`. The Skill its
 
 Agent Max routes work; it does not grant permissions, bypass approvals, invent tools, expose private reasoning, or declare success without evidence. Runtime controls and the host system remain authoritative.
 
+## Manus self-use mode
+
+When the user says “use AI Skills on yourself,” “update the Skill,” “run Agent Max on this task,” or equivalent, interpret it as **apply the installed routing and evidence contracts to the current task**, not as permission to rewrite Manus’s hidden system prompt, immutable host behavior, model weights, native UI, or authorization controls. Use command ID `agent-max.self` for this mode.
+
+1. Inspect the current request, relevant artifact, available Skills, host capabilities, constraints, and authority boundary.
+2. Select the smallest sufficient route and load only the relevant installed Skills. Prefer `/home/ubuntu/skills/ai-skills/skills/<skill-name>/SKILL.md`; if unavailable, use the repository checkout or report a reduced route.
+3. For a consequential or multi-step update, show a compact route preview, preserve the user’s explicit requirements, and use bounded planning, checkpoints, repair, and regression verification.
+4. Apply the selected contracts to Manus’s current work: intent, evidence, tools, memory, safety, human value, artifact quality, and completion status as relevant. Do not create a self-referential loop merely to appear more capable.
+5. Report what was applied, what actually changed, checks performed, remaining uncertainty, and host-level limits. A loaded Skill is guidance, not proof that Manus changed internally.
+
 ## Short commands and button IDs
 
 These stable commands are suitable for chat prompts, command palettes, or buttons. A UI may display one universal **Agent Max** label and submit the corresponding command ID; the user does not need to select a downstream Skill.
@@ -39,6 +49,7 @@ These stable commands are suitable for chat prompts, command palettes, or button
 |---|---|---|
 | Agent Max | `agent-max.auto` | Select the smallest sufficient route from the request, then verify the outcome |
 | Load Ai-skills | `agent-max.catalog` | Load the umbrella router and list relevant Skills; do not load the full catalog blindly |
+| Use on Manus | `agent-max.self` | Apply the minimal relevant AI Skills route to the current Manus task; do not claim hidden self-modification |
 | Screenshot precision | `agent-max.screenshot` | `screenshot-reconstruction` → `requirement-compiler` if functional scope exists → `product-completeness` → `dynamic-verification` → `accessibility`; `professional-taste` is secondary |
 | Build complete product | `agent-max.product` | `intent-preservation` → `requirement-compiler` → `product-completeness` → domain/build Skill → `dynamic-verification` → `outcome-completion` |
 | One-shot build | `agent-max.oneshot` | `task-framing` → `planning` → `requirement-compiler` → `build-recipes` → `staged-execution` → `dynamic-verification` → `repair-loop` → `completion-intelligence` |
@@ -50,7 +61,7 @@ Button IDs are routing vocabulary, not executable APIs. The surrounding host or 
 
 ## Routing rules
 
-Use `agent-max.auto` as the default route for every request that enters through the universal button or `/agent-max`. Do not ask the user to choose a downstream Skill unless the user explicitly wants to inspect the catalog. Load `references/task-classification-contract.md` to score ambiguity, consequence, irreversibility, dependency depth, artifact complexity, evidence burden, external effect, and sensitivity; use the result to choose Focused, Deep, or Ultra planning and the appropriate approvals. Add `task-framing` and `intent-preservation` for ambiguous or high-value requests. Add `requirement-compiler` before complex builds. Add `product-completeness` when the user asks for a working app, game, store, tool, or backend-backed experience. Add `dynamic-verification` whenever runtime behavior matters.
+Use `agent-max.auto` as the default route for every request that enters through the universal button or `/agent-max`; use `agent-max.self` when the user explicitly asks Manus to apply AI Skills to itself or update the Skill. Do not ask the user to choose a downstream Skill unless the user explicitly wants to inspect the catalog. Load `references/task-classification-contract.md` to score ambiguity, consequence, irreversibility, dependency depth, artifact complexity, evidence burden, external effect, and sensitivity; use the result to choose Focused, Deep, or Ultra planning and the appropriate approvals. Add `task-framing` and `intent-preservation` for ambiguous or high-value requests. Add `requirement-compiler` before complex builds. Add `product-completeness` when the user asks for a working app, game, store, tool, or backend-backed experience. Add `dynamic-verification` whenever runtime behavior matters.
 
 For a supplied screenshot or reference image, use `agent-max.screenshot`. Load `screenshot-reconstruction` first and treat the reference as the visual specification. Measure geometry, typography, assets, regions, density, and viewport; render at the same viewport; compare or diff; repair in priority order; and record observed, inferred, approximated, verified, and not-assessable claims. Never let Professional UI Taste redesign an unusual reference unless redesign is explicitly requested.
 
@@ -85,6 +96,8 @@ Use prompts such as:
 
 > Run `agent-max.verify` on the current artifact. Do not equate a successful build or attractive screenshot with a verified product.
 
+> Use AI Skills on yourself for this task. Apply the minimal route, show what changed, and state what remains outside the Skill’s authority.
+
 ## Failure and fallback
 
 If a requested Skill or path is unavailable, report the missing capability and continue only with a clearly labeled reduced route. Do not pretend that a route loaded. If the request matches multiple presets, choose the narrowest one and explain the choice. If the user asks to load everything, first offer the catalog route and load only the Skills needed for the stated outcome unless the user explicitly needs a full audit.
@@ -109,6 +122,7 @@ Use this Skill to improve **short-command routing into reliable, composable work
 2. Select the narrowest preset or Skill bundle; show the route preview for complex or consequential work.
 3. Load only the referenced Skills, preserve explicit requirements, and keep visual, functional, accessibility, and safety acceptance distinct.
 4. Verify the real outcome, repair focused failures, and record missing Skills, uncertainty, and evidence.
+5. In `agent-max.self` mode, report applied Skills and contracts, actual changes, validation evidence, and immutable host limits; never report internal Manus modification unless the host provides explicit evidence.
 
 ### Evidence and boundaries
 
