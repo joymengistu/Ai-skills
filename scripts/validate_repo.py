@@ -54,6 +54,8 @@ required = [
     ROOT / "references" / "one-shot-improvement-report-2026-08-23.md",
     ROOT / "references" / "screenshot-reconstruction-architecture.md",
     ROOT / "references" / "screenshot-reconstruction-release-report-2026-08-23.md",
+    ROOT / "references" / "prompt-architecture-research-2026-08-23.md",
+    ROOT / "references" / "modern-prompt-architecture-2026-08-23.md",
     ROOT / "references" / "skill-expansion-audit-2026-08-23.md",
     ROOT / "references" / "skill-expansion-self-prompt.md",
     ROOT / "references" / "skill-expansion-release-report-2026-08-23.md",
