@@ -46,6 +46,9 @@ required = [
     ROOT / "references" / "reference-host-architecture.md",
     ROOT / "references" / "agent-risk-research-notes.md",
     ROOT / "references" / "agent-risk-control-blueprint.md",
+    ROOT / "references" / "professional-taste-research-notes.md",
+    ROOT / "references" / "professional-taste-architecture.md",
+    ROOT / "evals" / "lovability-benchmark-plan.md",
     ROOT / "runtime" / "risk-control.schema.json",
     ROOT / "contributions" / "Fable-research-mission-original.txt",
 ]
@@ -54,8 +57,8 @@ for path in required:
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 58:
-    raise SystemExit(f"expected at least 58 skills, found {len(skills)}")
+if len(skills) < 59:
+    raise SystemExit(f"expected at least 59 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -85,6 +88,7 @@ for path in [
     ROOT / "skills" / "lovability" / "SKILL.md",
     ROOT / "skills" / "brainstorm-mode" / "SKILL.md",
     ROOT / "skills" / "agent-risk-controls" / "SKILL.md",
+    ROOT / "skills" / "professional-taste" / "SKILL.md",
 ]:
     if not path.exists():
         raise SystemExit(f"missing governance or peak skill file: {path}")
@@ -105,6 +109,7 @@ for phrase in [
     "CAPABILITY ANALYSIS ROUTE",
     "EVOLVING CAPABILITY ROUTE",
     "RISK-CONTROL ROUTE",
+    "LOVABILITY AND BRAINSTORM ROUTE",
     "risk",
 ]:
     if phrase.lower() not in prompt.lower():
@@ -188,6 +193,7 @@ for name in [
     "lovability",
     "brainstorm-mode",
     "agent-risk-controls",
+    "professional-taste",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")
