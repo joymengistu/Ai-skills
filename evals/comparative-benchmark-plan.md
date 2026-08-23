@@ -2,6 +2,10 @@
 
 This plan compares an agent host with and without the Ai-skills control layer. It is designed to test the repository's claims rather than assume them.
 
+## First runnable slice
+
+The reference host can now run a credential-free deterministic arm with the same policy, trace, checkpoint, approval, and completion-evidence behavior used by future hosted-provider adapters. Use `python3 -m runtime.reference_host` for a smoke test and `python3 -m unittest discover -s runtime/reference_host -p 'test_*.py'` for deterministic regression checks. This validates host behavior, not model quality.
+
 ## Experimental arms
 
 | Arm | Description |
@@ -10,7 +14,7 @@ This plan compares an agent host with and without the Ai-skills control layer. I
 | Ai-skills | Same model, tools, budgets, and runtime with the smallest sufficient Ai-skills bundle selected by the umbrella router. |
 | Framework + Ai-skills | Optional third arm using a public runtime such as LangGraph, CrewAI, or OpenAI Agents SDK plus Ai-skills. This tests complementarity, not framework superiority. |
 
-Keep the model, tool permissions, task prompt, time budget, and external conditions matched wherever possible. Randomize task order and use held-out cases that were not used to author or tune the skills.
+Keep the model, tool permissions, task prompt, time budget, and external conditions matched wherever possible. Randomize task order and use held-out cases that were not used to author or tune the skills. The reference host should remain the common control surface so provider differences are not confused with missing approvals, traces, checkpoints, or completion gates.
 
 ## Task families
 

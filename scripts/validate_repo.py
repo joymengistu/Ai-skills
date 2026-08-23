@@ -38,6 +38,11 @@ required = [
     ROOT / "evals" / "comparative-benchmark-plan.md",
     ROOT / "runtime" / "skill-contract.schema.json",
     ROOT / "runtime" / "skill-contract.example.json",
+    ROOT / "runtime" / "reference_host" / "__init__.py",
+    ROOT / "runtime" / "reference_host" / "__main__.py",
+    ROOT / "runtime" / "reference_host" / "host.py",
+    ROOT / "runtime" / "reference_host" / "test_host.py",
+    ROOT / "references" / "reference-host-architecture.md",
     ROOT / "contributions" / "Fable-research-mission-original.txt",
 ]
 for path in required:
@@ -180,4 +185,5 @@ for path in [ROOT / "contributions" / "ULTRIA-original.txt", ROOT / "contributio
         raise SystemExit(f"user source document unexpectedly small: {path}")
 
 subprocess.run(["python3", str(ROOT / "evals" / "validate_cases.py")], check=True)
+subprocess.run(["python3", "-m", "unittest", "discover", "-s", "runtime/reference_host", "-p", "test_*.py"], cwd=ROOT, check=True)
 print(f"validated repository with {len(skills)} skills")
