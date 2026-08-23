@@ -9,11 +9,11 @@ Verify the thing the user will actually use. Start from the requirement ledger a
 
 For software, build or launch the artifact, inspect runtime errors, exercise the primary journey, test invalid input, empty and loading states, refresh or restart, permissions, responsive layout, accessibility path, and recovery from tool or network failure. For games, test controls, playability, progression, feedback, pause, restart, and win/lose behavior. For documents or media, inspect rendered pages, legibility, structure, and source fidelity. Treat build health, visual usability, intent alignment, and operational readiness as separate gates; passing one does not imply passing the others.
 
-Record evidence such as URLs, screenshots, logs, traces, outputs, timestamps, and test steps. Include the exact requirement or acceptance criterion each observation supports. A project that compiles but does not respond correctly is not verified. A beautiful screen that omits the requested workflow is not complete. Do not claim an end-to-end test unless the full path was actually exercised.
+Record evidence through `references/artifact-provenance-contract.md` when an artifact is produced. Capture URLs, screenshots, logs, traces, outputs, timestamps, digests or versions, test steps, input/source/transformation references, and the exact requirement or acceptance criterion each observation supports. A project that compiles but does not respond correctly is not verified. A beautiful screen that omits the requested workflow is not complete. Do not claim an end-to-end test unless the full path was actually exercised.
 
 When a reference screenshot is part of the request, pair runtime verification with `skills/screenshot-reconstruction/SKILL.md`: capture the artifact at the same viewport, compare global and regional visual differences, and verify typography/assets/layout before declaring visual fidelity. Keep screenshot evidence separate from semantic accessibility, keyboard behavior, state transitions, and task completion; a visual match cannot prove those properties. Mark unseen responsive behavior and hidden interaction logic as unverified or not assessable.
 
-When execution is unavailable, say what was inspected and what remains unverified. Never convert static plausibility into a claim of dynamic success.
+Distinguish existence, integrity, rendered, behavioral, requirement-grounded, and operational evidence. When execution is unavailable, say what was inspected and what remains unverified. Never convert static plausibility, a hash, or a successful build into a claim of complete dynamic success.
 
 ## Operational deepening
 

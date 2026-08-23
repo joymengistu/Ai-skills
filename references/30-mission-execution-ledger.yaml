@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 14
-next_mission: 15
+current_mission: 15
+next_mission: 16
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -239,7 +239,25 @@ missions:
       - durable storage, atomicity, signals, and external reconciliation remain host responsibilities
   15:
     title: Strengthen artifact provenance and grounded verification
+    status: complete
+    artifacts:
+      - references/artifact-provenance-contract.md
+      - runtime/reference_host/artifact_provenance.py
+      - runtime/reference_host/test_artifact_provenance.py
+      - skills/dynamic-verification/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - artifact records link requirements, inputs, sources, transformations, hashes, scope, and verification status
+      - reference verifier confines paths and emits digest-backed integrity evidence
+      - existence, integrity, rendered, behavioral, requirement-grounded, and operational evidence are distinct
+      - full repository validation and 23 reference-host tests pass
+    result: grounded_artifact_provenance_created
+    limitations:
+      - integrity hashes do not prove semantic, behavioral, accessibility, or production correctness
+  16:
+    title: Create complete domain production workflows and recipes
     status: next
     planned_artifacts:
-      - artifact provenance contract
-      - grounded verification evaluations
+      - complete domain workflow matrix
+      - production recipe evaluations
