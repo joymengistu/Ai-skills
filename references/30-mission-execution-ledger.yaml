@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 12
-next_mission: 13
+current_mission: 13
+next_mission: 14
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -208,7 +208,23 @@ missions:
       - default budgets are operating controls and have not yet been calibrated against production trajectories
   13:
     title: Harden tool contracts, approvals, permissions, and side-effect boundaries
+    status: complete
+    artifacts:
+      - references/tool-action-boundary-contract.md
+      - skills/tool-use/SKILL.md
+      - skills/safety-governance/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - proposal, approval, execution, verification, and report states are explicit
+      - least privilege, allowlists, idempotency, exact approval binding, fail-closed behavior, and timeout reconciliation are specified
+      - four tool-boundary evaluations and full repository validation pass
+    result: governed_tool_action_contract_created
+    limitations:
+      - host runtime remains responsible for enforcing credentials, approvals, sandboxing, and external state
+  14:
+    title: Improve durable execution, recovery, cancellation, and resumability
     status: next
     planned_artifacts:
-      - tool/approval boundary review
-      - side-effect evaluations
+      - durable execution recovery contract
+      - interruption and recovery evaluations

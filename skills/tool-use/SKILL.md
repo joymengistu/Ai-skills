@@ -7,9 +7,9 @@ description: Select, call, validate, and document tools safely and efficiently w
 
 Use the smallest tool that can answer the current question. Tools should have one clear purpose, descriptive parameters, predictable output, explicit error states, and minimal overlap. Namespace tools by domain and return token-efficient results with identifiers, timestamps, and provenance.
 
-Before a call, state intent, target, scope, risk, reversibility, permission, and expected evidence. After a call, validate the result against the plan and handle partial failure. Never infer that a tool succeeded because the call returned without an exception.
+Before a call, use `references/tool-action-boundary-contract.md` to record intent, target, scope, risk, reversibility, permission, expected evidence, destination, idempotency, and rollback. After a call, validate the actual result against the plan and handle partial failure. Never infer that a tool succeeded because the call returned without an exception.
 
-Separate read, propose, approve, execute, verify, and report operations. Apply least privilege, path and domain allowlists, rate limits, timeouts, dry-run mode, and audit logging. For shell or file actions, show the exact scope and preserve a rollback path.
+Separate read, propose, approve, execute, verify, and report operations. Apply least privilege, path and domain allowlists, rate limits, timeouts, dry-run mode, idempotency, and audit logging. Fail closed on missing approval, ambiguous identity or destination, invalid arguments, unknown risk, or uncertain non-idempotent outcome. For shell or file actions, show the exact scope and preserve a rollback path.
 
 ## Operational deepening
 
