@@ -5,7 +5,7 @@ description: Turn a product idea into a complete, testable experience across int
 
 # Product completeness
 
-Do not treat a page or screenshot as the product. Compile a product brief into a capability map and a vertical slice that proves the core outcome end to end.
+Use `references/product-completeness-journey-contract.md`. Do not treat a page or screenshot as the product. Compile a product brief into a capability map and a vertical slice that proves the core outcome end to end.
 
 ## Completeness map
 
@@ -15,9 +15,9 @@ For a game also check input mapping, game loop, camera, collision, progression, 
 
 ## Vertical slice
 
-Build and verify one thin end-to-end path before broadening. Keep a requirement-to-artifact ledger. Use the running system, not source code alone, as evidence. Exercise the primary flow, invalid input, empty data, network/tool failure, refresh/restart, keyboard or assistive path, and cancellation or recovery.
+Build and verify one thin end-to-end path before broadening. Keep a requirement-to-artifact ledger. Use the running system, not source code alone, as evidence. Exercise the primary flow, invalid input, empty data, network/tool failure, permission denial, refresh/restart, keyboard or assistive path, and cancellation or recovery. Keep visual, functional, data/persistence, accessibility, security, resilience, and operational evidence separate.
 
-If the brief is only a visual mockup, label it honestly as a mockup and do not claim that backend or interactivity exists. If the user intended a working product, pause or continue the architecture until the missing behavior is addressed.
+If the brief is only a visual mockup, label it honestly as a mockup and do not claim that backend or interactivity exists. If the user intended a working product, pause or continue the architecture until the missing behavior is addressed. A compile, screenshot, seed data, successful API response, or one happy path cannot override a failed must-have journey or hard gate.
 
 When a reference screenshot is supplied for a working interface, add screenshot fidelity to the completeness map without confusing it with functional completeness. Route visual implementation through `skills/screenshot-reconstruction/SKILL.md`; record viewport, regions, geometry, spacing, typography, assets, visible states, and responsive evidence. Require same-viewport render/compare/repair evidence for visual claims, while separately testing interaction, accessibility, data, persistence, and recovery.
 

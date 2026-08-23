@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 27
-next_mission: 28
+current_mission: 28
+next_mission: 29
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -456,7 +456,24 @@ missions:
       - host runtime remains responsible for worker isolation, budgets, persistence, and side-effect enforcement
   28:
     title: Strengthen product completeness and real-world journey verification
+    status: complete
+    artifacts:
+      - references/product-completeness-journey-contract.md
+      - skills/product-completeness/SKILL.md
+      - skills/build-recipes/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - product completeness is defined relative to a user journey and context, not a page, screenshot, compile, or happy path
+      - vertical slices require relevant negative, empty, loading, permission, restart, cancellation, recovery, keyboard, and assistive states
+      - visual, functional, data, accessibility, security, resilience, and operational evidence remain separate
+      - four product-completeness-journey evaluations and full repository validation pass
+    result: product_completeness_journey_contract_created
+    limitations:
+      - contract does not prove every production condition or require irrelevant checklist expansion
+  29:
+    title: Strengthen safety, privacy, and authority as non-compensable gates
     status: next
     planned_artifacts:
-      - product completeness journey contract
-      - end-to-end journey evaluations
+      - non-compensable safety and authority contract
+      - safety-authority regression evaluations
