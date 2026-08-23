@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 17
-next_mission: 18
+current_mission: 18
+next_mission: 19
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -288,7 +288,23 @@ missions:
       - no universal taste metric exists; human review and task evidence remain necessary
   18:
     title: Expand multimodal and screenshot-to-UI fidelity workflows
+    status: complete
+    artifacts:
+      - references/multimodal-fidelity-contract.md
+      - skills/screenshot-reconstruction/SKILL.md
+      - skills/multimodal-reasoning/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - reference metadata, scaling, crop/compression, OCR limits, observed facts, inferences, asset provenance, and uncertainty are explicit
+      - visual, text/OCR, runtime, accessibility, and operational claims are separated
+      - four multimodal-fidelity evaluations and full repository validation pass
+    result: multimodal_fidelity_contract_created
+    limitations:
+      - visual evidence cannot establish hidden semantics, behavior, unseen responsive states, or production readiness
+  19:
+    title: Add engineering quality, security, performance, and accessibility gates
     status: next
     planned_artifacts:
-      - multimodal fidelity integration
-      - screenshot and visual-evidence evaluations
+      - engineering quality gates
+      - code/security/accessibility evaluations
