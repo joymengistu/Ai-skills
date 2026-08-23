@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 20
-next_mission: 21
+current_mission: 21
+next_mission: 22
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -337,7 +337,24 @@ missions:
       - completion status remains bounded by the quality and coverage of available evidence
   21:
     title: Formalize human lovability as measurable outcome value
+    status: complete
+    artifacts:
+      - references/human-lovability-outcome-contract.md
+      - skills/human-satisfaction/SKILL.md
+      - skills/lovability/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - human value is measured across ten separate dimensions rather than a friendliness score
+      - hard safety, privacy, authorization, truthfulness, accessibility, and completion gates remain non-compensable
+      - protocol requires matched measured baseline/candidate arms, independent review, deterministic checks, and tradeoff reporting
+      - four human-lovability outcome evaluations and full repository validation pass
+    result: measurable_human_lovability_outcome_contract_created
+    limitations:
+      - no real baseline/candidate model arms or human study were supplied, so comparative improvement remains unmeasured
+  22:
+    title: Formalize evidence-grounded professional judgment and taste
     status: next
     planned_artifacts:
-      - human lovability outcome contract
-      - human-value evaluations
+      - professional judgment contract
+      - judgment and taste evaluations
