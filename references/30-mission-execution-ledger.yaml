@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 21
-next_mission: 22
+current_mission: 22
+next_mission: 23
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -354,7 +354,24 @@ missions:
       - no real baseline/candidate model arms or human study were supplied, so comparative improvement remains unmeasured
   22:
     title: Formalize evidence-grounded professional judgment and taste
+    status: complete
+    artifacts:
+      - references/professional-judgment-contract.md
+      - skills/quality-judgment/SKILL.md
+      - skills/professional-taste/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - professional judgment separates intent, craft, usability, accessibility, resilience, and human-value evidence
+      - screenshots, builds, aesthetic reviews, and human judgments are prevented from proving unsupported properties
+      - contextual review, hard blockers, not-assessable properties, independent critique, and high-leverage repairs are explicit
+      - four professional-judgment evaluations and full repository validation pass
+    result: evidence_grounded_professional_judgment_created
+    limitations:
+      - taste remains context-sensitive and requires task evidence and human review; no universal quality score is claimed
+  23:
+    title: Strengthen multimodal grounding and cross-modal consistency
     status: next
     planned_artifacts:
-      - professional judgment contract
-      - judgment and taste evaluations
+      - cross-modal consistency contract
+      - multimodal grounding evaluations

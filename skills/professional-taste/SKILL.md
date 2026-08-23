@@ -5,7 +5,7 @@ description: Evaluate and improve professional UI quality by separating beauty, 
 
 # Professional UI taste
 
-Treat taste as contextual judgment supported by observable evidence, not as a fixed visual style. Use `references/professional-output-quality-contract.md` to separate outcome clarity, hierarchy, content reality, interaction, consistency, accessibility, resilience, visual craft, character, trust, and human perception. Extend `skills/ui-vision/SKILL.md`; do not replace it or create a generic UI checklist.
+Treat taste as contextual judgment supported by observable evidence, not as a fixed visual style. Use `references/professional-judgment-contract.md` together with `references/professional-output-quality-contract.md` to separate intent, craft, usability, accessibility, resilience, human value, outcome clarity, hierarchy, content reality, interaction, consistency, visual craft, character, trust, and human perception. Extend `skills/ui-vision/SKILL.md`; do not replace it or create a generic UI checklist.
 
 ## Define the job first
 
@@ -51,7 +51,7 @@ For live work, test first glance, squint/scan path, smaller/quieter, remove-20-p
 
 ## Report format
 
-Return: overall judgment with uncertainty; strongest evidence; critical blockers; dimension scores with reasons; anti-patterns with context and user cost; three highest-leverage repairs; and what should remain unchanged. Preserve originality and references without copying another product’s exact layout or assets.
+Return: overall judgment with uncertainty; evidence source and confidence by evidence layer and dimension; critical blockers; not-assessable properties; anti-patterns with context and user cost; three highest-leverage repairs; what should remain unchanged; tradeoffs; and the next validation step. Preserve originality and references without copying another product’s exact layout or assets. Use `verified`, `partial`, `unverified`, `deferred`, `blocked`, or `needs_review` rather than implying that polish proves quality.
 
 ## Screenshot-precision handoff
 
@@ -65,7 +65,7 @@ Public Replit and Vercel references inform the pattern decomposition, but do not
 
 ## Release gate
 
-Do not call an interface or deliverable professional merely because it looks polished. Apply the quality evidence ladder in `references/professional-output-quality-contract.md`; a serious accessibility, interaction, content hierarchy, misleading-state, resilience, trust, or recovery failure is a blocker. Verify the live artifact when possible and use human blind review for professional perception and taste.
+Do not call an interface or deliverable professional merely because it looks polished. Apply the quality evidence ladder in `references/professional-output-quality-contract.md` and the evidence boundaries in `references/professional-judgment-contract.md`; a serious accessibility, interaction, content hierarchy, misleading-state, resilience, trust, or recovery failure is a blocker. Verify the live artifact when possible and use independent or human blind review for professional perception and taste.
 
 ## Operational deepening
 

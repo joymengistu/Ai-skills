@@ -1,5 +1,5 @@
 name: ai-skills
-version: 1.42.0
+version: 1.43.0
 purpose: Model-agnostic operating system for capable, safe, evaluated, human-centered AI agents.
 entrypoint: core/self-directing-prompt.md
 loading:
