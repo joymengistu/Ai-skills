@@ -1,11 +1,24 @@
 ---
 name: agent-max
-description: Compact command and Skill router for invoking the Ai-skills capability library through short prompts or UI buttons. Use when the user wants to load Ai-skills, select a preset workflow, find a Skill, or run a fidelity-first build, research, or verification route without loading every Skill.
+description: Universal single-entry command and Skill router for invoking the Ai-skills capability library through one button, a slash command, or a short natural-language request. Use when the user says Agent Max, clicks an Agent Max action, types `/agent-max`, or wants the system to choose and load only the Skills needed for a build, research, screenshot, or verification task.
 ---
 
 # Agent Max
 
-Use Agent Max as a **control surface**, not as a second library of instructions. Translate a short command, button action, or natural-language request into the smallest sufficient ordered bundle of existing Skills in the Ai-skills package.
+Use Agent Max as the **single universal entry point** for the Ai-skills library, not as a second library of instructions. The user should not need to know or name downstream Skills. Translate a button action, `/agent-max` slash command, `Agent Max` message, or natural-language request into the smallest sufficient ordered bundle of existing Skills in the Ai-skills package.
+
+## Universal invocation
+
+Expose one user-facing action wherever the host supports custom Skills or commands:
+
+| Surface | Canonical invocation | Meaning |
+|---|---|---|
+| Button | `Agent Max` | Route the attached request automatically |
+| Slash command | `/agent-max <request>` | Use Agent Max for the request |
+| Short message | `Agent Max: <request>` | Use Agent Max for the request |
+| Empty invocation | `/agent-max` | Ask for the user’s goal, then route it |
+
+The host may bind the button or slash command to `agent-max.auto`. The Skill itself supplies the routing contract; it does not register a platform button, alter Manus’s immutable core, or create permissions. After installation, the user invokes only Agent Max, while Agent Max internally loads the referenced Skills as needed.
 
 ## Core contract
 
@@ -20,7 +33,7 @@ Agent Max routes work; it does not grant permissions, bypass approvals, invent t
 
 ## Short commands and button IDs
 
-These stable commands are suitable for chat prompts, command palettes, or buttons. A UI may display the human label and submit the corresponding command ID.
+These stable commands are suitable for chat prompts, command palettes, or buttons. A UI may display one universal **Agent Max** label and submit the corresponding command ID; the user does not need to select a downstream Skill.
 
 | Button label | Command ID | Ordered route |
 |---|---|---|
@@ -37,7 +50,7 @@ Button IDs are routing vocabulary, not executable APIs. The surrounding host or 
 
 ## Routing rules
 
-Use `agent-max.auto` for an ordinary request. Add `task-framing` and `intent-preservation` for ambiguous or high-value requests. Add `requirement-compiler` before complex builds. Add `product-completeness` when the user asks for a working app, game, store, tool, or backend-backed experience. Add `dynamic-verification` whenever runtime behavior matters.
+Use `agent-max.auto` as the default route for every request that enters through the universal button or `/agent-max`. Do not ask the user to choose a downstream Skill unless the user explicitly wants to inspect the catalog. Add `task-framing` and `intent-preservation` for ambiguous or high-value requests. Add `requirement-compiler` before complex builds. Add `product-completeness` when the user asks for a working app, game, store, tool, or backend-backed experience. Add `dynamic-verification` whenever runtime behavior matters.
 
 For a supplied screenshot or reference image, use `agent-max.screenshot`. Load `screenshot-reconstruction` first and treat the reference as the visual specification. Measure geometry, typography, assets, regions, density, and viewport; render at the same viewport; compare or diff; repair in priority order; and record observed, inferred, approximated, verified, and not-assessable claims. Never let Professional UI Taste redesign an unusual reference unless redesign is explicitly requested.
 
@@ -62,7 +75,9 @@ Then execute only after required inputs and permissions are available. At comple
 
 Use prompts such as:
 
-> Load `agent-max` and run `agent-max.screenshot` on this reference. Reconstruct it faithfully; do not redesign it.
+> Click **Agent Max** and use this reference to reconstruct the interface faithfully. Do not redesign it.
+
+> `/agent-max Build this product from the brief and choose the right Skills automatically.`
 
 > Run `agent-max.product` on this flower-pot shop brief. Preserve every explicit requirement and build a working vertical slice with states, persistence, accessibility, and verification.
 
