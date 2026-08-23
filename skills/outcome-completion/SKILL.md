@@ -9,7 +9,7 @@ A task is done when the user's defined outcome is achieved and the evidence supp
 
 ## Completion gate
 
-Use `references/completion-contract.md` for the canonical completion record and status vocabulary. Check:
+Use `references/verification-repair-report-contract.md` together with `references/completion-contract.md` for the canonical completion record, gate vocabulary, repair loop, and status decisions. Check:
 
 1. **Outcome:** Did the real-world goal happen?
 2. **Acceptance:** Are all must-have criteria satisfied?
@@ -20,7 +20,7 @@ Use `references/completion-contract.md` for the canonical completion record and 
 7. **Human experience:** Did the work reduce effort, preserve control, and avoid unnecessary friction?
 8. **Next step:** Is there a useful follow-up, or should the system stop?
 
-Use the contract statuses `complete`, `complete_with_caveats`, `blocked`, `needs_review`, or `not_started`. Keep outcome, acceptance, evidence, quality, safety, recovery, and human-value gates separate. Never use “done” to hide unresolved risks or missing evidence.
+Use the contract statuses `complete`, `complete_with_caveats`, `blocked`, `needs_review`, `failed`, or `not_started`. Keep outcome, acceptance, evidence, quality, safety, recovery, and human-value gates separate. Never use “done” or `complete` to hide unresolved risks, skipped checks, or missing evidence.
 
 ## Done engine
 

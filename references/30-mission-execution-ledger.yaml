@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 19
-next_mission: 20
+current_mission: 20
+next_mission: 21
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -320,7 +320,24 @@ missions:
       - automated checks and bounded tests cannot prove every production condition
   20:
     title: Unify completion gates, correction loops, and honest reporting
+    status: complete
+    artifacts:
+      - references/verification-repair-report-contract.md
+      - skills/outcome-completion/SKILL.md
+      - skills/repair-loop/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - completion record separates outcome, acceptance, evidence, quality, safety, recovery, and human-value gates
+      - repairs require reproduction, smallest-cause classification, focused and regression reruns, and bounded convergence
+      - statuses distinguish complete, caveated, needs review, blocked, failed, and not started
+      - four verification-repair evaluations and full repository validation pass
+    result: unified_verification_repair_reporting_created
+    limitations:
+      - completion status remains bounded by the quality and coverage of available evidence
+  21:
+    title: Formalize human lovability as measurable outcome value
     status: next
     planned_artifacts:
-      - unified verification and repair protocol
-      - completion/reporting evaluations
+      - human lovability outcome contract
+      - human-value evaluations

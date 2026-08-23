@@ -5,13 +5,13 @@ description: Repair incomplete or failing agent-built artifacts through observed
 
 # Repair loop
 
-Repair from evidence, not from guesswork. Observe the failure in the running artifact, trace, test, or user report; preserve the original state; and classify the cause as requirement, architecture, context, implementation, dependency, tool, environment, permission, or verification.
+Repair from evidence, not from guesswork. Use `references/verification-repair-report-contract.md` for completion gates, status, repair convergence, and stopping. Observe the failure in the running artifact, trace, test, or user report; preserve the original state; and classify the cause as requirement, architecture, context, implementation, dependency, tool, environment, permission, or verification.
 
 Reproduce with the smallest useful test. Patch the smallest cause that explains the failure. Rerun the focused test, the affected requirement checks, and the relevant regression suite. Update the trace, requirement ledger, evidence, and incident record when the failure is material.
 
 Do not hide missing requirements by weakening tests. Do not repeatedly retry a side effect whose outcome is uncertain; reconcile it through the durable action protocol first. Escalate when repairs reveal a wrong architecture, missing host capability, unsafe permission, or repeated non-convergence.
 
-A repair is complete only when the original failure is gone, related behavior still works, the requirement is verified, and the user-facing status is honest.
+A repair is complete only when the original failure is gone, related behavior still works, the requirement is verified, and the user-facing status is honest. Stop when the repair converges, the budget ends, the same failure repeats without a new hypothesis, risk rises, or a missing permission, capability, or user decision blocks safe progress.
 
 ## Operational deepening
 
