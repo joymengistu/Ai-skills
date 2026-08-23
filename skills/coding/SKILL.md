@@ -7,7 +7,7 @@ description: Plan, implement, debug, test, review, and document software changes
 
 Inspect the repository before editing. Map relevant files, runtime, dependencies, tests, interfaces, and constraints. Make the smallest coherent change that satisfies the acceptance checklist. Keep user code and generated code distinguishable.
 
-Use a loop of reproduce, hypothesize, change, test, review, and document. Run focused tests first, then broader checks. Validate failure paths, input boundaries, security implications, performance, and backwards compatibility. Never run destructive commands or modify production systems without explicit scope and approval.
+Use a loop of reproduce, hypothesize, change, test, review, and document. Apply `references/engineering-quality-gates.md` to map requirements to correctness, failure, security, privacy, performance, accessibility, compatibility, observability, reproducibility, and maintainability checks. Run focused tests first, then broader checks. Validate failure paths, input boundaries, security implications, performance, accessibility, and backwards compatibility. Never run destructive commands or modify production systems without explicit scope and approval.
 
 Report files changed, tests run, results, known limitations, and any follow-up migration or rollback steps.
 
