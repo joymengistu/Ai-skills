@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 24
-next_mission: 25
+current_mission: 25
+next_mission: 26
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -405,7 +405,23 @@ missions:
       - host storage, access control, provider retention, and deletion enforcement remain outside prompt-level guarantees
   25:
     title: Strengthen research synthesis, source freshness, and claim calibration
+    status: complete
+    artifacts:
+      - references/research-synthesis-contract.md
+      - skills/research/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - synthesis is decomposed into atomic claim records with scope, source tier, independence, freshness, transformations, contradictions, confidence, status, and next check
+      - copied reports are grouped by source family; disagreement is resolved, narrowed, or preserved rather than averaged away
+      - research stops at the evidence standard, budget, unavailable evidence, or diminishing value and reports unknowns honestly
+      - four research-synthesis evaluations and full repository validation pass
+    result: evidence_grounded_research_synthesis_created
+    limitations:
+      - source quality policy and synthesis records cannot guarantee source truth or replace domain expertise
+  26:
+    title: Strengthen tool selection, capability matching, and fallback behavior
     status: next
     planned_artifacts:
-      - research synthesis contract
-      - calibrated research evaluations
+      - tool selection and capability contract
+      - tool-fallback evaluations
