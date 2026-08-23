@@ -55,6 +55,8 @@ required = [
     ROOT / "references" / "public-agent-infrastructure-research-2026-08-23.md",
     ROOT / "references" / "intelligence-infrastructure-architecture.md",
     ROOT / "references" / "intelligence-infrastructure-self-critique.md",
+    ROOT / "references" / "hosted-evaluation-research-brief-2026-08-23.md",
+    ROOT / "references" / "hosted-evaluation-architecture-research-2026-08-23.md",
     ROOT / "evals" / "lovability-benchmark-plan.md",
     ROOT / "runtime" / "risk-control.schema.json",
     ROOT / "runtime" / "intelligence" / "research-memory.schema.json",
