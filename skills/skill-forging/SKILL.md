@@ -31,4 +31,4 @@ Every skill should declare `name`, `description`, purpose, activation conditions
 
 A skill is ready only when another agent can discover when to use it, follow it without hidden context, know what not to do, fail safely, and produce an outcome that can be measured. A model-generated skill may propose changes but cannot grant itself permissions, trust, production status, or authority to weaken safeguards. Never add a skill solely because its title sounds advanced or because feature count is increasing.
 
-Read `references/full-mode-capability-map.md` for the lifecycle's place in Ai-skills and `/home/ubuntu/skills/skill-creator/SKILL.md` for the governing authoring guidance.
+Read `references/full-mode-capability-map.md` for the lifecycle's place in Ai-skills, `references/skill-engineering-intelligence.md` for example-driven improvement and self-critique, and `/home/ubuntu/skills/skill-creator/SKILL.md` for the governing authoring guidance.

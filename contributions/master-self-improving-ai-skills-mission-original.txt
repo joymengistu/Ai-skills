@@ -1,0 +1,728 @@
+MASTER MISSION — BUILD THE SELF-IMPROVING AI SKILLS INTELLIGENCE SYSTEM
+
+You are working on the existing AI Skills repository.
+
+THIS IS NOT A NORMAL SKILL-CREATION TASK.
+
+Your objective is to transform the repository from a collection of AI skills into a continuously improving, evidence-driven capability system.
+
+Do not optimize for the number of skills.
+
+Optimize for:
+
+INTELLIGENCE
+QUALITY
+REUSABILITY
+COMPOSABILITY
+CONTEXT
+EXAMPLES
+VERIFICATION
+LEARNING
+SELF-CRITIQUE
+HUMAN VALUE
+
+==================================================
+CORE VISION
+==================================================
+
+Build a system that can:
+
+UNDERSTAND
+→ RESEARCH
+→ LEARN
+→ APPLY
+→ OBSERVE
+→ CRITIQUE
+→ REMEMBER
+→ IMPROVE
+→ VERIFY
+
+The system should become better at creating and using skills over time.
+
+However:
+
+SELF-IMPROVEMENT MUST NEVER MEAN BLIND SELF-MODIFICATION.
+
+Every improvement must be:
+
+EVIDENCE-BASED
+TESTED
+COMPARED
+VERIFIED
+
+The system must be capable of learning without automatically believing its own conclusions.
+
+==================================================
+PART 1 — FULL REPOSITORY AUDIT
+==================================================
+
+Inspect the entire repository.
+
+Understand:
+
+- existing skills
+- architecture
+- metadata
+- dependencies
+- documentation
+- references
+- scripts
+- examples
+- duplication
+- weaknesses
+- missing capabilities
+- inconsistent conventions
+
+Create a complete capability map.
+
+Do not assume existing skills are correct.
+
+==================================================
+PART 2 — DESIGN THE IDEAL SKILL
+==================================================
+
+Research what makes an AI skill genuinely useful.
+
+Do NOT assume a skill is simply:
+
+"name + instructions."
+
+Design a richer skill specification.
+
+Investigate:
+
+- purpose
+- activation conditions
+- inputs
+- outputs
+- principles
+- procedures
+- examples
+- counterexamples
+- edge cases
+- contextual exceptions
+- anti-patterns
+- tools
+- verification
+- benchmarks
+- limitations
+- uncertainty
+- lessons learned
+- version history
+
+Create a formal specification.
+
+==================================================
+PART 3 — EXAMPLE-DRIVEN INTELLIGENCE
+==================================================
+
+Create a framework for teaching skills through examples.
+
+Every important principle should ideally have:
+
+1. POSITIVE EXAMPLE
+2. NEGATIVE EXAMPLE
+3. BORDERLINE EXAMPLE
+4. CONTEXTUAL EXCEPTION
+5. TRANSFORMATION EXAMPLE
+
+Example:
+
+PRINCIPLE:
+Use restraint in professional UI.
+
+GOOD:
+Compact toolbar with clear hierarchy.
+
+BAD:
+Every action represented by a giant colorful card.
+
+BORDERLINE:
+Large primary CTA on a marketing page.
+
+EXCEPTION:
+A primary mobile action may require a larger touch target.
+
+TRANSFORMATION:
+Oversized button → compact contextual action.
+
+Do not use examples merely as decoration.
+
+Explain WHY each example represents the principle.
+
+==================================================
+PART 4 — CONTEXTUAL REASONING
+==================================================
+
+The system must NOT memorize simplistic rules.
+
+Avoid:
+
+"Large buttons are bad."
+
+Instead teach:
+
+"Button size depends on context, importance, frequency,
+platform, accessibility requirements, and hierarchy."
+
+Every major principle should distinguish:
+
+GENERAL RULE
+CONTEXT
+EXCEPTION
+TRADEOFF
+
+==================================================
+PART 5 — KNOWLEDGE BOUNDARIES
+==================================================
+
+Do NOT attempt to make the system pretend to "know everything."
+
+Instead build a structured understanding of:
+
+KNOWN
+SUPPORTED
+INFERRED
+UNCERTAIN
+UNKNOWN
+OUTDATED
+CONFLICTING
+
+The system should know what it does NOT know.
+
+When evidence is insufficient, it should say so.
+
+==================================================
+PART 6 — RESEARCH MEMORY
+==================================================
+
+Create structured memory for research discoveries.
+
+Each research finding should record:
+
+- claim
+- source
+- evidence
+- date
+- confidence
+- affected skills
+- related concepts
+- contradictions
+- implications
+
+Do not allow unsupported claims to silently become permanent knowledge.
+
+==================================================
+PART 7 — SELF-IMPROVEMENT MEMORY
+==================================================
+
+Create a structured learning record.
+
+Each lesson should contain:
+
+OBSERVATION
+FAILURE
+CAUSE
+EVIDENCE
+LESSON
+ACTION
+CONFIDENCE
+REGRESSION RISK
+NEXT EXPERIMENT
+
+Example:
+
+SKILL:
+Professional UI Taste
+
+OBSERVATION:
+The evaluator consistently preferred interfaces
+with fewer decorative containers.
+
+FAILURE:
+The skill previously rewarded card-heavy layouts.
+
+CAUSE:
+Visual complexity was incorrectly interpreted as polish.
+
+EVIDENCE:
+Multiple reference comparisons.
+
+LESSON:
+Professional quality should prioritize hierarchy,
+restraint, and contextual density over decoration.
+
+ACTION:
+Reduce the weight of decorative complexity.
+
+CONFIDENCE:
+Medium-high.
+
+NEXT EXPERIMENT:
+Benchmark against additional professional interfaces.
+
+==================================================
+PART 8 — LEARNING LOOP
+==================================================
+
+Implement the conceptual loop:
+
+OBSERVE
+↓
+RECORD
+↓
+ANALYZE
+↓
+FORM LESSON
+↓
+STORE
+↓
+APPLY
+↓
+TEST
+↓
+VERIFY
+↓
+PROMOTE OR REJECT
+
+IMPORTANT:
+
+A lesson is not automatically truth.
+
+A lesson becomes trusted only after sufficient evidence.
+
+==================================================
+PART 9 — SKILL IMPROVEMENT ENGINE
+==================================================
+
+Create:
+
+SELF_IMPROVING_SKILL_ENGINE
+
+Input:
+
+EXISTING SKILL
+
+Process:
+
+1. Understand the skill.
+2. Establish its intended outcome.
+3. Establish benchmarks.
+4. Research relevant best practices.
+5. Find weaknesses.
+6. Generate improvement candidates.
+7. Test candidates.
+8. Compare against previous version.
+9. Detect regressions.
+10. Keep only demonstrated improvements.
+11. Record the lesson.
+12. Update the skill.
+
+Core principle:
+
+LEARN
+→ TEST
+→ PROVE
+→ KEEP
+
+Not:
+
+LEARN
+→ ASSUME
+→ CHANGE
+
+==================================================
+PART 10 — EXAMPLE GENERATION
+==================================================
+
+When a skill discovers an important principle, determine whether
+additional examples are needed.
+
+Generate examples for:
+
+- normal cases
+- difficult cases
+- ambiguous cases
+- edge cases
+- failure cases
+- exceptions
+
+Do not generate thousands of redundant examples.
+
+Prefer high-information examples.
+
+==================================================
+PART 11 — CAPABILITY GAP DETECTION
+==================================================
+
+The system should detect:
+
+"I do not currently have a sufficient skill for this."
+
+Workflow:
+
+TASK
+↓
+REQUIRED CAPABILITIES
+↓
+AVAILABLE SKILLS
+↓
+GAP ANALYSIS
+↓
+RESEARCH
+↓
+CANDIDATE SKILL
+↓
+TEST
+↓
+BENCHMARK
+↓
+APPROVE / REJECT
+
+==================================================
+PART 12 — SKILL COMPOSITION
+==================================================
+
+Research how multiple skills should work together.
+
+Example:
+
+Professional UI generation:
+
+INTENT
++
+PROFESSIONAL_UI_TASTE
++
+PIXEL_PERFECT_UI
++
+VISUAL_QA
++
+ACCESSIBILITY
++
+VERIFICATION
+
+The system should discover useful combinations automatically.
+
+==================================================
+PART 13 — CRITIC SYSTEM
+==================================================
+
+Create reusable critique capabilities.
+
+A generated result should be able to enter:
+
+OUTPUT
+↓
+CRITIQUE
+↓
+WEAKNESS DETECTION
+↓
+REVISION
+↓
+VERIFICATION
+
+Critics must explain WHY something is weak.
+
+==================================================
+PART 14 — BENCHMARKING
+==================================================
+
+Create benchmarks for skills.
+
+Compare:
+
+VERSION A
+vs
+VERSION B
+
+Measure relevant outcomes.
+
+Do not declare improvement simply because the new version is
+larger or more sophisticated.
+
+A smaller skill that performs better should win.
+
+==================================================
+PART 15 — PROFESSIONAL UI TASTE
+==================================================
+
+Use PROFESSIONAL_UI_TASTE as the first major demonstration.
+
+Research deeply:
+
+- professional UI
+- visual hierarchy
+- restraint
+- typography
+- spacing
+- density
+- micro-interactions
+- consistency
+- information architecture
+- AI-generated UI anti-patterns
+- visual QA
+
+Create:
+
+PROFESSIONAL_UI_TASTE
++
+UI_SCREENSHOT_CRITIC
++
+PIXEL_PERFECT_UI
+
+Then connect them.
+
+==================================================
+PART 16 — BRAINSTORM INTELLIGENCE
+==================================================
+
+Create a framework for conversational idea emergence.
+
+Investigate:
+
+THOUGHT
+→ RESPONSE
+→ RECOGNITION
+→ CURIOSITY
+→ CONNECTION
+→ NEW IDEA
+→ REFINEMENT
+→ BREAKTHROUGH
+
+Create:
+
+BRAINSTORM_MODE
+
+The system should recognize promising idea sparks without becoming
+a constant praise machine.
+
+==================================================
+PART 17 — LOVABILITY
+==================================================
+
+Create the conceptual:
+
+LOVABILITY_LAYER
+
+The objective is not fake emotion.
+
+It is:
+
+UNDERSTANDING
++
+HONEST APPRECIATION
++
+CONTEXT
++
+PERSONALIZATION
++
+USEFUL INITIATIVE
++
+RESPECT
++
+HONESTY
+
+If the system says:
+
+"I love this idea"
+
+it should be able to explain why.
+
+It must also be willing to say:
+
+"I like the goal, but I think this implementation has a problem."
+
+==================================================
+PART 18 — HUMAN SATISFACTION
+==================================================
+
+Research how to evaluate whether an AI actually helped.
+
+Consider:
+
+- outcome quality
+- effort reduction
+- clarity
+- trust
+- control
+- frustration
+- unnecessary interaction
+- usefulness
+- predictability
+- satisfaction
+
+Do not optimize for engagement alone.
+
+Optimize for:
+
+HIGH-VALUE OUTCOME
++
+LOW UNNECESSARY HUMAN EFFORT
+
+==================================================
+PART 19 — META-LEARNING
+==================================================
+
+Investigate whether the repository can learn not only:
+
+"what a skill does"
+
+but:
+
+"how to create better skills."
+
+Create a meta-capability:
+
+SKILL_ENGINEERING_INTELLIGENCE
+
+It should learn patterns across successful and unsuccessful skills.
+
+==================================================
+PART 20 — FABLE / FRONTIER COMPARISON
+==================================================
+
+Research publicly available frontier skill systems and Fable-created
+skill repositories.
+
+Determine:
+
+- strengths
+- weaknesses
+- composability
+- verification
+- examples
+- activation
+- benchmarking
+- self-improvement
+
+Do NOT copy proprietary implementations.
+
+Find the architectural opportunity beyond static skill libraries.
+
+==================================================
+PART 21 — SELF-CRITIQUE
+==================================================
+
+At the end of the project, ask:
+
+"What are we probably getting wrong?"
+
+"What assumptions are unsupported?"
+
+"What part of this architecture is unnecessarily complicated?"
+
+"What capability is missing?"
+
+"What would an expert disagree with?"
+
+Then research those questions.
+
+==================================================
+PART 22 — QUALITY GATE
+==================================================
+
+Do NOT continuously loop forever.
+
+Stop an improvement cycle when:
+
+- measurable improvement has been demonstrated
+- remaining weaknesses are documented
+- new research produces diminishing returns
+- benchmark results stabilize
+
+==================================================
+FINAL ARCHITECTURE
+==================================================
+
+Propose the strongest final architecture.
+
+Potential structure:
+
+HUMAN GOAL
+↓
+INTENT
+↓
+CAPABILITY ANALYSIS
+↓
+SKILL DISCOVERY
+↓
+SKILL COMPOSITION
+↓
+RESEARCH
+↓
+EXECUTION
+↓
+OBSERVATION
+↓
+CRITIQUE
+↓
+VERIFICATION
+↓
+HUMAN SATISFACTION
+↓
+LESSON
+↓
+MEMORY
+↓
+FUTURE IMPROVEMENT
+
+But do not assume this diagram is correct.
+
+Change it if research demonstrates a better architecture.
+
+==================================================
+FINAL DELIVERABLE
+==================================================
+
+Produce:
+
+1. Repository audit
+2. Skill specification
+3. Example framework
+4. Contextual reasoning framework
+5. Knowledge boundary system
+6. Research memory
+7. Self-improvement memory
+8. Skill improvement engine
+9. Example engine
+10. Capability gap engine
+11. Skill composition system
+12. Critic system
+13. Benchmark system
+14. Professional UI Taste
+15. UI Screenshot Critic
+16. Pixel Perfect UI
+17. Brainstorm Mode
+18. Lovability Layer
+19. Human Satisfaction framework
+20. Meta-learning architecture
+21. Frontier comparison
+22. Self-critique
+23. Final architecture
+24. Implementation roadmap
+
+FINAL PRINCIPLE:
+
+DO NOT BUILD A REPOSITORY THAT MERELY CONTAINS MANY SKILLS.
+
+BUILD A SYSTEM THAT UNDERSTANDS:
+
+WHAT A SKILL IS,
+WHEN IT SHOULD BE USED,
+HOW IT SHOULD BE USED,
+WHAT GOOD LOOKS LIKE,
+WHAT BAD LOOKS LIKE,
+WHY THE DIFFERENCE EXISTS,
+WHEN THE RULE DOES NOT APPLY,
+HOW TO VERIFY THE RESULT,
+WHAT WAS LEARNED,
+AND HOW FUTURE VERSIONS CAN IMPROVE.
+
+The goal is not:
+
+"know everything."
+
+The goal is:
+
+BUILD THE MOST USEFUL, EVIDENCE-DRIVEN, SELF-IMPROVING
+CAPABILITY SYSTEM THAT CAN BE REASONABLY BUILT.

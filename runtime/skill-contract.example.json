@@ -21,5 +21,16 @@
   "lifecycle": "experimental",
   "provenance": ["Ai-skills architecture; example only"],
   "owner": "Ai-skills maintainers",
-  "rollback": "Remove the contract from the registry and revert dependent routing changes."
+  "rollback": "Remove the contract from the registry and revert dependent routing changes.",
+  "examples": [
+    {"kind": "positive", "situation": "A must-have requirement has a live test result.", "response": "Mark it verified and cite the observation.", "why": "Completion is tied to external evidence."},
+    {"kind": "negative", "situation": "The agent has only generated a plausible answer.", "response": "Mark the result unverified.", "why": "Output is not proof of completion."},
+    {"kind": "borderline", "situation": "A screenshot appears polished but interaction behavior is unavailable.", "response": "Score visible qualities and mark live behavior not assessable.", "why": "A screenshot cannot establish keyboard, error, or recovery behavior."},
+    {"kind": "exception", "situation": "The user explicitly requests a read-only review.", "response": "Do not modify the artifact while reviewing it.", "why": "The scope and permission are intentionally narrower."},
+    {"kind": "transformation", "situation": "A completion claim has no evidence reference.", "response": "Convert it into a partial report with the missing evidence listed.", "why": "Honest incompleteness is safer than false success."}
+  ],
+  "limitations": ["Does not replace host-level permissions, sandboxing, or independent verification."],
+  "uncertainty": ["Screenshot-only quality judgments cannot establish live interaction behavior."],
+  "lessons_learned": ["Separate generated output from verified completion."],
+  "version_history": [{"version": "0.1.0", "change": "Initial example contract", "evidence": "Repository validation and contract review"}]
 }

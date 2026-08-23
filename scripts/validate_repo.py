@@ -48,17 +48,23 @@ required = [
     ROOT / "references" / "agent-risk-control-blueprint.md",
     ROOT / "references" / "professional-taste-research-notes.md",
     ROOT / "references" / "professional-taste-architecture.md",
+    ROOT / "references" / "contextual-user-intelligence-architecture.md",
+    ROOT / "references" / "skill-engineering-intelligence.md",
+    ROOT / "references" / "master-mission-implementation-map.md",
     ROOT / "evals" / "lovability-benchmark-plan.md",
     ROOT / "runtime" / "risk-control.schema.json",
     ROOT / "contributions" / "Fable-research-mission-original.txt",
+    ROOT / "contributions" / "lovability-communication-mission-original.txt",
+    ROOT / "contributions" / "contextual-user-intelligence-mission-original.txt",
+    ROOT / "contributions" / "master-self-improving-ai-skills-mission-original.txt",
 ]
 for path in required:
     if not path.exists():
         raise SystemExit(f"missing required file: {path}")
 
 skills = sorted((ROOT / "skills").glob("*/SKILL.md"))
-if len(skills) < 59:
-    raise SystemExit(f"expected at least 59 skills, found {len(skills)}")
+if len(skills) < 60:
+    raise SystemExit(f"expected at least 60 skills, found {len(skills)}")
 for path in skills:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---\n") or "name:" not in text or "description:" not in text:
@@ -89,6 +95,7 @@ for path in [
     ROOT / "skills" / "brainstorm-mode" / "SKILL.md",
     ROOT / "skills" / "agent-risk-controls" / "SKILL.md",
     ROOT / "skills" / "professional-taste" / "SKILL.md",
+    ROOT / "skills" / "contextual-user-intelligence" / "SKILL.md",
 ]:
     if not path.exists():
         raise SystemExit(f"missing governance or peak skill file: {path}")
@@ -194,11 +201,12 @@ for name in [
     "brainstorm-mode",
     "agent-risk-controls",
     "professional-taste",
+    "contextual-user-intelligence",
 ]:
     if f"  - {name}" not in manifest:
         raise SystemExit(f"manifest missing skill: {name}")
 
-for path in [ROOT / "contributions" / "ULTRIA-original.txt", ROOT / "contributions" / "FORK-original.txt", ROOT / "contributions" / "UI-Vision-original.txt",     ROOT / "contributions" / "Fable-research-mission-original.txt", ROOT / "contributions" / "maximum-capability-research-mission-original.txt", ROOT / "contributions" / "lovable-ai-research-mission-original.txt"]:
+for path in [ROOT / "contributions" / "ULTRIA-original.txt", ROOT / "contributions" / "FORK-original.txt", ROOT / "contributions" / "UI-Vision-original.txt",     ROOT / "contributions" / "Fable-research-mission-original.txt", ROOT / "contributions" / "maximum-capability-research-mission-original.txt", ROOT / "contributions" / "lovable-ai-research-mission-original.txt", ROOT / "contributions" / "lovability-communication-mission-original.txt", ROOT / "contributions" / "contextual-user-intelligence-mission-original.txt", ROOT / "contributions" / "master-self-improving-ai-skills-mission-original.txt"]:
 
     if path.stat().st_size < 1000:
         raise SystemExit(f"user source document unexpectedly small: {path}")

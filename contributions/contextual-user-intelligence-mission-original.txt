@@ -1,0 +1,287 @@
+MISSION: BUILD CONTEXTUAL USER INTELLIGENCE
+
+Extend the AI Skills repository with a controlled system for
+understanding conversation context and predicting likely user intent.
+
+Do NOT build a system that claims to read minds or perfectly predict
+users.
+
+Build a system that makes evidence-based contextual predictions.
+
+==================================================
+1. CONTEXT SEPARATION
+==================================================
+
+Create three distinct context layers:
+
+PROFESSIONAL CONTEXT
+Information about projects, tasks, technical goals, requirements,
+workflows, and objectives.
+
+PERSONAL CONTEXT
+Stable user preferences about collaboration, communication,
+formatting, workflow, and interaction style.
+
+CONVERSATION STATE
+Temporary information about the current conversation, including:
+- current objective
+- recent decisions
+- unresolved questions
+- active terminology
+- immediate task
+- recent corrections
+
+Do not mix these layers unnecessarily.
+
+==================================================
+2. USER INTENT PREDICTION
+==================================================
+
+Create:
+
+USER_INTENT_PREDICTION
+
+The skill should estimate:
+
+- likely intended meaning
+- likely desired output
+- likely next action
+- likely correction
+- likely follow-up
+- ambiguity
+- confidence
+
+Use evidence from:
+
+- current message
+- recent conversation
+- active objective
+- terminology
+- previous corrections
+- current workflow
+- explicit constraints
+
+==================================================
+3. AMBIGUITY RESOLUTION
+==================================================
+
+When a user uses an ambiguous or apparently incorrect word:
+
+DO NOT immediately assume.
+
+Evaluate:
+
+1. literal interpretation
+2. conversational interpretation
+3. project-context interpretation
+4. previous terminology
+5. likely intended action
+
+Choose the interpretation with the strongest evidence.
+
+If confidence is low, ask.
+
+If confidence is high and the correction is obvious,
+continue naturally while remaining easy to correct.
+
+Example:
+
+User:
+"Start making the problem."
+
+Context:
+The conversation is repeatedly asking for Manus prompts.
+
+Possible interpretations:
+- problem
+- prompt
+
+If context strongly favors "prompt", infer prompt.
+
+But do not create a universal rule that "problem" means "prompt."
+
+==================================================
+4. PREDICTION TYPES
+==================================================
+
+Separate:
+
+INTENT PREDICTION
+What does the user mean?
+
+OUTPUT PREDICTION
+What form of answer probably satisfies them?
+
+NEXT-STEP PREDICTION
+What are they likely to ask next?
+
+CORRECTION PREDICTION
+What misunderstanding is likely to occur?
+
+PREFERENCE PREDICTION
+What presentation style is likely preferred?
+
+Do not treat these as equally certain.
+
+==================================================
+5. CONFIDENCE
+==================================================
+
+Every prediction should internally have:
+
+prediction
+evidence
+confidence
+alternative interpretations
+
+Never represent uncertain inference as fact.
+
+==================================================
+6. RESPONSE LEARNING
+==================================================
+
+Create:
+
+RESPONSE_LEARNING_ENGINE
+
+After significant interactions, compare:
+
+PREDICTION
+→ RESPONSE
+→ USER REACTION
+→ ACTUAL INTENT
+
+Record whether the prediction succeeded.
+
+If incorrect:
+
+identify WHY.
+
+Possible causes:
+
+- insufficient context
+- ambiguous language
+- wrong assumption
+- outdated context
+- overgeneralization
+- failure to recognize correction
+- excessive confidence
+
+==================================================
+7. LESSON GENERATION
+==================================================
+
+Convert successful and failed predictions into general lessons.
+
+Do NOT memorize superficial associations.
+
+Bad lesson:
+
+"user says X → always do Y"
+
+Good lesson:
+
+"When X appears in context C and objective O is active,
+Y becomes more likely, but alternative Z should remain possible."
+
+==================================================
+8. RESPONSE QUALITY LOOP
+==================================================
+
+Implement:
+
+UNDERSTAND
+→ PREDICT
+→ RESPOND
+→ OBSERVE USER REACTION
+→ EVALUATE
+→ LEARN
+→ UPDATE
+
+==================================================
+9. PERSONALIZATION SAFETY
+==================================================
+
+Do not infer sensitive personal characteristics merely from
+conversation behavior.
+
+Do not manufacture psychological diagnoses.
+
+Do not treat guesses as facts.
+
+Personalization should primarily concern useful interaction
+preferences and current workflow.
+
+==================================================
+10. META-ARCHITECTURE
+==================================================
+
+Do not allow USER_INTENT_PREDICTION to directly rewrite itself.
+
+Do not allow the ordinary Skill Creator to automatically modify
+the foundational architecture.
+
+Use:
+
+FOUNDATION
+↓
+SKILL CREATOR
+↓
+SKILL ENGINEERING
+↓
+META-RESEARCH
+
+Higher levels may recommend changes to lower levels, but changes
+to foundational capabilities require explicit validation.
+
+==================================================
+11. EXAMPLES
+==================================================
+
+For every major prediction principle, create:
+
+GOOD EXAMPLE
+BAD EXAMPLE
+AMBIGUOUS EXAMPLE
+CORRECTED EXAMPLE
+EDGE CASE
+
+Explain why each example works or fails.
+
+==================================================
+12. BENCHMARK
+==================================================
+
+Create a benchmark containing ambiguous conversational inputs.
+
+Evaluate:
+
+- intent accuracy
+- unnecessary clarification rate
+- incorrect assumption rate
+- confidence calibration
+- correction responsiveness
+- usefulness of predicted next steps
+
+The goal is not maximum prediction.
+
+The goal is:
+
+HIGH ACCURACY
++
+GOOD CALIBRATION
++
+LOW UNNECESSARY INTERRUPTION
+
+==================================================
+FINAL PRINCIPLE
+==================================================
+
+The system should not try to "predict the user."
+
+It should try to understand:
+
+WHAT THE USER IS PROBABLY TRYING TO ACCOMPLISH.
+
+Prediction exists to improve understanding,
+not to override the user.

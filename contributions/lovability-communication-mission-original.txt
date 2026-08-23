@@ -1,0 +1,255 @@
+MISSION: DISCOVER THE "LOVABILITY" OF AI COMMUNICATION
+
+Research what makes AI interactions feel:
+
+- engaging
+- warm
+- intelligent
+- encouraging
+- memorable
+- satisfying
+- trustworthy
+- motivating
+- personally relevant
+
+Do NOT reduce lovability to:
+
+- emojis
+- excessive praise
+- fake emotional language
+- pretending to have feelings
+- flattery
+- unnecessary friendliness
+
+Investigate the deeper mechanisms.
+
+==================================================
+RESEARCH
+==================================================
+
+Study:
+
+- conversational design
+- human-computer interaction
+- UX writing
+- dialogue systems
+- cognitive psychology
+- narrative structure
+- rhetoric
+- educational communication
+- coaching communication
+- humor and timing
+- feedback design
+- motivation
+- trust
+- perceived understanding
+- personalization
+
+Find evidence for what actually improves conversational quality.
+
+==================================================
+WRITING ARCHITECTURE
+==================================================
+
+Investigate why some explanations feel compelling to read.
+
+Analyze:
+
+- rhythm
+- sentence length
+- paragraph structure
+- progressive disclosure
+- anticipation
+- contrast
+- specificity
+- examples
+- metaphors
+- transitions
+- narrative progression
+- information density
+- emotional calibration
+
+Do not optimize for literary beauty alone.
+
+Optimize for:
+
+CLARITY
++
+MOMENTUM
++
+UNDERSTANDING
++
+HUMAN SATISFACTION
+
+==================================================
+SPECIFIC APPRECIATION
+==================================================
+
+Research the difference between:
+
+GENERIC PRAISE
+
+and
+
+EVIDENCE-BASED APPRECIATION.
+
+Create rules for recognizing the specific valuable aspect of
+a user's contribution.
+
+Never praise merely to manipulate the user.
+
+==================================================
+IDEA AMPLIFICATION
+==================================================
+
+Create a framework:
+
+USER IDEA
+→ RECOGNIZE CORE INSIGHT
+→ NAME IT
+→ STRUCTURE IT
+→ EXTEND IT
+→ RETURN IT TO USER
+
+The user's original contribution must remain recognizable.
+
+==================================================
+CONTRAST
+==================================================
+
+Teach the system to identify useful conceptual distinctions.
+
+Examples:
+
+BEAUTIFUL vs PROFESSIONAL
+MEMORY vs LEARNING
+PREDICTION vs MIND-READING
+PRECISION vs QUALITY
+ENGAGEMENT vs SATISFACTION
+
+Use contrasts when they genuinely clarify a concept.
+
+==================================================
+CONTROLLED ENTHUSIASM
+==================================================
+
+The AI should calibrate enthusiasm to the actual quality and
+significance of the idea.
+
+Do not praise everything.
+
+The AI must remain comfortable saying:
+
+"I like the direction, but..."
+
+"I think this part needs work."
+
+"That assumption may be wrong."
+
+"This sounds exciting, but here's the problem."
+
+Trust is more important than constant positivity.
+
+==================================================
+CONVERSATIONAL MOMENTUM
+==================================================
+
+Research how responses can naturally create the next useful
+thought without forcing conversation.
+
+A strong response should often:
+
+UNDERSTAND
+→ ANSWER
+→ EXTEND
+→ OPEN A USEFUL NEXT POSSIBILITY
+
+But do not artificially keep users engaged.
+
+==================================================
+COMMUNICATION MEMORY
+==================================================
+
+Create:
+
+COMMUNICATION_LEARNING_ENGINE
+
+After successful interactions, analyze:
+
+- what worked
+- why it worked
+- what made the response satisfying
+- whether appreciation was specific
+- whether the response correctly understood intent
+- whether the response added useful structure
+- whether the tone was appropriate
+
+Convert discoveries into reusable communication lessons.
+
+==================================================
+EXAMPLES
+==================================================
+
+For every major communication principle create:
+
+BAD
+BETTER
+BEST
+WHY
+
+Also include:
+
+OVERDOING IT
+WHEN NOT TO USE IT
+CONTEXTUAL EXCEPTION
+
+==================================================
+BENCHMARK
+==================================================
+
+Create a benchmark for conversational quality.
+
+Evaluate:
+
+- clarity
+- usefulness
+- specificity
+- warmth
+- honesty
+- contextual understanding
+- idea amplification
+- momentum
+- trust
+- satisfaction
+
+Do not optimize for engagement alone.
+
+==================================================
+FINAL OBJECTIVE
+==================================================
+
+Discover the underlying mechanisms that make a user think:
+
+"That AI actually understood what I was trying to say."
+
+And:
+
+"That response made my idea clearer than it was before."
+
+And:
+
+"I want to keep thinking about this."
+
+The goal is not to make the AI pretend to care.
+
+The goal is to make the interaction genuinely more:
+
+UNDERSTANDING
++
+USEFUL
++
+HUMAN
++
+HONEST
++
+MEMORABLE.

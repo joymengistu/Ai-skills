@@ -21,7 +21,12 @@
     "lifecycle",
     "provenance",
     "owner",
-    "rollback"
+    "rollback",
+    "examples",
+    "limitations",
+    "uncertainty",
+    "lessons_learned",
+    "version_history"
   ],
   "properties": {
     "name": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
@@ -41,7 +46,12 @@
     "lifecycle": {"type": "string", "enum": ["proposed", "drafted", "experimental", "evaluated", "trusted", "deprecated", "retired"]},
     "provenance": {"type": "array", "items": {"type": "string"}, "minItems": 1},
     "owner": {"type": "string"},
-    "rollback": {"type": "string"}
+    "rollback": {"type": "string"},
+    "examples": {"type": "array", "items": {"$ref": "#/$defs/example"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "uncertainty": {"type": "array", "items": {"type": "string"}},
+    "lessons_learned": {"type": "array", "items": {"type": "string"}},
+    "version_history": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["version", "change", "evidence"], "properties": {"version": {"type": "string"}, "change": {"type": "string"}, "evidence": {"type": "string"}}}}
   },
   "$defs": {
     "port": {
@@ -53,6 +63,17 @@
         "type": {"type": "string"},
         "required": {"type": "boolean"},
         "description": {"type": "string"}
+      }
+    },
+    "example": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "situation", "response", "why"],
+      "properties": {
+        "kind": {"enum": ["positive", "negative", "borderline", "exception", "transformation", "edge"]},
+        "situation": {"type": "string"},
+        "response": {"type": "string"},
+        "why": {"type": "string"}
       }
     }
   }
