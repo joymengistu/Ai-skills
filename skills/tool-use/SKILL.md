@@ -5,11 +5,11 @@ description: Select, call, validate, and document tools safely and efficiently w
 
 # Tool use
 
-Use the smallest tool that can answer the current question. Tools should have one clear purpose, descriptive parameters, predictable output, explicit error states, and minimal overlap. Namespace tools by domain and return token-efficient results with identifiers, timestamps, and provenance.
+Use `references/tool-selection-fallback-contract.md` together with `references/tool-action-boundary-contract.md`. Choose the smallest tool that can answer the current question. Tools should have one clear purpose, descriptive parameters, predictable output, explicit error states, and minimal overlap. Namespace tools by domain and return token-efficient results with identifiers, timestamps, and provenance.
 
-Before a call, use `references/tool-action-boundary-contract.md` to record intent, target, scope, risk, reversibility, permission, expected evidence, destination, idempotency, and rollback. After a call, validate the actual result against the plan and handle partial failure. Never infer that a tool succeeded because the call returned without an exception.
+Before a call, record objective, required capability, candidate fit, intent, target, scope, risk, reversibility, permission, expected evidence, destination, idempotency, and rollback. After a call, validate the actual result, completeness, evidence, and side effects against the plan and handle partial failure. Classify errors before changing a variable; never infer that a tool succeeded because the call returned without an exception.
 
-Separate read, propose, approve, execute, verify, and report operations. Apply least privilege, path and domain allowlists, rate limits, timeouts, dry-run mode, idempotency, and audit logging. Fail closed on missing approval, ambiguous identity or destination, invalid arguments, unknown risk, or uncertain non-idempotent outcome. For shell or file actions, show the exact scope and preserve a rollback path.
+Separate read, propose, approve, execute, verify, and report operations. Apply least privilege, path and domain allowlists, rate limits, timeouts, dry-run mode, idempotency, and audit logging. Use the fallback ladder only to repair input, retry a bounded idempotent call with a changed hypothesis, use an equivalent validated alternative, or disclose a narrower deliverable. Never use fallback to bypass approval or hide a failed gate. Fail closed on missing approval, ambiguous identity or destination, invalid arguments, unknown risk, or uncertain non-idempotent outcome. For shell or file actions, show the exact scope and preserve a rollback path.
 
 ## Operational deepening
 

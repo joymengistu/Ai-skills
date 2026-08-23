@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 25
-next_mission: 26
+current_mission: 26
+next_mission: 27
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -421,7 +421,24 @@ missions:
       - source quality policy and synthesis records cannot guarantee source truth or replace domain expertise
   26:
     title: Strengthen tool selection, capability matching, and fallback behavior
+    status: complete
+    artifacts:
+      - references/tool-selection-fallback-contract.md
+      - skills/tool-use/SKILL.md
+      - skills/tool-evaluation/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - tool choice is matched to required capability, acceptance evidence, permissions, privacy, cost, and reversibility
+      - fallbacks are bounded to changed hypotheses, equivalent validated alternatives, or disclosed narrower deliverables
+      - partial results, uncertain side effects, capability mismatch, and broader-permission alternatives are fail-closed or escalated
+      - four tool-selection-fallback evaluations and full repository validation pass
+    result: governed_tool_selection_and_fallback_created
+    limitations:
+      - host runtime still enforces credentials, approvals, isolation, third-party availability, and external-state reconciliation
+  27:
+    title: Strengthen agent collaboration, delegation, and handoff integrity
     status: next
     planned_artifacts:
-      - tool selection and capability contract
-      - tool-fallback evaluations
+      - collaboration and handoff contract
+      - delegation evaluations

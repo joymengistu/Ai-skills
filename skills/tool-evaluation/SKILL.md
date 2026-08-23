@@ -5,9 +5,9 @@ description: Evaluate whether agent tools are discoverable, well-scoped, correct
 
 # Tool evaluation
 
-Evaluate tools in realistic trajectories, not isolated demos. For each task record tool discovery, selected tool, arguments, permission outcome, latency, runtime, token use, output quality, error class, retries, side effects, and whether the call advanced the requirement ledger.
+Use `references/tool-selection-fallback-contract.md`. Evaluate tools in realistic trajectories, not isolated demos. For each task record required capability, candidate fit, tool discovery, selected tool, arguments, permission outcome, latency, runtime, token use, output quality, error class, fallback path, retries, side effects, evidence quality, and whether the call advanced the requirement ledger.
 
-Prefer tools with clear names, concise descriptions, strict schemas, useful error messages, stable outputs, bounded side effects, and feedback that lets the agent adapt. Test valid alternatives, malformed arguments, stale state, partial failure, permission denial, timeouts, and idempotent retry behavior.
+Prefer tools with clear names, concise descriptions, strict schemas, useful error messages, stable outputs, bounded side effects, and feedback that lets the agent adapt. Test valid alternatives, capability mismatch, malformed arguments, stale state, partial failure, permission denial, unavailable dependencies, timeouts, and idempotent retry behavior. Verify that fallbacks preserve scope and disclose when they establish less evidence.
 
 Measure end-to-end value: requirement coverage, successful completion, repair convergence, human effort, cost, latency, privacy exposure, and harmful or surprising side effects. A tool is not successful merely because its call returned 200 or produced output. Keep high-impact actions approval-gated and ensure logs support reconstruction without exposing secrets.
 
