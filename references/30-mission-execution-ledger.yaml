@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 16
-next_mission: 17
+current_mission: 17
+next_mission: 18
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -272,7 +272,23 @@ missions:
       - matrix is a routing reference and cannot replace domain-specific implementation or host deployment checks
   17:
     title: Build a professional output-quality and taste system
+    status: complete
+    artifacts:
+      - references/professional-output-research-2026-08-23.md
+      - references/professional-output-quality-contract.md
+      - skills/professional-taste/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - public W3C WCAG 2.2, Nielsen Norman usability heuristics, and GOV.UK design principles were read and recorded
+      - quality contract separates outcome clarity, hierarchy, content reality, interaction, accessibility, resilience, visual craft, character, trust, and human perception
+      - four professional-quality evaluations and full repository validation pass
+    result: professional_output_quality_contract_created
+    limitations:
+      - no universal taste metric exists; human review and task evidence remain necessary
+  18:
+    title: Expand multimodal and screenshot-to-UI fidelity workflows
     status: next
     planned_artifacts:
-      - professional output quality contract
-      - taste and quality evaluations
+      - multimodal fidelity integration
+      - screenshot and visual-evidence evaluations

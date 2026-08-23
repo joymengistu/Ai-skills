@@ -5,7 +5,7 @@ description: Evaluate and improve professional UI quality by separating beauty, 
 
 # Professional UI taste
 
-Treat taste as contextual judgment supported by observable evidence, not as a fixed visual style. Extend `skills/ui-vision/SKILL.md`; do not replace it or create a generic UI checklist.
+Treat taste as contextual judgment supported by observable evidence, not as a fixed visual style. Use `references/professional-output-quality-contract.md` to separate outcome clarity, hierarchy, content reality, interaction, consistency, accessibility, resilience, visual craft, character, trust, and human perception. Extend `skills/ui-vision/SKILL.md`; do not replace it or create a generic UI checklist.
 
 ## Define the job first
 
@@ -65,7 +65,7 @@ Public Replit and Vercel references inform the pattern decomposition, but do not
 
 ## Release gate
 
-Do not call an interface professional merely because it looks polished. A serious accessibility, interaction, content hierarchy, misleading-state, or recovery failure is a blocker. Verify the live artifact when possible and use human blind review for professional perception and taste.
+Do not call an interface or deliverable professional merely because it looks polished. Apply the quality evidence ladder in `references/professional-output-quality-contract.md`; a serious accessibility, interaction, content hierarchy, misleading-state, resilience, trust, or recovery failure is a blocker. Verify the live artifact when possible and use human blind review for professional perception and taste.
 
 ## Operational deepening
 
