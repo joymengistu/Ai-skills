@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 8
-next_mission: 9
+current_mission: 9
+next_mission: 10
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -146,7 +146,23 @@ missions:
       - resolution remains evidence-guided judgment and may require domain expertise
   9:
     title: Unify research memory, lesson memory, and forgetting rules
+    status: complete
+    artifacts:
+      - references/memory-lifecycle-contract.md
+      - skills/memory/SKILL.md
+      - skills/self-improvement/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - memory classes separate conversation, project, research, lesson, preference, and checkpoint retention
+      - lifecycle defines capture, qualification, retrieval, application, review, correction, supersession, deletion, and forgetting
+      - four memory evaluations and the full repository validation suite pass
+    result: unified_memory_lifecycle_created
+    limitations:
+      - host-level retention and deletion guarantees remain outside prompt-only control
+  10:
+    title: Formalize knowledge states, uncertainty, hypotheses, and unknowns
     status: next
     planned_artifacts:
-      - memory lifecycle and forgetting contract
-      - memory safety evaluations
+      - knowledge-state contract
+      - uncertainty evaluations

@@ -5,11 +5,11 @@ description: Design and use scoped, consent-aware, inspectable, deletable memory
 
 # Memory
 
-Store only information that is useful, stable enough to retain, and appropriate for the scope. Prefer explicit user preferences and project facts over speculative personality inferences. Separate general facts from structured keys, as in CLAI's `facts` and `special` memory pattern.
+Store only information that is useful, stable enough to retain, and appropriate for the scope. Use `references/memory-lifecycle-contract.md` to distinguish conversation, project, research, lesson, user-preference, and checkpoint memory; record purpose, provenance, scope, sensitivity, consent, confidence, status, expiry, correction, deletion, and promotion evidence. Prefer explicit user preferences and project facts over speculative personality inferences. Separate general facts from structured keys, as in CLAI's `facts` and `special` memory pattern.
 
 Every memory item should have provenance, scope, confidence, sensitivity, created/updated time, expiry or review rule, and deletion path. Do not store secrets, credentials, sensitive personal data, or high-impact inferences by default. Show users what is remembered when it matters and support correction and forget operations.
 
-Inject memory as a compact, clearly labeled context block. Never let memory override the current user request, safety policy, or fresh evidence.
+Inject memory as a compact, clearly labeled context block. Never let memory override the current user request, safety policy, or fresh evidence. Review memory on correction, contradiction, source change, expiry, or repeated failure; supersede or delete it rather than silently rewriting it.
 
 ## Operational deepening
 
