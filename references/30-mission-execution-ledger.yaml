@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 13
-next_mission: 14
+current_mission: 14
+next_mission: 15
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -224,7 +224,22 @@ missions:
       - host runtime remains responsible for enforcing credentials, approvals, sandboxing, and external state
   14:
     title: Improve durable execution, recovery, cancellation, and resumability
+    status: complete
+    artifacts:
+      - references/durable-recovery-contract.md
+      - skills/durable-execution/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - recovery matrix covers pre-execution, in-flight, post-effect, approval wait, verification, cancellation, and integrity failure
+      - idempotency reconciliation and partial-effect reporting are explicit
+      - four durable-recovery evaluations and full repository validation pass
+    result: durable_recovery_contract_created
+    limitations:
+      - durable storage, atomicity, signals, and external reconciliation remain host responsibilities
+  15:
+    title: Strengthen artifact provenance and grounded verification
     status: next
     planned_artifacts:
-      - durable execution recovery contract
-      - interruption and recovery evaluations
+      - artifact provenance contract
+      - grounded verification evaluations

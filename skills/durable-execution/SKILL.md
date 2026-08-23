@@ -5,7 +5,7 @@ description: Design and operate long-running AI tasks that survive crashes, dela
 
 # Durable execution
 
-Treat a long-running agent as a durable record, not a fragile conversation. Persist state at logical boundaries and make the run resumable.
+Treat a long-running agent as a durable record, not a fragile conversation. Use `references/durable-recovery-contract.md` to persist state at logical boundaries and make the run resumable across crashes, approval waits, cancellation, retries, and partial external effects.
 
 ## Required contract
 
@@ -17,7 +17,7 @@ Persist approval requests and decisions. A waiting run should consume no unneces
 
 ## Recovery test
 
-Simulate process crash before execution, during execution, after execution but before recording the result, while waiting for approval, and during verification. Confirm that recovery neither loses user work nor duplicates a side effect. Report unresolved ambiguity instead of fabricating a result.
+Simulate process crash before execution, during execution, after execution but before recording the result, while waiting for approval, during cancellation, and during verification. Confirm that recovery neither loses user work nor duplicates a side effect. Verify state integrity, idempotency reconciliation, safe cancellation, and partial-effect reporting. Report unresolved ambiguity instead of fabricating a result.
 
 This skill specifies behavior; the host runtime must provide durable storage, atomicity, access control, timers, and external reconciliation.
 
