@@ -5,7 +5,7 @@ description: Universal single-entry command and Skill router for invoking the Ai
 
 # Agent Max
 
-Use Agent Max as the **single universal entry point** for the Ai-skills library, not as a second library of instructions. The user should not need to know or name downstream Skills. Translate a button action, `/agent-max` slash command, `Agent Max` message, or natural-language request into the smallest sufficient ordered bundle of existing Skills in the Ai-skills package.
+Use Agent Max as the **single universal entry point** for the Ai-skills library, not as a second library of instructions. The user should not need to know or name downstream Skills. Translate a button action, `/agent-max` slash command, `Agent Max` message, or natural-language request into the smallest sufficient ordered bundle of existing Skills in the Ai-skills package. For complex or consequential routing, use `references/agent-max-governed-routing.md` to record route purpose, selected Skills, handoffs, conflicts, permissions, fallback, execution state, verification, and uncertainty.
 
 ## Universal invocation
 
@@ -23,11 +23,11 @@ The host may bind the button or slash command to `agent-max.auto`. The Skill its
 ## Core contract
 
 1. Identify the user’s outcome, artifact, constraints, reference inputs, and authority boundary.
-2. Select one preset or compose the smallest relevant Skills from the routing map below. Do not load all Skills by default.
+2. Create a route record when complexity or consequence warrants it; select one preset or compose the smallest relevant Skills from the routing map below. Do not load all Skills by default.
 3. Load the named `SKILL.md` files from the current Ai-skills installation, normally `/home/ubuntu/skills/ai-skills/skills/<skill-name>/SKILL.md`. In a repository checkout, use `skills/<skill-name>/SKILL.md`.
 4. Preserve explicit requirements. Treat inferred choices as reversible and label unknowns.
 5. Return the selected route before execution when the task is complex, consequential, or ambiguous.
-6. Execute with the selected Skills, verify the real outcome, repair focused failures, and report evidence and remaining limits.
+6. Execute with the selected Skills, verify the real outcome, repair focused failures, and report evidence and remaining limits. Reconcile the planned route with the Skills actually loaded, artifacts produced, checks run, and fallbacks used.
 
 Agent Max routes work; it does not grant permissions, bypass approvals, invent tools, expose private reasoning, or declare success without evidence. Runtime controls and the host system remain authoritative.
 

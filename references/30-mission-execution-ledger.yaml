@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 9
-next_mission: 10
+current_mission: 11
+next_mission: 12
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -162,7 +162,37 @@ missions:
       - host-level retention and deletion guarantees remain outside prompt-only control
   10:
     title: Formalize knowledge states, uncertainty, hypotheses, and unknowns
+    status: complete
+    artifacts:
+      - references/knowledge-state-contract.md
+      - core/self-directing-prompt.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - claim states distinguish known, supported, inferred, hypothesis, uncertain, unknown, outdated, and conflicting
+      - action policy separates confidence from consequence and prevents knowledge state from granting permission
+      - four knowledge-state evaluations and full repository validation pass
+    result: explicit_knowledge_state_contract_created
+    limitations:
+      - state labels improve calibration but do not mechanically determine truth
+  11:
+    title: Make Agent Max the governed universal Skill router
+    status: complete
+    artifacts:
+      - references/agent-max-governed-routing.md
+      - skills/agent-max/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - route records capture objective, selected Skills, handoffs, conflicts, permissions, fallback, execution state, verification, and uncertainty
+      - route minimality, button-versus-permission boundaries, screenshot-versus-redesign conflict, and unavailable-Skill fallback are evaluated
+      - full repository validation and all Skill quick validators pass
+    result: governed_universal_router_created
+    limitations:
+      - native host button or slash-command binding remains a host integration responsibility
+  12:
+    title: Connect adaptive planning depth, budgets, and checkpoints
     status: next
     planned_artifacts:
-      - knowledge-state contract
-      - uncertainty evaluations
+      - adaptive budget/checkpoint integration
+      - planning-depth evaluations
