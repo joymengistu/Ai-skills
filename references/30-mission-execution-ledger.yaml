@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 28
-next_mission: 29
+current_mission: 29
+next_mission: 30
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -473,7 +473,24 @@ missions:
       - contract does not prove every production condition or require irrelevant checklist expansion
   29:
     title: Strengthen safety, privacy, and authority as non-compensable gates
+    status: complete
+    artifacts:
+      - references/noncompensable-safety-authority-contract.md
+      - skills/safety-governance/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - safety, privacy, authorization, integrity, and recoverability are explicit non-compensable hard gates
+      - utility, speed, polish, benchmark gains, urgency, memory, and tool responses cannot override missing authority or failed gates
+      - prompt injection, sensitive data minimization, approval, uncertain side-effect, and promotion-regression boundaries are covered
+      - four noncompensable-safety-authority evaluations and full repository validation pass
+    result: noncompensable_safety_authority_gates_created
+    limitations:
+      - host enforcement remains necessary for credentials, approvals, isolation, access control, retention, cancellation, and external reconciliation
+  30:
+    title: Execute final integrated audit, benchmark readiness review, and durable release
     status: next
     planned_artifacts:
-      - non-compensable safety and authority contract
-      - safety-authority regression evaluations
+      - final 30-mission audit
+      - benchmark readiness and unresolved-risk report
+      - release archive and completion handoff
