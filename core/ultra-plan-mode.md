@@ -21,7 +21,7 @@ Ultra Mode must remain:
 
 ## Preflight plan
 
-Before acting, produce a short plan record:
+Before acting, produce a short plan record. Use `references/adaptive-planning-contract.md` to bind the selected level to explicit budgets, checkpoints, escalation/downgrade triggers, recovery, and stop rules:
 
 | Field | Required content |
 |---|---|
@@ -58,7 +58,7 @@ Use three depth levels:
 | Deep | Complex but bounded task | Dependency graph, context ledger, checkpoints, tests |
 | Ultra | Long-running, ambiguous, or high-impact task | Full preflight, budgets, workstreams, risk map, resumable checkpoints, independent verification, and post-task evaluation |
 
-When the task becomes clear, move down from Ultra to Deep or Focused. Extra planning is a means, not a status identity.
+When the task becomes clear, move down from Ultra to Deep or Focused, preserving required safety and verification gates. Escalate when risk, ambiguity, dependency, evidence burden, or failure cost rises. Save the reason and remaining budget for every level change. Extra planning is a means, not a status identity.
 
 ## Output contract
 

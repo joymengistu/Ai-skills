@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 11
-next_mission: 12
+current_mission: 12
+next_mission: 13
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -192,7 +192,23 @@ missions:
       - native host button or slash-command binding remains a host integration responsibility
   12:
     title: Connect adaptive planning depth, budgets, and checkpoints
+    status: complete
+    artifacts:
+      - references/adaptive-planning-contract.md
+      - core/ultra-plan-mode.md
+      - skills/ultra-plan/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - Focused, Deep, and Ultra levels are bound to explicit budgets, checkpoints, escalation, downgrade, recovery, and stopping rules
+      - four evaluations cover missing budgets, unnecessary Ultra persistence, risk escalation, and safe resumption
+      - full repository validation and all Skill quick validators pass
+    result: adaptive_planning_contract_created
+    limitations:
+      - default budgets are operating controls and have not yet been calibrated against production trajectories
+  13:
+    title: Harden tool contracts, approvals, permissions, and side-effect boundaries
     status: next
     planned_artifacts:
-      - adaptive budget/checkpoint integration
-      - planning-depth evaluations
+      - tool/approval boundary review
+      - side-effect evaluations

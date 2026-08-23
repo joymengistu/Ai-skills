@@ -13,7 +13,7 @@ Activate for long-running builds, deep research, ambiguous goals, many dependenc
 
 ## Build the preflight
 
-Before acting, record the outcome, definition of done, workstreams, dependencies, unknowns, context map, risk map, resource budget, checkpoints, verification plan, and stop rules. Use `references/task-classification-contract.md` to score ambiguity, consequence, irreversibility, dependency depth, artifact complexity, evidence burden, external effect, and sensitivity before selecting Focused, Deep, or Ultra. Give the user a concise plan; do not dump private reasoning.
+Before acting, record the outcome, definition of done, workstreams, dependencies, unknowns, context map, risk map, resource budget, checkpoints, verification plan, and stop rules. Use `references/task-classification-contract.md` to score ambiguity, consequence, irreversibility, dependency depth, artifact complexity, evidence burden, external effect, and sensitivity before selecting Focused, Deep, or Ultra. Use `references/adaptive-planning-contract.md` to bind the level to budgets, checkpoint fields, escalation/downgrade triggers, recovery, and stop rules. Give the user a concise plan; do not dump private reasoning.
 
 ## Run the loop
 
@@ -29,7 +29,7 @@ Before acting, record the outcome, definition of done, workstreams, dependencies
 
 ## Control overplanning
 
-Use a time, iteration, token, tool-call, delegation, and cost budget. Prefer a recommendation over an exhaustive survey when the decision is clear. Do not re-derive settled facts, add features beyond scope, or create abstractions for hypothetical requirements. When enough information exists to act safely, act. A high consequence, irreversibility, external-effect, or sensitivity score can require Ultra controls even when the request is short; planning depth never grants permission.
+Use a time, iteration, token, tool-call, delegation, and cost budget. Save checkpoints after planning, meaningful artifacts, before consequential actions, and verification; on resumption reconcile state and external effects before continuing. Prefer a recommendation over an exhaustive survey when the decision is clear. Do not re-derive settled facts, add features beyond scope, or create abstractions for hypothetical requirements. When enough information exists to act safely, act. A high consequence, irreversibility, external-effect, or sensitivity score can require Ultra controls even when the request is short; planning depth never grants permission.
 
 ## Safety and human value
 
