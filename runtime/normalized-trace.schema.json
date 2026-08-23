@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/normalized-trace.schema.json",
+  "title": "Provider-neutral normalized trace envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_kind", "provider", "model_ref", "span_id", "usage", "content_policy"],
+  "properties": {
+    "event_kind": {"type": "string", "enum": ["llm_generation", "tool_call", "handoff", "guardrail", "unknown"]},
+    "provider": {"type": "string", "minLength": 1},
+    "model_ref": {"type": "string", "minLength": 1},
+    "span_id": {"type": "string", "minLength": 1},
+    "parent_span_id": {"type": ["string", "null"]},
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "input_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "output_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "total_tokens": {"type": ["integer", "null"], "minimum": 0},
+        "latency_ms": {"type": ["number", "null"], "minimum": 0},
+        "retry_count": {"type": ["integer", "null"], "minimum": 0},
+        "finish_reason": {"type": ["string", "null"]}
+      }
+    },
+    "content_policy": {"type": "string", "enum": ["redacted_by_default", "metadata_only", "explicitly_captured"]},
+    "content_digests": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "request": {"type": ["string", "null"]},
+        "response": {"type": ["string", "null"]},
+        "tool_request": {"type": ["string", "null"]}
+      }
+    },
+    "redactions": {"type": "array", "items": {"type": "string"}},
+    "non_comparable_fields": {"type": "array", "items": {"type": "string"}},
+    "provider_extensions": {"type": "object", "additionalProperties": true}
+  }
+}

@@ -15,7 +15,7 @@ Public guidance supports separating traces used for debugging from repeatable da
 |---|---|---|
 | Case registry | Version tasks, expected properties, allowed alternatives, development/held-out split, and sensitive-data policy | `evals/intelligence-benchmark.json` plus case records |
 | Arm launcher | Run baseline, candidate, and ablation with matched model, tools, budget, environment, and trial policy | `benchmark-run.schema.json` |
-| Provider adapter | Translate provider-specific calls into normalized model, tool, handoff, guardrail, usage, timing, and error events while retaining safe extensions | Existing trace schema plus provider adapter contract; future implementation |
+| Provider adapter | Translate provider-specific calls into normalized model, tool, handoff, guardrail, usage, timing, and error events while retaining safe extensions | `runtime/normalized-trace.schema.json`, `runtime/reference_host/normalized_trace.py`, and provider-boundary reference; real hosted adapter remains future work |
 | Trace store | Persist a complete trajectory with redaction, retention, access control, and correlation IDs | `runtime/trace-schema.json`; OpenTelemetry-compatible fields are an interoperability option |
 | Outcome verifier | Inspect actual environment state, artifacts, tests, or database facts rather than trusting final prose | `evaluation-record.schema.json` plus task-specific verifiers |
 | Grader layer | Combine deterministic code checks, structured model judges, and blinded human review; preserve evidence snippets | `evaluation-record.schema.json` |
@@ -67,7 +67,7 @@ Do not compress the system into a single score. Use a release table with hard ga
 
 ## How this changes Ai-skills
 
-The existing repository already contains most of the conceptual contracts: traces, risk controls, evaluation records, benchmark manifest, contextual intent records, Lovability dimensions, evidence labels, lessons, improvement records, and conservative paired decisions. The next implementation should therefore be a **hosted adapter and experiment runner**, not another Skill.
+The existing repository contains most of the conceptual contracts and now includes a deterministic reference adapter and redaction path. The next implementation should therefore be a **real hosted adapter and experiment runner**, not another Skill.
 
 ### Staged roadmap
 

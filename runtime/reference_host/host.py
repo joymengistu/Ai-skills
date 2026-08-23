@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Mapping, Protocol
 
+from .normalized_trace import NormalizedTraceAdapter
 from .risk_controls import (
     ActionIntent,
     ActionJournal,
@@ -144,6 +145,7 @@ class TraceWriter:
         approval_ref: str | None = None,
         idempotency_key: str | None = None,
         state_hash: str | None = None,
+        redaction: list[str] | None = None,
     ) -> dict[str, Any]:
         if risk_class not in RISK_CLASSES:
             raise ValueError(f"unsupported risk class: {risk_class}")
@@ -161,7 +163,7 @@ class TraceWriter:
             "approval_ref": approval_ref,
             "idempotency_key": idempotency_key,
             "state_hash": state_hash,
-            "redaction": [],
+            "redaction": list(redaction or []),
         }
         with self.path.open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(event, sort_keys=True) + "\n")
@@ -257,9 +259,11 @@ class ReferenceHost:
         approvals: Mapping[str, Any] | None = None,
         cancel_path: str | os.PathLike[str] | None = None,
         journal_path: str | os.PathLike[str] | None = None,
+        trace_adapter: NormalizedTraceAdapter | None = None,
     ):
         self.profile = self._validate_profile(profile)
         self.provider = provider
+        self.trace_adapter = trace_adapter or NormalizedTraceAdapter(provider="reference_host", model_ref=type(provider).__name__)
         self.trace = TraceWriter(trace_path, self.profile["run_id"])
         self.checkpoints = CheckpointStore(checkpoint_path)
         self.tools = dict(tools or {})
@@ -365,7 +369,19 @@ class ReferenceHost:
             self.budget.model_call()
             response = self.provider.complete(ProviderRequest(self.profile["run_id"], task, context))
             state["response"] = {"text": response.text, "usage": dict(response.usage)}
-            self.trace.emit("agent", "decision_proposed", "read_only", {"has_tool_request": response.tool_request is not None})
+            normalized_trace = self.trace_adapter.normalize_response(
+                span_id=f"{self.profile['run_id']}:model:{self.budget.model_calls}",
+                response=response,
+                request_fingerprint={"task": task, "context": context},
+            )
+            state["normalized_trace"] = normalized_trace
+            self.trace.emit(
+                "agent",
+                "decision_proposed",
+                "read_only",
+                {"has_tool_request": response.tool_request is not None, "normalized_trace": normalized_trace},
+                redaction=normalized_trace["redactions"],
+            )
             if response.tool_request is not None:
                 try:
                     name, result = self._execute_tool(response.tool_request, task)
@@ -416,6 +432,7 @@ __all__ = [
     "ProviderRequest",
     "ProviderResponse",
     "ReferenceHost",
+    "NormalizedTraceAdapter",
     "ToolSpec",
     "TraceWriter",
 ]
