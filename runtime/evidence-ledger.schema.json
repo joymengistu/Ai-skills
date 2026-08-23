@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joymengistu/Ai-skills/runtime/evidence-ledger.schema.json",
+  "title": "Ai skills evidence ledger",
+  "type": "object",
+  "required": ["schema_version", "ledger_id", "run_id", "records"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0"},
+    "ledger_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": ["evidence_id", "claim_id", "claim_type", "claim", "source_ref", "support_status", "confidence", "scope"],
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1},
+        "claim_id": {"type": "string", "minLength": 1},
+        "claim_type": {"type": "string", "enum": ["fact", "definition", "measurement", "interpretation", "hypothesis", "unknown"]},
+        "claim": {"type": "string", "minLength": 1},
+        "source_ref": {"type": "string", "minLength": 1},
+        "source_tier": {"type": "string", "enum": ["A", "B", "C", "D", "E"]},
+        "evidence_span": {"type": "string"},
+        "retrieval_activity": {"type": "string"},
+        "transformation_refs": {"type": "array", "items": {"type": "string"}},
+        "derived_from": {"type": "array", "items": {"type": "string"}},
+        "corroboration_refs": {"type": "array", "items": {"type": "string"}},
+        "contradiction_refs": {"type": "array", "items": {"type": "string"}},
+        "independence_group": {"type": "string"},
+        "scope": {"type": "string", "minLength": 1},
+        "published_at": {"type": ["string", "null"]},
+        "updated_at": {"type": ["string", "null"]},
+        "accessed_at": {"type": ["string", "null"]},
+        "freshness_class": {"type": "string", "enum": ["live", "fast_changing", "active_policy", "research", "stable", "unknown"]},
+        "support_status": {"type": "string", "enum": ["unverified", "supported", "strong", "contradicted", "outdated", "conflicting"]},
+        "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+        "verification_refs": {"type": "array", "items": {"type": "string"}},
+        "notes": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

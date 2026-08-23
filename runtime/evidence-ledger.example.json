@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "ledger_id": "ledger-demo-001",
+  "run_id": "run-demo-001",
+  "created_at": "2026-08-23T00:00:00Z",
+  "records": [
+    {
+      "evidence_id": "evidence-001",
+      "claim_id": "claim-001",
+      "claim_type": "definition",
+      "claim": "Provenance records entities, activities, and agents involved in producing a thing.",
+      "source_ref": "https://www.w3.org/TR/prov-dm/",
+      "source_tier": "A",
+      "evidence_span": "PROV-DM introduction and core structures",
+      "retrieval_activity": "browser_navigate:2026-08-23",
+      "transformation_refs": [],
+      "derived_from": [],
+      "corroboration_refs": [],
+      "contradiction_refs": [],
+      "independence_group": "w3c-prov",
+      "scope": "Definition stated by the W3C PROV-DM specification.",
+      "published_at": "2013-04-30",
+      "updated_at": null,
+      "accessed_at": "2026-08-23",
+      "freshness_class": "stable",
+      "support_status": "supported",
+      "confidence": "high",
+      "verification_refs": ["source:direct-read"],
+      "notes": "Does not by itself prove an implementation conforms to PROV-DM."
+    }
+  ]
+}

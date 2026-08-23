@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 6
-next_mission: 7
+current_mission: 7
+next_mission: 8
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -112,7 +112,25 @@ missions:
       - no causal model-performance gain has been measured yet
   7:
     title: Upgrade evidence ledgers and claim provenance
+    status: complete
+    artifacts:
+      - runtime/evidence-ledger.schema.json
+      - runtime/evidence-ledger.example.json
+      - runtime/reference_host/evidence_ledger.py
+      - runtime/reference_host/test_evidence_ledger.py
+      - references/source-hierarchy-policy.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - schema records claim type, source reference, tier, span, retrieval, transformations, derivation, corroboration, contradiction, scope, freshness, status, confidence, and verification
+      - reference host rejects missing required fields, duplicate evidence IDs, unsupported confidence/status combinations, and missing evidence links
+      - 20 reference-host tests and the full repository validation suite pass
+    result: evidence_ledger_provenance_layer_created
+    limitations:
+      - adapter is reference-grade and does not provide cryptographic truth or source availability
+  8:
+    title: Add citation cross-checking and contradiction handling
     status: next
     planned_artifacts:
-      - claim provenance schema or adapter
-      - evidence-ledger evaluations
+      - contradiction-resolution protocol
+      - cross-checking evaluations
