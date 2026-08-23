@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from run_intelligence_benchmark import compare_metrics, validate_suite
+from run_intelligence_benchmark import aggregate_case_results, compare_metrics, validate_suite
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +16,18 @@ class IntelligenceBenchmarkTests(unittest.TestCase):
         summary = validate_suite(ROOT / "evals" / "intelligence-benchmark.json", ROOT / "evals" / "cases.jsonl")
         self.assertEqual(summary["status"], "manifest_validated")
         self.assertGreater(summary["families"]["held_out"], 0)
+
+    def test_case_result_aggregation_preserves_regressions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "case-results.json"
+            path.write_text(json.dumps([
+                {"case_id": "a", "baseline_success": False, "candidate_success": True},
+                {"case_id": "b", "baseline_success": True, "candidate_success": False},
+            ]))
+            summary = aggregate_case_results(path)
+            self.assertEqual(summary["gains"], ["a"])
+            self.assertEqual(summary["regressions"], ["b"])
+            self.assertEqual(summary["net_success_delta"], 0.0)
 
     def test_comparison_requires_measured_same_arm_controls(self):
         with tempfile.TemporaryDirectory() as directory:

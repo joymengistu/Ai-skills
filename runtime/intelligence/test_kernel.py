@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from kernel import ValidationError, append_record, example_coverage, load_json, paired_decision, validate_record
+from kernel import ValidationError, aggregate_paired_results, append_record, example_coverage, load_json, paired_decision, validate_record
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -68,6 +68,26 @@ class IntelligenceKernelTests(unittest.TestCase):
         result = paired_decision({"quality": 0.5}, {"quality": 0.5}, {"safety": True})
         self.assertEqual(result["decision"], "hold")
         self.assertEqual(result["reason"], "no_measurable_improvement")
+
+
+    def test_aggregate_paired_results_preserves_regressions_and_residual_failures(self):
+        result = aggregate_paired_results([
+            {"case_id": "gain", "baseline_success": False, "candidate_success": True, "hard_gates": {"safety": True}},
+            {"case_id": "regression", "baseline_success": True, "candidate_success": False, "hard_gates": {"safety": True}},
+            {"case_id": "residual", "baseline_success": False, "candidate_success": False, "hard_gates": {"safety": False}},
+            {"case_id": "same", "baseline_success": True, "candidate_success": True, "hard_gates": {"safety": True}},
+        ])
+        self.assertEqual(result["gains"], ["gain"])
+        self.assertEqual(result["regressions"], ["regression"])
+        self.assertEqual(result["residual_failures"], ["residual"])
+        self.assertEqual(result["hard_gate_failures"], {"safety": ["residual"]})
+        self.assertEqual(result["net_success_delta"], 0.0)
+
+    def test_aggregate_paired_results_rejects_duplicate_or_incomplete_cases(self):
+        with self.assertRaises(ValidationError):
+            aggregate_paired_results([{"case_id": "one", "baseline_success": True, "candidate_success": True}, {"case_id": "one", "baseline_success": True, "candidate_success": True}])
+        with self.assertRaises(ValidationError):
+            aggregate_paired_results([{"case_id": "one", "baseline_success": True}])
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "runtime" / "intelligence"))
-from kernel import paired_decision  # noqa: E402
+from kernel import aggregate_paired_results, paired_decision  # noqa: E402
 
 
 def load_cases(path: Path) -> set[str]:
@@ -34,6 +34,13 @@ def validate_suite(suite_path: Path, cases_path: Path) -> dict[str, object]:
     if development & held_out:
         raise ValueError(f"development and held-out cases overlap: {sorted(development & held_out)}")
     return {"suite_id": suite["suite_id"], "suite_version": suite["suite_version"], "case_count": len(case_ids), "families": {key: len(value) for key, value in families.items()}, "status": "manifest_validated"}
+
+
+def aggregate_case_results(path: Path) -> dict[str, object]:
+    rows = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(rows, list):
+        raise ValueError("case results must be a JSON array")
+    return aggregate_paired_results(rows)
 
 
 def compare_metrics(baseline_path: Path, candidate_path: Path, hard_gates: dict[str, bool], lower_is_better: list[str]) -> dict[str, object]:
@@ -55,10 +62,13 @@ def main() -> int:
     parser.add_argument("--candidate-metrics")
     parser.add_argument("--hard-gate", action="append", default=[], help="name=true|false; repeatable")
     parser.add_argument("--lower-is-better", action="append", default=[])
+    parser.add_argument("--case-results", help="JSON array of measured per-case paired outcomes")
     args = parser.parse_args()
     summary = validate_suite(Path(args.suite), Path(args.cases))
     if bool(args.baseline_metrics) != bool(args.candidate_metrics):
         raise SystemExit("provide both --baseline-metrics and --candidate-metrics, or neither")
+    if args.case_results:
+        summary["paired_case_summary"] = aggregate_case_results(Path(args.case_results))
     if args.baseline_metrics:
         gates: dict[str, bool] = {}
         for item in args.hard_gate:

@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any, Callable, Mapping, Protocol
 
 from .normalized_trace import NormalizedTraceAdapter
+from .verifiers import OutcomeVerifier
 from .risk_controls import (
     ActionIntent,
     ActionJournal,
@@ -260,10 +261,12 @@ class ReferenceHost:
         cancel_path: str | os.PathLike[str] | None = None,
         journal_path: str | os.PathLike[str] | None = None,
         trace_adapter: NormalizedTraceAdapter | None = None,
+        outcome_verifier: OutcomeVerifier | None = None,
     ):
         self.profile = self._validate_profile(profile)
         self.provider = provider
         self.trace_adapter = trace_adapter or NormalizedTraceAdapter(provider="reference_host", model_ref=type(provider).__name__)
+        self.outcome_verifier = outcome_verifier
         self.trace = TraceWriter(trace_path, self.profile["run_id"])
         self.checkpoints = CheckpointStore(checkpoint_path)
         self.tools = dict(tools or {})
@@ -397,6 +400,34 @@ class ReferenceHost:
                     self.trace.emit("system", "run_stopped", "unknown", {"reason": str(exc)})
                     return {"run_id": self.profile["run_id"], "status": state["status"], "completed": False, "text": response.text}
             evidence = list(completion_evidence or [])
+            if self.outcome_verifier is not None:
+                verification = self.outcome_verifier.verify(task, state)
+                verification_payload = {
+                    "status": verification.status,
+                    "evidence_refs": list(verification.evidence_refs),
+                    "details": dict(verification.details or {}),
+                }
+                state["outcome_verification"] = verification_payload
+                self.trace.emit(
+                    "reviewer",
+                    "verification_completed",
+                    "read_only",
+                    verification_payload,
+                    evidence_refs=list(verification.evidence_refs),
+                )
+                if verification.status != "success":
+                    state["status"] = "stopped"
+                    self._checkpoint(state)
+                    self.trace.emit("system", "run_stopped", "read_only", {"reason": f"outcome_verification:{verification.status}"})
+                    return {
+                        "run_id": self.profile["run_id"],
+                        "status": state["status"],
+                        "completed": False,
+                        "outcome_status": verification.status,
+                        "text": response.text,
+                        "evidence_refs": list(verification.evidence_refs),
+                    }
+                evidence.extend(ref for ref in verification.evidence_refs if ref not in evidence)
             if not evidence:
                 state["status"] = "stopped"
                 self._checkpoint(state)
@@ -433,6 +464,7 @@ __all__ = [
     "ProviderResponse",
     "ReferenceHost",
     "NormalizedTraceAdapter",
+    "OutcomeVerifier",
     "ToolSpec",
     "TraceWriter",
 ]

@@ -134,3 +134,66 @@ def paired_decision(
         decision = "promote"
         reason = "paired_improvement_without_regression"
     return {"decision": decision, "reason": reason, "failed_gates": failed_gates, "improvements": improvements, "regressions": regressions}
+
+
+def aggregate_paired_results(results: Iterable[dict[str, Any]]) -> dict[str, Any]:
+    """Aggregate case-level baseline/candidate outcomes without hiding regressions.
+
+    Each result must contain ``case_id``, boolean ``baseline_success`` and
+    ``candidate_success``, plus an optional ``hard_gates`` mapping. A result is
+    intentionally rejected if the pair is incomplete. The output keeps gains,
+    regressions, residual failures, and gate failures separate rather than
+    collapsing them into one average.
+    """
+    rows = list(results)
+    if not rows:
+        raise ValidationError("paired results cannot be empty")
+    required = {"case_id", "baseline_success", "candidate_success"}
+    seen: set[str] = set()
+    gains: list[str] = []
+    regressions: list[str] = []
+    residual_failures: list[str] = []
+    unchanged_successes: list[str] = []
+    hard_gate_failures: dict[str, list[str]] = {}
+    for row in rows:
+        missing = sorted(required - set(row))
+        if missing:
+            raise ValidationError(f"paired result missing fields: {missing}")
+        case_id = str(row["case_id"])
+        if not case_id or case_id in seen:
+            raise ValidationError(f"duplicate or empty case_id: {case_id!r}")
+        seen.add(case_id)
+        baseline_success = row["baseline_success"]
+        candidate_success = row["candidate_success"]
+        if not isinstance(baseline_success, bool) or not isinstance(candidate_success, bool):
+            raise ValidationError(f"success flags must be boolean for {case_id}")
+        if not baseline_success and candidate_success:
+            gains.append(case_id)
+        elif baseline_success and not candidate_success:
+            regressions.append(case_id)
+        elif not baseline_success and not candidate_success:
+            residual_failures.append(case_id)
+        else:
+            unchanged_successes.append(case_id)
+        gates = row.get("hard_gates", {})
+        if not isinstance(gates, dict):
+            raise ValidationError(f"hard_gates must be an object for {case_id}")
+        for gate, passed in sorted(gates.items()):
+            if not isinstance(passed, bool):
+                raise ValidationError(f"hard gate must be boolean: {case_id}.{gate}")
+            if not passed:
+                hard_gate_failures.setdefault(str(gate), []).append(case_id)
+    total = len(rows)
+    return {
+        "case_count": total,
+        "baseline_successes": sum(bool(row["baseline_success"]) for row in rows),
+        "candidate_successes": sum(bool(row["candidate_success"]) for row in rows),
+        "baseline_success_rate": sum(bool(row["baseline_success"]) for row in rows) / total,
+        "candidate_success_rate": sum(bool(row["candidate_success"]) for row in rows) / total,
+        "gains": sorted(gains),
+        "regressions": sorted(regressions),
+        "residual_failures": sorted(residual_failures),
+        "unchanged_successes": sorted(unchanged_successes),
+        "hard_gate_failures": {key: sorted(value) for key, value in sorted(hard_gate_failures.items())},
+        "net_success_delta": (sum(bool(row["candidate_success"]) for row in rows) - sum(bool(row["baseline_success"]) for row in rows)) / total,
+    }
