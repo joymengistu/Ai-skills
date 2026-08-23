@@ -13,7 +13,7 @@ This Skill is a **visual reconstruction** route, not a general UI-design route. 
 
 ## Inputs and preflight
 
-Accept the available screenshot(s), viewport dimensions, device-pixel ratio when known, optional assets, optional fonts, existing project files, and interaction requirements. Use `references/multimodal-fidelity-contract.md` to record reference locator, scaling/crop/compression, capture metadata, OCR or readability limits, observed regions, asset provenance, and visual uncertainty. Record what is present and what is missing. If only one screenshot exists, mark unseen responsive behavior as inferred or unknown rather than inventing certainty.
+Accept the available screenshot(s), viewport dimensions, device-pixel ratio when known, optional assets, optional fonts, existing project files, and interaction requirements. Use `references/multimodal-fidelity-contract.md` and `references/cross-modal-consistency-contract.md` to record reference locator, scaling/crop/compression, capture metadata, OCR or readability limits, observed regions, asset provenance, cross-modal agreement or conflict, and visual uncertainty. Inspect screenshots, extracted text, assets, and runtime independently before comparing. Record what is present and what is missing. If only one screenshot exists, mark unseen responsive behavior as inferred or unknown rather than inventing certainty.
 
 Before writing UI code, create a compact visual specification:
 
@@ -55,7 +55,7 @@ The loop is mandatory:
 
 Use region-based comparison when possible so a low global difference cannot hide a severe local mismatch. Mask only documented dynamic regions such as timestamps or randomized content. A mask is a tradeoff, not proof; record it explicitly. Keep reference and generated screenshots versioned with metadata.
 
-A visual diff can establish image mismatch but cannot establish semantic accessibility, keyboard behavior, task completion, production readiness, or meaningful interaction. Use `references/multimodal-fidelity-contract.md` to keep visual, text/OCR, runtime, accessibility, and operational claims separate. If interaction is requested, pair screenshot comparison with runtime, DOM, keyboard, focus, loading, error, and recovery checks.
+A visual diff can establish image mismatch but cannot establish semantic accessibility, keyboard behavior, task completion, production readiness, or meaningful interaction. Use `references/multimodal-fidelity-contract.md` and `references/cross-modal-consistency-contract.md` to keep visual, text/OCR, runtime, accessibility, asset, and operational claims separate. If interaction is requested, pair screenshot comparison with runtime, DOM, keyboard, focus, loading, error, and recovery checks. If visual, OCR, asset, or runtime evidence conflicts, preserve the conflict and lower confidence until a resolving check is performed.
 
 ## Difference triage
 

@@ -5,9 +5,9 @@ description: Analyze images, diagrams, screenshots, PDFs, audio, video, and mixe
 
 # Multimodal reasoning
 
-Identify the media type, task, resolution, time range, and decision the analysis supports. Use `references/multimodal-fidelity-contract.md` to record reference metadata, scaling, crop/compression, readability/OCR limits, observed facts, inferences, asset provenance, and uncertainty. Use the appropriate parser, OCR, transcript, frame sampler, crop, or visual inspection. For dense or unusually large media, inspect focused regions instead of trusting a whole-file summary.
+Identify the media type, task, resolution, time range, and decision the analysis supports. Use `references/multimodal-fidelity-contract.md` and `references/cross-modal-consistency-contract.md` to record reference metadata, scaling, crop/compression, readability/OCR limits, observed facts, inferences, asset provenance, cross-modal agreement or conflict, and uncertainty. Inspect each modality independently before comparison. Use the appropriate parser, OCR, transcript, frame sampler, crop, or visual inspection. For dense or unusually large media, inspect focused regions instead of trusting a whole-file summary.
 
-Record what was directly observed, what was extracted, what was inferred, and what remains unreadable or ambiguous. Preserve page, frame, timestamp, crop, or region references. Do not hallucinate tiny text, missing frames, unseen audio, or visual detail outside the inspected evidence.
+Record what was directly observed, what was extracted, what was inferred, and what remains unreadable or ambiguous. Preserve page, frame, timestamp, crop, transcript span, or region references. When modalities disagree, classify the conflict, lower confidence, preserve both observations, and seek a resolving check rather than silently choosing. Do not hallucinate tiny text, missing frames, unseen audio, or visual detail outside the inspected evidence.
 
 For generated or edited work, compare the result against the brief and acceptance criteria. Check legibility, layout, artifacts, accessibility, and consistency with the source. Use a second pass for high-impact visual or document claims and report limitations honestly.
 
