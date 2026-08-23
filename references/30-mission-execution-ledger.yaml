@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 5
-next_mission: 6
+current_mission: 6
+next_mission: 7
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -94,7 +94,25 @@ missions:
       - benchmark comparison remains not_run without measured model arms
   6:
     title: Research source hierarchy, freshness, and independence
+    status: complete
+    artifacts:
+      - references/source-hierarchy-research-2026-08-23.md
+      - references/source-hierarchy-policy.md
+      - skills/research/SKILL.md
+      - core/self-directing-prompt.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - W3C PROV-DM, NIST AI RMF, GO FAIR, and a current academic survey were read and recorded
+      - policy defines source tiers, claim-to-source matching, freshness classes, independence groups, provenance, and contradiction workflow
+      - four evaluations cover copied sources, stale API documentation, bounded research claims, and disappeared sources
+    result: source_quality_policy_created
+    limitations:
+      - freshness windows are operating defaults, not universally validated decay laws
+      - no causal model-performance gain has been measured yet
+  7:
+    title: Upgrade evidence ledgers and claim provenance
     status: next
     planned_artifacts:
-      - source hierarchy and freshness policy
-      - research quality evaluations
+      - claim provenance schema or adapter
+      - evidence-ledger evaluations
