@@ -1,0 +1,1935 @@
+{
+  "audit_id": "skill-catalog-audit-2026-08-23",
+  "repository": "/home/ubuntu/Ai-skills",
+  "skill_count": 63,
+  "records": [
+    {
+      "name": "accessibility",
+      "path": "skills/accessibility/SKILL.md",
+      "description": "Design and evaluate AI outputs, interfaces, and workflows for accessibility across sensory, motor, cognitive, linguistic, device, bandwidth, and stress conditions. Use whenever a human-facing result must be broadly usable.",
+      "line_count": 41,
+      "headings": [
+        "# Accessibility",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "agent-collaboration",
+      "path": "skills/agent-collaboration/SKILL.md",
+      "description": "Coordinate specialist agents or workstreams with clear contracts, bounded parallelism, shared evidence, handoffs, synthesis, and conflict resolution. Use when a task benefits from independent expertise or parallel side-effect-free work.",
+      "line_count": 43,
+      "headings": [
+        "# Agent collaboration",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "agent-max",
+      "path": "skills/agent-max/SKILL.md",
+      "description": "Universal single-entry command and Skill router for invoking the Ai-skills capability library through one button, a slash command, or a short natural-language request. Use when the user says Agent Max, clicks an Agent Max action, types `/agent-max`, or wants the system to choose and load only the Skills needed for a build, research, screenshot, or verification task.",
+      "line_count": 129,
+      "headings": [
+        "# Agent Max",
+        "## Universal invocation",
+        "## Core contract",
+        "## Short commands and button IDs",
+        "## Routing rules",
+        "## Button-action output contract",
+        "## Direct invocation examples",
+        "## Failure and fallback",
+        "## Catalog pointers",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "references/quality-vocabulary.md",
+        "skills/ai-skills/SKILL.md",
+        "skills/ai-skills/manifest.yaml",
+        "skills/ai-skills/skills/",
+        "skills/ai-skills/skills/screenshot-reconstruction/SKILL.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "agent-risk-controls",
+      "path": "skills/agent-risk-controls/SKILL.md",
+      "description": "Apply model-agnostic runtime controls for agent risk, including untrusted input provenance, scope-drift detection, typed tool authorization, approval binding, cancellation, incident learning, and evidence-based completion. Use before deploying or extending agents with tools, memory, code execution, external network access, delegation, or self-improvement.",
+      "line_count": 71,
+      "headings": [
+        "# Agent risk controls",
+        "## Use the risk loop",
+        "## Special cases",
+        "### Indirect prompt injection",
+        "### Memory",
+        "### Multi-agent work",
+        "### Approval fatigue",
+        "## Reference implementation",
+        "## Release gate",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "runtime/reference_host/"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "brainstorm-mode",
+      "path": "skills/brainstorm-mode/SKILL.md",
+      "description": "Help users think better by understanding, expanding, connecting, challenging, exploring, refining, and crystallizing ideas into useful next steps. Use for brainstorming, early concepts, creative direction, product ideas, and unfinished thoughts.",
+      "line_count": 45,
+      "headings": [
+        "# Brainstorm Mode",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "build-recipes",
+      "path": "skills/build-recipes/SKILL.md",
+      "description": "Select and adapt reusable, tested project recipes, templates, and domain checklists to accelerate complete builds while preserving user intent and avoiding brittle copy-paste behavior. Use when starting a common app, game, store, document, or workflow.",
+      "line_count": 43,
+      "headings": [
+        "# Build recipes",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "capability-analysis",
+      "path": "skills/capability-analysis/SKILL.md",
+      "description": "Analyze an agent capability by separating model contribution, harness contribution, tool contribution, state and memory contribution, and unknown or unsupported claims. Use for vendor comparisons, research synthesis, and architecture decisions.",
+      "line_count": 41,
+      "headings": [
+        "# Capability analysis",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "capability-discovery",
+      "path": "skills/capability-discovery/SKILL.md",
+      "description": "Discover and connect reusable skills, resources, prompts, tools, and asynchronous capabilities across compatible runtimes while checking provenance, permissions, version, risk, and user consent. Use when an agent can extend itself through plugins, protocols, marketplaces, or external integrations.",
+      "line_count": 45,
+      "headings": [
+        "# Capability discovery",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "capability-gap-response",
+      "path": "skills/capability-gap-response/SKILL.md",
+      "description": "Detect and respond to an evidenced capability gap by searching existing skills, researching reliable knowledge, designing a narrow candidate skill, testing it in isolation, and proposing controlled promotion. Use after repeated failures, unmet requirements, or a missing procedural capability.",
+      "line_count": 43,
+      "headings": [
+        "# Capability-gap response",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "coding",
+      "path": "skills/coding/SKILL.md",
+      "description": "Plan, implement, debug, test, review, and document software changes with repository awareness and safe execution. Use for code, scripts, configuration, APIs, and software architecture.",
+      "line_count": 41,
+      "headings": [
+        "# Coding",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "communication",
+      "path": "skills/communication/SKILL.md",
+      "description": "Communicate plans, evidence, uncertainty, failures, and results clearly across technical and non-technical audiences. Use for every user-facing response and deliverable.",
+      "line_count": 41,
+      "headings": [
+        "# Communication",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "completion-intelligence",
+      "path": "skills/completion-intelligence/SKILL.md",
+      "description": "Decide whether a task is genuinely complete rather than merely producing an output, using requirements, tests, runtime behavior, edge cases, quality, safety, and user-goal evidence. Use before declaring any complex task done.",
+      "line_count": 43,
+      "headings": [
+        "# Completion intelligence",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "context-engineering",
+      "path": "skills/context-engineering/SKILL.md",
+      "description": "Curate, rank, compress, and release high-signal context for LLM reasoning and tool use. Use when prompts, history, files, retrieved sources, tools, or long-running tasks risk overload or confusion.",
+      "line_count": 43,
+      "headings": [
+        "# Context engineering",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "context-handoff",
+      "path": "skills/context-handoff/SKILL.md",
+      "description": "Preserve the state needed for a fresh agent or context window to continue long-running work without guessing, repeating, or declaring completion early. Use across sessions, model switches, worker handoffs, resets, and compaction.",
+      "line_count": 43,
+      "headings": [
+        "# Context handoff",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "contextual-user-intelligence",
+      "path": "skills/contextual-user-intelligence/SKILL.md",
+      "description": "Make evidence-based contextual predictions about what a user is trying to accomplish without claiming mind-reading. Use for ambiguity resolution, intent preservation, scoped personalization, context management, communication learning, and adaptive agent workflows.",
+      "line_count": 81,
+      "headings": [
+        "# Contextual user intelligence",
+        "## Separate context",
+        "## Type the prediction",
+        "## Resolve ambiguity",
+        "## Learn from responses safely",
+        "## Measure quality",
+        "## Verification",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "references/contextual-user-intelligence-architecture.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "cost-aware-execution",
+      "path": "skills/cost-aware-execution/SKILL.md",
+      "description": "Optimize hosted-agent work for quality per unit of cost, latency, privacy exposure, and human effort using staged routing, caching, compact context, budgets, fallbacks, and verification. Use whenever online model or tool usage has a practical resource constraint.",
+      "line_count": 43,
+      "headings": [
+        "# Cost-aware execution",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "creative-work",
+      "path": "skills/creative-work/SKILL.md",
+      "description": "Generate original concepts, writing, visual directions, music or other creative work while preserving coherence, intent, audience fit, and human meaning. Use for ideation and expressive deliverables.",
+      "line_count": 41,
+      "headings": [
+        "# Creative work",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "data-analysis",
+      "path": "skills/data-analysis/SKILL.md",
+      "description": "Analyze structured data reproducibly, validate assumptions, quantify uncertainty, and produce clear tables or visualizations. Use for datasets, metrics, experiments, forecasts, and dashboards.",
+      "line_count": 41,
+      "headings": [
+        "# Data analysis",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "design-reference-library",
+      "path": "skills/design-reference-library/SKILL.md",
+      "description": "Build and use an organized visual reference library for navigation, controls, AI composers, dashboards, tables, settings, loading, empty, error, and activity states without copying protected interfaces. Use when screenshots, live references, or a new design system are involved.",
+      "line_count": 43,
+      "headings": [
+        "# Design reference library",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "durable-execution",
+      "path": "skills/durable-execution/SKILL.md",
+      "description": "Design and operate long-running AI tasks that survive crashes, delays, approvals, retries, and process restarts without losing state or repeating risky side effects. Use for asynchronous agents, scheduled work, multi-day tasks, or any workflow with external actions.",
+      "line_count": 51,
+      "headings": [
+        "# Durable execution",
+        "## Required contract",
+        "## Recovery test",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "runtime/progress-state-machine.md",
+        "runtime/trace-schema.json"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "dynamic-verification",
+      "path": "skills/dynamic-verification/SKILL.md",
+      "description": "Verify interactive software and agent outputs by executing the real artifact, exercising primary and failure flows, inspecting observable behavior, and comparing results against requirements. Use when static code inspection or a screenshot cannot prove the requested outcome.",
+      "line_count": 45,
+      "headings": [
+        "# Dynamic verification",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "skills/screenshot-reconstruction/SKILL.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "evaluation",
+      "path": "skills/evaluation/SKILL.md",
+      "description": "Build traceable, repeatable evaluations for agent quality, tool use, safety, efficiency, robustness, and human value. Use when comparing prompts, skills, models, tools, or releases.",
+      "line_count": 41,
+      "headings": [
+        "# Evaluation",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "governance/capability-risk-matrix.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "evaluator-critic",
+      "path": "skills/evaluator-critic/SKILL.md",
+      "description": "Evaluate an agent-generated artifact independently and skeptically using explicit criteria, live inspection, evidence, and actionable repair priorities. Use when quality is subjective, when the generator may praise its own work, or before a high-stakes release.",
+      "line_count": 43,
+      "headings": [
+        "# Evaluator critic",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "evidence-ledger",
+      "path": "skills/evidence-ledger/SKILL.md",
+      "description": "Track claims, sources, observations, freshness, confidence, counterevidence, and dependent decisions so an AI agent can produce defensible conclusions. Use for research, recommendations, high-impact analysis, and any claim that must be verified later.",
+      "line_count": 53,
+      "headings": [
+        "# Evidence ledger",
+        "## Claim record",
+        "## Reasoning discipline",
+        "## Context and privacy",
+        "## Delivery",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "frontier-research",
+      "path": "skills/frontier-research/SKILL.md",
+      "description": "Conduct deep, comprehensive, and frontier-oriented research across papers, repositories, protocols, architectures, benchmarks, products, and failure analyses while separating facts from hypotheses and reporting stopping criteria. Use for important discovery, technology strategy, or \u201cwhat is next\u201d questions.",
+      "line_count": 59,
+      "headings": [
+        "# Frontier research",
+        "## Research ladder",
+        "## Depth questions",
+        "## Comprehensive versus exhaustive",
+        "## Synthesis",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "references/public-fable-analysis.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "hosted-tool-bridge",
+      "path": "skills/hosted-tool-bridge/SKILL.md",
+      "description": "Connect an online agent to hosted browser, code, build, vision, storage, and deployment tools through explicit schemas, scoped permissions, approvals, idempotency, traces, and cleanup. Use when an online agent needs to act beyond text generation.",
+      "line_count": 43,
+      "headings": [
+        "# Hosted tool bridge",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "human-feedback",
+      "path": "skills/human-feedback/SKILL.md",
+      "description": "Collect, interpret, and apply user corrections, preferences, and satisfaction feedback without overfitting, manipulation, or unwanted profiling. Use when improving an AI agent from real interactions or when a user reports that an outcome was wrong or hard to use.",
+      "line_count": 43,
+      "headings": [
+        "# Human feedback",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "human-satisfaction",
+      "path": "skills/human-satisfaction/SKILL.md",
+      "description": "Design and evaluate AI behavior around actual human value, agency, trust calibration, effort, clarity, emotional ease, accessibility, and long-term usefulness. Use whenever a human is the end user.",
+      "line_count": 45,
+      "headings": [
+        "# Human satisfaction",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "incident-response",
+      "path": "skills/incident-response/SKILL.md",
+      "description": "Detect, contain, communicate, recover from, and learn from AI-agent failures, unsafe actions, data exposure, incorrect outputs, or policy violations. Use when an agent run causes or may have caused harm or a material reliability incident.",
+      "line_count": 43,
+      "headings": [
+        "# Incident response",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "intelligence-infrastructure",
+      "path": "skills/intelligence-infrastructure/SKILL.md",
+      "description": "Govern the evaluation, memory, example, intent, communication, research, composition, and improvement records that let an AI capability system learn without fooling itself. Use when auditing Skills, recording research or lessons, comparing baseline and candidate versions, designing benchmarks, or proposing capability changes.",
+      "line_count": 79,
+      "headings": [
+        "# Intelligence infrastructure",
+        "## Operating contract",
+        "## Skill deepening route",
+        "## Resource map",
+        "## Reference implementation",
+        "## Required record sequence",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "evals/comparative-benchmark-plan.md",
+        "references/fable-capability-evidence-ledger.yaml",
+        "references/public-agent-infrastructure-research-2026-08-23.md",
+        "references/skill-expansion-self-prompt.md",
+        "runtime/intelligence/behavior-observation.schema.json",
+        "runtime/intelligence/benchmark-run.schema.json",
+        "runtime/intelligence/communication-trial.schema.json",
+        "runtime/intelligence/evaluation-record.schema.json",
+        "runtime/intelligence/example-record.schema.json",
+        "runtime/intelligence/improvement-record.schema.json",
+        "runtime/intelligence/intent-prediction.schema.json",
+        "runtime/intelligence/kernel.py",
+        "runtime/intelligence/lesson-memory.schema.json",
+        "runtime/intelligence/research-memory.schema.json",
+        "runtime/skill-contract.schema.json",
+        "skills/contextual-user-intelligence/SKILL.md",
+        "skills/evaluation/SKILL.md",
+        "skills/evaluator-critic/SKILL.md",
+        "skills/evidence-ledger/SKILL.md",
+        "skills/human-feedback/SKILL.md",
+        "skills/lovability/SKILL.md",
+        "skills/self-improvement/SKILL.md",
+        "skills/skill-forging/SKILL.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "intent-preservation",
+      "path": "skills/intent-preservation/SKILL.md",
+      "description": "Preserve a user's explicit requirements, implied outcome, constraints, priorities, and important details from request through implementation and delivery. Use when a vague request could be simplified into a shallow result or when many requirements must survive a long build.",
+      "line_count": 43,
+      "headings": [
+        "# Intent preservation",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "interaction-design",
+      "path": "skills/interaction-design/SKILL.md",
+      "description": "Design clear, accessible, low-friction interaction flows for AI systems, tools, and interfaces. Use when the agent has a UI, conversational flow, approval step, or user-facing workflow.",
+      "line_count": 41,
+      "headings": [
+        "# Interaction design",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "lovability",
+      "path": "skills/lovability/SKILL.md",
+      "description": "Make AI collaboration feel genuinely useful, thoughtful, respectful, continuous, and creatively supportive without fake emotion, empty praise, manipulation, or unwanted dependence. Use for conversational design, personal assistants, brainstorming, and human-facing agent behavior.",
+      "line_count": 70,
+      "headings": [
+        "# Lovability",
+        "## Communication patterns",
+        "## Communication learning engine",
+        "### Quality examples",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "evals/lovability-benchmark-plan.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "memory",
+      "path": "skills/memory/SKILL.md",
+      "description": "Design and use scoped, consent-aware, inspectable, deletable memory for AI agents. Use when an agent needs continuity across turns or sessions.",
+      "line_count": 41,
+      "headings": [
+        "# Memory",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "model-routing",
+      "path": "skills/model-routing/SKILL.md",
+      "description": "Select, combine, and fall back between models according to task capability, effort, latency, cost, privacy, reliability, and risk rather than brand or size. Use when an agent has multiple models or providers available.",
+      "line_count": 41,
+      "headings": [
+        "# Model routing",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "multimodal-reasoning",
+      "path": "skills/multimodal-reasoning/SKILL.md",
+      "description": "Analyze images, diagrams, screenshots, PDFs, audio, video, and mixed media with modality-appropriate tools, focused context, provenance, and verification. Use whenever important information is not purely textual.",
+      "line_count": 41,
+      "headings": [
+        "# Multimodal reasoning",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "online-orchestration",
+      "path": "skills/online-orchestration/SKILL.md",
+      "description": "Coordinate hosted models, specialist agents, remote workers, browser sessions, and long-running queues into one observable, resumable online run. Use when work exceeds a single local turn or benefits from hosted parallel execution.",
+      "line_count": 43,
+      "headings": [
+        "# Online orchestration",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "optimal-assistance",
+      "path": "skills/optimal-assistance/SKILL.md",
+      "description": "Choose the right balance of AI initiative, human effort, explanation, suggestion, silence, personalization, and stopping for the user's current context. Use when designing or operating an assistant that should feel effortless without removing human control.",
+      "line_count": 65,
+      "headings": [
+        "# Optimal assistance",
+        "## Decide dynamically",
+        "## Personalization",
+        "## Human-state adaptation",
+        "## Success test",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "orchestration",
+      "path": "skills/orchestration/SKILL.md",
+      "description": "Select and coordinate workflows, bounded agent loops, specialist skills, model routes, and handoffs for complex tasks. Use when a task has multiple steps, tools, agents, or competing strategies.",
+      "line_count": 49,
+      "headings": [
+        "# Orchestration",
+        "## Procedure",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "outcome-completion",
+      "path": "skills/outcome-completion/SKILL.md",
+      "description": "Determine whether an AI task is genuinely complete, useful, verified, and ready for delivery rather than merely producing an impressive conversation. Use before declaring work done, especially for multi-step or tool-using tasks.",
+      "line_count": 62,
+      "headings": [
+        "# Outcome completion",
+        "## Completion gate",
+        "## Done engine",
+        "## Stop engine",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "planning",
+      "path": "skills/planning/SKILL.md",
+      "description": "Create practical plans with decomposition, checkpoints, stopping conditions, dependencies, risk classes, and verification. Use for complex, multi-step, or tool-using work.",
+      "line_count": 41,
+      "headings": [
+        "# Planning",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "product-completeness",
+      "path": "skills/product-completeness/SKILL.md",
+      "description": "Turn a product idea into a complete, testable experience across interface, behavior, data, backend, persistence, errors, accessibility, security, deployment, and documentation. Use when building apps, games, stores, tools, or other interactive software from a short brief.",
+      "line_count": 51,
+      "headings": [
+        "# Product completeness",
+        "## Completeness map",
+        "## Vertical slice",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "skills/screenshot-reconstruction/SKILL.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "product-strategy",
+      "path": "skills/product-strategy/SKILL.md",
+      "description": "Turn frontier AI research into original product opportunities using What-if, Why-not, 10\u00d7, magic-moment, quality-bar, and anti-feature-bloat analysis. Use when designing an AI product, agent platform, workflow, or major capability.",
+      "line_count": 59,
+      "headings": [
+        "# Product strategy",
+        "## What-if engine",
+        "## Why-not engine",
+        "## 10\u00d7 engine",
+        "## Magic moments",
+        "## Quality bar",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "professional-taste",
+      "path": "skills/professional-taste/SKILL.md",
+      "description": "Evaluate and improve professional UI quality by separating beauty, professionalism, usability, accessibility, density, restraint, and interaction clarity. Use for screenshot or live-interface reviews, polished product design, AI-generated UI, design-system decisions, and briefs using beautiful, premium, minimal, modern, clean, or professional.",
+      "line_count": 97,
+      "headings": [
+        "# Professional UI taste",
+        "## Define the job first",
+        "## Review the eleven dimensions",
+        "## Use the restraint engine",
+        "## Separate beautiful from professional",
+        "## Review sequence",
+        "## Report format",
+        "## Screenshot-precision handoff",
+        "## Developer-tool shell patterns",
+        "## Release gate",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "references/professional-ui-patterns.md",
+        "references/screenshot-reconstruction-architecture.md",
+        "skills/screenshot-reconstruction/SKILL.md",
+        "skills/ui-vision/SKILL.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "progressive-delivery",
+      "path": "skills/progressive-delivery/SKILL.md",
+      "description": "Deliver a fast first usable result while continuing staged implementation, verification, and repair through resumable online work. Use when users value an aha moment quickly but the complete outcome requires more time.",
+      "line_count": 43,
+      "headings": [
+        "# Progressive delivery",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "quality-judgment",
+      "path": "skills/quality-judgment/SKILL.md",
+      "description": "Evaluate qualitative excellence such as taste, clarity, coherence, restraint, originality, hierarchy, usefulness, and appropriateness without reducing quality to an arbitrary universal score. Use for design, writing, research synthesis, product experience, and other subjective outputs.",
+      "line_count": 43,
+      "headings": [
+        "# Quality judgment",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "repair-loop",
+      "path": "skills/repair-loop/SKILL.md",
+      "description": "Repair incomplete or failing agent-built artifacts through observed reproduction, root-cause classification, minimal patches, focused reruns, regression tests, and safe escalation. Use after build failures, broken interactions, missing requirements, tool errors, or verification failures.",
+      "line_count": 43,
+      "headings": [
+        "# Repair loop",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "requirement-compiler",
+      "path": "skills/requirement-compiler/SKILL.md",
+      "description": "Compile a short natural-language idea into explicit requirements, justified inferences, unknowns, architecture implications, acceptance criteria, and a traceable implementation plan. Use before building a complex app, game, store, workflow, or research artifact.",
+      "line_count": 47,
+      "headings": [
+        "# Requirement compiler",
+        "## Screenshot-precision compilation",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "skills/screenshot-reconstruction/SKILL.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "requirement-traceability",
+      "path": "skills/requirement-traceability/SKILL.md",
+      "description": "Convert a natural-language brief into a durable trace from requirement to interpretation, artifact, test, evidence, and delivery status. Use for complex builds, multi-step research, product work, or any task where important details may be silently omitted.",
+      "line_count": 43,
+      "headings": [
+        "# Requirement traceability",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "research",
+      "path": "skills/research/SKILL.md",
+      "description": "Conduct source-grounded, current, multi-source research with query refinement, provenance, synthesis, and uncertainty calibration. Use for factual, comparative, technical, market, policy, or literature questions.",
+      "line_count": 41,
+      "headings": [
+        "# Research",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "runtime-host",
+      "path": "skills/runtime-host/SKILL.md",
+      "description": "Design and implement a portable, low-cost host runtime that connects models, skills, tools, state, approvals, traces, and evaluators without binding the skill package to one provider. Use when turning the Ai-skills specification into a usable local or self-hosted agent.",
+      "line_count": 45,
+      "headings": [
+        "# Runtime host",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "runtime/reference_host",
+        "runtime/reference_host/"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "safety-governance",
+      "path": "skills/safety-governance/SKILL.md",
+      "description": "Threat-model and govern AI agents with least privilege, prompt-injection resistance, privacy controls, approvals, auditability, incident response, and bounded autonomy. Use before consequential tool use or deployment.",
+      "line_count": 41,
+      "headings": [
+        "# Safety and governance",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "screenshot-reconstruction",
+      "path": "skills/screenshot-reconstruction/SKILL.md",
+      "description": "Reconstruct a provided UI screenshot as accurately as technically possible with HTML, CSS, JavaScript, and assets. Use for screenshot-to-code work, visual reverse engineering, pixel-precision reconstruction, same-viewport rendering, image-diff comparison, and reference-fidelity correction\u2014not for redesigning or merely making a similar interface.",
+      "line_count": 96,
+      "headings": [
+        "# Screenshot reconstruction",
+        "## Core objective",
+        "## Inputs and preflight",
+        "## Forensic workflow",
+        "## Responsive reconstruction",
+        "## Visual validation loop",
+        "## Difference triage",
+        "## Anti-patterns",
+        "## Output contract",
+        "## Composition and boundaries",
+        "## High-information examples",
+        "## Self-critique and lesson memory"
+      ],
+      "linked_paths": [
+        "references/screenshot-reconstruction-architecture.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": false,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "self-improvement",
+      "path": "skills/self-improvement/SKILL.md",
+      "description": "Diagnose agent failures from traces, feedback, and evaluations, then propose bounded, reversible, evidence-backed improvements. Use after observed failures or during controlled optimization.",
+      "line_count": 41,
+      "headings": [
+        "# Self-improvement",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "skill-composition",
+      "path": "skills/skill-composition/SKILL.md",
+      "description": "Compose a minimal compatible bundle of skills for a goal by checking inputs, outputs, dependencies, ordering, permissions, side effects, evidence flow, and failure recovery. Use when an agent needs multiple capabilities or must build a reusable workflow.",
+      "line_count": 43,
+      "headings": [
+        "# Skill composition",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "skill-forging",
+      "path": "skills/skill-forging/SKILL.md",
+      "description": "Create, improve, validate, package, version, evaluate, and retire modular AI skills with clear triggers, progressive disclosure, bounded workflows, resources, permissions, and tests. Use when designing a new skill or upgrading an existing agent capability.",
+      "line_count": 63,
+      "headings": [
+        "# Skill forging",
+        "## Forge lifecycle",
+        "## Skill contract",
+        "## Quality gate",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "references/full-mode-capability-map.md",
+        "references/skill-engineering-intelligence.md",
+        "skills/skill-creator/SKILL.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "staged-execution",
+      "path": "skills/staged-execution/SKILL.md",
+      "description": "Execute complex builds in fast, observable stages with a vertical slice, bounded parallel work, integration checkpoints, budgets, and explicit release gates. Use for long-horizon coding, game creation, product development, or multi-agent implementation.",
+      "line_count": 43,
+      "headings": [
+        "# Staged execution",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "superlative-analysis",
+      "path": "skills/superlative-analysis/SKILL.md",
+      "description": "Translate superlatives such as best, smartest, maximum, optimal, frontier, deepest, comprehensive, reliable, powerful, and autonomous into explicit objectives, constraints, evidence, alternatives, failure modes, and stopping criteria. Use whenever a user or plan makes a high-performance claim or asks for the strongest option.",
+      "line_count": 64,
+      "headings": [
+        "# Superlative analysis",
+        "## Compile the claim",
+        "## Interpret carefully",
+        "## ULTRIA loop",
+        "## Output",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "references/ultria-fork-integration-map.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "task-framing",
+      "path": "skills/task-framing/SKILL.md",
+      "description": "Convert vague requests into explicit human outcomes, constraints, stakeholders, definitions of done, and safe next steps. Use at the start of any non-trivial task or when requirements are ambiguous.",
+      "line_count": 41,
+      "headings": [
+        "# Task framing",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "tool-evaluation",
+      "path": "skills/tool-evaluation/SKILL.md",
+      "description": "Evaluate whether agent tools are discoverable, well-scoped, correctly selected, efficiently called, and valuable in real multi-step tasks. Use when adding tools, debugging tool use, or comparing agent harnesses.",
+      "line_count": 41,
+      "headings": [
+        "# Tool evaluation",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "tool-use",
+      "path": "skills/tool-use/SKILL.md",
+      "description": "Select, call, validate, and document tools safely and efficiently with clear schemas, permissions, error handling, and evidence. Use whenever an agent can inspect or change an environment.",
+      "line_count": 41,
+      "headings": [
+        "# Tool use",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "ui-vision",
+      "path": "skills/ui-vision/SKILL.md",
+      "description": "Translate vague visual adjectives into observable UI decisions and review screens for professional hierarchy, minimalism, usability, accessibility, restraint, originality, and interaction quality. Use before designing or reviewing a polished interface, especially when the brief says beautiful, professional, minimal, premium, clean, modern, or polished.",
+      "line_count": 51,
+      "headings": [
+        "# UI Vision",
+        "## Screenshot-precision handoff",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "references/screenshot-reconstruction-architecture.md",
+        "skills/screenshot-reconstruction/SKILL.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    },
+    {
+      "name": "ultra-plan",
+      "path": "skills/ultra-plan/SKILL.md",
+      "description": "Run high-rigor, long-horizon planning for difficult, ambiguous, multi-threaded, or high-impact tasks with dependency mapping, context budgeting, risk gates, checkpoints, verification, and resumable execution. Use when the user asks for deep planning or unusually high quality.",
+      "line_count": 84,
+      "headings": [
+        "# Ultra Plan Mode",
+        "## Activate selectively",
+        "## Build the preflight",
+        "## Run the loop",
+        "## Control overplanning",
+        "## Safety and human value",
+        "## One-shot execution path",
+        "## Completion report",
+        "## Operational deepening",
+        "### Execute",
+        "### Evidence and boundaries",
+        "### Decision examples",
+        "### Composition and stopping rule"
+      ],
+      "linked_paths": [
+        "core/ultra-plan-mode.md",
+        "references/one-shot-execution-prompt.md"
+      ],
+      "observable_signals": {
+        "inputs": true,
+        "outputs": true,
+        "activation": true,
+        "process": true,
+        "tools": true,
+        "examples": true,
+        "failure_modes": true,
+        "verification": true,
+        "limitations": true
+      },
+      "quality_flags": [],
+      "assessment_boundary": "Structural audit only; substantive quality requires task-specific evaluation."
+    }
+  ],
+  "aggregate": {
+    "with_quality_flags": 0,
+    "with_verification_signal": 63,
+    "with_examples_signal": 63,
+    "with_failure_signal": 63,
+    "with_limitations_signal": 63
+  }
+}

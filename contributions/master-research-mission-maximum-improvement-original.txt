@@ -1,0 +1,924 @@
+MASTER RESEARCH MISSION
+AI SKILLS REPOSITORY — MAXIMUM IMPROVEMENT PASS
+
+You are operating on an existing AI Skills repository.
+
+This is a LONG-RUNNING RESEARCH + ENGINEERING mission.
+
+Do NOT treat this as a normal question-answering task.
+
+Your job is to investigate, experiment, critique, benchmark, improve,
+and document the repository.
+
+The objective is NOT to create the largest number of Skills.
+
+The objective is to create the HIGHEST-QUALITY SKILL SYSTEM that can
+reasonably be built from available evidence and tooling.
+
+============================================================
+CORE LOOP
+============================================================
+
+CONTINUOUSLY OPERATE THIS LOOP:
+
+AUDIT
+→ RESEARCH
+→ FORM HYPOTHESIS
+→ IMPLEMENT
+→ TEST
+→ CRITIQUE
+→ BENCHMARK
+→ IMPROVE
+→ DOCUMENT
+→ REPEAT
+
+Do not stop after the first successful implementation.
+
+Do not assume a change is better simply because it is larger,
+more complicated, or more sophisticated.
+
+A change is an improvement only when evidence supports it.
+
+============================================================
+PART 1 — COMPLETE REPOSITORY AUDIT
+============================================================
+
+Inspect the ENTIRE repository before making major changes.
+
+Understand:
+
+- every Skill
+- every SKILL.md
+- references
+- scripts
+- templates
+- examples
+- metadata
+- dependencies
+- conventions
+- duplicated functionality
+- missing functionality
+- inconsistent quality
+- weak instructions
+- unnecessary complexity
+- missing verification
+- missing examples
+- missing benchmarks
+
+Create a capability map.
+
+For every existing Skill determine:
+
+PURPOSE
+INPUT
+OUTPUT
+ACTIVATION
+PROCESS
+TOOLS
+EXAMPLES
+FAILURE MODES
+VERIFICATION
+KNOWN LIMITATIONS
+QUALITY
+
+Do not assume existing Skills are correct.
+
+============================================================
+PART 2 — RESEARCH WHAT MAKES A GREAT AI SKILL
+============================================================
+
+Perform deep research across:
+
+- official agent documentation
+- AI Skills documentation
+- agentic workflow research
+- HCI research
+- prompt engineering research
+- software engineering
+- evaluation research
+- agent memory research
+- multi-agent systems
+- human-AI interaction
+- UX research
+- open-source agent projects
+- publicly documented agent workflows
+
+Search broadly.
+
+Then distinguish:
+
+FACT
+EVIDENCE
+INFERENCE
+HYPOTHESIS
+UNKNOWN
+
+Never turn an internet claim into repository truth without
+evaluating its evidence.
+
+============================================================
+PART 3 — FABLE BEHAVIORAL RESEARCH
+============================================================
+
+Research publicly observable Fable/Fable-inspired workflows.
+
+IMPORTANT:
+
+Do NOT attempt to obtain proprietary code, private data,
+private prompts, credentials, or restricted material.
+
+Study observable behavior and publicly available research.
+
+Investigate:
+
+- planning
+- decomposition
+- exploration
+- effort allocation
+- verification
+- self-review
+- multi-agent coordination
+- context management
+- memory
+- lesson extraction
+- task completion
+- scope control
+- evidence gathering
+- failure recovery
+- final-answer quality
+
+For every discovered behavior:
+
+BEHAVIOR
+→ EVIDENCE
+→ WHY IT MAY WORK
+→ TESTABLE HYPOTHESIS
+→ OUR IMPLEMENTATION
+→ BENCHMARK RESULT
+
+Do not copy blindly.
+
+Recreate only generalizable principles.
+
+============================================================
+PART 4 — IMPROVE THE SKILL FORMAT
+============================================================
+
+Design the strongest practical Skill specification.
+
+Investigate whether Skills should contain:
+
+IDENTITY
+PURPOSE
+ACTIVATION CONDITIONS
+INPUTS
+OUTPUTS
+CONTEXT
+PRINCIPLES
+WORKFLOW
+TOOLS
+EXAMPLES
+COUNTEREXAMPLES
+EDGE CASES
+EXCEPTIONS
+ANTI-PATTERNS
+VERIFICATION
+BENCHMARKS
+KNOWN LIMITATIONS
+UNCERTAINTIES
+LESSONS
+VERSION HISTORY
+
+Do not automatically include every field.
+
+Research what actually improves performance.
+
+Prefer focused Skills over enormous Skills when evidence supports it.
+
+============================================================
+PART 5 — EXAMPLE INTELLIGENCE
+============================================================
+
+Improve the repository's use of examples.
+
+Research how examples affect model behavior.
+
+For important principles consider:
+
+GOOD EXAMPLE
+BAD EXAMPLE
+BORDERLINE EXAMPLE
+EXCEPTION
+TRANSFORMATION
+EDGE CASE
+
+Explain WHY.
+
+Do not generate examples merely to make Skills longer.
+
+Prefer examples that teach distinctions.
+
+============================================================
+PART 6 — SELF-IMPROVEMENT MEMORY
+============================================================
+
+Build or improve:
+
+SELF_IMPROVEMENT_MEMORY
+
+Record:
+
+OBSERVATION
+FAILURE
+CAUSE
+EVIDENCE
+LESSON
+ACTION
+CONFIDENCE
+REGRESSION RISK
+NEXT EXPERIMENT
+
+A lesson is NOT automatically truth.
+
+Lessons must be testable.
+
+Prevent circular self-confirmation.
+
+============================================================
+PART 7 — RESEARCH MEMORY
+============================================================
+
+Create structured research memory containing:
+
+CLAIM
+SOURCE
+DATE
+EVIDENCE
+CONFIDENCE
+RELATED SKILLS
+CONTRADICTIONS
+IMPLICATIONS
+STATUS
+
+Statuses may include:
+
+UNVERIFIED
+SUPPORTED
+STRONG
+CONTRADICTED
+OUTDATED
+
+============================================================
+PART 8 — SKILL EVALUATOR
+============================================================
+
+Build or improve:
+
+SKILL_EVALUATOR
+
+It should answer:
+
+Does this Skill actually work?
+
+Evaluate:
+
+- correctness
+- consistency
+- usefulness
+- robustness
+- context handling
+- failure recovery
+- instruction clarity
+- output quality
+- efficiency
+
+Create actual test cases.
+
+============================================================
+PART 9 — SKILL IMPROVEMENT ENGINE
+============================================================
+
+Build or improve:
+
+SKILL_IMPROVEMENT_ENGINE
+
+Process:
+
+CURRENT SKILL
+→ BENCHMARK
+→ WEAKNESS ANALYSIS
+→ RESEARCH
+→ IMPROVEMENT CANDIDATE
+→ IMPLEMENT
+→ RE-BENCHMARK
+→ COMPARE
+→ KEEP OR REJECT
+→ LESSON
+
+Do not allow:
+
+CHANGE
+→ ASSUME BETTER
+→ KEEP
+
+Require evidence.
+
+============================================================
+PART 10 — USER INTENT PREDICTION
+============================================================
+
+Build or improve:
+
+USER_INTENT_PREDICTION
+
+Research:
+
+- contextual disambiguation
+- conversation state
+- intent classification
+- uncertainty
+- clarification strategies
+- next-step prediction
+- user correction handling
+
+Separate:
+
+INTENT
+OUTPUT PREFERENCE
+NEXT ACTION
+POSSIBLE CORRECTION
+
+Never claim certainty when evidence is weak.
+
+============================================================
+PART 11 — LOVABILITY / HUMAN-CENTERED COMMUNICATION
+============================================================
+
+Build or improve:
+
+LOVABILITY_LAYER
+HUMAN_CENTRIC_AI_COMMUNICATION
+
+Research:
+
+- conversational UX
+- UX writing
+- trust
+- perceived understanding
+- personalization
+- warmth
+- specificity
+- calibrated enthusiasm
+- feedback
+- idea amplification
+- conversational momentum
+- human satisfaction
+
+Do NOT reduce lovability to:
+
+- excessive praise
+- emojis
+- fake emotions
+- manipulation
+- constant agreement
+
+Investigate why certain responses feel:
+
+UNDERSTANDING
+USEFUL
+MEMORABLE
+EXCITING
+TRUSTWORTHY
+
+Create benchmarks.
+
+============================================================
+PART 12 — BRAINSTORM MODE
+============================================================
+
+Research and improve:
+
+BRAINSTORM_MODE
+
+The system should be able to recognize promising ideas,
+connect concepts, name emerging patterns, challenge weak assumptions,
+and expand useful possibilities.
+
+Do not turn brainstorming into endless praise.
+
+The system must be willing to say:
+
+"Interesting direction, but..."
+
+============================================================
+PART 13 — PROFESSIONAL UI TASTE
+============================================================
+
+Build or improve:
+
+PROFESSIONAL_UI_TASTE
+
+Research deeply:
+
+- professional software interfaces
+- visual hierarchy
+- restraint
+- density
+- spacing
+- typography
+- interaction design
+- information architecture
+- micro-interactions
+- consistency
+- navigation
+- visual rhythm
+- enterprise software
+- developer tools
+- modern AI interfaces
+
+Study real professional products where publicly available.
+
+Distinguish:
+
+BEAUTIFUL
+PROFESSIONAL
+MINIMAL
+USABLE
+PREMIUM
+PIXEL-PERFECT
+
+These are NOT synonyms.
+
+Create examples and counterexamples.
+
+============================================================
+PART 14 — SCREENSHOT → UI
+============================================================
+
+Deeply improve:
+
+SCREENSHOT_TO_UI
+
+The screenshot is the primary visual specification.
+
+Research:
+
+- computer vision for UI reconstruction
+- screenshot analysis
+- DOM reconstruction
+- layout inference
+- typography matching
+- visual similarity
+- image comparison
+- responsive inference
+- UI asset identification
+- browser rendering
+- visual regression testing
+
+Pipeline:
+
+SCREENSHOT
+→ FORENSICS
+→ MEASUREMENT
+→ VISUAL SPECIFICATION
+→ IMPLEMENTATION
+→ RENDER
+→ COMPARISON
+→ DIFFERENCE ANALYSIS
+→ CORRECTION
+→ RE-RENDER
+→ VERIFY
+
+Do NOT allow:
+
+"looks close enough."
+
+Use objective comparison wherever technically possible.
+
+Measure:
+
+- geometry
+- spacing
+- typography
+- color
+- assets
+- layout
+- proportions
+- responsive behavior
+
+============================================================
+PART 15 — PIXEL-PERFECT
+============================================================
+
+Improve:
+
+PIXEL_PERFECT_UI
+
+Define pixel-perfect operationally.
+
+Do not treat it as a marketing phrase.
+
+Explain:
+
+WHAT IT MEANS
+WHAT IT DOES NOT MEAN
+HOW TO MEASURE IT
+HOW TO PRIORITIZE ERRORS
+HOW TO VERIFY IT
+
+Prioritize:
+
+1. global structure
+2. major geometry
+3. spacing
+4. typography
+5. colors
+6. components
+7. micro-details
+
+============================================================
+PART 16 — VISUAL QA
+============================================================
+
+Build:
+
+VISUAL_QA
+
+Given:
+
+REFERENCE
++
+GENERATED UI
+
+identify differences.
+
+Research useful techniques including:
+
+- overlays
+- image diffs
+- perceptual similarity
+- region comparison
+- structural comparison
+- screenshot regression
+
+Create a repeatable evaluation workflow.
+
+============================================================
+PART 17 — SKILL COMPOSITION
+============================================================
+
+Research how multiple Skills should work together.
+
+Example:
+
+SCREENSHOT_TO_UI
++
+PROFESSIONAL_UI_TASTE
++
+PIXEL_PERFECT_UI
++
+VISUAL_QA
++
+ACCESSIBILITY
++
+RESPONSIVE_UI
+
+Determine:
+
+- dependencies
+- ordering
+- conflicts
+- shared context
+- output handoff
+- verification
+
+Do not combine Skills simply because they are related.
+
+============================================================
+PART 18 — META-SKILL ENGINEERING
+============================================================
+
+Investigate:
+
+Can the repository become better at creating Skills?
+
+Create:
+
+SKILL_ENGINEERING_INTELLIGENCE
+
+It should analyze:
+
+WHY DID THIS SKILL WORK?
+WHY DID THIS SKILL FAIL?
+WHAT PATTERNS GENERALIZE?
+WHAT SHOULD NOT GENERALIZE?
+
+Separate:
+
+SKILL CREATION
+from
+SKILL EVALUATION
+from
+META-RESEARCH.
+
+Do not allow uncontrolled recursive self-modification.
+
+============================================================
+PART 19 — KNOWLEDGE BOUNDARIES
+============================================================
+
+The system must distinguish:
+
+KNOWN
+SUPPORTED
+INFERRED
+UNCERTAIN
+UNKNOWN
+OUTDATED
+CONFLICTING
+
+Never optimize for pretending to know everything.
+
+Optimize for knowing:
+
+WHAT WE KNOW
+WHY WE KNOW IT
+HOW CONFIDENT WE ARE
+WHAT WE DON'T KNOW
+WHAT WOULD RESOLVE THE UNCERTAINTY
+
+============================================================
+PART 20 — PROFESSIONAL VS PERSONAL VS CONVERSATION CONTEXT
+============================================================
+
+Design a clean context model.
+
+Separate:
+
+PROFESSIONAL CONTEXT
+PERSONAL INTERACTION PREFERENCES
+CURRENT CONVERSATION STATE
+
+Do not create an uncontrolled memory dump.
+
+Determine what information should be:
+
+TEMPORARY
+PERSISTENT
+PROJECT-SPECIFIC
+USER-SPECIFIC
+TASK-SPECIFIC
+
+============================================================
+PART 21 — RESPONSE LEARNING
+============================================================
+
+Create:
+
+RESPONSE_LEARNING_ENGINE
+
+Compare:
+
+PREDICTION
+→ RESPONSE
+→ USER REACTION
+→ ACTUAL INTENT
+→ LESSON
+
+Learn general principles rather than superficial word associations.
+
+Bad:
+
+"Whenever user says X, do Y."
+
+Better:
+
+"When context C and objective O are active,
+interpretation Y becomes more probable than Z."
+
+============================================================
+PART 22 — BENCHMARK SYSTEM
+============================================================
+
+Create a repository-wide benchmark framework.
+
+Each Skill should ideally have:
+
+TEST CASES
+EXPECTED BEHAVIOR
+FAILURE CASES
+EDGE CASES
+QUALITY CRITERIA
+BASELINE
+NEW VERSION
+RESULT
+REGRESSION CHECK
+
+Never declare improvement without comparison.
+
+============================================================
+PART 23 — RED TEAM THE REPOSITORY
+============================================================
+
+Try to break the system.
+
+Ask:
+
+- Where can it hallucinate?
+- Where can memory become wrong?
+- Where can Skills conflict?
+- Where can instructions become ambiguous?
+- Where can examples teach the wrong lesson?
+- Where can self-improvement amplify mistakes?
+- Where can UI reconstruction hallucinate assets?
+- Where can user prediction become overconfident?
+- Where can lovability become fake praise?
+- Where can complexity become unnecessary?
+
+Document every discovered weakness.
+
+============================================================
+PART 24 — RESEARCH QUALITY CONTROL
+============================================================
+
+For every major research area:
+
+Use multiple independent sources where possible.
+
+Prefer:
+
+PRIMARY SOURCES
+OFFICIAL DOCUMENTATION
+ACADEMIC RESEARCH
+REPRODUCIBLE EXPERIMENTS
+HIGH-QUALITY OPEN-SOURCE PROJECTS
+
+Do not rely on a single blog post for important conclusions.
+
+When sources disagree:
+
+DOCUMENT THE DISAGREEMENT.
+
+============================================================
+PART 25 — USE TIME INTELLIGENTLY
+============================================================
+
+This is a long-running mission.
+
+Do not repeatedly perform the same research.
+
+Maintain:
+
+RESEARCH_QUEUE
+OPEN_QUESTIONS
+COMPLETED_RESEARCH
+UNRESOLVED_QUESTIONS
+HIGH-VALUE_NEXT_STEPS
+
+Prioritize research according to:
+
+EXPECTED IMPACT
++
+UNCERTAINTY
++
+RELEVANCE
++
+IMPLEMENTATION VALUE
+
+If a research question has already been sufficiently answered,
+move on.
+
+============================================================
+PART 26 — DO NOT WASTE COMPUTE
+============================================================
+
+Do not spend effort on:
+
+- cosmetic rewriting
+- unnecessary refactoring
+- redundant documentation
+- duplicate research
+- meaningless Skill expansion
+
+Spend effort on:
+
+CAPABILITY
+QUALITY
+VERIFICATION
+GENERALIZATION
+RELIABILITY
+HUMAN VALUE
+
+============================================================
+PART 27 — FINAL SELF-CRITIQUE
+============================================================
+
+Before finishing, independently review your own work.
+
+Ask:
+
+"What did we assume?"
+
+"What evidence is weak?"
+
+"What did we overengineer?"
+
+"What important capability is still missing?"
+
+"What would an expert criticize?"
+
+"What would make this repository dramatically better?"
+
+"What should be researched next?"
+
+Then perform additional research on the highest-value unresolved
+questions if time and resources permit.
+
+============================================================
+PART 28 — FINAL REPORT
+============================================================
+
+When the mission concludes, produce:
+
+1. Repository audit
+2. Research findings
+3. Changes made
+4. New Skills
+5. Improved Skills
+6. New benchmarks
+7. Research memory
+8. Self-improvement memory
+9. Fable behavioral findings
+10. Screenshot-to-UI improvements
+11. Professional UI findings
+12. Lovability findings
+13. User-intent findings
+14. Skill-composition findings
+15. Discovered weaknesses
+16. Failed experiments
+17. Successful experiments
+18. Remaining uncertainties
+19. Highest-priority future research
+20. Recommended next actions
+
+For every major improvement state:
+
+BEFORE
+→ CHANGE
+→ EVIDENCE
+→ RESULT
+
+============================================================
+ULTIMATE OBJECTIVE
+============================================================
+
+Do not build a repository that merely contains many AI Skills.
+
+Build a system that progressively becomes better at:
+
+UNDERSTANDING
+RESEARCHING
+CREATING
+USING
+EVALUATING
+VERIFYING
+REMEMBERING
+COMPOSING
+AND IMPROVING
+
+AI Skills.
+
+The system should understand not merely:
+
+"WHAT TO DO"
+
+but:
+
+"WHAT GOOD LOOKS LIKE."
+
+And not merely:
+
+"WHAT GOOD LOOKS LIKE"
+
+but:
+
+"WHY IT IS GOOD."
+
+And not merely:
+
+"WHY IT IS GOOD"
+
+but:
+
+"HOW TO VERIFY THAT IT ACTUALLY IS."
+
+FINAL LOOP:
+
+RESEARCH
+→ UNDERSTAND
+→ BUILD
+→ TEST
+→ CRITIQUE
+→ IMPROVE
+→ REMEMBER
+→ REPEAT.

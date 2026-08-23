@@ -54,7 +54,7 @@ Use `agent-max.auto` as the default route for every request that enters through 
 
 For a supplied screenshot or reference image, use `agent-max.screenshot`. Load `screenshot-reconstruction` first and treat the reference as the visual specification. Measure geometry, typography, assets, regions, density, and viewport; render at the same viewport; compare or diff; repair in priority order; and record observed, inferred, approximated, verified, and not-assessable claims. Never let Professional UI Taste redesign an unusual reference unless redesign is explicitly requested.
 
-For research, keep facts, evidence, inferences, hypotheses, and unknowns distinct. For actions affecting external systems, load the relevant safety and approval Skills and stop for required user confirmation. For accessibility or human-facing output, add `accessibility` and the relevant communication or human-value Skill.
+For research, keep facts, evidence, inferences, hypotheses, and unknowns distinct. For actions affecting external systems, load the relevant safety and approval Skills and stop for required user confirmation. For accessibility or human-facing output, add `accessibility` and the relevant communication or human-value Skill. When the request uses “best,” “maximum,” “top tier,” “perfect,” “go to your limit,” or similar language, load `references/quality-vocabulary.md` and convert the intensifier into a target, scope, constraints, evidence standard, budget, and stopping rule. Never interpret it as unlimited resources or authority.
 
 ## Button-action output contract
 

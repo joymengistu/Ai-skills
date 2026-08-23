@@ -1,0 +1,51 @@
+mission_program: ai-skills-30-mission-top-tier
+source: contributions/master-research-mission-maximum-improvement-original.txt
+status: in_progress
+current_mission: 2
+next_mission: 3
+rules:
+  - audit_before_editing
+  - distinguish_fact_evidence_inference_hypothesis_unknown
+  - require_before_after_evidence
+  - preserve_user_authority
+  - prefer_smallest_sufficient_change
+  - never_claim_unmeasured_improvement
+missions:
+  1:
+    title: Audit the entire repository and create a capability gap baseline
+    status: complete
+    artifacts:
+      - references/skill-catalog-capability-map.json
+      - references/skill-catalog-audit-2026-08-23.md
+      - scripts/audit_skill_catalog.py
+      - contributions/master-research-mission-maximum-improvement-original.txt
+    evidence:
+      - 63 Skills inventoried from repository SKILL.md files
+      - structural metadata and observable signals recorded conservatively
+      - flagged items require substantive review; flags are not quality failures
+    result: baseline_created
+    limitations:
+      - structural signals do not prove that a Skill works
+      - aggregate benchmark comparison remains not_run without measured model arms
+  2:
+    title: Define and integrate calibrated quality vocabulary
+    status: complete
+    artifacts:
+      - references/quality-vocabulary.md
+      - core/self-directing-prompt.md
+      - skills/agent-max/SKILL.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - shared vocabulary defines target, scope, constraints, evidence, budget, and stopping semantics
+      - core prompt and Agent Max route intensity words to the focused reference
+      - five evaluation cases cover best, maximum effort, perfection, quick/simple, and human-centered top-tier requests
+    result: calibrated_quality_route_created
+    limitations:
+      - benchmark comparison remains not_run without measured model arms
+  3:
+    title: Strengthen intent preservation and clarification behavior
+    status: next
+    planned_artifacts:
+      - intent clarification integration
+      - ambiguity and requirement-preservation evaluations
