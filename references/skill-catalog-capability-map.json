@@ -936,7 +936,9 @@
         "### Decision examples",
         "### Composition and stopping rule"
       ],
-      "linked_paths": [],
+      "linked_paths": [
+        "references/intent-resolution-contract.md"
+      ],
       "observable_signals": {
         "inputs": true,
         "outputs": true,

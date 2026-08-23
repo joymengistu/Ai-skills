@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 2
-next_mission: 3
+current_mission: 3
+next_mission: 4
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -45,7 +45,23 @@ missions:
       - benchmark comparison remains not_run without measured model arms
   3:
     title: Strengthen intent preservation and clarification behavior
+    status: complete
+    artifacts:
+      - references/intent-resolution-contract.md
+      - skills/intent-preservation/SKILL.md
+      - core/self-directing-prompt.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - ambiguity records separate candidate intents, evidence, confidence, impact, reversibility, and correction scope
+      - core and Intent Preservation route consequential ambiguity through the shared contract
+      - four evaluations cover conflicting references, broad authority, correction precedence, and prediction-versus-permission
+    result: intent_resolution_route_created
+    limitations:
+      - no live user study or measured model-arm comparison has been run
+  4:
+    title: Add difficulty, risk, effort, and proportionality classification
     status: next
     planned_artifacts:
-      - intent clarification integration
-      - ambiguity and requirement-preservation evaluations
+      - task classification contract
+      - proportional planning evaluations
