@@ -1,8 +1,8 @@
 mission_program: ai-skills-30-mission-top-tier
 source: contributions/master-research-mission-maximum-improvement-original.txt
 status: in_progress
-current_mission: 7
-next_mission: 8
+current_mission: 8
+next_mission: 9
 rules:
   - audit_before_editing
   - distinguish_fact_evidence_inference_hypothesis_unknown
@@ -130,7 +130,23 @@ missions:
       - adapter is reference-grade and does not provide cryptographic truth or source availability
   8:
     title: Add citation cross-checking and contradiction handling
+    status: complete
+    artifacts:
+      - references/contradiction-resolution-protocol.md
+      - skills/research/SKILL.md
+      - core/self-directing-prompt.md
+      - evals/cases.jsonl
+      - evals/intelligence-benchmark.json
+    evidence:
+      - protocol separates direct, scope, temporal, definition, method, population, version, transformation, and apparent disagreement
+      - copied sources are grouped by source family and unresolved conflicts remain visible
+      - four contradiction evaluations and the full repository validation suite pass
+    result: contradiction_resolution_protocol_created
+    limitations:
+      - resolution remains evidence-guided judgment and may require domain expertise
+  9:
+    title: Unify research memory, lesson memory, and forgetting rules
     status: next
     planned_artifacts:
-      - contradiction-resolution protocol
-      - cross-checking evaluations
+      - memory lifecycle and forgetting contract
+      - memory safety evaluations
