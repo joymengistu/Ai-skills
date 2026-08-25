@@ -1,0 +1,14 @@
+# Bounded Behavior Tests
+
+These are **manual contract-behavior tests** performed while authoring the Skill. They show that its process forces creative direction, an initial candidate, an evidence-aware critique, a targeted improvement, a re-check, and an honest stop condition. They do **not** constitute blind human-preference studies, production runtime tests, or proof of universal visual superiority.
+
+| Case | Initial candidate | Quality-loop behavior observed | Result and limit |
+|---|---|---|---|
+| Web product: student project organizer | “A modern dashboard with project cards, tasks, and a big Create button.” | The Skill required a person/context, then reframed the surface as a calm “next commitment in three seconds” workspace; it rejected oversized cards and slogan CTAs, selected clarity/hierarchy/responsiveness, and proposed compact rows plus an observable next-action flow. | **Pass: workflow changed the design decision and named a screen-level verification need.** No running UI was built, so visual and touch scores remain not assessable. |
+| Interactive game: voxel exploration slice | “Terrain, trees, mining, inventory, and enemies.” | The Skill required a remembered moment and focal route; it introduced a distant landmark, authored clearings, weighty mining feedback, and a limited exploration loop. It identified repetitive terrain and absent feedback as regeneration triggers. | **Pass: workflow changed a feature list into a directed experience plan.** No playable build or human game-feel observation was performed. |
+| Visual creative tool: poster concept generator | “Generate colorful posters from prompts.” | The Skill required a composition rule and anti-generic check; it replaced arbitrary gradients with a constrained typographic hierarchy, a focal image zone, and controlled variation. It required comparison of outputs before approving a style. | **Pass: workflow added composition and comparison gates.** No image-generation output was produced in this contract test. |
+| Non-game interactive product: focus timer | “A timer with start, pause, and statistics.” | The Skill reframed the first seconds around starting without setup friction, selected feedback and recovery dimensions, then rejected decorative metrics as fake complexity. It required a timer interaction observation before completion. | **Pass: workflow prioritized experiential clarity over feature count.** No runtime timer was built or measured. |
+
+## Test conclusion
+
+The tests demonstrate an observable **process difference**: each weak, feature-first starting point was converted into a bounded creative direction, relevant rubric, targeted improvement decision, and evidence requirement. They do not demonstrate that every resulting product will be objectively preferred. Future validation should run matched baseline-versus-Skill builds with screenshots, runtime interactions, and human evaluation under fixed budgets.
